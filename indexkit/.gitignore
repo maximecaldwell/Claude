@@ -4,3 +4,4 @@ __pycache__/
 .indexkit_selftest.json
 demo_output/
 indexkit_report.md
+report_*.md

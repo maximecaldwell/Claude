@@ -12,6 +12,21 @@ indexkit only measures whether there is a signal. It never tells you what a sign
 
 ---
 
+## 0. The easiest way: double-click
+
+1. Download and unzip the folder (step 1 below), and open the `indexkit` folder in Finder.
+2. **Right-click `setup.command` → Open → Open.** (The right-click is needed only the first time,
+   because macOS is careful with files downloaded from the internet.) A Terminal window installs what
+   is needed, runs the self-test and shows the demo. Do this once.
+3. Save your articles (and a place-name list) into the `indexkit` folder as plain text — see section 3.
+4. **Double-click `test_clue.command`** (right-click → Open the first time). It asks for the digits and the
+   file names, runs the test, and opens the report in TextEdit. Each clue gets its own report file
+   (`report_810_419_227.md`), so nothing is overwritten.
+
+Everything below explains the same thing with typed commands, plus the extra options.
+
+---
+
 ## 1. One-time setup (Mac)
 
 You need the Terminal app (press ⌘-Space, type `Terminal`, press Enter).
