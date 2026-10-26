@@ -1,0 +1,846 @@
+<title>indexkit</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: a surveyor's field sheet. Inputs on the left as numbered steps, the
+   verdict on the right; one column on phones. Survey-blue accent on cool paper. */
+:root {
+  --paper: #eef1ee;
+  --sheet: #fbfcfa;
+  --ink: #18222c;
+  --muted: #56636e;
+  --rule: #cfd7d4;
+  --accent: #1f5c99;
+  --accent-ink: #ffffff;
+  --sig: #1c7444;
+  --sig-bg: #e1f1e7;
+  --null: #5d6670;
+  --null-bg: #e7eaec;
+  --warn: #9a4519;
+  --warn-bg: #f8e9df;
+  --chip: #e6edf3;
+  --hit: #fff1b8;
+  --hit-ink: #4a3b00;
+  --f-display: "Bricolage Grotesque", "Avenir Next", "Segoe UI", sans-serif;
+  --f-body: "Atkinson Hyperlegible", "Helvetica Neue", Arial, sans-serif;
+  --f-mono: "JetBrains Mono", "SF Mono", Menlo, Consolas, monospace;
+  --r: 10px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0f1418; --sheet: #161d23; --ink: #e4eaee; --muted: #94a2ad; --rule: #2b3640;
+    --accent: #7db1e6; --accent-ink: #0c1620; --sig: #6fd29a; --sig-bg: #163324; --null: #a7b1ba;
+    --null-bg: #222b33; --warn: #f0a57a; --warn-bg: #3a2418; --chip: #22303b; --hit: #4d4110; --hit-ink: #ffe9a3;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #0f1418; --sheet: #161d23; --ink: #e4eaee; --muted: #94a2ad; --rule: #2b3640;
+  --accent: #7db1e6; --accent-ink: #0c1620; --sig: #6fd29a; --sig-bg: #163324; --null: #a7b1ba;
+  --null-bg: #222b33; --warn: #f0a57a; --warn-bg: #3a2418; --chip: #22303b; --hit: #4d4110; --hit-ink: #ffe9a3;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body {
+  background: var(--paper); color: var(--ink); font-family: var(--f-body); font-size: 16px; line-height: 1.5;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 48px;
+}
+h1, h2, h3, h4 { font-family: var(--f-display); text-wrap: balance; margin: 0; line-height: 1.15; }
+button, input, textarea, select { font: inherit; color: inherit; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.wrap { max-width: 1240px; margin: 0 auto; }
+.top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 24px; padding-block: 22px 18px; }
+.brand { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+.brand h1 { font-size: 2rem; font-weight: 800; letter-spacing: -0.02em; }
+.brand h1 b { color: var(--accent); }
+.brand p { margin: 0; color: var(--muted); }
+.gate { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.pill { display: inline-flex; align-items: center; gap: 8px; border-radius: 999px; padding: 6px 14px; font-weight: 700; font-size: 0.9rem; white-space: nowrap; }
+.pill.ok { background: var(--sig-bg); color: var(--sig); }
+.pill.busy { background: var(--chip); color: var(--accent); }
+.pill.bad { background: var(--warn-bg); color: var(--warn); }
+.pill .dot { width: 8px; height: 8px; border-radius: 50%; background: currentColor; }
+.linkish { background: none; border: 0; padding: 0; color: var(--accent); text-decoration: underline; cursor: pointer; font-size: 0.9rem; }
+.grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 24px; align-items: start; }
+@media (min-width: 1000px) { .grid { grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr); } .results { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 12px); max-height: calc(100vh - 24px); overflow: auto; } }
+.sheet { background: var(--sheet); border: 1px solid var(--rule); border-radius: var(--r); }
+fieldset { border: 0; margin: 0; padding: 0; min-width: 0; }
+.inputs { display: flex; flex-direction: column; gap: 16px; min-width: 0; }
+.step { padding: 18px 20px; display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.step h2 { font-size: 1.2rem; display: flex; align-items: center; gap: 10px; }
+.step h2 .n { font-family: var(--f-mono); font-size: 0.85rem; color: var(--accent-ink); background: var(--accent); border-radius: 6px; padding: 1px 7px; }
+.help { margin: 0; color: var(--muted); font-size: 0.93rem; max-width: 65ch; }
+label.lab { font-weight: 700; font-size: 0.95rem; }
+input[type="text"], input[type="number"], textarea {
+  width: 100%; background: var(--paper); border: 1px solid var(--rule); border-radius: 8px; padding: 10px 12px;
+}
+textarea { font-family: var(--f-mono); font-size: 0.85rem; line-height: 1.45; resize: vertical; }
+#digits { font-family: var(--f-mono); font-size: 1.5rem; letter-spacing: 0.08em; padding: 12px 14px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; min-height: 28px; }
+.chip { font-family: var(--f-mono); font-size: 0.85rem; background: var(--chip); border-radius: 6px; padding: 2px 8px; font-variant-numeric: tabular-nums; }
+.sub { color: var(--muted); font-size: 0.88rem; }
+.tabs { display: flex; gap: 6px; flex-wrap: wrap; }
+.tab { border: 1px solid var(--rule); background: var(--paper); border-radius: 8px 8px 0 0; padding: 6px 14px; cursor: pointer; font-weight: 700; }
+.tab[aria-selected="true"] { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+.pane { display: flex; flex-direction: column; gap: 8px; }
+.row { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; }
+.btn { border: 1px solid var(--rule); background: var(--sheet); border-radius: 8px; padding: 8px 14px; cursor: pointer; font-weight: 700; }
+.btn:hover:not(:disabled) { border-color: var(--accent); color: var(--accent); }
+.btn.primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); font-size: 1.05rem; padding: 12px 22px; }
+.btn.primary:hover:not(:disabled) { color: var(--accent-ink); filter: brightness(1.08); }
+.btn:disabled { opacity: 0.5; cursor: not-allowed; }
+.filebtn { position: relative; overflow: hidden; }
+.filebtn input { position: absolute; inset: 0; opacity: 0; cursor: pointer; }
+.notice { border-radius: 8px; padding: 10px 12px; font-size: 0.92rem; display: flex; flex-direction: column; gap: 8px; align-items: flex-start; }
+.notice.warn { background: var(--warn-bg); color: var(--warn); }
+.notice.info { background: var(--chip); }
+.radios { display: flex; flex-direction: column; gap: 6px; }
+.radios label { display: flex; gap: 8px; align-items: baseline; cursor: pointer; }
+details.step > summary { cursor: pointer; font-family: var(--f-display); font-weight: 600; font-size: 1.1rem; }
+.checks { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 4px 12px; font-size: 0.92rem; }
+.checks label { display: flex; gap: 6px; align-items: center; }
+.group-title { font-weight: 700; font-size: 0.9rem; margin-top: 6px; }
+.three { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; }
+.actions { padding: 18px 20px; display: flex; flex-direction: column; gap: 12px; }
+.space { font-size: 1rem; }
+.space strong { font-family: var(--f-mono); font-variant-numeric: tabular-nums; }
+.convlist { font-family: var(--f-mono); font-size: 0.78rem; max-height: 260px; overflow: auto; background: var(--paper); border-radius: 8px; padding: 8px 10px; white-space: pre; }
+.banner { padding: 14px 18px; display: flex; flex-direction: column; gap: 8px; border-left: 4px solid var(--accent); }
+.results { padding: 22px; display: flex; flex-direction: column; gap: 18px; min-width: 0; }
+.results h2 { font-size: 1.45rem; }
+.nullbox { border: 1px dashed var(--rule); border-radius: 8px; padding: 12px 14px; font-size: 0.93rem; }
+.nullbox b { font-family: var(--f-display); }
+.lang { border: 1px solid var(--rule); border-radius: var(--r); padding: 16px 18px; display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+.lang.sig { border-color: var(--sig); box-shadow: inset 4px 0 0 var(--sig); }
+.lang header { display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; }
+.lang h3 { font-size: 1.25rem; }
+.verdict { border-radius: 999px; padding: 4px 12px; font-weight: 700; font-size: 0.9rem; }
+.verdict.sig { background: var(--sig-bg); color: var(--sig); }
+.verdict.null { background: var(--null-bg); color: var(--null); }
+.pline { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+.pbig { font-family: var(--f-mono); font-size: 1.9rem; font-weight: 600; font-variant-numeric: tabular-nums; }
+.facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 10px 16px; margin: 0; }
+.facts div { border-top: 1px solid var(--rule); padding-top: 6px; }
+.facts dt { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); }
+.facts dd { margin: 0; font-family: var(--f-mono); font-variant-numeric: tabular-nums; }
+.facts dd small { display: block; font-family: var(--f-body); color: var(--muted); }
+.top5 { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; counter-reset: t; }
+.top5 li { counter-increment: t; display: grid; grid-template-columns: 1.6em minmax(0, 1fr); gap: 2px 8px; }
+.top5 li::before { content: counter(t); font-family: var(--f-mono); color: var(--muted); grid-row: span 3; }
+.conv { font-family: var(--f-mono); font-size: 0.8rem; overflow-wrap: anywhere; }
+.same { color: var(--muted); }
+.extract { display: flex; flex-wrap: wrap; gap: 4px; }
+.extract .chip.hit { background: var(--hit); color: var(--hit-ink); font-weight: 600; }
+.extract .chip.gap { color: var(--muted); }
+.letters { font-family: var(--f-mono); font-size: 1.1rem; letter-spacing: 0.15em; font-weight: 600; }
+.meta { font-size: 0.82rem; color: var(--muted); }
+.signal { font-family: var(--f-display); font-weight: 800; font-size: 1.05rem; border-top: 2px solid var(--ink); padding-top: 12px; }
+.progress { height: 8px; background: var(--chip); border-radius: 99px; overflow: hidden; }
+.progress > div { height: 100%; background: var(--accent); width: 0; transition: width 0.2s; }
+.locked { background: var(--warn-bg); color: var(--warn); border-radius: 8px; padding: 10px 12px; display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; justify-content: space-between; }
+.fp { font-family: var(--f-mono); font-size: 0.85rem; overflow-wrap: anywhere; }
+.checklist { font-size: 0.85rem; display: flex; flex-direction: column; gap: 3px; max-height: 300px; overflow: auto; }
+.checklist .bad { color: var(--warn); font-weight: 700; }
+.small { font-size: 0.85rem; }
+@media (prefers-reduced-motion: reduce) { .progress > div { transition: none; } }
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <div class="brand">
+      <h1>index<b>kit</b></h1>
+      <p>Is this digit string really an index into this text? An honest test.</p>
+    </div>
+    <div class="gate" id="gate" aria-live="polite"></div>
+  </header>
+
+  <main class="grid">
+    <div class="inputs">
+      <div class="sheet banner" id="example-banner">
+        <strong>You are looking at an example.</strong>
+        <span class="help">A made-up bilingual article about a village called Lac-des-Lanternes. Load your own article below, or try the two examples.</span>
+        <div class="row">
+          <button class="btn" type="button" id="ex-hit">Example: planted index</button>
+          <button class="btn" type="button" id="ex-coin">Example: coincidence</button>
+          <button class="btn" type="button" id="ex-clear">Start with empty fields</button>
+        </div>
+      </div>
+
+      <div class="locked" id="locked-bar" hidden>
+        <span><strong>Locked test.</strong> Everything is fixed by the record. Fingerprint <span class="fp" id="locked-fp"></span></span>
+        <button class="btn" type="button" id="unlock">Unlock</button>
+      </div>
+
+      <fieldset id="fs">
+        <div class="inputs">
+          <section class="sheet step">
+            <h2><span class="n">1</span>The digits</h2>
+            <p class="help">Type them exactly as they appear in the clue, with the same spaces or dashes.</p>
+            <input type="text" id="digits" inputmode="numeric" autocomplete="off" spellcheck="false" aria-label="Digit string">
+            <div class="chips" id="digits-info"></div>
+          </section>
+
+          <section class="sheet step">
+            <h2><span class="n">2</span>The article</h2>
+            <p class="help">Paste the text, or open a .txt file. The first line must be the title. Leave an empty line between paragraphs. The French version is optional; each language is tested on its own.</p>
+            <div class="tabs" role="tablist">
+              <button class="tab" role="tab" type="button" id="tab-en" aria-selected="true" aria-controls="pane-en">English</button>
+              <button class="tab" role="tab" type="button" id="tab-fr" aria-selected="false" aria-controls="pane-fr">French</button>
+            </div>
+            <div class="pane" id="pane-en" role="tabpanel">
+              <textarea id="text-en" rows="11" spellcheck="false" aria-label="English article"></textarea>
+              <div class="row">
+                <span class="btn filebtn">Open a .txt file<input type="file" id="file-en" accept=".txt,text/plain" aria-label="Open English text file"></span>
+                <button class="btn" type="button" id="clear-en">Clear</button>
+                <span class="sub" id="info-en"></span>
+              </div>
+              <div id="fix-en"></div>
+            </div>
+            <div class="pane" id="pane-fr" role="tabpanel" hidden>
+              <textarea id="text-fr" rows="11" spellcheck="false" aria-label="French article"></textarea>
+              <div class="row">
+                <span class="btn filebtn">Open a .txt file<input type="file" id="file-fr" accept=".txt,text/plain" aria-label="Open French text file"></span>
+                <button class="btn" type="button" id="clear-fr">Clear</button>
+                <span class="sub" id="info-fr"></span>
+              </div>
+              <div id="fix-fr"></div>
+            </div>
+          </section>
+
+          <section class="sheet step">
+            <h2><span class="n">3</span>What counts as a hit</h2>
+            <div class="radios">
+              <label><input type="radio" name="mode" value="targets" id="mode-targets" checked> <span><strong>Words from my list</strong> (for example place names)</span></label>
+              <label><input type="radio" name="mode" value="letters" id="mode-letters"> <span><strong>Letters that spell real words</strong> (no list needed)</span></label>
+            </div>
+            <div id="targets-box" class="pane">
+              <label class="lab" for="targets">My list, one per line</label>
+              <textarea id="targets" rows="6" spellcheck="false"></textarea>
+              <p class="help">Capitals, accents, hyphens and apostrophes are ignored: Val-d'Or = VAL D’OR. Write your list before you look at any results.</p>
+            </div>
+            <div id="letters-box" class="pane" hidden>
+              <p class="help">Uses a built-in list of common English or French words, short words included. You can use your own list instead (a .txt file, one word per line).</p>
+              <div class="row">
+                <span class="btn filebtn">Use my own word list<input type="file" id="file-wl" accept=".txt,text/plain" aria-label="Open word list"></span>
+                <button class="btn" type="button" id="clear-wl" hidden>Back to the built-in list</button>
+                <span class="sub" id="info-wl">Built-in lists</span>
+              </div>
+            </div>
+          </section>
+
+          <details class="sheet step" id="advanced">
+            <summary>More options</summary>
+            <label class="lab" for="markers">Extra starting lines (optional, one per line)</label>
+            <textarea id="markers" rows="2" spellcheck="false" placeholder="Chapter 2|Chapitre 2"></textarea>
+            <p class="help">Counting can also start at the line that contains this text. Use | to give the English and French wording.</p>
+            <div class="three">
+              <div><label class="lab" for="draws">Random draws</label><input type="number" id="draws" min="10000" step="1000" value="10000"></div>
+              <div><label class="lab" for="seed">Seed</label><input type="number" id="seed" step="1" value="1856"></div>
+              <div><label class="lab" for="threshold">Pass threshold</label><input type="number" id="threshold" min="0.0001" max="0.5" step="0.001" value="0.01"></div>
+            </div>
+            <p class="help">Narrowing the search makes the test more sensitive, but only if you decide before seeing any result. Use "Lock in the test first" if you do.</p>
+            <div id="restrict"></div>
+          </details>
+        </div>
+      </fieldset>
+
+      <section class="sheet actions">
+        <div class="space" id="space"></div>
+        <details><summary class="small">See every way of counting</summary><div class="convlist" id="convlist"></div></details>
+        <div id="restrict-warn"></div>
+        <div class="row">
+          <button class="btn primary" type="button" id="run">Test these digits</button>
+          <button class="btn" type="button" id="lock">Lock in the test first</button>
+        </div>
+        <p class="help" id="why"></p>
+        <div id="lock-out"></div>
+      </section>
+
+      <details class="sheet step" id="locked-run">
+        <summary>Run a locked test</summary>
+        <p class="help">Paste a locked test record you made earlier. The page shows its fingerprint so you can compare it with the one you sent, then runs exactly what it says.</p>
+        <textarea id="locked-in" rows="4" spellcheck="false" aria-label="Locked test record"></textarea>
+        <div class="row"><button class="btn" type="button" id="locked-go">Check the record and run it</button></div>
+        <div id="locked-msg"></div>
+      </details>
+    </div>
+
+    <section class="sheet results" id="results" aria-live="polite"></section>
+  </main>
+</div>
+
+<script id="ik-engine">
+/*@ENGINE@*/
+</script>
+<script id="ik-data">
+/*@DATA@*/
+</script>
+<script type="text/plain" id="ik-worker">
+self.onmessage = function (e) {
+  var m = e.data, IK = self.IndexKit;
+  try {
+    if (m.cmd === 'selftest') {
+      var r = IK.selftest(m.demo, function (msg) { self.postMessage(msg); });
+      self.postMessage({ type: 'selftest-done', result: r });
+    } else if (m.cmd === 'run') {
+      var cfg = IK.Config.fromDict(m.config), ds = new IK.DigitString(m.digits), results = [];
+      m.texts.forEach(function (t, ti) {
+        var text = IK.Text.fromString(t.label, t.content, t.path, t.sha256);
+        results.push(IK.analyse(text, ds, cfg, m.draws, m.seed, { targets: m.targets, wordlist: t.wordlist,
+          progress: function (which, stream, done, total) {
+            self.postMessage({ type: 'progress', index: ti, count: m.texts.length, which: which, stream: stream, done: done, total: total });
+          } }));
+      });
+      self.postMessage({ type: 'run-done', results: results });
+    }
+  } catch (err) {
+    self.postMessage({ type: 'error', message: (err && err.message) || String(err) });
+  }
+};
+</script>
+<script>
+(function () {
+  'use strict';
+  var IK = window.IndexKit, D = window.IK_DATA;
+  var $ = function (id) { return document.getElementById(id); };
+  var esc = function (s) { return String(s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); };
+  var LANG = { en: 'English', fr: 'French' };
+  var ENGINE_HASH = IK.sha256Hex(IK.utf8($('ik-engine').textContent));
+  var GATE_KEY = 'indexkit.selftest.' + ENGINE_HASH;
+  var DRAFT_KEY = 'indexkit.draft.v1';
+
+  var state = { gate: 'checking', checks: [], files: {}, wordlist: null, locked: null, busy: false, isExample: false };
+
+  function store(key, val) { try { if (val === null) localStorage.removeItem(key); else localStorage.setItem(key, JSON.stringify(val)); } catch (e) { /* storage unavailable */ } }
+  function load(key) { try { var v = localStorage.getItem(key); return v ? JSON.parse(v) : null; } catch (e) { return null; } }
+
+  // ---------------- worker ----------------
+  var worker = null;
+  try {
+    var src = $('ik-engine').textContent + '\n' + $('ik-worker').textContent;
+    worker = new Worker(URL.createObjectURL(new Blob([src], { type: 'text/javascript' })));
+  } catch (e) { worker = null; }
+  var onWorker = null;
+  function job(msg, handler) {
+    onWorker = handler;
+    if (worker) { worker.postMessage(msg); return; }
+    // Fallback: same code on the page itself (the page freezes while it runs).
+    setTimeout(function () {
+      var fake = { IndexKit: IK, postMessage: function (m) { handler(m); } };
+      var fn = new Function('self', $('ik-worker').textContent + '\nreturn self.onmessage;');
+      fn(fake)({ data: msg });
+    }, 30);
+  }
+  if (worker) worker.onmessage = function (e) { if (onWorker) onWorker(e.data); };
+
+  // ---------------- instrument check (selftest gate) ----------------
+  function demoPayload() { return { en: D.demo.en, fr: D.demo.fr, targets: D.demo.targets, wordlistEn: D.wordlists.en }; }
+
+  function renderGate(frac) {
+    var g = $('gate'), html = '';
+    if (state.gate === 'passed') html = '<span class="pill ok"><span class="dot"></span>Instrument check passed</span>';
+    else if (state.gate === 'failed') html = '<span class="pill bad"><span class="dot"></span>Instrument check FAILED</span>';
+    else html = '<span class="pill busy"><span class="dot"></span>Checking the instrument… ' + Math.round((frac || 0) * 100) + '%</span>';
+    if (state.gate !== 'checking') html += '<button class="linkish" type="button" id="gate-details">details</button><button class="linkish" type="button" id="gate-rerun">run again</button>';
+    g.innerHTML = html;
+    if ($('gate-details')) $('gate-details').onclick = showGateDetails;
+    if ($('gate-rerun')) $('gate-rerun').onclick = runSelftest;
+    updateRunState();
+  }
+
+  function showGateDetails() {
+    var rows = state.checks.map(function (c) {
+      return '<div class="' + (c.ok ? '' : 'bad') + '">' + (c.ok ? '✓ ' : '✗ ') + esc(c.name) + (c.detail ? ' <span class="sub">— ' + esc(c.detail) + '</span>' : '') + '</div>';
+    }).join('');
+    $('results').innerHTML = '<h2>Instrument check</h2><p class="help">Before it tests anything, indexkit hides known messages in a made-up article and checks that it finds them, then feeds it hundreds of random digit strings and checks that they come out non-significant at the right rate. Nothing else can run until all of this passes.</p><div class="checklist">' + rows + '</div>';
+  }
+
+  function runSelftest() {
+    if (state.busy) return;
+    state.gate = 'checking'; state.checks = []; state.busy = true;
+    renderGate(0);
+    var phases = 0, checks = 0;
+    job({ cmd: 'selftest', demo: demoPayload() }, function (m) {
+      if (m.type === 'progress') {
+        var key = m.label + m.which + m.stream;
+        if (m.done === m.total) phases++;
+        renderGate(Math.min(0.97, (phases + (m.done === m.total ? 0 : m.done / m.total)) / 8 * 0.8 + checks / 23 * 0.2));
+      } else if (m.type === 'check') { checks++; state.checks.push(m); }
+      else if (m.type === 'selftest-done') {
+        state.busy = false;
+        state.checks = m.result.checks;
+        state.gate = m.result.passed ? 'passed' : 'failed';
+        store(GATE_KEY, { passed: m.result.passed, checks: m.result.checks });
+        renderGate(1);
+        if (!m.result.passed) showGateDetails();
+      } else if (m.type === 'error') {
+        state.busy = false; state.gate = 'failed';
+        state.checks = [{ name: 'the check could not run', ok: false, detail: m.message }];
+        renderGate(1); showGateDetails();
+      }
+    });
+  }
+
+  // ---------------- inputs ----------------
+  function textEntry(lang) {
+    var content = $('text-' + lang).value;
+    if (!IK.parseList(content).length) return null;
+    var f = state.files[lang], sha, path;
+    if (f && f.content === content) { sha = f.sha256; path = f.name; }
+    else { sha = IK.sha256Hex(IK.utf8(content)); path = '(pasted ' + LANG[lang] + ' text)'; }
+    return { label: lang, content: content, path: path, sha256: sha };
+  }
+
+  function checked(name) { return Array.prototype.slice.call(document.querySelectorAll('input[data-dim="' + name + '"]:checked')).map(function (x) { return x.value; }); }
+
+  function gatherInputs() {
+    var errors = [], out = {};
+    try { out.ds = new IK.DigitString($('digits').value); } catch (e) { errors.push(e.message); }
+    out.texts = ['en', 'fr'].map(textEntry).filter(Boolean);
+    if (!out.texts.length) errors.push('Paste or open at least one article.');
+    out.mode = $('mode-letters').checked ? 'letters' : 'targets';
+    out.targets = IK.parseList($('targets').value);
+    if (out.mode === 'targets' && !IK.uniqueKeys(out.targets).length) errors.push('Write at least one word in your list (step 3), or choose "Letters that spell real words".');
+    out.markers = IK.parseList($('markers').value);
+    out.draws = parseInt($('draws').value, 10);
+    out.seed = parseInt($('seed').value, 10);
+    out.threshold = parseFloat($('threshold').value);
+    if (!(out.draws >= IK.MIN_DRAWS)) errors.push('Random draws must be at least ' + IK.MIN_DRAWS + '.');
+    if (!isFinite(out.seed)) errors.push('The seed must be a whole number.');
+    if (!(out.threshold > 0 && out.threshold < 1)) errors.push('The pass threshold must be between 0 and 1.');
+    try {
+      out.cfg = new IK.Config({ mode: out.mode, units: checked('units'), tokenizers: checked('tokenizers'),
+        bases: checked('bases').map(Number), starts: checked('starts'), markers: out.markers, groupings: checked('groupings') });
+    } catch (e) { errors.push(e.message); }
+    out.texts.forEach(function (t) {
+      t.wordlist = state.wordlist ? state.wordlist.words : D.wordlists[t.label];
+    });
+    out.errors = errors;
+    return out;
+  }
+
+  function conventionLists(inp) {
+    var lists = {};
+    inp.texts.forEach(function (t) {
+      var text = IK.Text.fromString(t.label, t.content, t.path, t.sha256);
+      var tv = new IK.TextViews(text, inp.cfg);
+      lists[t.label] = { names: IK.buildConventions(tv, inp.ds, inp.cfg).convs.map(function (c) { return c.name; }), warnings: tv.warnings };
+    });
+    return lists;
+  }
+
+  function nullSentence(Ms, draws) {
+    return 'The digits carry no information about the text: across all ' + Ms.join(' / ') + ' conventions, the most unusual ' +
+      'score they produce is no more unusual than the most unusual score produced by random digit strings of the same shape ' +
+      '(null A) or by the real digits on paragraph-shuffled copies of the text (null B), judged on ' + draws + ' seeded test ' +
+      'draws per null after ' + draws + ' separate reference draws per null.';
+  }
+
+  // ---------------- live feedback ----------------
+  var liveTimer = null;
+  function live() { clearTimeout(liveTimer); liveTimer = setTimeout(refresh, 250); saveDraft(); }
+
+  function textInfo(lang) {
+    var el = $('info-' + lang), fix = $('fix-' + lang), content = $('text-' + lang).value;
+    fix.innerHTML = '';
+    if (!IK.parseList(content).length) { el.textContent = lang === 'fr' ? 'Empty: only English will be tested.' : 'Empty.'; return; }
+    try {
+      var t = IK.Text.fromString(lang, content);
+      var title = t.paragraphs[0].length > 48 ? t.paragraphs[0].slice(0, 46) + '…' : t.paragraphs[0];
+      var e = textEntry(lang);
+      el.textContent = 'Title "' + title + '" · ' + (t.paragraphs.length - 1) + ' paragraphs · ' + t.wordCount() + ' words · fingerprint ' + e.sha256.slice(0, 10);
+      var lines = IK.normalize(content).split('\n').filter(function (l) { return l.trim(); }).length;
+      if (t.paragraphs.length <= 2 && lines >= 4) {
+        fix.innerHTML = '<div class="notice warn"><span>This is read as a title and only ' + (t.paragraphs.length - 1) +
+          ' paragraph, because there are no empty lines between paragraphs. The shuffled-paragraph check needs at least two paragraphs.</span>' +
+          '<button class="btn" type="button">Treat each line as a paragraph</button></div>';
+        fix.querySelector('button').onclick = function () {
+          $('text-' + lang).value = IK.normalize(content).split('\n').filter(function (l) { return l.trim(); }).join('\n\n') + '\n';
+          live();
+        };
+      }
+    } catch (err) { el.textContent = err.message; }
+  }
+
+  function refresh() {
+    var ds = null;
+    try { ds = new IK.DigitString($('digits').value); } catch (e) { /* shown below */ }
+    if (ds) {
+      $('digits-info').innerHTML = ds.groups.map(function (g) { return '<span class="chip">' + esc(g) + '</span>'; }).join('') +
+        '<span class="sub">shape ' + ds.shape() + ' · ' + ds.nDigits + ' digit' + (ds.nDigits > 1 ? 's' : '') + '</span>';
+    } else $('digits-info').innerHTML = '<span class="sub">' + ($('digits').value.trim() ? 'No digits found yet.' : 'Type the digits above.') + '</span>';
+    textInfo('en'); textInfo('fr');
+    $('targets-box').hidden = $('mode-letters').checked;
+    $('letters-box').hidden = !$('mode-letters').checked;
+    var inp = gatherInputs(), lists = null;
+    if (inp.ds && inp.texts.length && inp.cfg) {
+      try { lists = conventionLists(inp); } catch (e) { inp.errors.push(e.message); }
+    }
+    if (lists) {
+      var parts = Object.keys(lists).map(function (k) { return LANG[k] + ' <strong>' + lists[k].names.length + '</strong>'; });
+      $('space').innerHTML = 'Ways of counting that will be tried (the search space): ' + parts.join(' · ');
+      $('convlist').textContent = Object.keys(lists).map(function (k) {
+        return '== ' + LANG[k] + ': ' + lists[k].names.length + ' ==\n' + lists[k].warnings.map(function (w) { return 'warning: ' + w + '\n'; }).join('') + lists[k].names.join('\n');
+      }).join('\n\n');
+    } else { $('space').textContent = 'Fill in steps 1–3 to see how many ways of counting will be tried.'; $('convlist').textContent = ''; }
+    $('restrict-warn').innerHTML = inp.cfg && inp.cfg.isRestricted() && !state.locked
+      ? '<div class="notice warn">You narrowed the search in More options. That is only honest if you decided this before looking at any result.</div>' : '';
+    state.lastErrors = inp.errors;
+    updateRunState();
+  }
+
+  function updateRunState() {
+    var why = '';
+    if (state.gate === 'checking') why = 'Waiting for the instrument check to finish (a few seconds).';
+    else if (state.gate === 'failed') why = 'The instrument check failed, so testing is disabled. Click "details" at the top.';
+    else if (state.busy) why = 'Working…';
+    else if (state.lastErrors && state.lastErrors.length) why = state.lastErrors[0];
+    $('run').disabled = !!why;
+    $('lock').disabled = !!why || !!state.locked;
+    $('locked-go').disabled = state.gate !== 'passed' || state.busy;
+    $('why').textContent = why;
+  }
+
+  // ---------------- run ----------------
+  function startRun(inp, preregNote) {
+    if (state.busy) return;
+    state.busy = true; updateRunState();
+    var lists = conventionLists(inp);
+    var Ms = inp.texts.map(function (t) { return lists[t.label].names.length; });
+    $('results').innerHTML = '<h2>Testing…</h2><div class="nullbox"><b>Null hypothesis.</b> ' + esc(nullSentence(Ms, inp.draws)) +
+      '</div><div class="progress"><div id="bar"></div></div><p class="sub" id="bar-txt">Starting…</p>';
+    var phaseNames = { A0: 'learning what random digits do', A1: 'testing against random digits', B0: 'learning what shuffled paragraphs do', B1: 'testing against shuffled paragraphs' };
+    var order = ['A0', 'A1', 'B0', 'B1'];
+    job({ cmd: 'run', digits: inp.ds.raw, texts: inp.texts, config: inp.cfg.toDict(), draws: inp.draws, seed: inp.seed, targets: inp.targets }, function (m) {
+      if (m.type === 'progress') {
+        var ph = order.indexOf(m.which + m.stream);
+        var f = (m.index + (ph + m.done / m.total) / 4) / m.count;
+        if ($('bar')) $('bar').style.width = (f * 100).toFixed(1) + '%';
+        if ($('bar-txt')) $('bar-txt').textContent = LANG[inp.texts[m.index].label] + ': ' + phaseNames[m.which + m.stream] + ' (' + m.done.toLocaleString() + ' of ' + m.total.toLocaleString() + ')';
+      } else if (m.type === 'run-done') {
+        state.busy = false;
+        var info = makeInfo(inp, preregNote);
+        state.last = { info: info, results: m.results, inp: inp };
+        renderResults(info, m.results, inp, false);
+        updateRunState();
+      } else if (m.type === 'error') {
+        state.busy = false;
+        $('results').innerHTML = '<h2>Something went wrong</h2><div class="notice warn">' + esc(m.message) + '</div>';
+        updateRunState();
+      }
+    });
+  }
+
+  function makeInfo(inp, preregNote) {
+    var cfg = inp.cfg;
+    return {
+      version: IK.VERSION, code_hash: ENGINE_HASH, when: new Date().toISOString().slice(0, 10),
+      digits: inp.ds.raw, shape: inp.ds.shape(), n_digits: inp.ds.nDigits, score: cfg.mode,
+      targets: inp.targets, wordlist_desc: state.wordlist ? state.wordlist.name + ' (' + state.wordlist.words.length + ' words, SHA-256 `' + state.wordlist.sha256 + '`)'
+        : inp.texts.map(function (t) { return t.label + ': built-in ' + LANG[t.label] + ' list (' + D.wordlists[t.label].length + ' words)'; }).join('; '),
+      markers: cfg.markers, draws: inp.draws, seed: inp.seed, threshold: inp.threshold, prereg: preregNote || null,
+      units: cfg.units, tokenizers: cfg.tokenizers, starts: cfg.starts, bases: cfg.bases, groupings: cfg.groupings,
+      restricted: cfg.isRestricted() ? ['units', 'tokenizers', 'bases', 'starts', 'groupings'].map(function (k) { return k + '=' + cfg.toDict()[k].join(','); }).join(', ') : null
+    };
+  }
+
+  // ---------------- results ----------------
+  function rarityText(r) {
+    if (r >= 0.5) return 'common (half of random strings or more)';
+    if (r >= 1e-4) return 'about 1 in ' + Math.round(1 / r).toLocaleString('en-US') + ' random strings';
+    return 'fewer than 1 in 10,000 random strings';
+  }
+  function fmtP(p, draws) { return p <= 1 / (draws + 1) + 1e-12 ? p.toFixed(5) + ' (the smallest possible with ' + draws.toLocaleString() + ' draws)' : p.toFixed(4); }
+  function fmtT(x) { return String(Number(x.toPrecision(3))); }
+  function convName(n) { return n.split(' | ').join(' · '); }
+  function sameWinner(results) {
+    if (results.length < 2) return [null, []];
+    var sets = results.map(function (r) { var s = new Set(); r.winners.forEach(function (a) { a.forEach(function (x) { s.add(x); }); }); return s; });
+    var common = Array.from(sets[0]).filter(function (x) { return sets.every(function (s) { return s.has(x); }); });
+    return [sets.every(function (s) { return s.size; }) && common.length > 0, common.sort()];
+  }
+
+  function renderResults(info, results, inp, isExample) {
+    var k = results.length, per = info.threshold / k;
+    var targetKeys = new Set(IK.uniqueKeys(info.targets || []));
+    var html = '';
+    html += '<h2>' + (isExample ? 'Example result' : 'Result') + ' for <span class="chip" style="font-size:1.1rem">' + esc(info.digits) + '</span></h2>';
+    if (isExample) html += '<p class="help">This was computed in advance for the example article and digits on the left, which were planted on purpose. Press "Test these digits" to run it yourself.</p>';
+    html += '<div class="nullbox"><b>Null hypothesis</b> (stated before the result). ' + esc(nullSentence(results.map(function (r) { return r.M; }), info.draws)) +
+      ' A text passes only if p ≤ ' + fmtT(per) + ' (the threshold ' + info.threshold + ' split over ' + k + ' text' + (k > 1 ? 's' : '') + ').</div>';
+    if (info.prereg) html += '<div class="notice info">Locked test, fingerprint <span class="fp">' + esc(info.prereg) + '</span></div>';
+    if (info.restricted) html += '<div class="notice warn">Narrowed search space (' + esc(info.restricted) + '). Only honest if decided before looking.</div>';
+    results.forEach(function (r) {
+      var sig = r.p <= per;
+      html += '<article class="lang ' + (sig ? 'sig' : '') + '"><header><h3>' + LANG[r.label] + '</h3><span class="verdict ' + (sig ? 'sig' : 'null') + '">' +
+        (sig ? 'Significant' : 'Consistent with coincidence') + '</span></header>';
+      html += '<div class="pline"><span class="pbig">p = ' + r.p.toFixed(4) + '</span><span class="sub">needs ≤ ' + fmtT(per) + ' to pass · already corrected for all ' + r.M + ' ways of counting</span></div>';
+      html += '<dl class="facts">' +
+        '<div><dt>Ways of counting that hit</dt><dd>' + r.hits + ' of ' + r.M + '<small>random digits: ' + r.nullA_mean_hits.toFixed(1) + ' on average (95% ≤ ' + r.nullA_hits_95 + ')</small></dd></div>' +
+        '<div><dt>Null A · random digits</dt><dd>p = ' + esc(fmtP(r.pA, r.draws)) + '</dd></div>' +
+        '<div><dt>Null B · shuffled paragraphs</dt><dd>p = ' + esc(fmtP(r.pB, r.draws)) + (r.shuffle_possible ? '' : '<small>too few paragraphs to shuffle, so p is set to 1</small>') + '</dd></div>' +
+        '</dl>';
+      if (r.n_winners > 1) html += '<p class="sub">' + r.n_winners + ' ways of counting are tied as most unusual, so the first one below is not unique.</p>';
+      html += '<h4>Top 5 ways of counting, most unusual first</h4><ol class="top5">';
+      r.top.forEach(function (t) {
+        var ex;
+        if (t.letters !== null) {
+          ex = '<div class="extract"><span class="letters">' + esc(t.letters) + '</span><span class="sub">from: ' + esc(t.items.join(' ')) + '</span></div>';
+        } else {
+          ex = '<div class="extract">' + t.items.map(function (it, i) {
+            var cls = it === '·' ? 'gap' : (targetKeys.has(IK.fold(it)) ? 'hit' : '');
+            return '<span class="chip ' + cls + '" title="number ' + t.numbers[i] + '">' + esc(it) + '</span>';
+          }).join('') + '</div>';
+        }
+        html += '<li><div class="conv">' + esc(convName(t.name)) + (t.aliases.length > 1 ? ' <span class="same">(+' + (t.aliases.length - 1) + ' identical)</span>' : '') + '</div>' + ex +
+          '<div class="meta">score ' + t.score + ' · uncorrected rarity: ' + esc(rarityText(t.rarity)) + '</div></li>';
+      });
+      html += '</ol>';
+      r.warnings.forEach(function (w) { html += '<div class="notice warn">' + esc(w) + '</div>'; });
+      html += '</article>';
+    });
+    if (k > 1) {
+      var sw = sameWinner(results);
+      html += '<div class="nullbox"><b>English / French.</b> Each language is tested on its own and never combined. ' +
+        (sw[0] ? 'The same way of counting is the most unusual in both: <span class="conv">' + esc(convName(sw[1][0])) + '</span>.' : 'The most unusual way of counting is <strong>not</strong> the same in both languages.') + '</div>';
+    }
+    html += '<p class="help">The "uncorrected rarity" ignores how many ways were tried, so it always looks impressive. Quote the p-value, not that.</p>';
+    html += '<div class="row"><button class="btn" type="button" id="copy-report">Copy the full report</button><span class="sub" id="copy-msg"></span></div>';
+    html += '<p class="signal">SIGNAL ONLY: this says nothing about what it means.</p>';
+    $('results').innerHTML = html;
+    $('copy-report').onclick = function () { copyText(markdown(info, results), $('copy-msg'), 'Report copied. Paste it into a note or email.'); };
+  }
+
+  function copyText(text, msgEl, okMsg) {
+    var fallback = function () {
+      msgEl.innerHTML = 'Copying is blocked here. Select all the text below and copy it:<textarea rows="6" readonly>' + esc(text) + '</textarea>';
+      var ta = msgEl.querySelector('textarea'); ta.focus(); ta.select();
+    };
+    try { navigator.clipboard.writeText(text).then(function () { msgEl.textContent = okMsg; }, fallback); } catch (e) { fallback(); }
+  }
+
+  // Markdown report (same layout as the Python tool's report.py)
+  function markdown(info, results) {
+    var k = results.length, per = info.threshold / k, L = [];
+    L.push('# indexkit report', '', '_' + info.when + ' · indexkit ' + info.version + ' (browser) · engine ' + info.code_hash.slice(0, 12) + '_', '');
+    L.push('## Null hypothesis (stated before any result)', '', nullSentence(results.map(function (r) { return r.M; }), info.draws), '');
+    L.push('Pass rule: a text is called significant only if p ≤ ' + fmtT(per) + ', where p is the LARGER of the two null p-values and ' + fmtT(per) + ' is the threshold ' + info.threshold + ' split over ' + k + ' text(s).', '');
+    L.push('## Inputs', '', '- Digit string: `' + info.digits + '` (shape ' + info.shape + ', ' + info.n_digits + ' digits)');
+    results.forEach(function (r) { L.push('- Text **' + r.label + '**: ' + r.path + ' — SHA-256 `' + r.sha256 + '` (' + r.paragraphs + ' paragraphs incl. title, ~' + r.words + ' words)'); });
+    if (info.score === 'targets') L.push('- Score: **targets** — ' + info.targets.length + ' target words: ' + info.targets.join(', '));
+    else L.push('- Score: **letters** — wordlist: ' + info.wordlist_desc);
+    if (info.markers.length) L.push('- Marker lines: ' + info.markers.map(function (m) { return '`' + m + '`'; }).join(', '));
+    L.push('- Null draws: ' + info.draws + ' reference + ' + info.draws + ' test draws for null A and for null B, seed ' + info.seed);
+    L.push('- Pre-registration: ' + (info.prereg ? 'locked test, fingerprint `' + info.prereg + '`' : 'none (results are exploratory)'));
+    if (info.restricted) L.push('- **Restricted search space** (' + info.restricted + '). This is only honest if the restriction was chosen before looking at any result.');
+    L.push('', '## Search space', '');
+    results.forEach(function (r) {
+      L.push('- **' + r.label + ': ' + r.M + ' conventions** tried (' + Object.keys(r.by_unit).map(function (u) { return u + ' ' + r.by_unit[u]; }).join(', ') + '). ' + r.merged_views + ' exact duplicate readings were merged.');
+      var same = r.groupings.filter(function (g) { return g.length > 1; }).map(function (g) { return g.join('='); });
+      if (same.length) L.push('  - digit groupings that are identical for this shape were merged: ' + same.join(', '));
+      r.warnings.forEach(function (w) { L.push('  - warning: ' + w); });
+    });
+    L.push('', 'Dimensions searched: units ' + info.units.join(', ') + '; tokenizers ' + info.tokenizers.join(', ') + ' (words only); reads item/initial/char; starts ' +
+      info.starts.concat(info.markers.map(function (m) { return 'marker:' + m; })).join(', ') + '; counting ' + info.bases.join('/') + '-based; digit groupings ' + info.groupings.join(', ') + '.', '');
+    results.forEach(function (r) {
+      var sig = r.p <= per;
+      L.push('## Result — ' + r.label, '');
+      L.push('- **' + r.hits + ' of ' + r.M + ' conventions hit.** Random digit strings of this shape hit on average ' + r.nullA_mean_hits.toFixed(1) + ' of ' + r.M + ' (95% of them hit ≤ ' + r.nullA_hits_95 + ').');
+      L.push('- Most unusual convention: `' + r.best_name + '`, score ' + r.best_score + '. For that one convention alone, this score is reached by ' + rarityText(r.best_rarity) + '. **Uncorrected — do not quote this; the p-values below are the honest ones.**');
+      L.push('- Highest raw score: ' + r.raw_max + ' (median highest raw score: random strings ' + Math.round(r.nullA_raw_max_median) + ', shuffled text ' + Math.round(r.nullB_raw_max_median) + ')');
+      L.push('- p, null A (random digits): ' + fmtP(r.pA, r.draws));
+      L.push('- p, null B (shuffled paragraphs): ' + fmtP(r.pB, r.draws) + (r.shuffle_possible ? '' : ' — the text has fewer than 2 body paragraphs, so it cannot be shuffled; p is set to 1'));
+      L.push('- **p (the larger, already corrected for all ' + r.M + ' conventions): ' + r.p.toFixed(4) + '**');
+      L.push('- Verdict: **' + (sig ? 'SIGNIFICANT (p = ' + r.p.toFixed(4) + ' ≤ ' + fmtT(per) + ')' : 'NOT significant (p = ' + r.p.toFixed(4) + ' > ' + fmtT(per) + ') — consistent with coincidence') + '**');
+      if (r.n_winners > 1) L.push('- ' + r.n_winners + ' conventions are tied as most unusual, so the "winner" below is not unique.');
+      L.push('', 'Top 5 conventions for the real digits, most unusual first:', '', '| # | convention | score | uncorrected rarity | extract |', '|---|---|---|---|---|');
+      r.top.forEach(function (t, i) {
+        var name = convName(t.name) + (t.aliases.length > 1 ? ' (+' + (t.aliases.length - 1) + ' identical)' : '');
+        var ex = t.letters !== null ? '`' + t.letters + '`  (from: ' + t.items.join(' ') + ')' : '`' + t.items.join(' ') + '`';
+        L.push('| ' + (i + 1) + ' | ' + name + ' | ' + t.score + ' | ' + rarityText(t.rarity) + ' | ' + ex.replace(/\|/g, '\\|') + ' |');
+      });
+      L.push('');
+    });
+    L.push('## English / French check', '');
+    if (k < 2) L.push('Only one text was given, so there is no cross-language check.');
+    else {
+      results.forEach(function (r) { L.push('- ' + r.label + ': ' + (r.p <= per ? 'SIGNIFICANT' : 'NOT significant') + ' (p = ' + r.p.toFixed(4) + ')'); });
+      var sw = sameWinner(results);
+      L.push(sw[0] ? '- The same convention reaches the top in every text: `' + sw[1][0] + '`' : '- The top-scoring convention is **not** the same across texts.');
+      L.push('- Each text is scored and tested on its own; the scores are never combined.');
+    }
+    L.push('', '**SIGNAL ONLY: this says nothing about what it means.**', '');
+    return L.join('\n');
+  }
+
+  // ---------------- locked tests (pre-registration) ----------------
+  function makeRecord(inp) {
+    var lists = conventionLists(inp);
+    var conv = {}, space = {};
+    Object.keys(lists).forEach(function (k) { conv[k] = lists[k].names; space[k] = lists[k].names.length; });
+    return {
+      indexkit_locked_test: 1, engine: IK.VERSION, digits: inp.ds.raw,
+      texts: inp.texts.map(function (t) { return { label: t.label, source: t.path, sha256: t.sha256, content: t.content }; }),
+      score: inp.cfg.mode, targets: inp.mode === 'targets' ? inp.targets : null,
+      wordlist: inp.mode === 'letters' ? (state.wordlist ? { name: state.wordlist.name, sha256: state.wordlist.sha256, words: state.wordlist.words } : 'built-in') : null,
+      config: inp.cfg.toDict(), search_space: space, conventions: conv,
+      null: { statement: nullSentence(Object.keys(space).map(function (k) { return space[k]; }), inp.draws), draws: inp.draws, seed: inp.seed },
+      threshold: inp.threshold, pass_rule: 'a text passes if max(pA, pB) <= threshold / number of texts'
+    };
+  }
+  function fingerprint(rec) { return IK.sha256Hex(IK.utf8(IK.canonicalJSON(rec))); }
+
+  $('lock').onclick = function () {
+    var inp = gatherInputs();
+    if (inp.errors.length) return;
+    var rec = makeRecord(inp), fp = fingerprint(rec), text = IK.canonicalJSON(rec);
+    $('lock-out').innerHTML = '<div class="notice info"><strong>Your locked test is ready. Do not run it yet.</strong>' +
+      '<span>1. Send this fingerprint to a teammate (or anywhere you cannot edit later):</span><span class="fp">' + fp + '</span>' +
+      '<div class="row"><button class="btn" type="button" id="copy-fp">Copy fingerprint</button><button class="btn" type="button" id="copy-rec">Copy the record</button></div>' +
+      '<span>2. Save the record (paste it into a note). 3. Open "Run a locked test" below, paste the record, and run it. The page will show the fingerprint again so anyone can check nothing was changed.</span>' +
+      '<span class="sub" id="lock-msg"></span></div>';
+    $('copy-fp').onclick = function () { copyText(fp, $('lock-msg'), 'Fingerprint copied.'); };
+    $('copy-rec').onclick = function () { copyText(text, $('lock-msg'), 'Record copied. Paste it into a note and keep it.'); };
+  };
+
+  $('locked-go').onclick = function () {
+    var msg = $('locked-msg'), rec;
+    try { rec = JSON.parse($('locked-in').value); } catch (e) { msg.innerHTML = '<div class="notice warn">This is not a locked test record. Paste the whole record you copied.</div>'; return; }
+    if (!rec || rec.indexkit_locked_test !== 1) { msg.innerHTML = '<div class="notice warn">This is not an indexkit locked test record.</div>'; return; }
+    var fp = fingerprint(rec);
+    // fill and lock the inputs
+    $('digits').value = rec.digits;
+    $('text-en').value = ''; $('text-fr').value = ''; state.files = {};
+    rec.texts.forEach(function (t) { $('text-' + t.label).value = t.content; state.files[t.label] = { name: t.source, content: t.content, sha256: t.sha256 }; });
+    $('mode-' + rec.score).checked = true;
+    $('targets').value = (rec.targets || []).join('\n');
+    state.wordlist = rec.wordlist && rec.wordlist !== 'built-in' ? rec.wordlist : null;
+    $('markers').value = rec.config.markers.join('\n');
+    $('draws').value = rec.null.draws; $('seed').value = rec.null.seed; $('threshold').value = rec.threshold;
+    document.querySelectorAll('input[data-dim]').forEach(function (x) {
+      var vals = rec.config[x.getAttribute('data-dim')].map(String); x.checked = vals.indexOf(x.value) >= 0;
+    });
+    var inp = gatherInputs();
+    if (inp.errors.length) { msg.innerHTML = '<div class="notice warn">REFUSED: ' + esc(inp.errors[0]) + '</div>'; return; }
+    var bad = rec.texts.filter(function (t) { return IK.sha256Hex(IK.utf8(t.content)) !== t.sha256 && t.source.indexOf('(pasted') === 0; });
+    if (bad.length) { msg.innerHTML = '<div class="notice warn">REFUSED: the ' + esc(bad[0].label) + ' text does not match its fingerprint; the record was edited.</div>'; return; }
+    var lists = conventionLists(inp), same = Object.keys(rec.conventions).every(function (k) { return lists[k] && JSON.stringify(lists[k].names) === JSON.stringify(rec.conventions[k]); });
+    if (!same) { msg.innerHTML = '<div class="notice warn">REFUSED: this version of indexkit would try a different list of ways of counting than the record.</div>'; return; }
+    state.locked = { fp: fp };
+    $('fs').disabled = true; $('locked-bar').hidden = false; $('locked-fp').textContent = fp; $('example-banner').hidden = true;
+    msg.innerHTML = '<div class="notice info">Record accepted. Fingerprint <span class="fp">' + fp + '</span>. Compare it with the one you sent before trusting the result.</div>';
+    refresh();
+    startRun(inp, fp);
+  };
+
+  $('unlock').onclick = function () {
+    state.locked = null; $('fs').disabled = false; $('locked-bar').hidden = true; refresh();
+  };
+
+  // ---------------- wiring ----------------
+  function buildRestrict() {
+    var dims = [['units', 'What is counted', IK.UNITS], ['tokenizers', 'How words are split', IK.TOKENIZERS], ['bases', 'Counting from', IK.BASES],
+      ['starts', 'Starting at', IK.DEFAULT_STARTS], ['groupings', 'Reading the digits', IK.GROUPINGS]];
+    var nice = { 0: '0 (first = 0)', 1: '1 (first = 1)', title: 'the title', body: 'first paragraph' };
+    $('restrict').innerHTML = dims.map(function (d) {
+      return '<div class="group-title">' + d[1] + '</div><div class="checks">' + d[2].map(function (v) {
+        return '<label><input type="checkbox" checked data-dim="' + d[0] + '" value="' + v + '" id="dim-' + d[0] + '-' + v + '"> ' + esc(nice[v] || v) + '</label>';
+      }).join('') + '</div>';
+    }).join('');
+  }
+
+  function setTab(lang) {
+    ['en', 'fr'].forEach(function (l) { $('tab-' + l).setAttribute('aria-selected', String(l === lang)); $('pane-' + l).hidden = l !== lang; });
+  }
+
+  function readFile(input, cb) {
+    var f = input.files && input.files[0];
+    if (!f) return;
+    var r = new FileReader();
+    r.onload = function () {
+      var bytes = new Uint8Array(r.result), text;
+      try { text = new TextDecoder('utf-8', { fatal: true }).decode(bytes); }
+      catch (e) { alertBox(f.name + ' is not UTF-8 text. In TextEdit, save it as plain text with the encoding "Unicode (UTF-8)".'); return; }
+      cb(f.name, text, IK.sha256Hex(bytes));
+    };
+    r.readAsArrayBuffer(f);
+    input.value = '';
+  }
+  function alertBox(msg) { $('why').textContent = msg; }
+
+  function loadExample(which) {
+    state.files = {}; state.wordlist = null; state.isExample = true;
+    $('digits').value = which === 'coin' ? D.demo.coincidence : D.demo.planted;
+    $('text-en').value = D.demo.en; $('text-fr').value = D.demo.fr;
+    $('targets').value = D.demo.targets.join('\n');
+    $('mode-targets').checked = true; $('markers').value = '';
+    $('example-banner').hidden = false;
+    refresh();
+  }
+
+  function saveDraft() {
+    if (state.locked) return;
+    store(DRAFT_KEY, { digits: $('digits').value, en: $('text-en').value, fr: $('text-fr').value, targets: $('targets').value,
+      mode: $('mode-letters').checked ? 'letters' : 'targets', markers: $('markers').value, example: state.isExample });
+  }
+
+  ['digits', 'text-en', 'text-fr', 'targets', 'markers', 'draws', 'seed', 'threshold'].forEach(function (id) {
+    $(id).addEventListener('input', function () { if (id !== 'draws' && id !== 'seed' && id !== 'threshold') state.isExample = false; live(); });
+  });
+  document.querySelectorAll('input[name="mode"]').forEach(function (x) { x.addEventListener('change', live); });
+  $('tab-en').onclick = function () { setTab('en'); };
+  $('tab-fr').onclick = function () { setTab('fr'); };
+  ['en', 'fr'].forEach(function (lang) {
+    $('file-' + lang).onchange = function () {
+      readFile(this, function (name, text, sha) {
+        state.files[lang] = { name: name, content: text, sha256: sha }; state.isExample = false;
+        $('text-' + lang).value = text; live();
+      });
+    };
+    $('clear-' + lang).onclick = function () { $('text-' + lang).value = ''; delete state.files[lang]; live(); };
+  });
+  $('file-wl').onchange = function () {
+    readFile(this, function (name, text, sha) {
+      var words = IK.parseList(text);
+      state.wordlist = { name: name, words: words, sha256: sha };
+      $('info-wl').textContent = name + ' · ' + words.length + ' words'; $('clear-wl').hidden = false; live();
+    });
+  };
+  $('clear-wl').onclick = function () { state.wordlist = null; $('info-wl').textContent = 'Built-in lists'; $('clear-wl').hidden = true; live(); };
+  $('ex-hit').onclick = function () { loadExample('hit'); };
+  $('ex-coin').onclick = function () { loadExample('coin'); };
+  $('ex-clear').onclick = function () {
+    state.files = {}; state.isExample = false;
+    ['digits', 'text-en', 'text-fr', 'targets', 'markers'].forEach(function (id) { $(id).value = ''; });
+    $('example-banner').hidden = true; live();
+  };
+  $('run').onclick = function () {
+    var inp = gatherInputs();
+    if (inp.errors.length) { updateRunState(); return; }
+    if (state.locked) { startRun(inp, state.locked.fp); return; }
+    startRun(inp, null);
+  };
+
+  // ---------------- start ----------------
+  buildRestrict();
+  var draft = load(DRAFT_KEY);
+  if (draft && !draft.example && (draft.en || draft.fr || draft.digits)) {
+    $('digits').value = draft.digits || ''; $('text-en').value = draft.en || ''; $('text-fr').value = draft.fr || '';
+    $('targets').value = draft.targets || ''; $('markers').value = draft.markers || '';
+    $('mode-' + (draft.mode === 'letters' ? 'letters' : 'targets')).checked = true;
+    $('example-banner').hidden = true;
+    refresh();
+    $('results').innerHTML = '<h2>Ready</h2><p class="help">Your last inputs were restored. Press "Test these digits" when the instrument check has passed.</p>';
+  } else {
+    loadExample('hit');
+    var ex = D.example;
+    renderResults(ex.info, ex.results, null, true);
+  }
+  var cached = load(GATE_KEY);
+  if (cached && cached.passed) { state.gate = 'passed'; state.checks = cached.checks; renderGate(1); }
+  else runSelftest();
+})();
+</script>

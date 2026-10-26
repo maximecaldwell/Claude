@@ -25,7 +25,7 @@ import numpy as np
 
 from .text import fold
 
-MAX_WORD = 15
+MAX_WORD = 13  # 27**13 still fits the 64-bit word codes used below
 
 
 def read_word_file(path: str) -> List[str]:

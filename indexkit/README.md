@@ -12,7 +12,19 @@ indexkit only measures whether there is a signal. It never tells you what a sign
 
 ---
 
-## 0. The easiest way: double-click
+## The easiest way: the web page (nothing to install)
+
+Open the indexkit page in your browser (the link Claude gave you). Paste the article, type the digits,
+list the place names, and press **Test these digits**. Everything runs inside your browser; your texts
+are not sent anywhere. The page runs the same instrument check before it lets you test anything.
+
+The page is built from `web/` in this folder (`python3 web/build.py` makes `web/indexkit.html`). Its
+engine is a JavaScript copy of the Python one; `web/crosscheck.js` confirms both give identical scores
+on the same inputs. Only the random draws differ, so p-values agree up to normal random variation.
+
+---
+
+## 0. Double-click (Mac, no typing)
 
 1. Download and unzip the folder (step 1 below), and open the `indexkit` folder in Finder.
 2. **Right-click `setup.command` → Open → Open.** (The right-click is needed only the first time,

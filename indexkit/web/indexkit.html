@@ -1,0 +1,1874 @@
+<title>indexkit</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: a surveyor's field sheet. Inputs on the left as numbered steps, the
+   verdict on the right; one column on phones. Survey-blue accent on cool paper. */
+:root {
+  --paper: #eef1ee;
+  --sheet: #fbfcfa;
+  --ink: #18222c;
+  --muted: #56636e;
+  --rule: #cfd7d4;
+  --accent: #1f5c99;
+  --accent-ink: #ffffff;
+  --sig: #1c7444;
+  --sig-bg: #e1f1e7;
+  --null: #5d6670;
+  --null-bg: #e7eaec;
+  --warn: #9a4519;
+  --warn-bg: #f8e9df;
+  --chip: #e6edf3;
+  --hit: #fff1b8;
+  --hit-ink: #4a3b00;
+  --f-display: "Bricolage Grotesque", "Avenir Next", "Segoe UI", sans-serif;
+  --f-body: "Atkinson Hyperlegible", "Helvetica Neue", Arial, sans-serif;
+  --f-mono: "JetBrains Mono", "SF Mono", Menlo, Consolas, monospace;
+  --r: 10px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0f1418; --sheet: #161d23; --ink: #e4eaee; --muted: #94a2ad; --rule: #2b3640;
+    --accent: #7db1e6; --accent-ink: #0c1620; --sig: #6fd29a; --sig-bg: #163324; --null: #a7b1ba;
+    --null-bg: #222b33; --warn: #f0a57a; --warn-bg: #3a2418; --chip: #22303b; --hit: #4d4110; --hit-ink: #ffe9a3;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #0f1418; --sheet: #161d23; --ink: #e4eaee; --muted: #94a2ad; --rule: #2b3640;
+  --accent: #7db1e6; --accent-ink: #0c1620; --sig: #6fd29a; --sig-bg: #163324; --null: #a7b1ba;
+  --null-bg: #222b33; --warn: #f0a57a; --warn-bg: #3a2418; --chip: #22303b; --hit: #4d4110; --hit-ink: #ffe9a3;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body {
+  background: var(--paper); color: var(--ink); font-family: var(--f-body); font-size: 16px; line-height: 1.5;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 48px;
+}
+h1, h2, h3, h4 { font-family: var(--f-display); text-wrap: balance; margin: 0; line-height: 1.15; }
+button, input, textarea, select { font: inherit; color: inherit; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.wrap { max-width: 1240px; margin: 0 auto; }
+.top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 24px; padding-block: 22px 18px; }
+.brand { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+.brand h1 { font-size: 2rem; font-weight: 800; letter-spacing: -0.02em; }
+.brand h1 b { color: var(--accent); }
+.brand p { margin: 0; color: var(--muted); }
+.gate { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.pill { display: inline-flex; align-items: center; gap: 8px; border-radius: 999px; padding: 6px 14px; font-weight: 700; font-size: 0.9rem; white-space: nowrap; }
+.pill.ok { background: var(--sig-bg); color: var(--sig); }
+.pill.busy { background: var(--chip); color: var(--accent); }
+.pill.bad { background: var(--warn-bg); color: var(--warn); }
+.pill .dot { width: 8px; height: 8px; border-radius: 50%; background: currentColor; }
+.linkish { background: none; border: 0; padding: 0; color: var(--accent); text-decoration: underline; cursor: pointer; font-size: 0.9rem; }
+.grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 24px; align-items: start; }
+@media (min-width: 1000px) { .grid { grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr); } .results { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 12px); max-height: calc(100vh - 24px); overflow: auto; } }
+.sheet { background: var(--sheet); border: 1px solid var(--rule); border-radius: var(--r); }
+fieldset { border: 0; margin: 0; padding: 0; min-width: 0; }
+.inputs { display: flex; flex-direction: column; gap: 16px; min-width: 0; }
+.step { padding: 18px 20px; display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.step h2 { font-size: 1.2rem; display: flex; align-items: center; gap: 10px; }
+.step h2 .n { font-family: var(--f-mono); font-size: 0.85rem; color: var(--accent-ink); background: var(--accent); border-radius: 6px; padding: 1px 7px; }
+.help { margin: 0; color: var(--muted); font-size: 0.93rem; max-width: 65ch; }
+label.lab { font-weight: 700; font-size: 0.95rem; }
+input[type="text"], input[type="number"], textarea {
+  width: 100%; background: var(--paper); border: 1px solid var(--rule); border-radius: 8px; padding: 10px 12px;
+}
+textarea { font-family: var(--f-mono); font-size: 0.85rem; line-height: 1.45; resize: vertical; }
+#digits { font-family: var(--f-mono); font-size: 1.5rem; letter-spacing: 0.08em; padding: 12px 14px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; min-height: 28px; }
+.chip { font-family: var(--f-mono); font-size: 0.85rem; background: var(--chip); border-radius: 6px; padding: 2px 8px; font-variant-numeric: tabular-nums; }
+.sub { color: var(--muted); font-size: 0.88rem; }
+.tabs { display: flex; gap: 6px; flex-wrap: wrap; }
+.tab { border: 1px solid var(--rule); background: var(--paper); border-radius: 8px 8px 0 0; padding: 6px 14px; cursor: pointer; font-weight: 700; }
+.tab[aria-selected="true"] { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+.pane { display: flex; flex-direction: column; gap: 8px; }
+.row { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; }
+.btn { border: 1px solid var(--rule); background: var(--sheet); border-radius: 8px; padding: 8px 14px; cursor: pointer; font-weight: 700; }
+.btn:hover:not(:disabled) { border-color: var(--accent); color: var(--accent); }
+.btn.primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); font-size: 1.05rem; padding: 12px 22px; }
+.btn.primary:hover:not(:disabled) { color: var(--accent-ink); filter: brightness(1.08); }
+.btn:disabled { opacity: 0.5; cursor: not-allowed; }
+.filebtn { position: relative; overflow: hidden; }
+.filebtn input { position: absolute; inset: 0; opacity: 0; cursor: pointer; }
+.notice { border-radius: 8px; padding: 10px 12px; font-size: 0.92rem; display: flex; flex-direction: column; gap: 8px; align-items: flex-start; }
+.notice.warn { background: var(--warn-bg); color: var(--warn); }
+.notice.info { background: var(--chip); }
+.radios { display: flex; flex-direction: column; gap: 6px; }
+.radios label { display: flex; gap: 8px; align-items: baseline; cursor: pointer; }
+details.step > summary { cursor: pointer; font-family: var(--f-display); font-weight: 600; font-size: 1.1rem; }
+.checks { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 4px 12px; font-size: 0.92rem; }
+.checks label { display: flex; gap: 6px; align-items: center; }
+.group-title { font-weight: 700; font-size: 0.9rem; margin-top: 6px; }
+.three { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; }
+.actions { padding: 18px 20px; display: flex; flex-direction: column; gap: 12px; }
+.space { font-size: 1rem; }
+.space strong { font-family: var(--f-mono); font-variant-numeric: tabular-nums; }
+.convlist { font-family: var(--f-mono); font-size: 0.78rem; max-height: 260px; overflow: auto; background: var(--paper); border-radius: 8px; padding: 8px 10px; white-space: pre; }
+.banner { padding: 14px 18px; display: flex; flex-direction: column; gap: 8px; border-left: 4px solid var(--accent); }
+.results { padding: 22px; display: flex; flex-direction: column; gap: 18px; min-width: 0; }
+.results h2 { font-size: 1.45rem; }
+.nullbox { border: 1px dashed var(--rule); border-radius: 8px; padding: 12px 14px; font-size: 0.93rem; }
+.nullbox b { font-family: var(--f-display); }
+.lang { border: 1px solid var(--rule); border-radius: var(--r); padding: 16px 18px; display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+.lang.sig { border-color: var(--sig); box-shadow: inset 4px 0 0 var(--sig); }
+.lang header { display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; }
+.lang h3 { font-size: 1.25rem; }
+.verdict { border-radius: 999px; padding: 4px 12px; font-weight: 700; font-size: 0.9rem; }
+.verdict.sig { background: var(--sig-bg); color: var(--sig); }
+.verdict.null { background: var(--null-bg); color: var(--null); }
+.pline { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+.pbig { font-family: var(--f-mono); font-size: 1.9rem; font-weight: 600; font-variant-numeric: tabular-nums; }
+.facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 10px 16px; margin: 0; }
+.facts div { border-top: 1px solid var(--rule); padding-top: 6px; }
+.facts dt { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); }
+.facts dd { margin: 0; font-family: var(--f-mono); font-variant-numeric: tabular-nums; }
+.facts dd small { display: block; font-family: var(--f-body); color: var(--muted); }
+.top5 { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; counter-reset: t; }
+.top5 li { counter-increment: t; display: grid; grid-template-columns: 1.6em minmax(0, 1fr); gap: 2px 8px; }
+.top5 li::before { content: counter(t); font-family: var(--f-mono); color: var(--muted); grid-row: span 3; }
+.conv { font-family: var(--f-mono); font-size: 0.8rem; overflow-wrap: anywhere; }
+.same { color: var(--muted); }
+.extract { display: flex; flex-wrap: wrap; gap: 4px; }
+.extract .chip.hit { background: var(--hit); color: var(--hit-ink); font-weight: 600; }
+.extract .chip.gap { color: var(--muted); }
+.letters { font-family: var(--f-mono); font-size: 1.1rem; letter-spacing: 0.15em; font-weight: 600; }
+.meta { font-size: 0.82rem; color: var(--muted); }
+.signal { font-family: var(--f-display); font-weight: 800; font-size: 1.05rem; border-top: 2px solid var(--ink); padding-top: 12px; }
+.progress { height: 8px; background: var(--chip); border-radius: 99px; overflow: hidden; }
+.progress > div { height: 100%; background: var(--accent); width: 0; transition: width 0.2s; }
+.locked { background: var(--warn-bg); color: var(--warn); border-radius: 8px; padding: 10px 12px; display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; justify-content: space-between; }
+.fp { font-family: var(--f-mono); font-size: 0.85rem; overflow-wrap: anywhere; }
+.checklist { font-size: 0.85rem; display: flex; flex-direction: column; gap: 3px; max-height: 300px; overflow: auto; }
+.checklist .bad { color: var(--warn); font-weight: 700; }
+.small { font-size: 0.85rem; }
+@media (prefers-reduced-motion: reduce) { .progress > div { transition: none; } }
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <div class="brand">
+      <h1>index<b>kit</b></h1>
+      <p>Is this digit string really an index into this text? An honest test.</p>
+    </div>
+    <div class="gate" id="gate" aria-live="polite"></div>
+  </header>
+
+  <main class="grid">
+    <div class="inputs">
+      <div class="sheet banner" id="example-banner">
+        <strong>You are looking at an example.</strong>
+        <span class="help">A made-up bilingual article about a village called Lac-des-Lanternes. Load your own article below, or try the two examples.</span>
+        <div class="row">
+          <button class="btn" type="button" id="ex-hit">Example: planted index</button>
+          <button class="btn" type="button" id="ex-coin">Example: coincidence</button>
+          <button class="btn" type="button" id="ex-clear">Start with empty fields</button>
+        </div>
+      </div>
+
+      <div class="locked" id="locked-bar" hidden>
+        <span><strong>Locked test.</strong> Everything is fixed by the record. Fingerprint <span class="fp" id="locked-fp"></span></span>
+        <button class="btn" type="button" id="unlock">Unlock</button>
+      </div>
+
+      <fieldset id="fs">
+        <div class="inputs">
+          <section class="sheet step">
+            <h2><span class="n">1</span>The digits</h2>
+            <p class="help">Type them exactly as they appear in the clue, with the same spaces or dashes.</p>
+            <input type="text" id="digits" inputmode="numeric" autocomplete="off" spellcheck="false" aria-label="Digit string">
+            <div class="chips" id="digits-info"></div>
+          </section>
+
+          <section class="sheet step">
+            <h2><span class="n">2</span>The article</h2>
+            <p class="help">Paste the text, or open a .txt file. The first line must be the title. Leave an empty line between paragraphs. The French version is optional; each language is tested on its own.</p>
+            <div class="tabs" role="tablist">
+              <button class="tab" role="tab" type="button" id="tab-en" aria-selected="true" aria-controls="pane-en">English</button>
+              <button class="tab" role="tab" type="button" id="tab-fr" aria-selected="false" aria-controls="pane-fr">French</button>
+            </div>
+            <div class="pane" id="pane-en" role="tabpanel">
+              <textarea id="text-en" rows="11" spellcheck="false" aria-label="English article"></textarea>
+              <div class="row">
+                <span class="btn filebtn">Open a .txt file<input type="file" id="file-en" accept=".txt,text/plain" aria-label="Open English text file"></span>
+                <button class="btn" type="button" id="clear-en">Clear</button>
+                <span class="sub" id="info-en"></span>
+              </div>
+              <div id="fix-en"></div>
+            </div>
+            <div class="pane" id="pane-fr" role="tabpanel" hidden>
+              <textarea id="text-fr" rows="11" spellcheck="false" aria-label="French article"></textarea>
+              <div class="row">
+                <span class="btn filebtn">Open a .txt file<input type="file" id="file-fr" accept=".txt,text/plain" aria-label="Open French text file"></span>
+                <button class="btn" type="button" id="clear-fr">Clear</button>
+                <span class="sub" id="info-fr"></span>
+              </div>
+              <div id="fix-fr"></div>
+            </div>
+          </section>
+
+          <section class="sheet step">
+            <h2><span class="n">3</span>What counts as a hit</h2>
+            <div class="radios">
+              <label><input type="radio" name="mode" value="targets" id="mode-targets" checked> <span><strong>Words from my list</strong> (for example place names)</span></label>
+              <label><input type="radio" name="mode" value="letters" id="mode-letters"> <span><strong>Letters that spell real words</strong> (no list needed)</span></label>
+            </div>
+            <div id="targets-box" class="pane">
+              <label class="lab" for="targets">My list, one per line</label>
+              <textarea id="targets" rows="6" spellcheck="false"></textarea>
+              <p class="help">Capitals, accents, hyphens and apostrophes are ignored: Val-d'Or = VAL D’OR. Write your list before you look at any results.</p>
+            </div>
+            <div id="letters-box" class="pane" hidden>
+              <p class="help">Uses a built-in list of common English or French words, short words included. You can use your own list instead (a .txt file, one word per line).</p>
+              <div class="row">
+                <span class="btn filebtn">Use my own word list<input type="file" id="file-wl" accept=".txt,text/plain" aria-label="Open word list"></span>
+                <button class="btn" type="button" id="clear-wl" hidden>Back to the built-in list</button>
+                <span class="sub" id="info-wl">Built-in lists</span>
+              </div>
+            </div>
+          </section>
+
+          <details class="sheet step" id="advanced">
+            <summary>More options</summary>
+            <label class="lab" for="markers">Extra starting lines (optional, one per line)</label>
+            <textarea id="markers" rows="2" spellcheck="false" placeholder="Chapter 2|Chapitre 2"></textarea>
+            <p class="help">Counting can also start at the line that contains this text. Use | to give the English and French wording.</p>
+            <div class="three">
+              <div><label class="lab" for="draws">Random draws</label><input type="number" id="draws" min="10000" step="1000" value="10000"></div>
+              <div><label class="lab" for="seed">Seed</label><input type="number" id="seed" step="1" value="1856"></div>
+              <div><label class="lab" for="threshold">Pass threshold</label><input type="number" id="threshold" min="0.0001" max="0.5" step="0.001" value="0.01"></div>
+            </div>
+            <p class="help">Narrowing the search makes the test more sensitive, but only if you decide before seeing any result. Use "Lock in the test first" if you do.</p>
+            <div id="restrict"></div>
+          </details>
+        </div>
+      </fieldset>
+
+      <section class="sheet actions">
+        <div class="space" id="space"></div>
+        <details><summary class="small">See every way of counting</summary><div class="convlist" id="convlist"></div></details>
+        <div id="restrict-warn"></div>
+        <div class="row">
+          <button class="btn primary" type="button" id="run">Test these digits</button>
+          <button class="btn" type="button" id="lock">Lock in the test first</button>
+        </div>
+        <p class="help" id="why"></p>
+        <div id="lock-out"></div>
+      </section>
+
+      <details class="sheet step" id="locked-run">
+        <summary>Run a locked test</summary>
+        <p class="help">Paste a locked test record you made earlier. The page shows its fingerprint so you can compare it with the one you sent, then runs exactly what it says.</p>
+        <textarea id="locked-in" rows="4" spellcheck="false" aria-label="Locked test record"></textarea>
+        <div class="row"><button class="btn" type="button" id="locked-go">Check the record and run it</button></div>
+        <div id="locked-msg"></div>
+      </details>
+    </div>
+
+    <section class="sheet results" id="results" aria-live="polite"></section>
+  </main>
+</div>
+
+<script id="ik-engine">
+/* indexkit engine for the browser.
+ *
+ * A line-by-line port of the Python package (indexkit/*.py).  Same
+ * conventions, same scores, same tail model and p-value rule; only the
+ * random number generator differs, so p-values agree with the Python tool
+ * up to Monte-Carlo noise.  web/crosscheck.js verifies the port against the
+ * Python code on the same inputs.
+ *
+ * Works as a plain <script> (defines self.IndexKit), inside a Web Worker,
+ * and under node (module.exports).
+ */
+(function (root) {
+  'use strict';
+
+  var VERSION = '1.0.0-web';
+  var MIN_DRAWS = 10000;
+
+  // ------------------------------------------------------------------
+  // Text: Unicode clean-up, folding, tokenizers (text.py)
+  // ------------------------------------------------------------------
+
+  // Exactly Python's str.isspace() set.
+  var WS = '\\t\\n\\v\\f\\r\\x1c-\\x1f \\x85\\xa0\\u1680\\u2000-\\u200a\\u2028\\u2029\\u202f\\u205f\\u3000';
+  var RE_WS_TOKEN = new RegExp('[^' + WS + ']+', 'gu');
+  var RE_IS_WS = new RegExp('^[' + WS + ']$', 'u');
+  var RE_LSTRIP = new RegExp('^[' + WS + ']+', 'u');
+  var RE_RSTRIP = new RegExp('[' + WS + ']+$', 'u');
+  var RE_ALNUM_RUN = /[\p{L}\p{N}]+/gu;
+  var RE_ALNUM = /^[\p{L}\p{N}]$/u;
+  var RE_HAS_ALNUM = /[\p{L}\p{N}]/u;
+  var RE_ALPHA = /^\p{L}$/u;
+  var RE_SENT_END = new RegExp('[.!?\\u2026]+(?:[' + WS + ']*[\\u00bb\\u201d)\\]]|["\'\\u2019])*(?=[' + WS + ']|$)', 'gu');
+
+  function lstrip(s) { return s.replace(RE_LSTRIP, ''); }
+  function rstrip(s) { return s.replace(RE_RSTRIP, ''); }
+  function strip(s) { return rstrip(lstrip(s)); }
+
+  function normalize(raw) {
+    if (raw.charAt(0) === '﻿') raw = raw.slice(1);
+    raw = raw.replace(/\r\n/g, '\n').replace(/\r/g, '\n');
+    return raw.normalize('NFC');
+  }
+
+  var LIG = { 'œ': 'oe', 'Œ': 'oe', 'æ': 'ae', 'Æ': 'ae', 'ß': 'ss', 'ẞ': 'ss' };
+
+  function fold(s) {
+    var out = '';
+    for (var ch0 of s.normalize('NFKD')) {
+      var ch = LIG[ch0] || ch0;
+      var low = ch.toLowerCase();
+      for (var c of low) if (c >= 'a' && c <= 'z') out += c;
+    }
+    return out;
+  }
+
+  function letterCode(s) {
+    var f = fold(s);
+    return f ? f.charCodeAt(0) - 97 : -1;
+  }
+
+  var TOKENIZERS = ['ws', 'ws-drop', 'strip', 'split'];
+  var TOKENIZER_HELP = {
+    'ws': "split on whitespace only; standalone punctuation such as ':' '–' '«' counts as a word",
+    'ws-drop': 'split on whitespace, then drop tokens that contain no letter or digit',
+    'strip': 'split on whitespace, strip punctuation from both ends of each token, drop empty ones',
+    'split': "split on whitespace, hyphens and apostrophes too (Val-d'Or -> Val d Or, l'Or -> l Or)"
+  };
+
+  function hasAlnum(s) { return RE_HAS_ALNUM.test(s); }
+
+  function tokenize(s, name) {
+    var out = [], m;
+    if (name === 'split') {
+      RE_ALNUM_RUN.lastIndex = 0;
+      while ((m = RE_ALNUM_RUN.exec(s)) !== null) out.push([m[0], m.index, m.index + m[0].length]);
+      return out;
+    }
+    var raw = [];
+    RE_WS_TOKEN.lastIndex = 0;
+    while ((m = RE_WS_TOKEN.exec(s)) !== null) raw.push([m[0], m.index, m.index + m[0].length]);
+    if (name === 'ws') return raw;
+    if (name === 'ws-drop') return raw.filter(function (t) { return hasAlnum(t[0]); });
+    if (name === 'strip') {
+      for (var k = 0; k < raw.length; k++) {
+        var tok = raw[k][0], a = raw[k][1];
+        var cps = Array.from(tok);
+        var i = 0, j = cps.length;
+        while (i < j && !RE_ALNUM.test(cps[i])) i++;
+        while (j > i && !RE_ALNUM.test(cps[j - 1])) j--;
+        if (i < j) {
+          var pre = cps.slice(0, i).join('').length;
+          var body = cps.slice(i, j).join('');
+          out.push([body, a + pre, a + pre + body.length]);
+        }
+      }
+      return out;
+    }
+    throw new Error('unknown tokenizer ' + name);
+  }
+
+  function tokens(s, name) { return tokenize(normalize(s), name).map(function (t) { return t[0]; }); }
+
+  function lineSpans(p) {
+    var out = [], pos = 0, lines = p.split('\n');
+    for (var i = 0; i < lines.length; i++) {
+      var line = lines[i];
+      var a = pos + (line.length - lstrip(line).length);
+      var b = pos + rstrip(line).length;
+      if (b > a) out.push([p.slice(a, b), a, b]);
+      pos += line.length + 1;
+    }
+    return out;
+  }
+
+  function sentenceSpans(p) {
+    var out = [], start = 0, ends = [], m;
+    RE_SENT_END.lastIndex = 0;
+    while ((m = RE_SENT_END.exec(p)) !== null) {
+      ends.push(m.index + m[0].length);
+      if (m[0].length === 0) RE_SENT_END.lastIndex++;
+    }
+    if (!ends.length || ends[ends.length - 1] < p.length) ends.push(p.length);
+    for (var i = 0; i < ends.length; i++) {
+      var end = ends[i], seg = p.slice(start, end);
+      var a = start + (seg.length - lstrip(seg).length);
+      var b = start + rstrip(seg).length;
+      if (b > a && hasAlnum(p.slice(a, b))) out.push([p.slice(a, b), a, b]);
+      start = end;
+    }
+    return out;
+  }
+
+  function Text(label, paragraphs, path, sha) {
+    if (!paragraphs.length) throw new Error('text ' + label + ' is empty');
+    this.label = label;
+    this.paragraphs = paragraphs;
+    this.path = path || '(pasted)';
+    this.sha256 = sha || sha256Hex(utf8(paragraphs.join('\n\n')));
+  }
+  Text.fromString = function (label, raw, path, sha) {
+    var text = normalize(raw);
+    var lines = text.split('\n');
+    var i = 0;
+    while (i < lines.length && !strip(lines[i])) i++;
+    if (i === lines.length) throw new Error('The ' + label + ' text is empty.');
+    var paragraphs = [strip(lines[i])], current = [];
+    for (var k = i + 1; k < lines.length; k++) {
+      var line = lines[k];
+      if (strip(line)) current.push(rstrip(line));
+      else if (current.length) { paragraphs.push(current.join('\n')); current = []; }
+    }
+    if (current.length) paragraphs.push(current.join('\n'));
+    return new Text(label, paragraphs, path, sha);
+  };
+  Text.prototype.wordCount = function () {
+    var n = 0;
+    for (var i = 0; i < this.paragraphs.length; i++) n += tokenize(this.paragraphs[i], 'ws-drop').length;
+    return n;
+  };
+  Text.prototype.findMarker = function (marker) {
+    var alts = normalize(marker).split('|').map(strip).filter(Boolean);
+    for (var ai = 0; ai < alts.length; ai++) {
+      var needle = alts[ai].toLowerCase();
+      for (var pi = 0; pi < this.paragraphs.length; pi++) {
+        var ls = lineSpans(this.paragraphs[pi]);
+        for (var li = 0; li < ls.length; li++) {
+          if (ls[li][0].toLowerCase().indexOf(needle) >= 0) return [pi, ls[li][1], alts[ai]];
+        }
+      }
+    }
+    return null;
+  };
+
+  // ------------------------------------------------------------------
+  // Random numbers (seeded; xoshiro128**)
+  // ------------------------------------------------------------------
+
+  function splitmix32(a) {
+    return function () {
+      a = (a + 0x9e3779b9) | 0;
+      var t = a ^ (a >>> 16);
+      t = Math.imul(t, 0x21f0aaad);
+      t = t ^ (t >>> 15);
+      t = Math.imul(t, 0x735a2d97);
+      return (t ^ (t >>> 15)) >>> 0;
+    };
+  }
+
+  function makeRng(parts) {
+    var h = 0x811c9dc5;
+    for (var i = 0; i < parts.length; i++) {
+      var v = parts[i] >>> 0;
+      for (var k = 0; k < 4; k++) { h ^= (v >>> (8 * k)) & 255; h = Math.imul(h, 0x01000193); }
+      h ^= Math.floor(parts[i] / 4294967296) | 0;
+      h = Math.imul(h, 0x01000193);
+    }
+    var sm = splitmix32(h);
+    var s0 = sm(), s1 = sm(), s2 = sm(), s3 = sm();
+    function next() {
+      var r = Math.imul(s1, 5);
+      r = Math.imul((r << 7) | (r >>> 25), 9) >>> 0;
+      var t = s1 << 9;
+      s2 ^= s0; s3 ^= s1; s1 ^= s2; s0 ^= s3; s2 ^= t;
+      s3 = (s3 << 11) | (s3 >>> 21);
+      return r;
+    }
+    return {
+      random: function () { return next() / 4294967296; },
+      int: function (n) { return Math.floor(next() / 4294967296 * n); }
+    };
+  }
+
+  // ------------------------------------------------------------------
+  // Digits (digits.py)
+  // ------------------------------------------------------------------
+
+  var GROUPINGS = ['given', 'single', 'pairs', 'cumulative', 'reversed'];
+  var GROUPING_HELP = {
+    'given': 'numbers exactly as grouped in the string (no separators = one big number)',
+    'single': 'every digit on its own',
+    'pairs': 'digits taken two at a time, ignoring the separators (an odd last digit stays single)',
+    'cumulative': 'the given numbers are steps: each position = previous position + next number',
+    'reversed': 'the whole string read backwards, then grouped as given'
+  };
+  var MAX_DIGITS = 60, MAX_GROUP = 15;
+
+  function DigitString(raw) {
+    this.raw = strip(raw);
+    this.groups = this.raw.match(/[0-9]+/g) || [];
+    this.seps = this.raw.split(/[0-9]+/);
+    if (!this.groups.length) throw new Error('No digits found in "' + raw + '".');
+    this.lengths = this.groups.map(function (g) { return g.length; });
+    this.nDigits = this.lengths.reduce(function (a, b) { return a + b; }, 0);
+    if (this.nDigits > MAX_DIGITS) throw new Error('At most ' + MAX_DIGITS + ' digits are supported.');
+    if (Math.max.apply(null, this.lengths) > MAX_GROUP) throw new Error('A single group may have at most ' + MAX_GROUP + ' digits.');
+  }
+  DigitString.prototype.shape = function () { return this.lengths.join('-'); };
+  DigitString.prototype.digits = function () { return Array.from(this.groups.join('')).map(Number); };
+  DigitString.prototype.randomDigits = function (rng, out) {
+    for (var i = 0; i < this.nDigits; i++) out[i] = rng.int(10);
+    return out;
+  };
+
+  function givenNums(d, lengths, out) {
+    var pos = 0;
+    for (var g = 0; g < lengths.length; g++) {
+      var v = 0;
+      for (var i = 0; i < lengths[g]; i++) v = v * 10 + d[pos + i];
+      out.push(v);
+      pos += lengths[g];
+    }
+    return out;
+  }
+
+  function numbers(grouping, d, lengths) {
+    var n = d.length, i, out;
+    if (grouping === 'given') return givenNums(d, lengths, []);
+    if (grouping === 'single') return Array.prototype.slice.call(d, 0, n);
+    if (grouping === 'pairs') {
+      var L = [];
+      for (i = 0; i < Math.floor(n / 2); i++) L.push(2);
+      if (n % 2) L.push(1);
+      return givenNums(d, L, []);
+    }
+    if (grouping === 'cumulative') {
+      out = givenNums(d, lengths, []);
+      for (i = 1; i < out.length; i++) out[i] += out[i - 1];
+      return out;
+    }
+    if (grouping === 'reversed') {
+      var r = [];
+      for (i = n - 1; i >= 0; i--) r.push(d[i]);
+      return givenNums(r, lengths.slice().reverse(), []);
+    }
+    throw new Error('unknown grouping ' + grouping);
+  }
+
+  function distinctGroupings(ds, groupings) {
+    var rng = makeRng([0, 7]);
+    var probes = [ds.digits()];
+    for (var k = 0; k < 50; k++) probes.push(ds.randomDigits(rng, new Array(ds.nDigits)));
+    var kept = [], outs = [];
+    groupings.forEach(function (g) {
+      var out = probes.map(function (p) { return numbers(g, p, ds.lengths).join(','); }).join(';');
+      var idx = outs.indexOf(out);
+      if (idx >= 0) kept[idx].push(g);
+      else { kept.push([g]); outs.push(out); }
+    });
+    return kept;
+  }
+
+  // ------------------------------------------------------------------
+  // Conventions (conventions.py)
+  // ------------------------------------------------------------------
+
+  var UNITS = ['word', 'letter', 'nonspace', 'line', 'sentence', 'paragraph'];
+  var UNIT_HELP = {
+    'word': 'the n-th word (depends on the tokenizer)',
+    'letter': 'the n-th letter (a-z and accented letters; spaces, digits, punctuation skipped)',
+    'nonspace': 'the n-th character that is not a space (punctuation and digits count)',
+    'line': 'the n-th non-empty line of the file',
+    'sentence': 'the n-th sentence',
+    'paragraph': 'the n-th paragraph (the title is paragraph 1 when counting from the title)'
+  };
+  var READS = {
+    word: ['item', 'initial'], letter: ['char'], nonspace: ['char'],
+    line: ['item', 'initial'], sentence: ['item', 'initial'], paragraph: ['item', 'initial']
+  };
+  var BASES = [0, 1];
+  var DEFAULT_STARTS = ['title', 'body'];
+
+  function ordered(allowed, given) { return allowed.filter(function (x) { return given.indexOf(x) >= 0; }); }
+
+  function Config(o) {
+    o = o || {};
+    if (o.mode !== 'targets' && o.mode !== 'letters') throw new Error("score must be 'targets' or 'letters'");
+    var chk = function (name, given, allowed, mayBeEmpty) {
+      var bad = given.filter(function (g) { return allowed.indexOf(g) < 0; });
+      if (bad.length || (!given.length && !mayBeEmpty)) throw new Error('Bad ' + name + ' list: ' + given.join(','));
+    };
+    var units = o.units || UNITS, toks = o.tokenizers || TOKENIZERS, bases = o.bases || BASES;
+    var starts = o.starts || DEFAULT_STARTS, groupings = o.groupings || GROUPINGS, markers = o.markers || [];
+    chk('unit', units, UNITS); chk('tokenizer', toks, TOKENIZERS); chk('base', bases, BASES);
+    chk('start', starts, DEFAULT_STARTS, true); chk('grouping', groupings, GROUPINGS);
+    if (!starts.length && !markers.length) throw new Error('Need at least one start point.');
+    this.mode = o.mode;
+    this.units = ordered(UNITS, units);
+    this.tokenizers = ordered(TOKENIZERS, toks);
+    this.bases = ordered(BASES, bases);
+    this.starts = ordered(DEFAULT_STARTS, starts);
+    this.markers = markers.slice();
+    this.groupings = ordered(GROUPINGS, groupings);
+  }
+  Config.prototype.isRestricted = function () {
+    return this.units.length !== UNITS.length || this.tokenizers.length !== TOKENIZERS.length ||
+      this.bases.length !== BASES.length || this.starts.length !== DEFAULT_STARTS.length ||
+      this.groupings.length !== GROUPINGS.length;
+  };
+  Config.prototype.toDict = function () {
+    return { score: this.mode, units: this.units, tokenizers: this.tokenizers, bases: this.bases,
+      starts: this.starts, markers: this.markers, groupings: this.groupings };
+  };
+  Config.fromDict = function (d) {
+    return new Config({ mode: d.score, units: d.units, tokenizers: d.tokenizers, bases: d.bases,
+      starts: d.starts, markers: d.markers, groupings: d.groupings });
+  };
+
+  function View(name, kind, paraCodes, paraDisp, start) {
+    this.name = name;
+    this.aliases = [name];
+    this.kind = kind;
+    var P = paraCodes.length;
+    this.paraLen = new Int32Array(P);
+    this.paraBase = new Int32Array(P);
+    var total = 0;
+    for (var i = 0; i < P; i++) { this.paraBase[i] = total; this.paraLen[i] = paraCodes[i].length; total += paraCodes[i].length; }
+    this.flat = new Int32Array(total);
+    for (i = 0; i < P; i++) this.flat.set(paraCodes[i], this.paraBase[i]);
+    this.disp = [].concat.apply([], paraDisp);
+    this.start = start;
+    this.startFlat = start[0] === 'slot' ? this.paraBase[start[1]] : this.paraBase[start[1]] + start[2];
+    this.signature = kind + '|' + start.join(',') + '|' + paraCodes.map(function (c) { return Array.prototype.join.call(c, ','); }).join(';');
+  }
+
+  function unitItems(p, unit, tok) {
+    var out = [], i = 0;
+    if (unit === 'word') return tokenize(p, tok).map(function (t) { return [t[0], t[0], t[1], t[2]]; });
+    if (unit === 'letter' || unit === 'nonspace') {
+      for (var c of p) {
+        var keep = unit === 'letter' ? RE_ALPHA.test(c) : !RE_IS_WS.test(c);
+        if (keep) out.push([c, c, i, i + c.length]);
+        i += c.length;
+      }
+      return out;
+    }
+    var spans = unit === 'line' ? lineSpans(p) : unit === 'sentence' ? sentenceSpans(p) : [[p, 0, p.length]];
+    return spans.map(function (s) {
+      var first = tokenize(s[0], 'strip');
+      var w = first.length ? first[0][0] : '';
+      return [w, w, s[1], s[2]];
+    });
+  }
+
+  function TextViews(text, cfg) {
+    var self = this;
+    this.text = text;
+    this.vocab = new Map([['', 0]]);
+    this.views = [];
+    this.warnings = [];
+    this.nMerged = 0;
+    var bySig = new Map();
+    var starts = [];
+    cfg.starts.forEach(function (s) {
+      if (s === 'body' && text.paragraphs.length < 2) {
+        self.warnings.push("start 'body' skipped: " + text.label + ' has no paragraph after the title');
+        return;
+      }
+      starts.push([s, null]);
+    });
+    cfg.markers.forEach(function (m) {
+      var found = text.findMarker(m);
+      if (!found) self.warnings.push('marker "' + m + '" not found in ' + text.label + '; that start point is skipped for this text');
+      else starts.push(['marker:' + m, found]);
+    });
+    cfg.units.forEach(function (unit) {
+      var toks = unit === 'word' ? cfg.tokenizers : [null];
+      toks.forEach(function (tok) {
+        var items = text.paragraphs.map(function (p) { return unitItems(p, unit, tok); });
+        READS[unit].forEach(function (read) {
+          var kind = read === 'item' ? 'item' : 'letter';
+          if (cfg.mode === 'letters' && kind === 'item') return;
+          var codes = [], disp = [];
+          items.forEach(function (its) {
+            var arr = new Int32Array(its.length);
+            for (var k = 0; k < its.length; k++) arr[k] = kind === 'item' ? self._vid(fold(its[k][1])) : letterCode(its[k][1]);
+            codes.push(arr);
+            disp.push(its.map(function (it) { return it[0]; }));
+          });
+          starts.forEach(function (st) {
+            var sname = st[0], found = st[1], start;
+            if (!found) start = ['slot', sname === 'title' ? 0 : 1];
+            else {
+              var pi = found[0], ls = found[1], off = items[pi].length;
+              for (var k = 0; k < items[pi].length; k++) if (items[pi][k][3] > ls) { off = k; break; }
+              start = (pi === 0 && off === 0) ? ['slot', 0] : ['anchor', pi, off];
+            }
+            var parts = [unit].concat(tok ? [tok] : [], [read, 'from=' + sname]);
+            var v = new View(parts[0] + parts.slice(1).map(function (x) { return ' | ' + x; }).join(''), kind, codes, disp, start);
+            if (bySig.has(v.signature)) { self.views[bySig.get(v.signature)].aliases.push(v.name); self.nMerged++; }
+            else { bySig.set(v.signature, self.views.length); self.views.push(v); }
+          });
+        });
+      });
+    });
+  }
+  TextViews.prototype._vid = function (key) {
+    if (!this.vocab.has(key)) this.vocab.set(key, this.vocab.size);
+    return this.vocab.get(key);
+  };
+  TextViews.prototype.vocabList = function () {
+    var out = new Array(this.vocab.size);
+    this.vocab.forEach(function (i, k) { out[i] = k; });
+    return out;
+  };
+
+  function buildConventions(tv, ds, cfg) {
+    var groups = distinctGroupings(ds, cfg.groupings), convs = [];
+    tv.views.forEach(function (v, vi) {
+      groups.forEach(function (ga, gi) {
+        cfg.bases.forEach(function (b) {
+          var aliases = [];
+          v.aliases.forEach(function (vn) { ga.forEach(function (g) { aliases.push(vn + ' | ' + b + '-based | digits=' + g); }); });
+          convs.push({ viewIndex: vi, groupIndex: gi, grouping: ga[0], base: b,
+            name: v.name + ' | ' + b + '-based | digits=' + ga[0], aliases: aliases, unit: v.name.split(' ')[0] });
+        });
+      });
+    });
+    return { convs: convs, groups: groups };
+  }
+
+  // ------------------------------------------------------------------
+  // Scores (scoring.py)
+  // ------------------------------------------------------------------
+
+  var MAX_WORD = 13;
+
+  function uniqueKeys(words) {
+    var seen = new Set(), out = [];
+    words.forEach(function (w) { var k = fold(w); if (k && !seen.has(k)) { seen.add(k); out.push(k); } });
+    return out;
+  }
+
+  function parseList(text) {
+    return normalize(text || '').split('\n').map(strip).filter(function (l) { return l && l.charAt(0) !== '#'; });
+  }
+
+  function TargetScorer(targets, vocab) {
+    this.keys = uniqueKeys(targets);
+    if (!this.keys.length) throw new Error('The list of place names (targets) is empty.');
+    var V = vocab.length, keys = this.keys;
+    this.V = V;
+    this.single = new Int32Array(V).fill(-1);
+    var tnum = new Map();
+    keys.forEach(function (k, i) { tnum.set(k, i); });
+    for (var v = 0; v < V; v++) if (vocab[v] && tnum.has(vocab[v])) this.single[v] = tnum.get(vocab[v]);
+    this.vlen = new Int32Array(V);
+    for (v = 0; v < V; v++) this.vlen[v] = vocab[v].length;
+    this.multi = [];
+    for (var ti = 0; ti < keys.length; ti++) {
+      var t = keys[ti], ok = new Uint8Array(t.length * V), any0 = false;
+      for (v = 0; v < V; v++) {
+        var k = vocab[v];
+        if (!k || t.indexOf(k) < 0) continue;
+        for (var off = 0; off < t.length; off++) {
+          if (t.startsWith(k, off) && (off > 0 || k.length < t.length)) { ok[off * V + v] = 1; if (off === 0) any0 = true; }
+        }
+      }
+      if (any0) this.multi.push([ti, t.length, ok]);
+    }
+    this.letterTargets = keys.map(function (t) { return Array.from(t).map(function (c) { return c.charCodeAt(0) - 97; }); });
+    this.found = new Uint8Array(keys.length);
+  }
+  TargetScorer.prototype.mode = 'targets';
+  TargetScorer.prototype.score = function (kind, codes, K) {
+    var found = this.found, T = this.keys.length, j, k, c;
+    found.fill(0);
+    if (kind === 'item') {
+      for (k = 0; k < K; k++) { c = codes[k]; if (c >= 0 && this.single[c] >= 0) found[this.single[c]] = 1; }
+      var V = this.V, vlen = this.vlen;
+      for (var mi = 0; mi < this.multi.length; mi++) {
+        var ti = this.multi[mi][0], tlen = this.multi[mi][1], ok = this.multi[mi][2];
+        for (j = 0; j < K - 1; j++) {
+          var off = 0;
+          for (k = j; k < K; k++) {
+            c = codes[k];
+            if (c < 0 || !ok[Math.min(off, tlen - 1) * V + c]) break;
+            off += vlen[c];
+            if (off === tlen && k > j) found[ti] = 1;
+            if (off >= tlen) break;
+          }
+        }
+      }
+    } else {
+      for (var t = 0; t < T; t++) {
+        var tg = this.letterTargets[t], m = tg.length;
+        for (j = 0; j + m <= K; j++) {
+          var all = true;
+          for (var i = 0; i < m; i++) if (codes[j + i] !== tg[i]) { all = false; break; }
+          if (all) { found[t] = 1; break; }
+        }
+      }
+    }
+    var s = 0;
+    for (t = 0; t < T; t++) s += found[t];
+    this.lastHit = s >= 1;
+    return s;
+  };
+
+  function LetterScorer(words) {
+    var keys = uniqueKeys(words).filter(function (k) { return k.length <= MAX_WORD; });
+    if (!keys.length) throw new Error('The word list is empty.');
+    this.nWords = keys.length;
+    // trie over a-z
+    var child = [new Int32Array(26).fill(-1)], term = [0];
+    var maxlen = 0;
+    keys.forEach(function (k) {
+      var node = 0;
+      for (var i = 0; i < k.length; i++) {
+        var c = k.charCodeAt(i) - 97;
+        if (child[node][c] < 0) { child[node][c] = child.length; child.push(new Int32Array(26).fill(-1)); term.push(0); }
+        node = child[node][c];
+      }
+      term[node] = 1;
+      if (k.length > maxlen) maxlen = k.length;
+    });
+    this.child = new Int32Array(child.length * 26);
+    for (var n = 0; n < child.length; n++) this.child.set(child[n], n * 26);
+    this.term = Uint8Array.from(term);
+    this.maxlen = maxlen;
+    this.best = new Float64Array(MAX_DIGITS + 2);
+  }
+  LetterScorer.prototype.mode = 'letters';
+  LetterScorer.prototype.score = function (kind, codes, K) {
+    if (kind !== 'letter') throw new Error('letter scoring only applies to letter extracts');
+    var best = this.best, child = this.child, term = this.term, s, m, n = 0;
+    for (s = 0; s <= K; s++) best[s] = 0;
+    for (s = 0; s < K; s++) {
+      if (codes[s] >= 0) n++;
+      if (best[s] > best[s + 1]) best[s + 1] = best[s];
+      var node = 0, lim = Math.min(this.maxlen, K - s);
+      for (m = 1; m <= lim; m++) {
+        var c = codes[s + m - 1];
+        if (c < 0) break;
+        node = child[node * 26 + c];
+        if (node < 0) break;
+        if (term[node]) {
+          var cand = best[s] + m * m * 1024 + m;
+          if (cand > best[s + m]) best[s + m] = cand;
+        }
+      }
+    }
+    var sc = Math.floor(best[K] / 1024), cov = best[K] % 1024;
+    this.lastHit = n >= 3 && cov * 5 >= n * 4;
+    return sc;
+  };
+
+  // ------------------------------------------------------------------
+  // Engine (engine.py)
+  // ------------------------------------------------------------------
+
+  // Item codes at 0-based positions; -1 = nothing there.  order = null for
+  // the text as written, else a paragraph order with order[0] === 0.
+  function gatherInto(view, pos, K, order, out, seg) {
+    var k, p;
+    if (!order) {
+      var total = view.flat.length - view.startFlat;
+      for (k = 0; k < K; k++) { p = pos[k]; out[k] = (p >= 0 && p < total) ? view.flat[view.startFlat + p] : -1; }
+      return out;
+    }
+    var P = order.length, lens = seg.lens, offs = seg.offs, cum = seg.cum, s;
+    for (s = 0; s < P; s++) { lens[s] = view.paraLen[order[s]]; offs[s] = 0; }
+    if (view.start[0] === 'slot') { for (s = 0; s < view.start[1]; s++) lens[s] = 0; }
+    else {
+      var m = view.start[1], o = view.start[2], sm = 0;
+      while (order[sm] !== m) sm++;
+      for (s = 0; s < sm; s++) lens[s] = 0;
+      lens[sm] = view.paraLen[m] - o; offs[sm] = o;
+    }
+    var acc = 0;
+    for (s = 0; s < P; s++) { acc += lens[s]; cum[s] = acc; }
+    for (k = 0; k < K; k++) {
+      p = pos[k];
+      if (p < 0 || p >= acc) { out[k] = -1; continue; }
+      var lo = 0, hi = P - 1;
+      while (lo < hi) { var mid = (lo + hi) >> 1; if (cum[mid] > p) hi = mid; else lo = mid + 1; }
+      var before = cum[lo] - lens[lo];
+      out[k] = view.flat[view.paraBase[order[lo]] + offs[lo] + (p - before)];
+    }
+    return out;
+  }
+
+  function randomOrder(rng, P, out) {
+    out[0] = 0;
+    for (var i = 1; i < P; i++) out[i] = i;
+    for (i = P - 1; i > 1; i--) { var j = 1 + rng.int(i); var t = out[i]; out[i] = out[j]; out[j] = t; }
+    return out;
+  }
+
+  function Analysis(text, ds, cfg, targets, wordlist) {
+    this.text = text; this.ds = ds; this.cfg = cfg;
+    this.tv = new TextViews(text, cfg);
+    if (!this.tv.views.length) throw new Error('No ways of counting are left for ' + text.label + ' (check the restrictions).');
+    var bc = buildConventions(this.tv, ds, cfg);
+    this.convs = bc.convs; this.groups = bc.groups;
+    this.scorer = cfg.mode === 'targets' ? new TargetScorer(targets || [], this.tv.vocabList()) : new LetterScorer(wordlist || []);
+    this.M = this.convs.length;
+    this.nParagraphs = text.paragraphs.length;
+    var nv = this.tv.views.length, nb = cfg.bases.length;
+    this.col = new Int32Array(this.groups.length * nb * nv);
+    for (var i = 0; i < this.M; i++) {
+      var c = this.convs[i];
+      this.col[(c.groupIndex * nb + cfg.bases.indexOf(c.base)) * nv + c.viewIndex] = i;
+    }
+    var P = this.nParagraphs;
+    this._seg = { lens: new Int32Array(P), offs: new Int32Array(P), cum: new Int32Array(P) };
+    this._codes = new Int32Array(MAX_DIGITS);
+    this._pos = new Float64Array(MAX_DIGITS);
+  }
+  Analysis.prototype.positions = function (d, gi, base) {
+    return numbers(this.groups[gi][0], d, this.ds.lengths).map(function (x) { return x - base; });
+  };
+  // Scores (Int32Array M) and hits (Uint8Array M) for one digit row.
+  Analysis.prototype.evaluate = function (d, order, scores, hits) {
+    scores = scores || new Int32Array(this.M);
+    hits = hits || new Uint8Array(this.M);
+    var views = this.tv.views, sc = this.scorer, codes = this._codes, pos = this._pos;
+    for (var gi = 0; gi < this.groups.length; gi++) {
+      var nums = numbers(this.groups[gi][0], d, this.ds.lengths), K = nums.length;
+      for (var bi = 0; bi < this.cfg.bases.length; bi++) {
+        var b = this.cfg.bases[bi];
+        for (var k = 0; k < K; k++) pos[k] = nums[k] - b;
+        for (var vi = 0; vi < views.length; vi++) {
+          gatherInto(views[vi], pos, K, order, codes, this._seg);
+          var j = this.col[(gi * this.cfg.bases.length + bi) * views.length + vi];
+          scores[j] = sc.score(views[vi].kind, codes, K);
+          hits[j] = sc.lastHit ? 1 : 0;
+        }
+      }
+    }
+    return { scores: scores, hits: hits };
+  };
+  Analysis.prototype.observed = function () { return this.evaluate(this.ds.digits(), null); };
+  // which: 'A' (random digits) or 'B' (shuffled paragraphs); stream 0 = reference, 1 = test
+  Analysis.prototype.nullDraws = function (which, draws, seed, stream, progress) {
+    var rng = makeRng([seed, which === 'A' ? 1 : 2, stream]);
+    var M = this.M, S = new Int32Array(draws * M), nhit = new Int32Array(draws);
+    var d = this.ds.digits(), order = null, P = this.nParagraphs;
+    var scores = new Int32Array(M), hits = new Uint8Array(M);
+    if (which === 'B' && P >= 3) order = new Int32Array(P);
+    for (var i = 0; i < draws; i++) {
+      if (which === 'A') this.ds.randomDigits(rng, d);
+      else if (order) randomOrder(rng, P, order);
+      this.evaluate(d, order, scores, hits);
+      S.set(scores, i * M);
+      var h = 0;
+      for (var j = 0; j < M; j++) h += hits[j];
+      nhit[i] = h;
+      if (progress && (i % 500 === 499 || i === draws - 1)) progress(which, stream, i + 1, draws);
+    }
+    return { S: S, nhit: nhit, N: draws };
+  };
+  Analysis.prototype.extract = function (ci) {
+    var c = this.convs[ci], v = this.tv.views[c.viewIndex];
+    var d = this.ds.digits();
+    var pos = this.positions(d, c.groupIndex, c.base);
+    var total = v.flat.length - v.startFlat, items = [], letters = [];
+    pos.forEach(function (p) {
+      if (p >= 0 && p < total) {
+        var disp = v.disp[v.startFlat + p], code = v.flat[v.startFlat + p];
+        items.push(disp ? disp : '∅');
+        letters.push(v.kind === 'letter' && code >= 0 ? String.fromCharCode(97 + code).toUpperCase() : '·');
+      } else { items.push('·'); letters.push('·'); }
+    });
+    return { numbers: this.positions(d, c.groupIndex, 0), items: items, letters: v.kind === 'letter' ? letters.join('') : null };
+  };
+
+  function median(a) {
+    var s = Array.from(a).sort(function (x, y) { return x - y; }), n = s.length;
+    return n % 2 ? s[(n - 1) / 2] : (s[n / 2 - 1] + s[n / 2]) / 2;
+  }
+  function percentile(a, q) {   // numpy default (linear)
+    var s = Array.from(a).sort(function (x, y) { return x - y; }), h = (s.length - 1) * q / 100;
+    var lo = Math.floor(h), hi = Math.ceil(h);
+    return s[lo] + (s[hi] - s[lo]) * (h - lo);
+  }
+
+  // How unusual is a score for one convention? (engine.py TailModel)
+  function TailModel(R, NR, M) {
+    this.NR = NR; this.M = M;
+    var top = 0, i, j, v;
+    for (i = 0; i < R.length; i++) if (R[i] > top) top = R[i];
+    var W = top + 2;
+    this.W = W;
+    var cnt = new Int32Array(M * W);
+    for (i = 0; i < NR; i++) for (j = 0; j < M; j++) cnt[j * W + R[i * M + j]]++;
+    for (j = 0; j < M; j++) for (v = W - 2; v >= 0; v--) cnt[j * W + v] += cnt[j * W + v + 1];
+    this.cnt = cnt;
+    this.vb = new Int32Array(M);
+    var lam = new Float64Array(M), okList = [];
+    for (j = 0; j < M; j++) {
+      var vb = 0, va = 0;
+      for (v = 0; v < W; v++) { if (cnt[j * W + v] >= 10) vb = v; if (cnt[j * W + v] >= 100) va = v; }
+      this.vb[j] = vb;
+      if (vb > va) {
+        lam[j] = Math.log((cnt[j * W + va] + 1.0) / (cnt[j * W + vb] + 1.0)) / (vb - va);
+        okList.push(lam[j]);
+      } else lam[j] = NaN;
+    }
+    var fallback = okList.length ? median(okList) : Math.log(10.0);
+    for (j = 0; j < M; j++) if (isNaN(lam[j])) lam[j] = fallback;
+    this.lam = lam;
+    this.logNorm = Math.log(NR + 1.0);
+  }
+  TailModel.prototype.logRarity = function (scores, j) {
+    var x = scores[j], vb = this.vb[j], xc = x < vb ? x : vb;
+    return Math.log(this.cnt[j * this.W + xc] + 1.0) - this.logNorm - this.lam[j] * Math.max(0, x - vb);
+  };
+  TailModel.prototype.statistic = function (scores) {
+    var best = Infinity;
+    for (var j = 0; j < this.M; j++) { var r = this.logRarity(scores, j); if (r < best) best = r; }
+    return best;
+  };
+
+  function NullTest(ref, test, M) {
+    this.tail = new TailModel(ref.S, ref.N, M);
+    this.N = test.N;
+    this.nullStat = new Float64Array(test.N);
+    for (var i = 0; i < test.N; i++) this.nullStat[i] = this.tail.statistic(test.S.subarray(i * M, (i + 1) * M));
+  }
+  NullTest.prototype.p = function (scores, u) {
+    var f = this.tail.statistic(scores), le = 0, lt = 0, eq = 0;
+    for (var i = 0; i < this.N; i++) { var x = this.nullStat[i]; if (x <= f) le++; if (x < f) lt++; else if (x === f) eq++; }
+    if (u === undefined || u === null) return (1.0 + le) / (1.0 + this.N);
+    return (lt + u * (eq + 1.0)) / (1.0 + this.N);
+  };
+
+  function analyse(text, ds, cfg, draws, seed, opts) {
+    opts = opts || {};
+    if (draws < MIN_DRAWS) throw new Error('At least ' + MIN_DRAWS + ' null draws are required.');
+    var an = new Analysis(text, ds, cfg, opts.targets, opts.wordlist);
+    var obs = an.observed(), M = an.M;
+    var obsS = Int32Array.from(obs.scores), obsH = Uint8Array.from(obs.hits);
+    var tests = {};
+    ['A', 'B'].forEach(function (which) {
+      var ref = an.nullDraws(which, draws, seed, 0, opts.progress);
+      var test = an.nullDraws(which, draws, seed, 1, opts.progress);
+      tests[which] = { nt: new NullTest(ref, test, M), test: test };
+    });
+    var nA = tests.A.nt, nB = tests.B.nt;
+    var pA = nA.p(obsS), pB = nB.p(obsS);
+    var rar = new Float64Array(M);
+    for (var j = 0; j < M; j++) rar[j] = nA.tail.logRarity(obsS, j);
+    var order = [];
+    for (j = 0; j < M; j++) order.push(j);
+    order.sort(function (a, b) { return (rar[a] - rar[b]) || (obsS[b] - obsS[a]) || (a - b); });
+    var top = order.slice(0, 5).map(function (i) {
+      var e = an.extract(i);
+      return { name: an.convs[i].name, aliases: an.convs[i].aliases, score: obsS[i], hit: !!obsH[i],
+        rarity: Math.exp(rar[i]), numbers: e.numbers, items: e.items, letters: e.letters };
+    });
+    var best = order[0], winners = [];
+    for (j = 0; j < M; j++) if (rar[j] === rar[best] && obsS[j] > 0) winners.push(j);
+    var rawMax = function (t) { var out = new Int32Array(t.N); for (var i = 0; i < t.N; i++) { var m = 0; for (var k = 0; k < M; k++) if (t.S[i * M + k] > m) m = t.S[i * M + k]; out[i] = m; } return out; };
+    var byUnit = {};
+    cfg.units.forEach(function (u) { byUnit[u] = an.convs.filter(function (c) { return c.unit === u; }).length; });
+    var nh = 0;
+    for (j = 0; j < M; j++) nh += obsH[j];
+    var hitsA = tests.A.test.nhit;
+    var result = {
+      label: text.label, path: text.path, sha256: text.sha256,
+      paragraphs: text.paragraphs.length, words: text.wordCount(),
+      M: M, merged_views: an.tv.nMerged, n_views: an.tv.views.length,
+      groupings: an.groups, warnings: an.tv.warnings.slice(), by_unit: byUnit,
+      conventions: an.convs.map(function (c) { return c.name; }), draws: draws,
+      best_name: an.convs[best].name, best_score: obsS[best], best_rarity: Math.exp(rar[best]),
+      raw_max: Math.max.apply(null, Array.from(obsS)),
+      nullA_raw_max_median: median(rawMax(tests.A.test)), nullB_raw_max_median: median(rawMax(tests.B.test)),
+      hits: nh, nullA_mean_hits: hitsA.reduce(function (a, b) { return a + b; }, 0) / hitsA.length,
+      nullA_hits_95: Math.floor(percentile(hitsA, 95)),
+      pA: pA, pB: pB, p: Math.max(pA, pB), shuffle_possible: an.nParagraphs >= 3,
+      top: top, winners: winners.map(function (i) { return an.convs[i].aliases; }), n_winners: winners.length
+    };
+    if (opts.returnRaw) return { result: result, analysis: an, nullA: nA, nullB: nB, obs: obsS };
+    return result;
+  }
+
+  // ------------------------------------------------------------------
+  // Kolmogorov-Smirnov against uniform (stats.py)
+  // ------------------------------------------------------------------
+
+  function ksUniform(values) {
+    var x = Array.from(values).sort(function (a, b) { return a - b; }), n = x.length, d = 0;
+    for (var i = 0; i < n; i++) d = Math.max(d, (i + 1) / n - x[i], x[i] - i / n);
+    var en = Math.sqrt(n), lam = (en + 0.12 + 0.11 / en) * d;
+    if (lam < 1e-3) return [d, 1.0];
+    var p = 0;
+    for (var k = 1; k <= 100; k++) {
+      var term = 2.0 * (k % 2 ? 1 : -1) * Math.exp(-2.0 * k * k * lam * lam);
+      p += term;
+      if (Math.abs(term) < 1e-12) break;
+    }
+    return [d, Math.min(1, Math.max(0, p))];
+  }
+
+  // ------------------------------------------------------------------
+  // SHA-256 (for fingerprints of texts and locked tests)
+  // ------------------------------------------------------------------
+
+  function utf8(s) { return new TextEncoder().encode(s); }
+
+  var K256 = new Uint32Array([
+    0x428a2f98, 0x71374491, 0xb5c0fbcf, 0xe9b5dba5, 0x3956c25b, 0x59f111f1, 0x923f82a4, 0xab1c5ed5,
+    0xd807aa98, 0x12835b01, 0x243185be, 0x550c7dc3, 0x72be5d74, 0x80deb1fe, 0x9bdc06a7, 0xc19bf174,
+    0xe49b69c1, 0xefbe4786, 0x0fc19dc6, 0x240ca1cc, 0x2de92c6f, 0x4a7484aa, 0x5cb0a9dc, 0x76f988da,
+    0x983e5152, 0xa831c66d, 0xb00327c8, 0xbf597fc7, 0xc6e00bf3, 0xd5a79147, 0x06ca6351, 0x14292967,
+    0x27b70a85, 0x2e1b2138, 0x4d2c6dfc, 0x53380d13, 0x650a7354, 0x766a0abb, 0x81c2c92e, 0x92722c85,
+    0xa2bfe8a1, 0xa81a664b, 0xc24b8b70, 0xc76c51a3, 0xd192e819, 0xd6990624, 0xf40e3585, 0x106aa070,
+    0x19a4c116, 0x1e376c08, 0x2748774c, 0x34b0bcb5, 0x391c0cb3, 0x4ed8aa4a, 0x5b9cca4f, 0x682e6ff3,
+    0x748f82ee, 0x78a5636f, 0x84c87814, 0x8cc70208, 0x90befffa, 0xa4506ceb, 0xbef9a3f7, 0xc67178f2]);
+
+  function sha256Hex(bytes) {
+    var n = bytes.length, total = ((n + 9 + 63) >> 6) << 6, buf = new Uint8Array(total);
+    buf.set(bytes); buf[n] = 0x80;
+    var bits = n * 8, dv = new DataView(buf.buffer);
+    dv.setUint32(total - 4, bits >>> 0); dv.setUint32(total - 8, Math.floor(bits / 4294967296));
+    var h = new Uint32Array([0x6a09e667, 0xbb67ae85, 0x3c6ef372, 0xa54ff53a, 0x510e527f, 0x9b05688c, 0x1f83d9ab, 0x5be0cd19]);
+    var w = new Uint32Array(64);
+    for (var off = 0; off < total; off += 64) {
+      for (var i = 0; i < 16; i++) w[i] = dv.getUint32(off + i * 4);
+      for (i = 16; i < 64; i++) {
+        var a0 = w[i - 15], a1 = w[i - 2];
+        var s0 = ((a0 >>> 7) | (a0 << 25)) ^ ((a0 >>> 18) | (a0 << 14)) ^ (a0 >>> 3);
+        var s1 = ((a1 >>> 17) | (a1 << 15)) ^ ((a1 >>> 19) | (a1 << 13)) ^ (a1 >>> 10);
+        w[i] = (w[i - 16] + s0 + w[i - 7] + s1) >>> 0;
+      }
+      var a = h[0], b = h[1], c = h[2], d = h[3], e = h[4], f = h[5], g = h[6], hh = h[7];
+      for (i = 0; i < 64; i++) {
+        var S1 = ((e >>> 6) | (e << 26)) ^ ((e >>> 11) | (e << 21)) ^ ((e >>> 25) | (e << 7));
+        var ch = (e & f) ^ (~e & g);
+        var t1 = (hh + S1 + ch + K256[i] + w[i]) >>> 0;
+        var S0 = ((a >>> 2) | (a << 30)) ^ ((a >>> 13) | (a << 19)) ^ ((a >>> 22) | (a << 10));
+        var mj = (a & b) ^ (a & c) ^ (b & c);
+        var t2 = (S0 + mj) >>> 0;
+        hh = g; g = f; f = e; e = (d + t1) >>> 0; d = c; c = b; b = a; a = (t1 + t2) >>> 0;
+      }
+      h[0] += a; h[1] += b; h[2] += c; h[3] += d; h[4] += e; h[5] += f; h[6] += g; h[7] += hh;
+    }
+    return Array.from(h).map(function (x) { return ('00000000' + x.toString(16)).slice(-8); }).join('');
+  }
+
+  // Stable JSON (sorted keys) so a locked test always hashes the same.
+  function canonicalJSON(v) {
+    if (Array.isArray(v)) return '[' + v.map(canonicalJSON).join(',') + ']';
+    if (v && typeof v === 'object') {
+      return '{' + Object.keys(v).sort().map(function (k) { return JSON.stringify(k) + ':' + canonicalJSON(v[k]); }).join(',') + '}';
+    }
+    return JSON.stringify(v === undefined ? null : v);
+  }
+
+
+  // ------------------------------------------------------------------
+  // Self-test (selftest.py): planted messages must be found, random
+  // inputs must come out uniformly non-significant.
+  // demo = { en: text, fr: text, targets: [...], wordlistEn: [...] }
+  // ------------------------------------------------------------------
+
+  var SELFTEST_SEED = 20240611, N_CALIB = 400;
+
+  function selftest(demo, report) {
+    var rows = [];
+    var check = function (name, ok, detail) {
+      rows.push({ name: name, ok: !!ok, detail: detail || '' });
+      if (report) report({ type: 'check', name: name, ok: !!ok, detail: detail || '' });
+    };
+    var eq = function (a, b) { return JSON.stringify(a) === JSON.stringify(b); };
+    var s = '« Bonjour » : l’Or de Val-d\'Or – fin.';
+    check('tokenizer ws keeps standalone punctuation',
+      eq(tokens(s, 'ws'), ['«', 'Bonjour', '»', ':', 'l’Or', 'de', "Val-d'Or", '–', 'fin.']));
+    check('tokenizer ws-drop drops it', eq(tokens(s, 'ws-drop'), ['Bonjour', 'l’Or', 'de', "Val-d'Or", 'fin.']));
+    check('tokenizer strip keeps inner apostrophes/hyphens', eq(tokens(s, 'strip'), ['Bonjour', 'l’Or', 'de', "Val-d'Or", 'fin']));
+    check('tokenizer split splits elisions and hyphens', eq(tokens(s, 'split'), ['Bonjour', 'l', 'Or', 'de', 'Val', 'd', 'Or', 'fin']));
+    check('folding: accents, both apostrophes, case',
+      fold('VAL-D’OR') === 'valdor' && fold("Val-d'Or") === 'valdor' && fold('Hérons') === 'herons' && fold('cœur') === 'coeur');
+    check('NFC: decomposed é is one letter', eq(tokens('Hérons', 'strip'), ['Hérons']));
+
+    var en = Text.fromString('en', demo.en), fr = Text.fromString('fr', demo.fr);
+
+    // fast path == shuffle path when nothing is shuffled
+    var probe = new DigitString('12 345 6 78');
+    var an = new Analysis(fr, probe, new Config({ mode: 'targets', markers: ['Son magasin'] }), demo.targets);
+    var ident = new Int32Array(an.nParagraphs);
+    for (var i = 0; i < ident.length; i++) ident[i] = i;
+    var rng = makeRng([1, 1]), same = true, d = new Array(probe.nDigits), o1 = new Int32Array(MAX_DIGITS), o2 = new Int32Array(MAX_DIGITS);
+    for (var r = 0; r < 7 && same; r++) {
+      probe.randomDigits(rng, d);
+      an.tv.views.forEach(function (v) {
+        an.groups.forEach(function (g, gi) {
+          [0, 1].forEach(function (b) {
+            var pos = an.positions(d, gi, b);
+            gatherInto(v, pos, pos.length, null, o1, an._seg);
+            gatherInto(v, pos, pos.length, ident, o2, an._seg);
+            for (var k = 0; k < pos.length; k++) if (o1[k] !== o2[k]) same = false;
+          });
+        });
+      });
+    }
+    check('shuffle path == plain path when nothing is shuffled', same);
+
+    var progress = function (label) {
+      return function (which, stream, done, total) {
+        if (report) report({ type: 'progress', label: label, which: which, stream: stream, done: done, total: total });
+      };
+    };
+
+    // planted letters
+    rng = makeRng([SELFTEST_SEED, 3]);
+    var words = [];
+    en.paragraphs.slice(1).forEach(function (p) { tokenize(p, 'ws').forEach(function (t) { words.push(t[0]); }); });
+    var message = 'goldisnorth', picks = [];
+    Array.from(message).forEach(function (ch) {
+      var cands = [];
+      words.forEach(function (w, i) { if (fold(w).charAt(0) === ch && i + 1 >= 10) cands.push(i + 1); });
+      picks.push(cands[rng.int(cands.length)]);
+    });
+    var ds = new DigitString(picks.join(' '));
+    var raw = analyse(en, ds, new Config({ mode: 'letters' }), MIN_DRAWS, SELFTEST_SEED,
+      { wordlist: demo.wordlistEn, returnRaw: true, progress: progress('planted letters') });
+    var res = raw.result, planted = 'word | ws | initial | from=body | 1-based | digits=given';
+    check('planted letters: found by the planted convention',
+      res.winners.some(function (a) { return a.indexOf(planted) >= 0; }), 'top: ' + res.top[0].name + ' -> ' + res.top[0].letters);
+    check('planted letters: p <= 0.01', res.p <= 0.01, 'pA=' + res.pA.toFixed(5) + ' pB=' + res.pB.toFixed(5));
+    calibrate(check, 'letters', raw, ds, SELFTEST_SEED);
+
+    // planted targets: split tokenizer, 0-based from the title, cumulative steps
+    var fw = [];
+    fr.paragraphs.forEach(function (p) { tokenize(p, 'split').forEach(function (t) { fw.push(fold(t[0])); }); });
+    var last = -1, posn = [];
+    ['cuivre', 'cuivre', 'herons', 'sureau'].forEach(function (w) {
+      for (var k = last + 1; k < fw.length; k++) if (fw[k] === w) { last = k; break; }
+      posn.push(last);
+    });
+    var steps = [posn[0]];
+    for (i = 1; i < posn.length; i++) steps.push(posn[i] - posn[i - 1]);
+    ds = new DigitString(steps.join('-'));
+    raw = analyse(fr, ds, new Config({ mode: 'targets' }), MIN_DRAWS, SELFTEST_SEED,
+      { targets: demo.targets, returnRaw: true, progress: progress('planted targets') });
+    res = raw.result;
+    planted = 'word | split | item | from=title | 0-based | digits=cumulative';
+    check('planted targets: found by the planted convention',
+      res.winners.some(function (a) { return a.indexOf(planted) >= 0; }), 'top: ' + res.top[0].name + ' -> ' + res.top[0].items.join(' '));
+    check('planted targets: p <= 0.01', res.p <= 0.01, 'pA=' + res.pA.toFixed(5) + ' pB=' + res.pB.toFixed(5));
+    calibrate(check, 'targets', raw, ds, SELFTEST_SEED + 1);
+
+    return { passed: rows.every(function (x) { return x.ok; }), checks: rows };
+  }
+
+  function calibrate(check, name, raw, ds, seed) {
+    var an = raw.analysis, rng = makeRng([seed, 99]), urng = makeRng([seed, 98]);
+    var d = ds.digits(), order = new Int32Array(an.nParagraphs);
+    var scores = new Int32Array(an.M), hits = new Uint8Array(an.M);
+    [['A', raw.nullA], ['B', raw.nullB]].forEach(function (pair) {
+      var which = pair[0], nt = pair[1], prand = [], pcons = [];
+      for (var i = 0; i < N_CALIB; i++) {
+        if (which === 'A') an.evaluate(ds.randomDigits(rng, d), null, scores, hits);
+        else an.evaluate(ds.digits(), an.nParagraphs >= 3 ? randomOrder(rng, an.nParagraphs, order) : null, scores, hits);
+        prand.push(nt.p(scores, urng.random()));
+        pcons.push(nt.p(scores));
+      }
+      var ks = ksUniform(prand), hist = new Array(10).fill(0);
+      prand.forEach(function (p) { hist[Math.min(9, Math.floor(p * 10))]++; });
+      check(name + ' null ' + which + ': p-values of ' + N_CALIB + ' random inputs look uniform', ks[1] >= 0.01,
+        'KS D=' + ks[0].toFixed(3) + ', p=' + ks[1].toFixed(3) + '; deciles ' + hist.join(' '));
+      [0.05, 0.01].forEach(function (a) {
+        var nsig = pcons.filter(function (p) { return p <= a; }).length;
+        var limit = N_CALIB * a + 3 * Math.sqrt(N_CALIB * a * (1 - a));
+        check(name + ' null ' + which + ': random inputs significant at ' + a.toFixed(2), nsig <= limit,
+          nsig + ' of ' + N_CALIB + ' (allowed up to ' + Math.round(limit) + ')');
+      });
+    });
+  }
+
+  var API = {
+    VERSION: VERSION, MIN_DRAWS: MIN_DRAWS,
+    normalize: normalize, fold: fold, letterCode: letterCode, tokenize: tokenize, tokens: tokens,
+    lineSpans: lineSpans, sentenceSpans: sentenceSpans, Text: Text,
+    TOKENIZERS: TOKENIZERS, TOKENIZER_HELP: TOKENIZER_HELP,
+    GROUPINGS: GROUPINGS, GROUPING_HELP: GROUPING_HELP, DigitString: DigitString, numbers: numbers,
+    distinctGroupings: distinctGroupings,
+    UNITS: UNITS, UNIT_HELP: UNIT_HELP, READS: READS, BASES: BASES, DEFAULT_STARTS: DEFAULT_STARTS,
+    Config: Config, TextViews: TextViews, buildConventions: buildConventions,
+    TargetScorer: TargetScorer, LetterScorer: LetterScorer, uniqueKeys: uniqueKeys, parseList: parseList,
+    gatherInto: gatherInto, randomOrder: randomOrder, makeRng: makeRng,
+    Analysis: Analysis, TailModel: TailModel, NullTest: NullTest, analyse: analyse,
+    ksUniform: ksUniform, selftest: selftest, sha256Hex: sha256Hex, utf8: utf8, canonicalJSON: canonicalJSON
+  };
+  root.IndexKit = API;
+  if (typeof module !== 'undefined' && module.exports) module.exports = API;
+})(typeof self !== 'undefined' ? self : this);
+
+</script>
+<script id="ik-data">
+window.IK_DATA = {"demo": {"en": "The Lanterns of Lac-des-Lanternes: a village that keeps its lights on\n\nEvery autumn, when the first frost settles on the shore, the people of\nLac-des-Lanternes hang a paper lantern in every window. Nobody remembers\nexactly when the custom began. Some say it was 1887; others insist it is\nolder than the church.\n\nThe village sits at the end of a gravel road, forty minutes north of\nVal-du-Cuivre. In summer, canoes drift past the old copper mill; in\nwinter, the lake freezes so thick that trucks cross it to reach\nPointe-aux-H\u00e9rons.\n\n\u201cWe don\u2019t do it for tourists,\u201d says Madeleine Arsenault, who has run the\ngeneral store for thirty-one years. \u201cWe do it so the fishermen can find\ntheir way home \u2013 that\u2019s all.\u201d\n\nHer store sells bait, coffee, and maps of the islands. The most popular\nmap shows a hiking trail that climbs Mont Sureau, the rounded hill\nbehind the school. From the summit, on a clear night, you can count more\nthan two hundred lanterns.\n\nNot everyone is pleased. A councillor from the regional office\ncomplained last year that the lanterns are a fire hazard: paper,\ncandles, and old wooden houses. The village answered with battery\nlights, which glow a little bluer than before.\n\nThe tradition has its own vocabulary. A lantern that goes out before\nmidnight is called a \u201csleeper\u201d; one that lasts until dawn is a \u201ckeeper\u201d.\nChildren compete to light the most keepers, and the winner rings the\nbell at the Rivi\u00e8re-Noire bridge.\n\nHistorians at the provincial archives have found only one written\nmention of the custom before 1950: a letter from a schoolteacher\ndescribing \u201ca necklace of small suns\u201d around the bay. The letter is\nunsigned. It also mentions the gold rush.\n\nThis year the festival begins on the second Saturday of October.\nVisitors are welcome, says Arsenault, as long as they leave their own\nlantern lit for one night. \u201cIt is a promise,\u201d she adds, \u201cnot a\ndecoration.\u201d\n", "fr": "Les lanternes de Lac-des-Lanternes\u202f: un village qui garde ses lumi\u00e8res allum\u00e9es\n\nChaque automne, quand le premier gel se pose sur la rive, les gens de\nLac-des-Lanternes accrochent une lanterne de papier \u00e0 chaque fen\u00eatre.\nPersonne ne se souvient exactement du d\u00e9but de la coutume. Certains\ndisent que c\u2019\u00e9tait en 1887\u202f; d\u2019autres affirment qu\u2019elle est plus vieille\nque l\u2019\u00e9glise.\n\nLe village se trouve au bout d\u2019un chemin de gravier, \u00e0 quarante minutes\nau nord de Val-du-Cuivre. L\u2019\u00e9t\u00e9, les canots glissent devant le vieux\nmoulin de cuivre\u202f; l\u2019hiver, le lac g\u00e8le si \u00e9pais que les camions le\ntraversent pour rejoindre Pointe-aux-H\u00e9rons.\n\n\u00ab\u00a0On ne le fait pas pour les touristes\u00a0\u00bb, dit Madeleine Arsenault, qui\ntient le magasin g\u00e9n\u00e9ral depuis trente et un ans. \u00ab\u00a0On le fait pour que\nles p\u00eacheurs retrouvent le chemin de la maison \u2013 c\u2019est tout.\u00a0\u00bb\n\nSon magasin vend des app\u00e2ts, du caf\u00e9 et des cartes des \u00eeles. La carte la\nplus populaire montre un sentier qui grimpe le mont Sureau, la colline\narrondie derri\u00e8re l'\u00e9cole. Du sommet, par une nuit claire, on peut\ncompter plus de deux cents lanternes.\n\nTout le monde n\u2019est pas content. Un conseiller du bureau r\u00e9gional s\u2019est\nplaint l\u2019an dernier\u00a0: les lanternes seraient un risque d\u2019incendie\n(papier, chandelles et vieilles maisons de bois). Le village a r\u00e9pondu\navec des lumi\u00e8res \u00e0 piles, un peu plus bleues qu\u2019avant.\n\nLa tradition a son propre vocabulaire. Une lanterne qui s\u2019\u00e9teint avant\nminuit est une \u00ab\u00a0dormeuse\u00a0\u00bb\u202f; celle qui dure jusqu\u2019\u00e0 l\u2019aube est une\n\u00ab\u00a0gardienne\u00a0\u00bb. Les enfants rivalisent pour allumer le plus de\ngardiennes, et le gagnant sonne la cloche du pont de la Rivi\u00e8re-Noire.\n\nAux archives provinciales, les historiens n\u2019ont trouv\u00e9 qu\u2019une seule\nmention \u00e9crite de la coutume avant 1950\u00a0: la lettre d\u2019une institutrice\nd\u00e9crivant \u00ab\u00a0un collier de petits soleils\u00a0\u00bb autour de la baie. La lettre\nn\u2019est pas sign\u00e9e. Elle \u00e9voque aussi la ru\u00e9e vers l'Or.\n\nCette ann\u00e9e, la f\u00eate commence le deuxi\u00e8me samedi d\u2019octobre. Les\nvisiteurs sont les bienvenus, dit Arsenault, pourvu qu\u2019ils laissent leur\npropre lanterne allum\u00e9e une nuit. \u00ab\u00a0C\u2019est une promesse, ajoute-t-elle,\npas une d\u00e9coration.\u00a0\u00bb\n", "targets": ["Lac-des-Lanternes", "Val-du-Cuivre", "Pointe-aux-H\u00e9rons", "Mont Sureau", "Rivi\u00e8re-Noire", "Sureau", "Cuivre", "H\u00e9rons"], "planted": "67-90-143", "coincidence": "130-315-814"}, "wordlists": {"en": ["a", "i", "am", "an", "as", "at", "be", "by", "do", "go", "he", "if", "in", "is", "it", "me", "my", "no", "of", "oh", "on", "or", "so", "to", "up", "us", "we", "ago", "all", "and", "any", "are", "ask", "big", "boy", "but", "can", "day", "did", "end", "far", "few", "for", "get", "got", "had", "has", "her", "him", "his", "how", "its", "key", "let", "man", "may", "men", "new", "nor", "not", "now", "off", "old", "one", "our", "out", "own", "put", "red", "run", "sat", "saw", "say", "see", "set", "she", "sit", "six", "sun", "ten", "the", "too", "top", "two", "use", "war", "was", "way", "who", "why", "win", "yes", "yet", "you", "also", "away", "back", "bank", "bear", "been", "bell", "best", "bird", "blue", "boat", "body", "book", "both", "call", "came", "camp", "city", "cold", "come", "copper", "dark", "dawn", "days", "door", "down", "each", "east", "even", "eyes", "face", "fall", "farm", "find", "fire", "fish", "five", "flag", "four", "free", "from", "gate", "gave", "give", "glad", "gold", "good", "gray", "grey", "half", "hall", "hand", "have", "head", "hear", "help", "here", "hide", "high", "hill", "hold", "home", "hope", "hour", "into", "iron", "just", "keep", "kind", "king", "lake", "land", "last", "late", "left", "life", "like", "line", "lion", "long", "look", "lost", "made", "mail", "make", "many", "mark", "mile", "mill", "mind", "mine", "more", "most", "move", "much", "must", "name", "near", "need", "next", "nine", "none", "north", "note", "once", "only", "open", "over", "page", "park", "part", "pass", "past", "path", "port", "read", "rest", "ring", "road", "rock", "roof", "room", "rose", "rule", "said", "salt", "same", "sand", "seat", "seen", "ship", "shop", "show", "side", "sign", "snow", "some", "soon", "star", "stay", "step", "stop", "such", "sure", "take", "tell", "than", "that", "them", "then", "they", "this", "time", "told", "town", "tree", "true", "turn", "unit", "upon", "very", "view", "wait", "walk", "wall", "want", "warm", "well", "went", "west", "what", "when", "wide", "will", "wind", "with", "wood", "word", "work", "yard", "year", "your", "about", "above", "after", "again", "along", "among", "angel", "begin", "below", "black", "block", "board", "bound", "brook", "brown", "build", "chain", "chart", "clear", "clock", "close", "coast", "count", "cross", "dream", "earth", "eight", "empty", "enter", "every", "field", "final", "first", "floor", "found", "front", "ghost", "glass", "going", "grand", "grass", "great", "green", "guard", "guide", "heart", "horse", "hotel", "house", "image", "inner", "island", "large", "later", "layer", "least", "level", "light", "lower", "magic", "metal", "might", "money", "month", "mount", "mouth", "music", "never", "night", "ninth", "north", "ocean", "often", "order", "other", "paper", "peace", "piece", "place", "plain", "plant", "point", "pound", "queen", "quiet", "right", "river", "roman", "round", "route", "royal", "scale", "seven", "shall", "shore", "short", "sight", "since", "small", "sound", "south", "space", "stand", "start", "state", "steel", "still", "stone", "story", "table", "their", "there", "these", "thing", "think", "third", "those", "three", "tower", "track", "trail", "train", "trees", "truth", "under", "until", "upper", "value", "voice", "watch", "water", "where", "which", "while", "white", "whole", "world", "would", "write", "young", "across", "always", "animal", "answer", "around", "autumn", "before", "behind", "beyond", "border", "bridge", "canada", "center", "centre", "church", "circle", "corner", "county", "dollar", "double", "eleven", "escape", "family", "famous", "finger", "follow", "forest", "garden", "golden", "ground", "hidden", "island", "letter", "little", "lumber", "market", "middle", "mirror", "moment", "mother", "nature", "number", "object", "palace", "people", "person", "pirate", "player", "prince", "record", "riddle", "search", "second", "secret", "silver", "simple", "single", "spring", "square", "stream", "street", "summer", "system", "thirty", "toward", "travel", "twelve", "twenty", "valley", "window", "winter", "between", "brother", "captain", "capital", "century", "chapter", "compass", "country", "crystal", "diamond", "eastern", "emerald", "evening", "fifteen", "forever", "freedom", "general", "harbour", "harbor", "history", "journey", "kingdom", "lantern", "machine", "message", "million", "morning", "mystery", "nothing", "outside", "picture", "railway", "shelter", "station", "student", "thought", "through", "village", "western", "whisper", "mountain", "northern", "southern", "treasure"], "fr": ["a", "\u00e0", "y", "\u00f4", "de", "du", "la", "le", "les", "un", "une", "et", "en", "est", "il", "elle", "on", "ou", "o\u00f9", "au", "aux", "ce", "ces", "se", "sa", "son", "ses", "sur", "par", "pour", "qui", "que", "dans", "pas", "plus", "nous", "vous", "ils", "mais", "ni", "si", "l\u00e0", "or", "ici", "me", "te", "ma", "ta", "mon", "ton", "tes", "mes", "nos", "vos", "leur", "lui", "eux", "moi", "toi", "oui", "non", "ami", "ans", "art", "bas", "bon", "cap", "cou", "cri", "dos", "eau", "feu", "fer", "fil", "fin", "roi", "loi", "lac", "lit", "mer", "mot", "mur", "nez", "nom", "nord", "sud", "ouest", "peu", "pr\u00e9", "rue", "sel", "sol", "son", "t\u00f4t", "vie", "vin", "vue", "\u00e2ge", "\u00eele", "val", "mont", "aide", "aller", "all\u00e9", "alors", "aube", "auto", "avec", "avez", "avoir", "bain", "beau", "bien", "blanc", "bleu", "bois", "bord", "bout", "but", "cave", "cent", "cher", "chez", "ciel", "cinq", "clef", "cl\u00e9", "coin", "c\u00f4te", "cour", "dame", "dans", "date", "deux", "dieu", "dire", "dix", "doux", "droit", "elle", "ange", "\u00e9toile", "\u00eatre", "fait", "faim", "f\u00eate", "feuille", "fils", "fond", "fort", "four", "gare", "gens", "gros", "haut", "heure", "hier", "hiver", "huit", "jour", "jeu", "joie", "juste", "lent", "lieu", "long", "lune", "main", "mais", "mars", "m\u00e8re", "midi", "mine", "mois", "mort", "neuf", "nuit", "onze", "pain", "papier", "parc", "part", "pays", "p\u00e8re", "petit", "pied", "pierre", "place", "plage", "pluie", "pont", "port", "porte", "poste", "pour", "prix", "quai", "quand", "quel", "rive", "roche", "rose", "rouge", "route", "sable", "sage", "sang", "sans", "seize", "sept", "seul", "soir", "sous", "suis", "tard", "tour", "tout", "tous", "train", "trois", "trou", "tr\u00e8s", "vent", "vers", "vert", "vide", "vieux", "ville", "voie", "voir", "vous", "argent", "arbre", "blanche", "bureau", "carte", "centre", "chemin", "cheval", "chose", "clair", "colline", "compte", "coutume", "croix", "cuivre", "dernier", "dessous", "dessus", "\u00e9glise", "enfant", "ensemble", "entre", "espace", "\u00e9tang", "femme", "fen\u00eatre", "fleuve", "for\u00eat", "grand", "grande", "guerre", "histoire", "homme", "hiver", "jardin", "lettre", "lumi\u00e8re", "maison", "matin", "minuit", "monde", "montagne", "myst\u00e8re", "nombre", "ombre", "parole", "passage", "pens\u00e9e", "personne", "pointe", "premier", "prince", "quatre", "question", "rivi\u00e8re", "ruelle", "saison", "secret", "sentier", "soleil", "source", "temps", "terre", "tr\u00e9sor", "trente", "vall\u00e9e", "village", "voyage"]}, "example": {"info": {"digits": "67-90-143", "shape": "2-2-3", "n_digits": 7, "score": "targets", "targets": ["Lac-des-Lanternes", "Val-du-Cuivre", "Pointe-aux-H\u00e9rons", "Mont Sureau", "Rivi\u00e8re-Noire", "Sureau", "Cuivre", "H\u00e9rons"], "draws": 10000, "seed": 1856, "threshold": 0.01, "prereg": null, "restricted": null, "markers": []}, "results": [{"label": "en", "path": "(example en text)", "sha256": "ee0c538b6ef3a4fc38af8a29f415c16db7a38373ed34c950c6f88f035d56f154", "paragraphs": 9, "words": 322, "M": 280, "merged_views": 4, "n_views": 28, "groupings": [["given"], ["single"], ["pairs"], ["cumulative"], ["reversed"]], "warnings": [], "by_unit": {"word": 120, "letter": 20, "nonspace": 20, "line": 40, "sentence": 40, "paragraph": 40}, "conventions": ["word | ws | item | from=title | 0-based | digits=given", "word | ws | item | from=title | 1-based | digits=given", "word | ws | item | from=title | 0-based | digits=single", "word | ws | item | from=title | 1-based | digits=single", "word | ws | item | from=title | 0-based | digits=pairs", "word | ws | item | from=title | 1-based | digits=pairs", "word | ws | item | from=title | 0-based | digits=cumulative", "word | ws | item | from=title | 1-based | digits=cumulative", "word | ws | item | from=title | 0-based | digits=reversed", "word | ws | item | from=title | 1-based | digits=reversed", "word | ws | item | from=body | 0-based | digits=given", "word | ws | item | from=body | 1-based | digits=given", "word | ws | item | from=body | 0-based | digits=single", "word | ws | item | from=body | 1-based | digits=single", "word | ws | item | from=body | 0-based | digits=pairs", "word | ws | item | from=body | 1-based | digits=pairs", "word | ws | item | from=body | 0-based | digits=cumulative", "word | ws | item | from=body | 1-based | digits=cumulative", "word | ws | item | from=body | 0-based | digits=reversed", "word | ws | item | from=body | 1-based | digits=reversed", "word | ws | initial | from=title | 0-based | digits=given", "word | ws | initial | from=title | 1-based | digits=given", "word | ws | initial | from=title | 0-based | digits=single", "word | ws | initial | from=title | 1-based | digits=single", "word | ws | initial | from=title | 0-based | digits=pairs", "word | ws | initial | from=title | 1-based | digits=pairs", "word | ws | initial | from=title | 0-based | digits=cumulative", "word | ws | initial | from=title | 1-based | digits=cumulative", "word | ws | initial | from=title | 0-based | digits=reversed", "word | ws | initial | from=title | 1-based | digits=reversed", "word | ws | initial | from=body | 0-based | digits=given", "word | ws | initial | from=body | 1-based | digits=given", "word | ws | initial | from=body | 0-based | digits=single", "word | ws | initial | from=body | 1-based | digits=single", "word | ws | initial | from=body | 0-based | digits=pairs", "word | ws | initial | from=body | 1-based | digits=pairs", "word | ws | initial | from=body | 0-based | digits=cumulative", "word | ws | initial | from=body | 1-based | digits=cumulative", "word | ws | initial | from=body | 0-based | digits=reversed", "word | ws | initial | from=body | 1-based | digits=reversed", "word | ws-drop | item | from=title | 0-based | digits=given", "word | ws-drop | item | from=title | 1-based | digits=given", "word | ws-drop | item | from=title | 0-based | digits=single", "word | ws-drop | item | from=title | 1-based | digits=single", "word | ws-drop | item | from=title | 0-based | digits=pairs", "word | ws-drop | item | from=title | 1-based | digits=pairs", "word | ws-drop | item | from=title | 0-based | digits=cumulative", "word | ws-drop | item | from=title | 1-based | digits=cumulative", "word | ws-drop | item | from=title | 0-based | digits=reversed", "word | ws-drop | item | from=title | 1-based | digits=reversed", "word | ws-drop | item | from=body | 0-based | digits=given", "word | ws-drop | item | from=body | 1-based | digits=given", "word | ws-drop | item | from=body | 0-based | digits=single", "word | ws-drop | item | from=body | 1-based | digits=single", "word | ws-drop | item | from=body | 0-based | digits=pairs", "word | ws-drop | item | from=body | 1-based | digits=pairs", "word | ws-drop | item | from=body | 0-based | digits=cumulative", "word | ws-drop | item | from=body | 1-based | digits=cumulative", "word | ws-drop | item | from=body | 0-based | digits=reversed", "word | ws-drop | item | from=body | 1-based | digits=reversed", "word | ws-drop | initial | from=title | 0-based | digits=given", "word | ws-drop | initial | from=title | 1-based | digits=given", "word | ws-drop | initial | from=title | 0-based | digits=single", "word | ws-drop | initial | from=title | 1-based | digits=single", "word | ws-drop | initial | from=title | 0-based | digits=pairs", "word | ws-drop | initial | from=title | 1-based | digits=pairs", "word | ws-drop | initial | from=title | 0-based | digits=cumulative", "word | ws-drop | initial | from=title | 1-based | digits=cumulative", "word | ws-drop | initial | from=title | 0-based | digits=reversed", "word | ws-drop | initial | from=title | 1-based | digits=reversed", "word | ws-drop | initial | from=body | 0-based | digits=given", "word | ws-drop | initial | from=body | 1-based | digits=given", "word | ws-drop | initial | from=body | 0-based | digits=single", "word | ws-drop | initial | from=body | 1-based | digits=single", "word | ws-drop | initial | from=body | 0-based | digits=pairs", "word | ws-drop | initial | from=body | 1-based | digits=pairs", "word | ws-drop | initial | from=body | 0-based | digits=cumulative", "word | ws-drop | initial | from=body | 1-based | digits=cumulative", "word | ws-drop | initial | from=body | 0-based | digits=reversed", "word | ws-drop | initial | from=body | 1-based | digits=reversed", "word | split | item | from=title | 0-based | digits=given", "word | split | item | from=title | 1-based | digits=given", "word | split | item | from=title | 0-based | digits=single", "word | split | item | from=title | 1-based | digits=single", "word | split | item | from=title | 0-based | digits=pairs", "word | split | item | from=title | 1-based | digits=pairs", "word | split | item | from=title | 0-based | digits=cumulative", "word | split | item | from=title | 1-based | digits=cumulative", "word | split | item | from=title | 0-based | digits=reversed", "word | split | item | from=title | 1-based | digits=reversed", "word | split | item | from=body | 0-based | digits=given", "word | split | item | from=body | 1-based | digits=given", "word | split | item | from=body | 0-based | digits=single", "word | split | item | from=body | 1-based | digits=single", "word | split | item | from=body | 0-based | digits=pairs", "word | split | item | from=body | 1-based | digits=pairs", "word | split | item | from=body | 0-based | digits=cumulative", "word | split | item | from=body | 1-based | digits=cumulative", "word | split | item | from=body | 0-based | digits=reversed", "word | split | item | from=body | 1-based | digits=reversed", "word | split | initial | from=title | 0-based | digits=given", "word | split | initial | from=title | 1-based | digits=given", "word | split | initial | from=title | 0-based | digits=single", "word | split | initial | from=title | 1-based | digits=single", "word | split | initial | from=title | 0-based | digits=pairs", "word | split | initial | from=title | 1-based | digits=pairs", "word | split | initial | from=title | 0-based | digits=cumulative", "word | split | initial | from=title | 1-based | digits=cumulative", "word | split | initial | from=title | 0-based | digits=reversed", "word | split | initial | from=title | 1-based | digits=reversed", "word | split | initial | from=body | 0-based | digits=given", "word | split | initial | from=body | 1-based | digits=given", "word | split | initial | from=body | 0-based | digits=single", "word | split | initial | from=body | 1-based | digits=single", "word | split | initial | from=body | 0-based | digits=pairs", "word | split | initial | from=body | 1-based | digits=pairs", "word | split | initial | from=body | 0-based | digits=cumulative", "word | split | initial | from=body | 1-based | digits=cumulative", "word | split | initial | from=body | 0-based | digits=reversed", "word | split | initial | from=body | 1-based | digits=reversed", "letter | char | from=title | 0-based | digits=given", "letter | char | from=title | 1-based | digits=given", "letter | char | from=title | 0-based | digits=single", "letter | char | from=title | 1-based | digits=single", "letter | char | from=title | 0-based | digits=pairs", "letter | char | from=title | 1-based | digits=pairs", "letter | char | from=title | 0-based | digits=cumulative", "letter | char | from=title | 1-based | digits=cumulative", "letter | char | from=title | 0-based | digits=reversed", "letter | char | from=title | 1-based | digits=reversed", "letter | char | from=body | 0-based | digits=given", "letter | char | from=body | 1-based | digits=given", "letter | char | from=body | 0-based | digits=single", "letter | char | from=body | 1-based | digits=single", "letter | char | from=body | 0-based | digits=pairs", "letter | char | from=body | 1-based | digits=pairs", "letter | char | from=body | 0-based | digits=cumulative", "letter | char | from=body | 1-based | digits=cumulative", "letter | char | from=body | 0-based | digits=reversed", "letter | char | from=body | 1-based | digits=reversed", "nonspace | char | from=title | 0-based | digits=given", "nonspace | char | from=title | 1-based | digits=given", "nonspace | char | from=title | 0-based | digits=single", "nonspace | char | from=title | 1-based | digits=single", "nonspace | char | from=title | 0-based | digits=pairs", "nonspace | char | from=title | 1-based | digits=pairs", "nonspace | char | from=title | 0-based | digits=cumulative", "nonspace | char | from=title | 1-based | digits=cumulative", "nonspace | char | from=title | 0-based | digits=reversed", "nonspace | char | from=title | 1-based | digits=reversed", "nonspace | char | from=body | 0-based | digits=given", "nonspace | char | from=body | 1-based | digits=given", "nonspace | char | from=body | 0-based | digits=single", "nonspace | char | from=body | 1-based | digits=single", "nonspace | char | from=body | 0-based | digits=pairs", "nonspace | char | from=body | 1-based | digits=pairs", "nonspace | char | from=body | 0-based | digits=cumulative", "nonspace | char | from=body | 1-based | digits=cumulative", "nonspace | char | from=body | 0-based | digits=reversed", "nonspace | char | from=body | 1-based | digits=reversed", "line | item | from=title | 0-based | digits=given", "line | item | from=title | 1-based | digits=given", "line | item | from=title | 0-based | digits=single", "line | item | from=title | 1-based | digits=single", "line | item | from=title | 0-based | digits=pairs", "line | item | from=title | 1-based | digits=pairs", "line | item | from=title | 0-based | digits=cumulative", "line | item | from=title | 1-based | digits=cumulative", "line | item | from=title | 0-based | digits=reversed", "line | item | from=title | 1-based | digits=reversed", "line | item | from=body | 0-based | digits=given", "line | item | from=body | 1-based | digits=given", "line | item | from=body | 0-based | digits=single", "line | item | from=body | 1-based | digits=single", "line | item | from=body | 0-based | digits=pairs", "line | item | from=body | 1-based | digits=pairs", "line | item | from=body | 0-based | digits=cumulative", "line | item | from=body | 1-based | digits=cumulative", "line | item | from=body | 0-based | digits=reversed", "line | item | from=body | 1-based | digits=reversed", "line | initial | from=title | 0-based | digits=given", "line | initial | from=title | 1-based | digits=given", "line | initial | from=title | 0-based | digits=single", "line | initial | from=title | 1-based | digits=single", "line | initial | from=title | 0-based | digits=pairs", "line | initial | from=title | 1-based | digits=pairs", "line | initial | from=title | 0-based | digits=cumulative", "line | initial | from=title | 1-based | digits=cumulative", "line | initial | from=title | 0-based | digits=reversed", "line | initial | from=title | 1-based | digits=reversed", "line | initial | from=body | 0-based | digits=given", "line | initial | from=body | 1-based | digits=given", "line | initial | from=body | 0-based | digits=single", "line | initial | from=body | 1-based | digits=single", "line | initial | from=body | 0-based | digits=pairs", "line | initial | from=body | 1-based | digits=pairs", "line | initial | from=body | 0-based | digits=cumulative", "line | initial | from=body | 1-based | digits=cumulative", "line | initial | from=body | 0-based | digits=reversed", "line | initial | from=body | 1-based | digits=reversed", "sentence | item | from=title | 0-based | digits=given", "sentence | item | from=title | 1-based | digits=given", "sentence | item | from=title | 0-based | digits=single", "sentence | item | from=title | 1-based | digits=single", "sentence | item | from=title | 0-based | digits=pairs", "sentence | item | from=title | 1-based | digits=pairs", "sentence | item | from=title | 0-based | digits=cumulative", "sentence | item | from=title | 1-based | digits=cumulative", "sentence | item | from=title | 0-based | digits=reversed", "sentence | item | from=title | 1-based | digits=reversed", "sentence | item | from=body | 0-based | digits=given", "sentence | item | from=body | 1-based | digits=given", "sentence | item | from=body | 0-based | digits=single", "sentence | item | from=body | 1-based | digits=single", "sentence | item | from=body | 0-based | digits=pairs", "sentence | item | from=body | 1-based | digits=pairs", "sentence | item | from=body | 0-based | digits=cumulative", "sentence | item | from=body | 1-based | digits=cumulative", "sentence | item | from=body | 0-based | digits=reversed", "sentence | item | from=body | 1-based | digits=reversed", "sentence | initial | from=title | 0-based | digits=given", "sentence | initial | from=title | 1-based | digits=given", "sentence | initial | from=title | 0-based | digits=single", "sentence | initial | from=title | 1-based | digits=single", "sentence | initial | from=title | 0-based | digits=pairs", "sentence | initial | from=title | 1-based | digits=pairs", "sentence | initial | from=title | 0-based | digits=cumulative", "sentence | initial | from=title | 1-based | digits=cumulative", "sentence | initial | from=title | 0-based | digits=reversed", "sentence | initial | from=title | 1-based | digits=reversed", "sentence | initial | from=body | 0-based | digits=given", "sentence | initial | from=body | 1-based | digits=given", "sentence | initial | from=body | 0-based | digits=single", "sentence | initial | from=body | 1-based | digits=single", "sentence | initial | from=body | 0-based | digits=pairs", "sentence | initial | from=body | 1-based | digits=pairs", "sentence | initial | from=body | 0-based | digits=cumulative", "sentence | initial | from=body | 1-based | digits=cumulative", "sentence | initial | from=body | 0-based | digits=reversed", "sentence | initial | from=body | 1-based | digits=reversed", "paragraph | item | from=title | 0-based | digits=given", "paragraph | item | from=title | 1-based | digits=given", "paragraph | item | from=title | 0-based | digits=single", "paragraph | item | from=title | 1-based | digits=single", "paragraph | item | from=title | 0-based | digits=pairs", "paragraph | item | from=title | 1-based | digits=pairs", "paragraph | item | from=title | 0-based | digits=cumulative", "paragraph | item | from=title | 1-based | digits=cumulative", "paragraph | item | from=title | 0-based | digits=reversed", "paragraph | item | from=title | 1-based | digits=reversed", "paragraph | item | from=body | 0-based | digits=given", "paragraph | item | from=body | 1-based | digits=given", "paragraph | item | from=body | 0-based | digits=single", "paragraph | item | from=body | 1-based | digits=single", "paragraph | item | from=body | 0-based | digits=pairs", "paragraph | item | from=body | 1-based | digits=pairs", "paragraph | item | from=body | 0-based | digits=cumulative", "paragraph | item | from=body | 1-based | digits=cumulative", "paragraph | item | from=body | 0-based | digits=reversed", "paragraph | item | from=body | 1-based | digits=reversed", "paragraph | initial | from=title | 0-based | digits=given", "paragraph | initial | from=title | 1-based | digits=given", "paragraph | initial | from=title | 0-based | digits=single", "paragraph | initial | from=title | 1-based | digits=single", "paragraph | initial | from=title | 0-based | digits=pairs", "paragraph | initial | from=title | 1-based | digits=pairs", "paragraph | initial | from=title | 0-based | digits=cumulative", "paragraph | initial | from=title | 1-based | digits=cumulative", "paragraph | initial | from=title | 0-based | digits=reversed", "paragraph | initial | from=title | 1-based | digits=reversed", "paragraph | initial | from=body | 0-based | digits=given", "paragraph | initial | from=body | 1-based | digits=given", "paragraph | initial | from=body | 0-based | digits=single", "paragraph | initial | from=body | 1-based | digits=single", "paragraph | initial | from=body | 0-based | digits=pairs", "paragraph | initial | from=body | 1-based | digits=pairs", "paragraph | initial | from=body | 0-based | digits=cumulative", "paragraph | initial | from=body | 1-based | digits=cumulative", "paragraph | initial | from=body | 0-based | digits=reversed", "paragraph | initial | from=body | 1-based | digits=reversed"], "draws": 10000, "best_name": "word | ws-drop | item | from=title | 1-based | digits=given", "best_score": 3, "best_rarity": 3.3837365677952106e-05, "raw_max": 3, "nullA_raw_max_median": 2, "nullB_raw_max_median": 1, "hits": 21, "nullA_mean_hits": 11.4078, "nullA_hits_95": 17, "pA": 0.00019998000199980003, "pB": 0.0006999300069993001, "p": 0.0006999300069993001, "shuffle_possible": true, "top": [{"name": "word | ws-drop | item | from=title | 1-based | digits=given", "aliases": ["word | ws-drop | item | from=title | 1-based | digits=given", "word | strip | item | from=title | 1-based | digits=given"], "score": 3, "hit": true, "rarity": 3.3837365677952106e-05, "numbers": [67, 90, 143], "items": ["Val-du-Cuivre.", "Pointe-aux-H\u00e9rons.", "Sureau,"], "letters": null}, {"name": "word | ws | item | from=title | 1-based | digits=given", "aliases": ["word | ws | item | from=title | 1-based | digits=given"], "score": 2, "hit": true, "rarity": 0.0016998300169982989, "numbers": [67, 90, 143], "items": ["Val-du-Cuivre.", "Pointe-aux-H\u00e9rons.", "Mont"], "letters": null}, {"name": "word | ws | item | from=title | 1-based | digits=pairs", "aliases": ["word | ws | item | from=title | 1-based | digits=pairs"], "score": 2, "hit": true, "rarity": 0.007499250074992492, "numbers": [67, 90, 14, 3], "items": ["Val-du-Cuivre.", "Pointe-aux-H\u00e9rons.", "when", "of"], "letters": null}, {"name": "word | ws-drop | item | from=title | 1-based | digits=pairs", "aliases": ["word | ws-drop | item | from=title | 1-based | digits=pairs", "word | strip | item | from=title | 1-based | digits=pairs"], "score": 2, "hit": true, "rarity": 0.007499250074992492, "numbers": [67, 90, 14, 3], "items": ["Val-du-Cuivre.", "Pointe-aux-H\u00e9rons.", "when", "of"], "letters": null}, {"name": "line | item | from=title | 1-based | digits=reversed", "aliases": ["line | item | from=title | 1-based | digits=reversed"], "score": 1, "hit": true, "rarity": 0.06189381061893806, "numbers": [341, 9, 76], "items": ["\u00b7", "Pointe-aux-H\u00e9rons", "\u00b7"], "letters": null}], "winners": [["word | ws-drop | item | from=title | 1-based | digits=given", "word | strip | item | from=title | 1-based | digits=given"]], "n_winners": 1}, {"label": "fr", "path": "(example fr text)", "sha256": "09a98b7d4e83a831f27e5770d62a7f5e6a4093f0e9ff918c0510e6090f5e6398", "paragraphs": 9, "words": 338, "M": 280, "merged_views": 4, "n_views": 28, "groupings": [["given"], ["single"], ["pairs"], ["cumulative"], ["reversed"]], "warnings": [], "by_unit": {"word": 120, "letter": 20, "nonspace": 20, "line": 40, "sentence": 40, "paragraph": 40}, "conventions": ["word | ws | item | from=title | 0-based | digits=given", "word | ws | item | from=title | 1-based | digits=given", "word | ws | item | from=title | 0-based | digits=single", "word | ws | item | from=title | 1-based | digits=single", "word | ws | item | from=title | 0-based | digits=pairs", "word | ws | item | from=title | 1-based | digits=pairs", "word | ws | item | from=title | 0-based | digits=cumulative", "word | ws | item | from=title | 1-based | digits=cumulative", "word | ws | item | from=title | 0-based | digits=reversed", "word | ws | item | from=title | 1-based | digits=reversed", "word | ws | item | from=body | 0-based | digits=given", "word | ws | item | from=body | 1-based | digits=given", "word | ws | item | from=body | 0-based | digits=single", "word | ws | item | from=body | 1-based | digits=single", "word | ws | item | from=body | 0-based | digits=pairs", "word | ws | item | from=body | 1-based | digits=pairs", "word | ws | item | from=body | 0-based | digits=cumulative", "word | ws | item | from=body | 1-based | digits=cumulative", "word | ws | item | from=body | 0-based | digits=reversed", "word | ws | item | from=body | 1-based | digits=reversed", "word | ws | initial | from=title | 0-based | digits=given", "word | ws | initial | from=title | 1-based | digits=given", "word | ws | initial | from=title | 0-based | digits=single", "word | ws | initial | from=title | 1-based | digits=single", "word | ws | initial | from=title | 0-based | digits=pairs", "word | ws | initial | from=title | 1-based | digits=pairs", "word | ws | initial | from=title | 0-based | digits=cumulative", "word | ws | initial | from=title | 1-based | digits=cumulative", "word | ws | initial | from=title | 0-based | digits=reversed", "word | ws | initial | from=title | 1-based | digits=reversed", "word | ws | initial | from=body | 0-based | digits=given", "word | ws | initial | from=body | 1-based | digits=given", "word | ws | initial | from=body | 0-based | digits=single", "word | ws | initial | from=body | 1-based | digits=single", "word | ws | initial | from=body | 0-based | digits=pairs", "word | ws | initial | from=body | 1-based | digits=pairs", "word | ws | initial | from=body | 0-based | digits=cumulative", "word | ws | initial | from=body | 1-based | digits=cumulative", "word | ws | initial | from=body | 0-based | digits=reversed", "word | ws | initial | from=body | 1-based | digits=reversed", "word | ws-drop | item | from=title | 0-based | digits=given", "word | ws-drop | item | from=title | 1-based | digits=given", "word | ws-drop | item | from=title | 0-based | digits=single", "word | ws-drop | item | from=title | 1-based | digits=single", "word | ws-drop | item | from=title | 0-based | digits=pairs", "word | ws-drop | item | from=title | 1-based | digits=pairs", "word | ws-drop | item | from=title | 0-based | digits=cumulative", "word | ws-drop | item | from=title | 1-based | digits=cumulative", "word | ws-drop | item | from=title | 0-based | digits=reversed", "word | ws-drop | item | from=title | 1-based | digits=reversed", "word | ws-drop | item | from=body | 0-based | digits=given", "word | ws-drop | item | from=body | 1-based | digits=given", "word | ws-drop | item | from=body | 0-based | digits=single", "word | ws-drop | item | from=body | 1-based | digits=single", "word | ws-drop | item | from=body | 0-based | digits=pairs", "word | ws-drop | item | from=body | 1-based | digits=pairs", "word | ws-drop | item | from=body | 0-based | digits=cumulative", "word | ws-drop | item | from=body | 1-based | digits=cumulative", "word | ws-drop | item | from=body | 0-based | digits=reversed", "word | ws-drop | item | from=body | 1-based | digits=reversed", "word | ws-drop | initial | from=title | 0-based | digits=given", "word | ws-drop | initial | from=title | 1-based | digits=given", "word | ws-drop | initial | from=title | 0-based | digits=single", "word | ws-drop | initial | from=title | 1-based | digits=single", "word | ws-drop | initial | from=title | 0-based | digits=pairs", "word | ws-drop | initial | from=title | 1-based | digits=pairs", "word | ws-drop | initial | from=title | 0-based | digits=cumulative", "word | ws-drop | initial | from=title | 1-based | digits=cumulative", "word | ws-drop | initial | from=title | 0-based | digits=reversed", "word | ws-drop | initial | from=title | 1-based | digits=reversed", "word | ws-drop | initial | from=body | 0-based | digits=given", "word | ws-drop | initial | from=body | 1-based | digits=given", "word | ws-drop | initial | from=body | 0-based | digits=single", "word | ws-drop | initial | from=body | 1-based | digits=single", "word | ws-drop | initial | from=body | 0-based | digits=pairs", "word | ws-drop | initial | from=body | 1-based | digits=pairs", "word | ws-drop | initial | from=body | 0-based | digits=cumulative", "word | ws-drop | initial | from=body | 1-based | digits=cumulative", "word | ws-drop | initial | from=body | 0-based | digits=reversed", "word | ws-drop | initial | from=body | 1-based | digits=reversed", "word | split | item | from=title | 0-based | digits=given", "word | split | item | from=title | 1-based | digits=given", "word | split | item | from=title | 0-based | digits=single", "word | split | item | from=title | 1-based | digits=single", "word | split | item | from=title | 0-based | digits=pairs", "word | split | item | from=title | 1-based | digits=pairs", "word | split | item | from=title | 0-based | digits=cumulative", "word | split | item | from=title | 1-based | digits=cumulative", "word | split | item | from=title | 0-based | digits=reversed", "word | split | item | from=title | 1-based | digits=reversed", "word | split | item | from=body | 0-based | digits=given", "word | split | item | from=body | 1-based | digits=given", "word | split | item | from=body | 0-based | digits=single", "word | split | item | from=body | 1-based | digits=single", "word | split | item | from=body | 0-based | digits=pairs", "word | split | item | from=body | 1-based | digits=pairs", "word | split | item | from=body | 0-based | digits=cumulative", "word | split | item | from=body | 1-based | digits=cumulative", "word | split | item | from=body | 0-based | digits=reversed", "word | split | item | from=body | 1-based | digits=reversed", "word | split | initial | from=title | 0-based | digits=given", "word | split | initial | from=title | 1-based | digits=given", "word | split | initial | from=title | 0-based | digits=single", "word | split | initial | from=title | 1-based | digits=single", "word | split | initial | from=title | 0-based | digits=pairs", "word | split | initial | from=title | 1-based | digits=pairs", "word | split | initial | from=title | 0-based | digits=cumulative", "word | split | initial | from=title | 1-based | digits=cumulative", "word | split | initial | from=title | 0-based | digits=reversed", "word | split | initial | from=title | 1-based | digits=reversed", "word | split | initial | from=body | 0-based | digits=given", "word | split | initial | from=body | 1-based | digits=given", "word | split | initial | from=body | 0-based | digits=single", "word | split | initial | from=body | 1-based | digits=single", "word | split | initial | from=body | 0-based | digits=pairs", "word | split | initial | from=body | 1-based | digits=pairs", "word | split | initial | from=body | 0-based | digits=cumulative", "word | split | initial | from=body | 1-based | digits=cumulative", "word | split | initial | from=body | 0-based | digits=reversed", "word | split | initial | from=body | 1-based | digits=reversed", "letter | char | from=title | 0-based | digits=given", "letter | char | from=title | 1-based | digits=given", "letter | char | from=title | 0-based | digits=single", "letter | char | from=title | 1-based | digits=single", "letter | char | from=title | 0-based | digits=pairs", "letter | char | from=title | 1-based | digits=pairs", "letter | char | from=title | 0-based | digits=cumulative", "letter | char | from=title | 1-based | digits=cumulative", "letter | char | from=title | 0-based | digits=reversed", "letter | char | from=title | 1-based | digits=reversed", "letter | char | from=body | 0-based | digits=given", "letter | char | from=body | 1-based | digits=given", "letter | char | from=body | 0-based | digits=single", "letter | char | from=body | 1-based | digits=single", "letter | char | from=body | 0-based | digits=pairs", "letter | char | from=body | 1-based | digits=pairs", "letter | char | from=body | 0-based | digits=cumulative", "letter | char | from=body | 1-based | digits=cumulative", "letter | char | from=body | 0-based | digits=reversed", "letter | char | from=body | 1-based | digits=reversed", "nonspace | char | from=title | 0-based | digits=given", "nonspace | char | from=title | 1-based | digits=given", "nonspace | char | from=title | 0-based | digits=single", "nonspace | char | from=title | 1-based | digits=single", "nonspace | char | from=title | 0-based | digits=pairs", "nonspace | char | from=title | 1-based | digits=pairs", "nonspace | char | from=title | 0-based | digits=cumulative", "nonspace | char | from=title | 1-based | digits=cumulative", "nonspace | char | from=title | 0-based | digits=reversed", "nonspace | char | from=title | 1-based | digits=reversed", "nonspace | char | from=body | 0-based | digits=given", "nonspace | char | from=body | 1-based | digits=given", "nonspace | char | from=body | 0-based | digits=single", "nonspace | char | from=body | 1-based | digits=single", "nonspace | char | from=body | 0-based | digits=pairs", "nonspace | char | from=body | 1-based | digits=pairs", "nonspace | char | from=body | 0-based | digits=cumulative", "nonspace | char | from=body | 1-based | digits=cumulative", "nonspace | char | from=body | 0-based | digits=reversed", "nonspace | char | from=body | 1-based | digits=reversed", "line | item | from=title | 0-based | digits=given", "line | item | from=title | 1-based | digits=given", "line | item | from=title | 0-based | digits=single", "line | item | from=title | 1-based | digits=single", "line | item | from=title | 0-based | digits=pairs", "line | item | from=title | 1-based | digits=pairs", "line | item | from=title | 0-based | digits=cumulative", "line | item | from=title | 1-based | digits=cumulative", "line | item | from=title | 0-based | digits=reversed", "line | item | from=title | 1-based | digits=reversed", "line | item | from=body | 0-based | digits=given", "line | item | from=body | 1-based | digits=given", "line | item | from=body | 0-based | digits=single", "line | item | from=body | 1-based | digits=single", "line | item | from=body | 0-based | digits=pairs", "line | item | from=body | 1-based | digits=pairs", "line | item | from=body | 0-based | digits=cumulative", "line | item | from=body | 1-based | digits=cumulative", "line | item | from=body | 0-based | digits=reversed", "line | item | from=body | 1-based | digits=reversed", "line | initial | from=title | 0-based | digits=given", "line | initial | from=title | 1-based | digits=given", "line | initial | from=title | 0-based | digits=single", "line | initial | from=title | 1-based | digits=single", "line | initial | from=title | 0-based | digits=pairs", "line | initial | from=title | 1-based | digits=pairs", "line | initial | from=title | 0-based | digits=cumulative", "line | initial | from=title | 1-based | digits=cumulative", "line | initial | from=title | 0-based | digits=reversed", "line | initial | from=title | 1-based | digits=reversed", "line | initial | from=body | 0-based | digits=given", "line | initial | from=body | 1-based | digits=given", "line | initial | from=body | 0-based | digits=single", "line | initial | from=body | 1-based | digits=single", "line | initial | from=body | 0-based | digits=pairs", "line | initial | from=body | 1-based | digits=pairs", "line | initial | from=body | 0-based | digits=cumulative", "line | initial | from=body | 1-based | digits=cumulative", "line | initial | from=body | 0-based | digits=reversed", "line | initial | from=body | 1-based | digits=reversed", "sentence | item | from=title | 0-based | digits=given", "sentence | item | from=title | 1-based | digits=given", "sentence | item | from=title | 0-based | digits=single", "sentence | item | from=title | 1-based | digits=single", "sentence | item | from=title | 0-based | digits=pairs", "sentence | item | from=title | 1-based | digits=pairs", "sentence | item | from=title | 0-based | digits=cumulative", "sentence | item | from=title | 1-based | digits=cumulative", "sentence | item | from=title | 0-based | digits=reversed", "sentence | item | from=title | 1-based | digits=reversed", "sentence | item | from=body | 0-based | digits=given", "sentence | item | from=body | 1-based | digits=given", "sentence | item | from=body | 0-based | digits=single", "sentence | item | from=body | 1-based | digits=single", "sentence | item | from=body | 0-based | digits=pairs", "sentence | item | from=body | 1-based | digits=pairs", "sentence | item | from=body | 0-based | digits=cumulative", "sentence | item | from=body | 1-based | digits=cumulative", "sentence | item | from=body | 0-based | digits=reversed", "sentence | item | from=body | 1-based | digits=reversed", "sentence | initial | from=title | 0-based | digits=given", "sentence | initial | from=title | 1-based | digits=given", "sentence | initial | from=title | 0-based | digits=single", "sentence | initial | from=title | 1-based | digits=single", "sentence | initial | from=title | 0-based | digits=pairs", "sentence | initial | from=title | 1-based | digits=pairs", "sentence | initial | from=title | 0-based | digits=cumulative", "sentence | initial | from=title | 1-based | digits=cumulative", "sentence | initial | from=title | 0-based | digits=reversed", "sentence | initial | from=title | 1-based | digits=reversed", "sentence | initial | from=body | 0-based | digits=given", "sentence | initial | from=body | 1-based | digits=given", "sentence | initial | from=body | 0-based | digits=single", "sentence | initial | from=body | 1-based | digits=single", "sentence | initial | from=body | 0-based | digits=pairs", "sentence | initial | from=body | 1-based | digits=pairs", "sentence | initial | from=body | 0-based | digits=cumulative", "sentence | initial | from=body | 1-based | digits=cumulative", "sentence | initial | from=body | 0-based | digits=reversed", "sentence | initial | from=body | 1-based | digits=reversed", "paragraph | item | from=title | 0-based | digits=given", "paragraph | item | from=title | 1-based | digits=given", "paragraph | item | from=title | 0-based | digits=single", "paragraph | item | from=title | 1-based | digits=single", "paragraph | item | from=title | 0-based | digits=pairs", "paragraph | item | from=title | 1-based | digits=pairs", "paragraph | item | from=title | 0-based | digits=cumulative", "paragraph | item | from=title | 1-based | digits=cumulative", "paragraph | item | from=title | 0-based | digits=reversed", "paragraph | item | from=title | 1-based | digits=reversed", "paragraph | item | from=body | 0-based | digits=given", "paragraph | item | from=body | 1-based | digits=given", "paragraph | item | from=body | 0-based | digits=single", "paragraph | item | from=body | 1-based | digits=single", "paragraph | item | from=body | 0-based | digits=pairs", "paragraph | item | from=body | 1-based | digits=pairs", "paragraph | item | from=body | 0-based | digits=cumulative", "paragraph | item | from=body | 1-based | digits=cumulative", "paragraph | item | from=body | 0-based | digits=reversed", "paragraph | item | from=body | 1-based | digits=reversed", "paragraph | initial | from=title | 0-based | digits=given", "paragraph | initial | from=title | 1-based | digits=given", "paragraph | initial | from=title | 0-based | digits=single", "paragraph | initial | from=title | 1-based | digits=single", "paragraph | initial | from=title | 0-based | digits=pairs", "paragraph | initial | from=title | 1-based | digits=pairs", "paragraph | initial | from=title | 0-based | digits=cumulative", "paragraph | initial | from=title | 1-based | digits=cumulative", "paragraph | initial | from=title | 0-based | digits=reversed", "paragraph | initial | from=title | 1-based | digits=reversed", "paragraph | initial | from=body | 0-based | digits=given", "paragraph | initial | from=body | 1-based | digits=given", "paragraph | initial | from=body | 0-based | digits=single", "paragraph | initial | from=body | 1-based | digits=single", "paragraph | initial | from=body | 0-based | digits=pairs", "paragraph | initial | from=body | 1-based | digits=pairs", "paragraph | initial | from=body | 0-based | digits=cumulative", "paragraph | initial | from=body | 1-based | digits=cumulative", "paragraph | initial | from=body | 0-based | digits=reversed", "paragraph | initial | from=body | 1-based | digits=reversed"], "draws": 10000, "best_name": "word | ws | item | from=body | 1-based | digits=given", "best_score": 1, "best_rarity": 0.08539146085391457, "raw_max": 1, "nullA_raw_max_median": 1, "nullB_raw_max_median": 1, "hits": 14, "nullA_mean_hits": 8.9685, "nullA_hits_95": 15, "pA": 0.808019198080192, "pB": 0.6284371562843716, "p": 0.808019198080192, "shuffle_possible": true, "top": [{"name": "word | ws | item | from=body | 1-based | digits=given", "aliases": ["word | ws | item | from=body | 1-based | digits=given"], "score": 1, "hit": true, "rarity": 0.08539146085391457, "numbers": [67, 90, 143], "items": ["les", "Pointe-aux-H\u00e9rons.", "\u00eeles."], "letters": null}, {"name": "word | ws | item | from=title | 0-based | digits=reversed", "aliases": ["word | ws | item | from=title | 0-based | digits=reversed"], "score": 1, "hit": true, "rarity": 0.08669133086691319, "numbers": [341, 9, 76], "items": ["laissent", "ses", "Val-du-Cuivre."], "letters": null}, {"name": "word | ws-drop | item | from=body | 0-based | digits=pairs", "aliases": ["word | ws-drop | item | from=body | 0-based | digits=pairs", "word | strip | item | from=body | 0-based | digits=pairs"], "score": 1, "hit": true, "rarity": 0.11198880111988789, "numbers": [67, 90, 14, 3], "items": ["glissent", "le", "Lac-des-Lanternes", "le"], "letters": null}, {"name": "word | ws | item | from=body | 0-based | digits=pairs", "aliases": ["word | ws | item | from=body | 0-based | digits=pairs"], "score": 1, "hit": true, "rarity": 0.11518848115188475, "numbers": [67, 90, 14, 3], "items": ["canots", "\u00ab", "Lac-des-Lanternes", "le"], "letters": null}, {"name": "word | ws | item | from=body | 1-based | digits=pairs", "aliases": ["word | ws | item | from=body | 1-based | digits=pairs"], "score": 1, "hit": true, "rarity": 0.11738826117388255, "numbers": [67, 90, 14, 3], "items": ["les", "Pointe-aux-H\u00e9rons.", "de", "quand"], "letters": null}], "winners": [["word | ws | item | from=body | 1-based | digits=given"]], "n_winners": 1}]}};
+</script>
+<script type="text/plain" id="ik-worker">
+self.onmessage = function (e) {
+  var m = e.data, IK = self.IndexKit;
+  try {
+    if (m.cmd === 'selftest') {
+      var r = IK.selftest(m.demo, function (msg) { self.postMessage(msg); });
+      self.postMessage({ type: 'selftest-done', result: r });
+    } else if (m.cmd === 'run') {
+      var cfg = IK.Config.fromDict(m.config), ds = new IK.DigitString(m.digits), results = [];
+      m.texts.forEach(function (t, ti) {
+        var text = IK.Text.fromString(t.label, t.content, t.path, t.sha256);
+        results.push(IK.analyse(text, ds, cfg, m.draws, m.seed, { targets: m.targets, wordlist: t.wordlist,
+          progress: function (which, stream, done, total) {
+            self.postMessage({ type: 'progress', index: ti, count: m.texts.length, which: which, stream: stream, done: done, total: total });
+          } }));
+      });
+      self.postMessage({ type: 'run-done', results: results });
+    }
+  } catch (err) {
+    self.postMessage({ type: 'error', message: (err && err.message) || String(err) });
+  }
+};
+</script>
+<script>
+(function () {
+  'use strict';
+  var IK = window.IndexKit, D = window.IK_DATA;
+  var $ = function (id) { return document.getElementById(id); };
+  var esc = function (s) { return String(s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); };
+  var LANG = { en: 'English', fr: 'French' };
+  var ENGINE_HASH = IK.sha256Hex(IK.utf8($('ik-engine').textContent));
+  var GATE_KEY = 'indexkit.selftest.' + ENGINE_HASH;
+  var DRAFT_KEY = 'indexkit.draft.v1';
+
+  var state = { gate: 'checking', checks: [], files: {}, wordlist: null, locked: null, busy: false, isExample: false };
+
+  function store(key, val) { try { if (val === null) localStorage.removeItem(key); else localStorage.setItem(key, JSON.stringify(val)); } catch (e) { /* storage unavailable */ } }
+  function load(key) { try { var v = localStorage.getItem(key); return v ? JSON.parse(v) : null; } catch (e) { return null; } }
+
+  // ---------------- worker ----------------
+  var worker = null;
+  try {
+    var src = $('ik-engine').textContent + '\n' + $('ik-worker').textContent;
+    worker = new Worker(URL.createObjectURL(new Blob([src], { type: 'text/javascript' })));
+  } catch (e) { worker = null; }
+  var onWorker = null;
+  function job(msg, handler) {
+    onWorker = handler;
+    if (worker) { worker.postMessage(msg); return; }
+    // Fallback: same code on the page itself (the page freezes while it runs).
+    setTimeout(function () {
+      var fake = { IndexKit: IK, postMessage: function (m) { handler(m); } };
+      var fn = new Function('self', $('ik-worker').textContent + '\nreturn self.onmessage;');
+      fn(fake)({ data: msg });
+    }, 30);
+  }
+  if (worker) worker.onmessage = function (e) { if (onWorker) onWorker(e.data); };
+
+  // ---------------- instrument check (selftest gate) ----------------
+  function demoPayload() { return { en: D.demo.en, fr: D.demo.fr, targets: D.demo.targets, wordlistEn: D.wordlists.en }; }
+
+  function renderGate(frac) {
+    var g = $('gate'), html = '';
+    if (state.gate === 'passed') html = '<span class="pill ok"><span class="dot"></span>Instrument check passed</span>';
+    else if (state.gate === 'failed') html = '<span class="pill bad"><span class="dot"></span>Instrument check FAILED</span>';
+    else html = '<span class="pill busy"><span class="dot"></span>Checking the instrument… ' + Math.round((frac || 0) * 100) + '%</span>';
+    if (state.gate !== 'checking') html += '<button class="linkish" type="button" id="gate-details">details</button><button class="linkish" type="button" id="gate-rerun">run again</button>';
+    g.innerHTML = html;
+    if ($('gate-details')) $('gate-details').onclick = showGateDetails;
+    if ($('gate-rerun')) $('gate-rerun').onclick = runSelftest;
+    updateRunState();
+  }
+
+  function showGateDetails() {
+    var rows = state.checks.map(function (c) {
+      return '<div class="' + (c.ok ? '' : 'bad') + '">' + (c.ok ? '✓ ' : '✗ ') + esc(c.name) + (c.detail ? ' <span class="sub">— ' + esc(c.detail) + '</span>' : '') + '</div>';
+    }).join('');
+    $('results').innerHTML = '<h2>Instrument check</h2><p class="help">Before it tests anything, indexkit hides known messages in a made-up article and checks that it finds them, then feeds it hundreds of random digit strings and checks that they come out non-significant at the right rate. Nothing else can run until all of this passes.</p><div class="checklist">' + rows + '</div>';
+  }
+
+  function runSelftest() {
+    if (state.busy) return;
+    state.gate = 'checking'; state.checks = []; state.busy = true;
+    renderGate(0);
+    var phases = 0, checks = 0;
+    job({ cmd: 'selftest', demo: demoPayload() }, function (m) {
+      if (m.type === 'progress') {
+        var key = m.label + m.which + m.stream;
+        if (m.done === m.total) phases++;
+        renderGate(Math.min(0.97, (phases + (m.done === m.total ? 0 : m.done / m.total)) / 8 * 0.8 + checks / 23 * 0.2));
+      } else if (m.type === 'check') { checks++; state.checks.push(m); }
+      else if (m.type === 'selftest-done') {
+        state.busy = false;
+        state.checks = m.result.checks;
+        state.gate = m.result.passed ? 'passed' : 'failed';
+        store(GATE_KEY, { passed: m.result.passed, checks: m.result.checks });
+        renderGate(1);
+        if (!m.result.passed) showGateDetails();
+      } else if (m.type === 'error') {
+        state.busy = false; state.gate = 'failed';
+        state.checks = [{ name: 'the check could not run', ok: false, detail: m.message }];
+        renderGate(1); showGateDetails();
+      }
+    });
+  }
+
+  // ---------------- inputs ----------------
+  function textEntry(lang) {
+    var content = $('text-' + lang).value;
+    if (!IK.parseList(content).length) return null;
+    var f = state.files[lang], sha, path;
+    if (f && f.content === content) { sha = f.sha256; path = f.name; }
+    else { sha = IK.sha256Hex(IK.utf8(content)); path = '(pasted ' + LANG[lang] + ' text)'; }
+    return { label: lang, content: content, path: path, sha256: sha };
+  }
+
+  function checked(name) { return Array.prototype.slice.call(document.querySelectorAll('input[data-dim="' + name + '"]:checked')).map(function (x) { return x.value; }); }
+
+  function gatherInputs() {
+    var errors = [], out = {};
+    try { out.ds = new IK.DigitString($('digits').value); } catch (e) { errors.push(e.message); }
+    out.texts = ['en', 'fr'].map(textEntry).filter(Boolean);
+    if (!out.texts.length) errors.push('Paste or open at least one article.');
+    out.mode = $('mode-letters').checked ? 'letters' : 'targets';
+    out.targets = IK.parseList($('targets').value);
+    if (out.mode === 'targets' && !IK.uniqueKeys(out.targets).length) errors.push('Write at least one word in your list (step 3), or choose "Letters that spell real words".');
+    out.markers = IK.parseList($('markers').value);
+    out.draws = parseInt($('draws').value, 10);
+    out.seed = parseInt($('seed').value, 10);
+    out.threshold = parseFloat($('threshold').value);
+    if (!(out.draws >= IK.MIN_DRAWS)) errors.push('Random draws must be at least ' + IK.MIN_DRAWS + '.');
+    if (!isFinite(out.seed)) errors.push('The seed must be a whole number.');
+    if (!(out.threshold > 0 && out.threshold < 1)) errors.push('The pass threshold must be between 0 and 1.');
+    try {
+      out.cfg = new IK.Config({ mode: out.mode, units: checked('units'), tokenizers: checked('tokenizers'),
+        bases: checked('bases').map(Number), starts: checked('starts'), markers: out.markers, groupings: checked('groupings') });
+    } catch (e) { errors.push(e.message); }
+    out.texts.forEach(function (t) {
+      t.wordlist = state.wordlist ? state.wordlist.words : D.wordlists[t.label];
+    });
+    out.errors = errors;
+    return out;
+  }
+
+  function conventionLists(inp) {
+    var lists = {};
+    inp.texts.forEach(function (t) {
+      var text = IK.Text.fromString(t.label, t.content, t.path, t.sha256);
+      var tv = new IK.TextViews(text, inp.cfg);
+      lists[t.label] = { names: IK.buildConventions(tv, inp.ds, inp.cfg).convs.map(function (c) { return c.name; }), warnings: tv.warnings };
+    });
+    return lists;
+  }
+
+  function nullSentence(Ms, draws) {
+    return 'The digits carry no information about the text: across all ' + Ms.join(' / ') + ' conventions, the most unusual ' +
+      'score they produce is no more unusual than the most unusual score produced by random digit strings of the same shape ' +
+      '(null A) or by the real digits on paragraph-shuffled copies of the text (null B), judged on ' + draws + ' seeded test ' +
+      'draws per null after ' + draws + ' separate reference draws per null.';
+  }
+
+  // ---------------- live feedback ----------------
+  var liveTimer = null;
+  function live() { clearTimeout(liveTimer); liveTimer = setTimeout(refresh, 250); saveDraft(); }
+
+  function textInfo(lang) {
+    var el = $('info-' + lang), fix = $('fix-' + lang), content = $('text-' + lang).value;
+    fix.innerHTML = '';
+    if (!IK.parseList(content).length) { el.textContent = lang === 'fr' ? 'Empty: only English will be tested.' : 'Empty.'; return; }
+    try {
+      var t = IK.Text.fromString(lang, content);
+      var title = t.paragraphs[0].length > 48 ? t.paragraphs[0].slice(0, 46) + '…' : t.paragraphs[0];
+      var e = textEntry(lang);
+      el.textContent = 'Title "' + title + '" · ' + (t.paragraphs.length - 1) + ' paragraphs · ' + t.wordCount() + ' words · fingerprint ' + e.sha256.slice(0, 10);
+      var lines = IK.normalize(content).split('\n').filter(function (l) { return l.trim(); }).length;
+      if (t.paragraphs.length <= 2 && lines >= 4) {
+        fix.innerHTML = '<div class="notice warn"><span>This is read as a title and only ' + (t.paragraphs.length - 1) +
+          ' paragraph, because there are no empty lines between paragraphs. The shuffled-paragraph check needs at least two paragraphs.</span>' +
+          '<button class="btn" type="button">Treat each line as a paragraph</button></div>';
+        fix.querySelector('button').onclick = function () {
+          $('text-' + lang).value = IK.normalize(content).split('\n').filter(function (l) { return l.trim(); }).join('\n\n') + '\n';
+          live();
+        };
+      }
+    } catch (err) { el.textContent = err.message; }
+  }
+
+  function refresh() {
+    var ds = null;
+    try { ds = new IK.DigitString($('digits').value); } catch (e) { /* shown below */ }
+    if (ds) {
+      $('digits-info').innerHTML = ds.groups.map(function (g) { return '<span class="chip">' + esc(g) + '</span>'; }).join('') +
+        '<span class="sub">shape ' + ds.shape() + ' · ' + ds.nDigits + ' digit' + (ds.nDigits > 1 ? 's' : '') + '</span>';
+    } else $('digits-info').innerHTML = '<span class="sub">' + ($('digits').value.trim() ? 'No digits found yet.' : 'Type the digits above.') + '</span>';
+    textInfo('en'); textInfo('fr');
+    $('targets-box').hidden = $('mode-letters').checked;
+    $('letters-box').hidden = !$('mode-letters').checked;
+    var inp = gatherInputs(), lists = null;
+    if (inp.ds && inp.texts.length && inp.cfg) {
+      try { lists = conventionLists(inp); } catch (e) { inp.errors.push(e.message); }
+    }
+    if (lists) {
+      var parts = Object.keys(lists).map(function (k) { return LANG[k] + ' <strong>' + lists[k].names.length + '</strong>'; });
+      $('space').innerHTML = 'Ways of counting that will be tried (the search space): ' + parts.join(' · ');
+      $('convlist').textContent = Object.keys(lists).map(function (k) {
+        return '== ' + LANG[k] + ': ' + lists[k].names.length + ' ==\n' + lists[k].warnings.map(function (w) { return 'warning: ' + w + '\n'; }).join('') + lists[k].names.join('\n');
+      }).join('\n\n');
+    } else { $('space').textContent = 'Fill in steps 1–3 to see how many ways of counting will be tried.'; $('convlist').textContent = ''; }
+    $('restrict-warn').innerHTML = inp.cfg && inp.cfg.isRestricted() && !state.locked
+      ? '<div class="notice warn">You narrowed the search in More options. That is only honest if you decided this before looking at any result.</div>' : '';
+    state.lastErrors = inp.errors;
+    updateRunState();
+  }
+
+  function updateRunState() {
+    var why = '';
+    if (state.gate === 'checking') why = 'Waiting for the instrument check to finish (a few seconds).';
+    else if (state.gate === 'failed') why = 'The instrument check failed, so testing is disabled. Click "details" at the top.';
+    else if (state.busy) why = 'Working…';
+    else if (state.lastErrors && state.lastErrors.length) why = state.lastErrors[0];
+    $('run').disabled = !!why;
+    $('lock').disabled = !!why || !!state.locked;
+    $('locked-go').disabled = state.gate !== 'passed' || state.busy;
+    $('why').textContent = why;
+  }
+
+  // ---------------- run ----------------
+  function startRun(inp, preregNote) {
+    if (state.busy) return;
+    state.busy = true; updateRunState();
+    var lists = conventionLists(inp);
+    var Ms = inp.texts.map(function (t) { return lists[t.label].names.length; });
+    $('results').innerHTML = '<h2>Testing…</h2><div class="nullbox"><b>Null hypothesis.</b> ' + esc(nullSentence(Ms, inp.draws)) +
+      '</div><div class="progress"><div id="bar"></div></div><p class="sub" id="bar-txt">Starting…</p>';
+    var phaseNames = { A0: 'learning what random digits do', A1: 'testing against random digits', B0: 'learning what shuffled paragraphs do', B1: 'testing against shuffled paragraphs' };
+    var order = ['A0', 'A1', 'B0', 'B1'];
+    job({ cmd: 'run', digits: inp.ds.raw, texts: inp.texts, config: inp.cfg.toDict(), draws: inp.draws, seed: inp.seed, targets: inp.targets }, function (m) {
+      if (m.type === 'progress') {
+        var ph = order.indexOf(m.which + m.stream);
+        var f = (m.index + (ph + m.done / m.total) / 4) / m.count;
+        if ($('bar')) $('bar').style.width = (f * 100).toFixed(1) + '%';
+        if ($('bar-txt')) $('bar-txt').textContent = LANG[inp.texts[m.index].label] + ': ' + phaseNames[m.which + m.stream] + ' (' + m.done.toLocaleString() + ' of ' + m.total.toLocaleString() + ')';
+      } else if (m.type === 'run-done') {
+        state.busy = false;
+        var info = makeInfo(inp, preregNote);
+        state.last = { info: info, results: m.results, inp: inp };
+        renderResults(info, m.results, inp, false);
+        updateRunState();
+      } else if (m.type === 'error') {
+        state.busy = false;
+        $('results').innerHTML = '<h2>Something went wrong</h2><div class="notice warn">' + esc(m.message) + '</div>';
+        updateRunState();
+      }
+    });
+  }
+
+  function makeInfo(inp, preregNote) {
+    var cfg = inp.cfg;
+    return {
+      version: IK.VERSION, code_hash: ENGINE_HASH, when: new Date().toISOString().slice(0, 10),
+      digits: inp.ds.raw, shape: inp.ds.shape(), n_digits: inp.ds.nDigits, score: cfg.mode,
+      targets: inp.targets, wordlist_desc: state.wordlist ? state.wordlist.name + ' (' + state.wordlist.words.length + ' words, SHA-256 `' + state.wordlist.sha256 + '`)'
+        : inp.texts.map(function (t) { return t.label + ': built-in ' + LANG[t.label] + ' list (' + D.wordlists[t.label].length + ' words)'; }).join('; '),
+      markers: cfg.markers, draws: inp.draws, seed: inp.seed, threshold: inp.threshold, prereg: preregNote || null,
+      units: cfg.units, tokenizers: cfg.tokenizers, starts: cfg.starts, bases: cfg.bases, groupings: cfg.groupings,
+      restricted: cfg.isRestricted() ? ['units', 'tokenizers', 'bases', 'starts', 'groupings'].map(function (k) { return k + '=' + cfg.toDict()[k].join(','); }).join(', ') : null
+    };
+  }
+
+  // ---------------- results ----------------
+  function rarityText(r) {
+    if (r >= 0.5) return 'common (half of random strings or more)';
+    if (r >= 1e-4) return 'about 1 in ' + Math.round(1 / r).toLocaleString('en-US') + ' random strings';
+    return 'fewer than 1 in 10,000 random strings';
+  }
+  function fmtP(p, draws) { return p <= 1 / (draws + 1) + 1e-12 ? p.toFixed(5) + ' (the smallest possible with ' + draws.toLocaleString() + ' draws)' : p.toFixed(4); }
+  function fmtT(x) { return String(Number(x.toPrecision(3))); }
+  function convName(n) { return n.split(' | ').join(' · '); }
+  function sameWinner(results) {
+    if (results.length < 2) return [null, []];
+    var sets = results.map(function (r) { var s = new Set(); r.winners.forEach(function (a) { a.forEach(function (x) { s.add(x); }); }); return s; });
+    var common = Array.from(sets[0]).filter(function (x) { return sets.every(function (s) { return s.has(x); }); });
+    return [sets.every(function (s) { return s.size; }) && common.length > 0, common.sort()];
+  }
+
+  function renderResults(info, results, inp, isExample) {
+    var k = results.length, per = info.threshold / k;
+    var targetKeys = new Set(IK.uniqueKeys(info.targets || []));
+    var html = '';
+    html += '<h2>' + (isExample ? 'Example result' : 'Result') + ' for <span class="chip" style="font-size:1.1rem">' + esc(info.digits) + '</span></h2>';
+    if (isExample) html += '<p class="help">This was computed in advance for the example article and digits on the left, which were planted on purpose. Press "Test these digits" to run it yourself.</p>';
+    html += '<div class="nullbox"><b>Null hypothesis</b> (stated before the result). ' + esc(nullSentence(results.map(function (r) { return r.M; }), info.draws)) +
+      ' A text passes only if p ≤ ' + fmtT(per) + ' (the threshold ' + info.threshold + ' split over ' + k + ' text' + (k > 1 ? 's' : '') + ').</div>';
+    if (info.prereg) html += '<div class="notice info">Locked test, fingerprint <span class="fp">' + esc(info.prereg) + '</span></div>';
+    if (info.restricted) html += '<div class="notice warn">Narrowed search space (' + esc(info.restricted) + '). Only honest if decided before looking.</div>';
+    results.forEach(function (r) {
+      var sig = r.p <= per;
+      html += '<article class="lang ' + (sig ? 'sig' : '') + '"><header><h3>' + LANG[r.label] + '</h3><span class="verdict ' + (sig ? 'sig' : 'null') + '">' +
+        (sig ? 'Significant' : 'Consistent with coincidence') + '</span></header>';
+      html += '<div class="pline"><span class="pbig">p = ' + r.p.toFixed(4) + '</span><span class="sub">needs ≤ ' + fmtT(per) + ' to pass · already corrected for all ' + r.M + ' ways of counting</span></div>';
+      html += '<dl class="facts">' +
+        '<div><dt>Ways of counting that hit</dt><dd>' + r.hits + ' of ' + r.M + '<small>random digits: ' + r.nullA_mean_hits.toFixed(1) + ' on average (95% ≤ ' + r.nullA_hits_95 + ')</small></dd></div>' +
+        '<div><dt>Null A · random digits</dt><dd>p = ' + esc(fmtP(r.pA, r.draws)) + '</dd></div>' +
+        '<div><dt>Null B · shuffled paragraphs</dt><dd>p = ' + esc(fmtP(r.pB, r.draws)) + (r.shuffle_possible ? '' : '<small>too few paragraphs to shuffle, so p is set to 1</small>') + '</dd></div>' +
+        '</dl>';
+      if (r.n_winners > 1) html += '<p class="sub">' + r.n_winners + ' ways of counting are tied as most unusual, so the first one below is not unique.</p>';
+      html += '<h4>Top 5 ways of counting, most unusual first</h4><ol class="top5">';
+      r.top.forEach(function (t) {
+        var ex;
+        if (t.letters !== null) {
+          ex = '<div class="extract"><span class="letters">' + esc(t.letters) + '</span><span class="sub">from: ' + esc(t.items.join(' ')) + '</span></div>';
+        } else {
+          ex = '<div class="extract">' + t.items.map(function (it, i) {
+            var cls = it === '·' ? 'gap' : (targetKeys.has(IK.fold(it)) ? 'hit' : '');
+            return '<span class="chip ' + cls + '" title="number ' + t.numbers[i] + '">' + esc(it) + '</span>';
+          }).join('') + '</div>';
+        }
+        html += '<li><div class="conv">' + esc(convName(t.name)) + (t.aliases.length > 1 ? ' <span class="same">(+' + (t.aliases.length - 1) + ' identical)</span>' : '') + '</div>' + ex +
+          '<div class="meta">score ' + t.score + ' · uncorrected rarity: ' + esc(rarityText(t.rarity)) + '</div></li>';
+      });
+      html += '</ol>';
+      r.warnings.forEach(function (w) { html += '<div class="notice warn">' + esc(w) + '</div>'; });
+      html += '</article>';
+    });
+    if (k > 1) {
+      var sw = sameWinner(results);
+      html += '<div class="nullbox"><b>English / French.</b> Each language is tested on its own and never combined. ' +
+        (sw[0] ? 'The same way of counting is the most unusual in both: <span class="conv">' + esc(convName(sw[1][0])) + '</span>.' : 'The most unusual way of counting is <strong>not</strong> the same in both languages.') + '</div>';
+    }
+    html += '<p class="help">The "uncorrected rarity" ignores how many ways were tried, so it always looks impressive. Quote the p-value, not that.</p>';
+    html += '<div class="row"><button class="btn" type="button" id="copy-report">Copy the full report</button><span class="sub" id="copy-msg"></span></div>';
+    html += '<p class="signal">SIGNAL ONLY: this says nothing about what it means.</p>';
+    $('results').innerHTML = html;
+    $('copy-report').onclick = function () { copyText(markdown(info, results), $('copy-msg'), 'Report copied. Paste it into a note or email.'); };
+  }
+
+  function copyText(text, msgEl, okMsg) {
+    var fallback = function () {
+      msgEl.innerHTML = 'Copying is blocked here. Select all the text below and copy it:<textarea rows="6" readonly>' + esc(text) + '</textarea>';
+      var ta = msgEl.querySelector('textarea'); ta.focus(); ta.select();
+    };
+    try { navigator.clipboard.writeText(text).then(function () { msgEl.textContent = okMsg; }, fallback); } catch (e) { fallback(); }
+  }
+
+  // Markdown report (same layout as the Python tool's report.py)
+  function markdown(info, results) {
+    var k = results.length, per = info.threshold / k, L = [];
+    L.push('# indexkit report', '', '_' + info.when + ' · indexkit ' + info.version + ' (browser) · engine ' + info.code_hash.slice(0, 12) + '_', '');
+    L.push('## Null hypothesis (stated before any result)', '', nullSentence(results.map(function (r) { return r.M; }), info.draws), '');
+    L.push('Pass rule: a text is called significant only if p ≤ ' + fmtT(per) + ', where p is the LARGER of the two null p-values and ' + fmtT(per) + ' is the threshold ' + info.threshold + ' split over ' + k + ' text(s).', '');
+    L.push('## Inputs', '', '- Digit string: `' + info.digits + '` (shape ' + info.shape + ', ' + info.n_digits + ' digits)');
+    results.forEach(function (r) { L.push('- Text **' + r.label + '**: ' + r.path + ' — SHA-256 `' + r.sha256 + '` (' + r.paragraphs + ' paragraphs incl. title, ~' + r.words + ' words)'); });
+    if (info.score === 'targets') L.push('- Score: **targets** — ' + info.targets.length + ' target words: ' + info.targets.join(', '));
+    else L.push('- Score: **letters** — wordlist: ' + info.wordlist_desc);
+    if (info.markers.length) L.push('- Marker lines: ' + info.markers.map(function (m) { return '`' + m + '`'; }).join(', '));
+    L.push('- Null draws: ' + info.draws + ' reference + ' + info.draws + ' test draws for null A and for null B, seed ' + info.seed);
+    L.push('- Pre-registration: ' + (info.prereg ? 'locked test, fingerprint `' + info.prereg + '`' : 'none (results are exploratory)'));
+    if (info.restricted) L.push('- **Restricted search space** (' + info.restricted + '). This is only honest if the restriction was chosen before looking at any result.');
+    L.push('', '## Search space', '');
+    results.forEach(function (r) {
+      L.push('- **' + r.label + ': ' + r.M + ' conventions** tried (' + Object.keys(r.by_unit).map(function (u) { return u + ' ' + r.by_unit[u]; }).join(', ') + '). ' + r.merged_views + ' exact duplicate readings were merged.');
+      var same = r.groupings.filter(function (g) { return g.length > 1; }).map(function (g) { return g.join('='); });
+      if (same.length) L.push('  - digit groupings that are identical for this shape were merged: ' + same.join(', '));
+      r.warnings.forEach(function (w) { L.push('  - warning: ' + w); });
+    });
+    L.push('', 'Dimensions searched: units ' + info.units.join(', ') + '; tokenizers ' + info.tokenizers.join(', ') + ' (words only); reads item/initial/char; starts ' +
+      info.starts.concat(info.markers.map(function (m) { return 'marker:' + m; })).join(', ') + '; counting ' + info.bases.join('/') + '-based; digit groupings ' + info.groupings.join(', ') + '.', '');
+    results.forEach(function (r) {
+      var sig = r.p <= per;
+      L.push('## Result — ' + r.label, '');
+      L.push('- **' + r.hits + ' of ' + r.M + ' conventions hit.** Random digit strings of this shape hit on average ' + r.nullA_mean_hits.toFixed(1) + ' of ' + r.M + ' (95% of them hit ≤ ' + r.nullA_hits_95 + ').');
+      L.push('- Most unusual convention: `' + r.best_name + '`, score ' + r.best_score + '. For that one convention alone, this score is reached by ' + rarityText(r.best_rarity) + '. **Uncorrected — do not quote this; the p-values below are the honest ones.**');
+      L.push('- Highest raw score: ' + r.raw_max + ' (median highest raw score: random strings ' + Math.round(r.nullA_raw_max_median) + ', shuffled text ' + Math.round(r.nullB_raw_max_median) + ')');
+      L.push('- p, null A (random digits): ' + fmtP(r.pA, r.draws));
+      L.push('- p, null B (shuffled paragraphs): ' + fmtP(r.pB, r.draws) + (r.shuffle_possible ? '' : ' — the text has fewer than 2 body paragraphs, so it cannot be shuffled; p is set to 1'));
+      L.push('- **p (the larger, already corrected for all ' + r.M + ' conventions): ' + r.p.toFixed(4) + '**');
+      L.push('- Verdict: **' + (sig ? 'SIGNIFICANT (p = ' + r.p.toFixed(4) + ' ≤ ' + fmtT(per) + ')' : 'NOT significant (p = ' + r.p.toFixed(4) + ' > ' + fmtT(per) + ') — consistent with coincidence') + '**');
+      if (r.n_winners > 1) L.push('- ' + r.n_winners + ' conventions are tied as most unusual, so the "winner" below is not unique.');
+      L.push('', 'Top 5 conventions for the real digits, most unusual first:', '', '| # | convention | score | uncorrected rarity | extract |', '|---|---|---|---|---|');
+      r.top.forEach(function (t, i) {
+        var name = convName(t.name) + (t.aliases.length > 1 ? ' (+' + (t.aliases.length - 1) + ' identical)' : '');
+        var ex = t.letters !== null ? '`' + t.letters + '`  (from: ' + t.items.join(' ') + ')' : '`' + t.items.join(' ') + '`';
+        L.push('| ' + (i + 1) + ' | ' + name + ' | ' + t.score + ' | ' + rarityText(t.rarity) + ' | ' + ex.replace(/\|/g, '\\|') + ' |');
+      });
+      L.push('');
+    });
+    L.push('## English / French check', '');
+    if (k < 2) L.push('Only one text was given, so there is no cross-language check.');
+    else {
+      results.forEach(function (r) { L.push('- ' + r.label + ': ' + (r.p <= per ? 'SIGNIFICANT' : 'NOT significant') + ' (p = ' + r.p.toFixed(4) + ')'); });
+      var sw = sameWinner(results);
+      L.push(sw[0] ? '- The same convention reaches the top in every text: `' + sw[1][0] + '`' : '- The top-scoring convention is **not** the same across texts.');
+      L.push('- Each text is scored and tested on its own; the scores are never combined.');
+    }
+    L.push('', '**SIGNAL ONLY: this says nothing about what it means.**', '');
+    return L.join('\n');
+  }
+
+  // ---------------- locked tests (pre-registration) ----------------
+  function makeRecord(inp) {
+    var lists = conventionLists(inp);
+    var conv = {}, space = {};
+    Object.keys(lists).forEach(function (k) { conv[k] = lists[k].names; space[k] = lists[k].names.length; });
+    return {
+      indexkit_locked_test: 1, engine: IK.VERSION, digits: inp.ds.raw,
+      texts: inp.texts.map(function (t) { return { label: t.label, source: t.path, sha256: t.sha256, content: t.content }; }),
+      score: inp.cfg.mode, targets: inp.mode === 'targets' ? inp.targets : null,
+      wordlist: inp.mode === 'letters' ? (state.wordlist ? { name: state.wordlist.name, sha256: state.wordlist.sha256, words: state.wordlist.words } : 'built-in') : null,
+      config: inp.cfg.toDict(), search_space: space, conventions: conv,
+      null: { statement: nullSentence(Object.keys(space).map(function (k) { return space[k]; }), inp.draws), draws: inp.draws, seed: inp.seed },
+      threshold: inp.threshold, pass_rule: 'a text passes if max(pA, pB) <= threshold / number of texts'
+    };
+  }
+  function fingerprint(rec) { return IK.sha256Hex(IK.utf8(IK.canonicalJSON(rec))); }
+
+  $('lock').onclick = function () {
+    var inp = gatherInputs();
+    if (inp.errors.length) return;
+    var rec = makeRecord(inp), fp = fingerprint(rec), text = IK.canonicalJSON(rec);
+    $('lock-out').innerHTML = '<div class="notice info"><strong>Your locked test is ready. Do not run it yet.</strong>' +
+      '<span>1. Send this fingerprint to a teammate (or anywhere you cannot edit later):</span><span class="fp">' + fp + '</span>' +
+      '<div class="row"><button class="btn" type="button" id="copy-fp">Copy fingerprint</button><button class="btn" type="button" id="copy-rec">Copy the record</button></div>' +
+      '<span>2. Save the record (paste it into a note). 3. Open "Run a locked test" below, paste the record, and run it. The page will show the fingerprint again so anyone can check nothing was changed.</span>' +
+      '<span class="sub" id="lock-msg"></span></div>';
+    $('copy-fp').onclick = function () { copyText(fp, $('lock-msg'), 'Fingerprint copied.'); };
+    $('copy-rec').onclick = function () { copyText(text, $('lock-msg'), 'Record copied. Paste it into a note and keep it.'); };
+  };
+
+  $('locked-go').onclick = function () {
+    var msg = $('locked-msg'), rec;
+    try { rec = JSON.parse($('locked-in').value); } catch (e) { msg.innerHTML = '<div class="notice warn">This is not a locked test record. Paste the whole record you copied.</div>'; return; }
+    if (!rec || rec.indexkit_locked_test !== 1) { msg.innerHTML = '<div class="notice warn">This is not an indexkit locked test record.</div>'; return; }
+    var fp = fingerprint(rec);
+    // fill and lock the inputs
+    $('digits').value = rec.digits;
+    $('text-en').value = ''; $('text-fr').value = ''; state.files = {};
+    rec.texts.forEach(function (t) { $('text-' + t.label).value = t.content; state.files[t.label] = { name: t.source, content: t.content, sha256: t.sha256 }; });
+    $('mode-' + rec.score).checked = true;
+    $('targets').value = (rec.targets || []).join('\n');
+    state.wordlist = rec.wordlist && rec.wordlist !== 'built-in' ? rec.wordlist : null;
+    $('markers').value = rec.config.markers.join('\n');
+    $('draws').value = rec.null.draws; $('seed').value = rec.null.seed; $('threshold').value = rec.threshold;
+    document.querySelectorAll('input[data-dim]').forEach(function (x) {
+      var vals = rec.config[x.getAttribute('data-dim')].map(String); x.checked = vals.indexOf(x.value) >= 0;
+    });
+    var inp = gatherInputs();
+    if (inp.errors.length) { msg.innerHTML = '<div class="notice warn">REFUSED: ' + esc(inp.errors[0]) + '</div>'; return; }
+    var bad = rec.texts.filter(function (t) { return IK.sha256Hex(IK.utf8(t.content)) !== t.sha256 && t.source.indexOf('(pasted') === 0; });
+    if (bad.length) { msg.innerHTML = '<div class="notice warn">REFUSED: the ' + esc(bad[0].label) + ' text does not match its fingerprint; the record was edited.</div>'; return; }
+    var lists = conventionLists(inp), same = Object.keys(rec.conventions).every(function (k) { return lists[k] && JSON.stringify(lists[k].names) === JSON.stringify(rec.conventions[k]); });
+    if (!same) { msg.innerHTML = '<div class="notice warn">REFUSED: this version of indexkit would try a different list of ways of counting than the record.</div>'; return; }
+    state.locked = { fp: fp };
+    $('fs').disabled = true; $('locked-bar').hidden = false; $('locked-fp').textContent = fp; $('example-banner').hidden = true;
+    msg.innerHTML = '<div class="notice info">Record accepted. Fingerprint <span class="fp">' + fp + '</span>. Compare it with the one you sent before trusting the result.</div>';
+    refresh();
+    startRun(inp, fp);
+  };
+
+  $('unlock').onclick = function () {
+    state.locked = null; $('fs').disabled = false; $('locked-bar').hidden = true; refresh();
+  };
+
+  // ---------------- wiring ----------------
+  function buildRestrict() {
+    var dims = [['units', 'What is counted', IK.UNITS], ['tokenizers', 'How words are split', IK.TOKENIZERS], ['bases', 'Counting from', IK.BASES],
+      ['starts', 'Starting at', IK.DEFAULT_STARTS], ['groupings', 'Reading the digits', IK.GROUPINGS]];
+    var nice = { 0: '0 (first = 0)', 1: '1 (first = 1)', title: 'the title', body: 'first paragraph' };
+    $('restrict').innerHTML = dims.map(function (d) {
+      return '<div class="group-title">' + d[1] + '</div><div class="checks">' + d[2].map(function (v) {
+        return '<label><input type="checkbox" checked data-dim="' + d[0] + '" value="' + v + '" id="dim-' + d[0] + '-' + v + '"> ' + esc(nice[v] || v) + '</label>';
+      }).join('') + '</div>';
+    }).join('');
+  }
+
+  function setTab(lang) {
+    ['en', 'fr'].forEach(function (l) { $('tab-' + l).setAttribute('aria-selected', String(l === lang)); $('pane-' + l).hidden = l !== lang; });
+  }
+
+  function readFile(input, cb) {
+    var f = input.files && input.files[0];
+    if (!f) return;
+    var r = new FileReader();
+    r.onload = function () {
+      var bytes = new Uint8Array(r.result), text;
+      try { text = new TextDecoder('utf-8', { fatal: true }).decode(bytes); }
+      catch (e) { alertBox(f.name + ' is not UTF-8 text. In TextEdit, save it as plain text with the encoding "Unicode (UTF-8)".'); return; }
+      cb(f.name, text, IK.sha256Hex(bytes));
+    };
+    r.readAsArrayBuffer(f);
+    input.value = '';
+  }
+  function alertBox(msg) { $('why').textContent = msg; }
+
+  function loadExample(which) {
+    state.files = {}; state.wordlist = null; state.isExample = true;
+    $('digits').value = which === 'coin' ? D.demo.coincidence : D.demo.planted;
+    $('text-en').value = D.demo.en; $('text-fr').value = D.demo.fr;
+    $('targets').value = D.demo.targets.join('\n');
+    $('mode-targets').checked = true; $('markers').value = '';
+    $('example-banner').hidden = false;
+    refresh();
+  }
+
+  function saveDraft() {
+    if (state.locked) return;
+    store(DRAFT_KEY, { digits: $('digits').value, en: $('text-en').value, fr: $('text-fr').value, targets: $('targets').value,
+      mode: $('mode-letters').checked ? 'letters' : 'targets', markers: $('markers').value, example: state.isExample });
+  }
+
+  ['digits', 'text-en', 'text-fr', 'targets', 'markers', 'draws', 'seed', 'threshold'].forEach(function (id) {
+    $(id).addEventListener('input', function () { if (id !== 'draws' && id !== 'seed' && id !== 'threshold') state.isExample = false; live(); });
+  });
+  document.querySelectorAll('input[name="mode"]').forEach(function (x) { x.addEventListener('change', live); });
+  $('tab-en').onclick = function () { setTab('en'); };
+  $('tab-fr').onclick = function () { setTab('fr'); };
+  ['en', 'fr'].forEach(function (lang) {
+    $('file-' + lang).onchange = function () {
+      readFile(this, function (name, text, sha) {
+        state.files[lang] = { name: name, content: text, sha256: sha }; state.isExample = false;
+        $('text-' + lang).value = text; live();
+      });
+    };
+    $('clear-' + lang).onclick = function () { $('text-' + lang).value = ''; delete state.files[lang]; live(); };
+  });
+  $('file-wl').onchange = function () {
+    readFile(this, function (name, text, sha) {
+      var words = IK.parseList(text);
+      state.wordlist = { name: name, words: words, sha256: sha };
+      $('info-wl').textContent = name + ' · ' + words.length + ' words'; $('clear-wl').hidden = false; live();
+    });
+  };
+  $('clear-wl').onclick = function () { state.wordlist = null; $('info-wl').textContent = 'Built-in lists'; $('clear-wl').hidden = true; live(); };
+  $('ex-hit').onclick = function () { loadExample('hit'); };
+  $('ex-coin').onclick = function () { loadExample('coin'); };
+  $('ex-clear').onclick = function () {
+    state.files = {}; state.isExample = false;
+    ['digits', 'text-en', 'text-fr', 'targets', 'markers'].forEach(function (id) { $(id).value = ''; });
+    $('example-banner').hidden = true; live();
+  };
+  $('run').onclick = function () {
+    var inp = gatherInputs();
+    if (inp.errors.length) { updateRunState(); return; }
+    if (state.locked) { startRun(inp, state.locked.fp); return; }
+    startRun(inp, null);
+  };
+
+  // ---------------- start ----------------
+  buildRestrict();
+  var draft = load(DRAFT_KEY);
+  if (draft && !draft.example && (draft.en || draft.fr || draft.digits)) {
+    $('digits').value = draft.digits || ''; $('text-en').value = draft.en || ''; $('text-fr').value = draft.fr || '';
+    $('targets').value = draft.targets || ''; $('markers').value = draft.markers || '';
+    $('mode-' + (draft.mode === 'letters' ? 'letters' : 'targets')).checked = true;
+    $('example-banner').hidden = true;
+    refresh();
+    $('results').innerHTML = '<h2>Ready</h2><p class="help">Your last inputs were restored. Press "Test these digits" when the instrument check has passed.</p>';
+  } else {
+    loadExample('hit');
+    var ex = D.example;
+    renderResults(ex.info, ex.results, null, true);
+  }
+  var cached = load(GATE_KEY);
+  if (cached && cached.passed) { state.gate = 'passed'; state.checks = cached.checks; renderGate(1); }
+  else runSelftest();
+})();
+</script>
