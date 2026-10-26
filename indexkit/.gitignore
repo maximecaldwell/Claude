@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.indexkit_selftest.json
+demo_output/
+indexkit_report.md
