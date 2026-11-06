@@ -1,0 +1,2917 @@
+{
+ "hidden_en_words6": {
+  "observed": 14,
+  "null_mean": 9.7,
+  "null_sd": 3.2,
+  "null_max": 22,
+  "p_ge": 0.133,
+  "forward": [
+   [
+    "person",
+    "copper song"
+   ],
+   [
+    "slight",
+    "siren’s light"
+   ],
+   [
+    "insight",
+    "in sight"
+   ],
+   [
+    "debuts",
+    "code But silence"
+   ],
+   [
+    "markers",
+    "marker stands"
+   ],
+   [
+    "messaged",
+    "message dulled"
+   ],
+   [
+    "bypass",
+    "by passing"
+   ],
+   [
+    "bypassing",
+    "by passing"
+   ],
+   [
+    "warmth",
+    "warm the"
+   ],
+   [
+    "sandstone",
+    "suits and stones"
+   ],
+   [
+    "shaves",
+    "stones have struck"
+   ],
+   [
+    "stares",
+    "stare Step"
+   ],
+   [
+    "sandal",
+    "turns and all"
+   ]
+  ],
+  "reverse": [
+   [
+    "wonder",
+    "declared now"
+   ]
+  ]
+ },
+ "hidden_fr_words6": {
+  "observed": 25,
+  "null_mean": 25.2,
+  "null_sd": 4.8,
+  "null_max": 36,
+  "p_ge": 0.56,
+  "forward": [
+   [
+    "chemins",
+    "chemin se"
+   ],
+   [
+    "mouillee",
+    "mouille encore"
+   ],
+   [
+    "envolee",
+    "envolé et"
+   ],
+   [
+    "commences",
+    "commencé Son"
+   ],
+   [
+    "boucliers",
+    "Bouclier s’incline"
+   ],
+   [
+    "nevers",
+    "s’incline vers"
+   ],
+   [
+    "ventre",
+    "peuvent retenir"
+   ],
+   [
+    "entretenir",
+    "peuvent retenir"
+   ],
+   [
+    "presses",
+    "presse silencieuse"
+   ],
+   [
+    "chantee",
+    "chante et"
+   ],
+   [
+    "hantee",
+    "chante et"
+   ],
+   [
+    "bornes",
+    "borne se"
+   ],
+   [
+    "entete",
+    "poussent Et enterré"
+   ],
+   [
+    "tenter",
+    "Et enterré"
+   ],
+   [
+    "tournee",
+    "tourne et"
+   ],
+   [
+    "toutes",
+    "tout est"
+   ]
+  ],
+  "reverse": [
+   [
+    "lierre",
+    "enterré il"
+   ],
+   [
+    "revenu",
+    "Une vérité"
+   ],
+   [
+    "revenue",
+    "invisible Une vérité"
+   ],
+   [
+    "passer",
+    "cèdres s’appuient"
+   ],
+   [
+    "penser",
+    "ruptures ne parlent"
+   ],
+   [
+    "revenu",
+    "Aucune vérité"
+   ],
+   [
+    "gerent",
+    "et ne regardera"
+   ],
+   [
+    "retenu",
+    "une terre"
+   ],
+   [
+    "retenus",
+    "Dans une terre"
+   ]
+  ]
+ },
+ "hidden_en_places7": {
+  "observed": 4,
+  "null_mean": 2.8,
+  "null_sd": 1.7,
+  "null_max": 9,
+  "p_ge": 0.32,
+  "forward": [
+   [
+    "themount",
+    "the mountain’s"
+   ],
+   [
+    "themountain",
+    "the mountain’s"
+   ],
+   [
+    "saltair",
+    "Salt air"
+   ],
+   [
+    "thesound",
+    "The sounds"
+   ]
+  ],
+  "reverse": [],
+  "detail": [
+   [
+    "themount",
+    "the mountain’s",
+    [
+     "The Mount (NS, MT)",
+     "The Mount (NL, MT)"
+    ]
+   ],
+   [
+    "themountain",
+    "the mountain’s",
+    [
+     "The Mountain (ON, MT)",
+     "The Mountain (NL, MT)",
+     "The Mountain (NL, RDGE)"
+    ]
+   ],
+   [
+    "saltair",
+    "Salt air",
+    [
+     "Saltair (BC, PPL)"
+    ]
+   ],
+   [
+    "thesound",
+    "The sounds",
+    [
+     "The Sound (NS, SD)",
+     "The Sound (NS, CHN)"
+    ]
+   ]
+  ]
+ },
+ "hidden_fr_places7": {
+  "observed": 7,
+  "null_mean": 2.3,
+  "null_sd": 1.6,
+  "null_max": 7,
+  "p_ge": 0.01,
+  "forward": [
+   [
+    "porteau",
+    "porté autrefois"
+   ],
+   [
+    "lamontagne",
+    "la montagne"
+   ],
+   [
+    "lesbouleaux",
+    "les bouleaux"
+   ],
+   [
+    "lamousse",
+    "la mousse"
+   ],
+   [
+    "lescedres",
+    "les cèdres"
+   ],
+   [
+    "lesbouleaux",
+    "les bouleaux"
+   ]
+  ],
+  "reverse": [
+   [
+    "revenue",
+    "invisible Une vérité"
+   ]
+  ],
+  "detail": [
+   [
+    "porteau",
+    "porté autrefois",
+    [
+     "Porteau (BC, PPLL)"
+    ]
+   ],
+   [
+    "lamontagne",
+    "la montagne",
+    [
+     "La Montagne (ON, MT)",
+     "La Montagne (QC, HLL)",
+     "La Montagne (QC, PPL)"
+    ]
+   ],
+   [
+    "lesbouleaux",
+    "les bouleaux",
+    [
+     "Les Bouleaux (QC, STM)",
+     "Les Bouleaux (QC, AREA)"
+    ]
+   ],
+   [
+    "lamousse",
+    "la mousse",
+    [
+     "La Mousse (QC, STM)"
+    ]
+   ],
+   [
+    "lescedres",
+    "les cèdres",
+    [
+     "Les Cèdres (QC, PPL)",
+     "Les Cèdres (QC, AREA)",
+     "Les Cèdres (QC, PO)"
+    ]
+   ],
+   [
+    "lesbouleaux",
+    "les bouleaux",
+    [
+     "Les Bouleaux (QC, STM)",
+     "Les Bouleaux (QC, AREA)"
+    ]
+   ],
+   [
+    "revenue",
+    "invisible Une vérité",
+    [
+     "Revenue (SK, PPL)"
+    ]
+   ]
+  ]
+ },
+ "patterned": {
+  "en": {
+   "line initials": {
+    "stream": "IOATBGYTSBTTWANTABINWWTBTWBWWTATOIWBWATIWANWSBBANALT",
+    "hits": [
+     "→want",
+     "→anal",
+     "←lana"
+    ],
+    "n": 3,
+    "null_mean": 1.17,
+    "p_ge": 0.13
+   },
+   "line finals": {
+    "stream": "TTEENNEWGGSSEEKKNNTTTDEDSESSNNEEEESSLLSSDDEENNSSENHH",
+    "hits": [
+     "→teen",
+     "→seek",
+     "←ness",
+     "←need",
+     "←gwen"
+    ],
+    "n": 5,
+    "null_mean": 3.58,
+    "p_ge": 0.275
+   },
+   "word initials": {
+    "stream": "IALCCAVORWTTPAMHWVOBTVBTLBTCWGRGSBTMSYPMWGHTPLWTBTGSAOBACSBBRDGFLTBRBFTCPWMSWWFSANNARSSAFFNENITTTPFAWLBAGCRTSBCLWNBIGIBASLNMTIHISWCFGTEWFCONCTWHAACBSMTCRTSBLTSTWSWTOEBBDSNFCWRMHIQPWISACLTNCRUATNLBFTBTSTSATFOMSBSAPIMDBPTWODNDBTWOGYWWTZWFABRIDBTSNFBETIFWEMPWSASHSAABSCTMHNGDNNSWPTWTBSSNIHWPABWTTFDBTMTTGGABSWNOKNMBGBCAASRIOLPTSBTBTCTAAIH",
+    "hits": [
+     "→anna",
+     "←anna"
+    ],
+    "n": 2,
+    "null_mean": 7.21,
+    "p_ge": 0.98
+   },
+   "word finals": {
+    "stream": "NADDDDTDSRHETARSTSEEESDEEDESESNDSHESNTSDHDEEHSEEHSWTREEARGTESTERGEESTSETSESLSEEDANEDDSDAGEORWSEKEXWDTKKATNSENTSDEENSMSTASTOSHSDNTEORDETESMERDERSNTETESETDEDSWHGSENSDFETSTKRSSTSYDNTSENSDSNENLSNAHTDTDOEEGETDEEERSYEDESEDYGETEDWSHETFGSEMEDSLDTGSTLESWETOSNSENYSESDSEKDDYTDEGDODKRDELTOEESEPTNEESNTEELSNDEKELSSDDSTOESTDYDTEEARSNNKTETDEHESSDLSH",
+    "hits": [
+     "→deed",
+     "→shes",
+     "→tree",
+     "→test",
+     "→sets",
+     "→seed",
+     "→dane",
+     "→sent",
+     "→meds",
+     "→sept",
+     "→toes",
+     "→ears",
+     "←seen",
+     "←dodge",
+     "←than",
+     "←hans",
+     "←nest",
+     "←need",
+     "←needs",
+     "←test",
+     "←tests",
+     "←heed",
+     "←deed",
+     "←deeds",
+     "←rate"
+    ],
+    "n": 25,
+    "null_mean": 21.46,
+    "p_ge": 0.27
+   },
+   "first word of each line, 2nd letters": {
+    "stream": "NLHEOEHAUHHHNOHUTOHHHUHHUHHHHNTHEHNHNHNOITUENOOH",
+    "hits": [
+     "→ohhh"
+    ],
+    "n": 1,
+    "null_mean": 1.57,
+    "p_ge": 0.755
+   },
+   "last word initials": {
+    "stream": "VPBLRSHGSLFWNFTBSBLSECCRTECPLUBFPTDYFBTPAHSSADGKAOBH",
+    "hits": [],
+    "n": 0,
+    "null_mean": 0.88,
+    "p_ge": 1.0
+   },
+   "second-word initials": {
+    "stream": "ARMVTSPPABBCFREPGCGMCFWSSSBRINTSMMOTWBSFSBGPNWTBMSPC",
+    "hits": [
+     "←apps"
+    ],
+    "n": 1,
+    "null_mean": 0.56,
+    "p_ge": 0.45
+   },
+   "letter 1 of each line": {
+    "stream": "IOATBGYTSBTTWANTABINWWTBTWBWWTATOIWBWATIWANWSBBANALT",
+    "hits": [
+     "→want",
+     "→anal",
+     "←lana"
+    ],
+    "n": 3,
+    "null_mean": 1.21,
+    "p_ge": 0.12
+   },
+   "letter 2 of each line": {
+    "stream": "NLMHEOEHAUHHHNOHGUTOHHHUHHUHHHTHNTHEHNHNHNOITUENOSOH",
+    "hits": [
+     "→ohhh"
+    ],
+    "n": 1,
+    "null_mean": 1.5,
+    "p_ge": 0.725
+   },
+   "letter 3 of each line": {
+    "stream": "ADIEYLTELTEEEDEEITSMEEETEETAEEREESANEDEFEDGLETYDTLOE",
+    "hits": [
+     "→sane",
+     "←eden"
+    ],
+    "n": 2,
+    "null_mean": 3.17,
+    "p_ge": 0.77
+   },
+   "letter 4 of each line": {
+    "stream": "LRRVODPPTBBCRRMPACGIRRWSSRBTRNUSMMTERBSORBILPWOBMIKC",
+    "hits": [
+     "←bros"
+    ],
+    "n": 1,
+    "null_mean": 0.91,
+    "p_ge": 0.595
+   },
+   "letter 5 of each line": {
+    "stream": "AIRENSEAARRUEEBHNILNEEAIHERREOTTAEOAEAOLEALPNHNUAVPO",
+    "hits": [],
+    "n": 0,
+    "null_mean": 2.51,
+    "p_ge": 1.0
+   },
+   "letter 6 of each line": {
+    "stream": "NCORDIATIIIRFDEOTREECFTLISEOIRHRRSNTWTUDSYDOOEDRREAM",
+    "hits": [
+     "→cord",
+     "→tree"
+    ],
+    "n": 2,
+    "null_mean": 2.38,
+    "p_ge": 0.65
+   },
+   "letter 7 of each line": {
+    "stream": "DHRDTGKHRTNRISRECCARHLEEEUAORTNOKSCHAHNSUSEITRTIKRSP",
+    "hits": [
+     "←ties"
+    ],
+    "n": 1,
+    "null_mean": 2.08,
+    "p_ge": 0.835
+   },
+   "letter 8 of each line": {
+    "stream": "CEHIHHSLOTEERENNOLMSAIRNLNKTOHONEAETRUDWITDNIEHEERTA",
+    "hits": [
+     "→slot",
+     "←tree"
+    ],
+    "n": 2,
+    "null_mean": 2.59,
+    "p_ge": 0.69
+   },
+   "word 1 initials": {
+    "stream": "IOATBGYTSBTTWANTABINWWTBTWBWWTATOIWBWATIWANWSBBANALT",
+    "hits": [
+     "→want",
+     "→anal",
+     "←lana"
+    ],
+    "n": 3,
+    "null_mean": 1.25,
+    "p_ge": 0.13
+   },
+   "word 2 initials": {
+    "stream": "ARMVTSPPABBCFREPGCGMCFWSSSBRINTSMMOTWBSFSBGPNWTBMSPC",
+    "hits": [
+     "←apps"
+    ],
+    "n": 1,
+    "null_mean": 0.67,
+    "p_ge": 0.465
+   },
+   "word 3 initials": {
+    "stream": "LWHBCBMLORRPSSNFCLITFCHMBWDMSCNTSDDWTRNWASDTITMSBRTT",
+    "hits": [],
+    "n": 0,
+    "null_mean": 0.66,
+    "p_ge": 1.0
+   },
+   "word 4 initials": {
+    "stream": "CTWTWTWWBDBWASIARWBIGOATLTSHARLSBBNOZIFESCNWHTTWGISA",
+    "hits": [
+     "→asia",
+     "→goat"
+    ],
+    "n": 2,
+    "null_mean": 1.28,
+    "p_ge": 0.34
+   },
+   "word 5 initials": {
+    "stream": "CTVLGMGTAGFMNATWTNAHTNACTONICUBASPDGWDBMHTNTWFTNBOBA",
+    "hits": [
+     "→toni",
+     "→tonic",
+     "→cuba",
+     "←cant",
+     "←than"
+    ],
+    "n": 5,
+    "null_mean": 0.83,
+    "p_ge": 0.005
+   },
+   "stanza initials": {
+    "stream": "IBSWAWTWOWWSN",
+    "hits": [],
+    "n": 0,
+    "null_mean": 0.2,
+    "p_ge": 1.0
+   },
+   "stanza last-line initials": {
+    "stream": "TTTTNBWTBIWAT",
+    "hits": [],
+    "n": 0,
+    "null_mean": 0.17,
+    "p_ge": 1.0
+   }
+  },
+  "fr": {
+   "line initials": {
+    "stream": "DDULALMLLMLLLEALUMSALLLMLLMCLLULUSCSLELDLEAINMAEPURL",
+    "hits": [
+     "→lulu"
+    ],
+    "n": 1,
+    "null_mean": 2,
+    "p_ge": 0.805
+   },
+   "line finals": {
+    "stream": "EESESEEEESEEEEEELEEETENESESETEESSEITTEETSRETTNTTLNSX",
+    "hits": [
+     "←etes"
+    ],
+    "n": 1,
+    "null_mean": 4.55,
+    "p_ge": 0.96
+   },
+   "word initials": {
+    "stream": "DUTCFEVDVRCATLPUMCCQLVOPALVDLLADNLORLGLSSLTDLMMLSTALTDLCSTLOLBOPLSPAUCDCMLRFNGPLLSSSMOLCTLOLMMELOLFACUNNELCROFJUFEABNPLPLPSEENRPEAUPDMGRLSMLCMLORNCSENQLLDSAVDMNEVLOLFDCSEDLLOLRDFNJCLFUCAMLSMLRALBSVLBATLAELODCNPDFMLRNPPELFNSPACQLRPRDLPSLOLFCELCSLDNDIUVNBMFPELFLSELLUBSDPDREDPSMETPLTQPCQAEDADASLPDAQPLOLECTDZTEBSSCLPPLSSAMLTDLPOMLMPLOLCELPSSAEBSCLTMABDNAANILOLBSFNMPHLOLCSMLOLSOLDADLMLHHPEEIDCQPNSPMPLMPLNSUERDLVRADLDLBLBTETES",
+    "hits": [
+     "→peau",
+     "→tete",
+     "→tetes",
+     "→etes",
+     "←oslo",
+     "←mass",
+     "←bull",
+     "←bulle",
+     "←bulles",
+     "←nees"
+    ],
+    "n": 10,
+    "null_mean": 8.88,
+    "p_ge": 0.395
+   },
+   "word finals": {
+    "stream": "SEEEETEESSTASEENREEESSTESESEAEASSAUTSSRESANEAESSSTCREEENEEAUSXTERETSENEESSSSETSSAEETSEETEAUAEEEAUEUAUNMETSSSTTREEEEEESAEEXTETEASNEEEEEEEELSSSTAUNAENTTEAEEEEEURTNEAUAEUOTEETAUANEYASEUENENSEEEAEEERESESASSSSAUSSSTEESSSETSTSSETSSEESSTRSAEEAUERETSSTLUDEEEENESERESSSXTSSEEEESUETSSNETIRESIEEIAEESTISESSSITAUSXSSECTTTTAEASESSTISOESSSUEAETAUSSTSSETSTYTTERRNUEIENEAAUSXETEZSTAUSSTSAUEREENAEAESSSTTELTEEEETSERRSREULNTESANZAEEESSAEETTTX",
+    "hits": [
+     "→assaut",
+     "→assauts",
+     "→saut",
+     "→sauts",
+     "→cree",
+     "→creee",
+     "→nees",
+     "→sets",
+     "→mets",
+     "→tete",
+     "→sets",
+     "→sets",
+     "→tire",
+     "→tires",
+     "→sets",
+     "←reste",
+     "←restee",
+     "←tess",
+     "←rite",
+     "←tess",
+     "←tess",
+     "←true",
+     "←tess",
+     "←sers",
+     "←sets",
+     "←nees"
+    ],
+    "n": 26,
+    "null_mean": 31.41,
+    "p_ge": 0.825
+   },
+   "first word of each line, 2nd letters": {
+    "stream": "AENEUOAEAAAEATUENAOUAAEAEAAEAANENOEOATEAATUNEAUTANEA",
+    "hits": [
+     "←ouen"
+    ],
+    "n": 1,
+    "null_mean": 1.01,
+    "p_ge": 0.565
+   },
+   "last word initials": {
+    "stream": "VPALGMDPCLOENEPASCSVLCAAEFASSIELPPAPTPTPAMNFSDPSSVBS",
+    "hits": [
+     "←apple"
+    ],
+    "n": 1,
+    "null_mean": 1.53,
+    "p_ge": 0.72
+   },
+   "second-word initials": {
+    "stream": "UVMVDSLCSLSCOLBPPLEVOOFLBOLQODVFBMQLOBSLOBBLMLDEMEAB",
+    "hits": [
+     "←bloc",
+     "←blocs"
+    ],
+    "n": 2,
+    "null_mean": 0.67,
+    "p_ge": 0.135
+   },
+   "letter 1 of each line": {
+    "stream": "DDULALMLLMLLLEALUMSALLLMLLMCLLULUSCSLELDLEAINMAEPURL",
+    "hits": [
+     "→lulu"
+    ],
+    "n": 1,
+    "null_mean": 1.95,
+    "p_ge": 0.805
+   },
+   "letter 2 of each line": {
+    "stream": "AENEUOAEAAAEATUENAOUAAEAEAAEAANENOEOATEAATUNEAUTANEA",
+    "hits": [
+     "←ouen"
+    ],
+    "n": 1,
+    "null_mean": 1.02,
+    "p_ge": 0.535
+   },
+   "letter 3 of each line": {
+    "stream": "NVMVDRICIISCOLCPEINCOOAIBOIQOPESENQUOBSNOBCDMIDESEGB",
+    "hits": [
+     "→pese",
+     "←bons"
+    ],
+    "n": 2,
+    "null_mean": 1.31,
+    "p_ge": 0.38
+   },
+   "letter 4 of each line": {
+    "stream": "SIIEESSHRSAOUEUHPSEUUUUSOUSUUPVFBMUSUASSUAUIASENMCAO",
+    "hits": [
+     "→sous"
+    ],
+    "n": 1,
+    "null_mean": 1.44,
+    "p_ge": 0.765
+   },
+   "letter 5 of each line": {
+    "stream": "UERRLOLESLUULSNEILCNLLFLUDLELEEOOEILLTOLLYNQRLLTALRU",
+    "hits": [
+     "→neil",
+     "→oeil",
+     "←lien",
+     "←liens"
+    ],
+    "n": 4,
+    "null_mean": 1.88,
+    "p_ge": 0.15
+   },
+   "letter 6 of each line": {
+    "stream": "NIOTAUEMAEMRECENEELEAARECEELELRRRSAEEHNEESBUCAAERADS",
+    "hits": [
+     "→nees"
+    ],
+    "n": 1,
+    "null_mean": 2.94,
+    "p_ge": 0.93
+   },
+   "letter 7 of each line": {
+    "stream": "ELIDDPSILSUAFOBICSAVFRESLSSEFDITNSEPSUSSSTUEHODRQTES",
+    "hits": [],
+    "n": 0,
+    "null_mean": 2.08,
+    "p_ge": 1.0
+   },
+   "letter 8 of each line": {
+    "stream": "TLREEISNERRNEURXECTEIEDIICRSEUTSEATOERSPCRRREUERURZO",
+    "hits": [
+     "←tues"
+    ],
+    "n": 1,
+    "null_mean": 2.68,
+    "p_ge": 0.905
+   },
+   "word 1 initials": {
+    "stream": "DDULALMLLMLLLEALUMSALLLMLLMCLLULUSCSLELDLEAINMAEPURL",
+    "hits": [
+     "→lulu"
+    ],
+    "n": 1,
+    "null_mean": 1.98,
+    "p_ge": 0.82
+   },
+   "word 2 initials": {
+    "stream": "UVMVDSLCSLSCOLBPPLEVOOFLBOLQODVFBMQLOBSLOBBLMLDEMEAB",
+    "hits": [
+     "←bloc",
+     "←blocs"
+    ],
+    "n": 2,
+    "null_mean": 0.53,
+    "p_ge": 0.105
+   },
+   "word 3 initials": {
+    "stream": "TRCDNSSSPRSTLCNSDCNDLLUSSDRLLNNLSEAPLSSPLSDOPOLIPRDT",
+    "hits": [
+     "→poli"
+    ],
+    "n": 1,
+    "null_mean": 0.9,
+    "p_ge": 0.595
+   },
+   "word 4 initials": {
+    "stream": "CCCLLLTTAFSLFRPEMMQMFRCMVCNRFDBSDTEDESAOCCNLHLMDLDLE",
+    "hits": [],
+    "n": 0,
+    "null_mean": 0.71,
+    "p_ge": 1.0
+   },
+   "word 5 initials": {
+    "stream": "FAQLOTALUNMOAOLEGLLNDDALLNPPCIMEPPDACCMMELABLSLCMLDT",
+    "hits": [
+     "←bale"
+    ],
+    "n": 1,
+    "null_mean": 1.39,
+    "p_ge": 0.705
+   },
+   "stanza initials": {
+    "stream": "DALLULLLULLNP",
+    "hits": [],
+    "n": 0,
+    "null_mean": 0.28,
+    "p_ge": 1.0
+   },
+   "stanza last-line initials": {
+    "stream": "LLLLAMCLSDIEL",
+    "hits": [],
+    "n": 0,
+    "null_mean": 0.65,
+    "p_ge": 1.0
+   }
+  }
+ },
+ "els": [
+  [
+   "sudbury",
+   0,
+   0,
+   0.0,
+   1.0
+  ],
+  [
+   "nickel",
+   0,
+   0,
+   0.0,
+   1.0
+  ],
+  [
+   "copper",
+   0,
+   0,
+   0.0,
+   1.0
+  ],
+  [
+   "gold",
+   1,
+   1.4,
+   -0.32,
+   0.775
+  ],
+  [
+   "cache",
+   0,
+   0.2,
+   -0.44,
+   1.0
+  ],
+  [
+   "chest",
+   2,
+   0.8,
+   1.46,
+   0.2
+  ],
+  [
+   "treasure",
+   0,
+   0,
+   0.0,
+   1.0
+  ],
+  [
+   "buried",
+   0,
+   0,
+   0.0,
+   1.0
+  ],
+  [
+   "north",
+   1,
+   0.9,
+   0.11,
+   0.6
+  ],
+  [
+   "south",
+   0,
+   0.3,
+   -0.55,
+   1.0
+  ],
+  [
+   "east",
+   27,
+   31.1,
+   -0.91,
+   0.875
+  ],
+  [
+   "west",
+   19,
+   13.4,
+   1.64,
+   0.05
+  ],
+  [
+   "lake",
+   2,
+   2.0,
+   0.02,
+   0.525
+  ],
+  [
+   "mine",
+   6,
+   5.1,
+   0.39,
+   0.375
+  ],
+  [
+   "shaft",
+   0,
+   0.1,
+   -0.42,
+   1.0
+  ],
+  [
+   "kelly",
+   0,
+   0.0,
+   -0.16,
+   1.0
+  ],
+  [
+   "code",
+   0,
+   5.2,
+   -2.1,
+   1.0
+  ],
+  [
+   "dig",
+   24,
+   33.2,
+   -1.49,
+   0.925
+  ],
+  [
+   "rock",
+   2,
+   0.7,
+   1.95,
+   0.075
+  ],
+  [
+   "core",
+   7,
+   8.6,
+   -0.5,
+   0.675
+  ],
+  [
+   "creek",
+   0,
+   0.2,
+   -0.5,
+   1.0
+  ],
+  [
+   "falls",
+   0,
+   0.0,
+   -0.16,
+   1.0
+  ],
+  [
+   "cobalt",
+   0,
+   0,
+   0.0,
+   1.0
+  ],
+  [
+   "timmins",
+   0,
+   0,
+   0.0,
+   1.0
+  ],
+  [
+   "ontario",
+   0,
+   0,
+   0.0,
+   1.0
+  ],
+  [
+   "quebec",
+   0,
+   0,
+   0.0,
+   1.0
+  ],
+  [
+   "manitoba",
+   0,
+   0,
+   0.0,
+   1.0
+  ],
+  [
+   "canada",
+   0,
+   0,
+   0.0,
+   1.0
+  ],
+  [
+   "nipissing",
+   0,
+   0,
+   0.0,
+   1.0
+  ],
+  [
+   "huron",
+   1,
+   0.3,
+   1.3,
+   0.3
+  ],
+  [
+   "trail",
+   0,
+   0.4,
+   -0.82,
+   1.0
+  ],
+  [
+   "cairn",
+   0,
+   0.3,
+   -0.54,
+   1.0
+  ],
+  [
+   "plaque",
+   0,
+   0,
+   0.0,
+   1.0
+  ],
+  [
+   "marker",
+   0,
+   0,
+   0.0,
+   1.0
+  ],
+  [
+   "salter",
+   0,
+   0.1,
+   -0.28,
+   1.0
+  ],
+  [
+   "murray",
+   0,
+   0,
+   0.0,
+   1.0
+  ],
+  [
+   "compass",
+   0,
+   0,
+   0.0,
+   1.0
+  ],
+  [
+   "birch",
+   0,
+   0.1,
+   -0.23,
+   1.0
+  ],
+  [
+   "cedar",
+   0,
+   0.3,
+   -0.61,
+   1.0
+  ],
+  [
+   "pine",
+   5,
+   5.2,
+   -0.1,
+   0.725
+  ],
+  [
+   "one",
+   338,
+   341.7,
+   -0.16,
+   0.525
+  ],
+  [
+   "two",
+   64,
+   71.6,
+   -0.97,
+   0.85
+  ],
+  [
+   "three",
+   3,
+   3.4,
+   -0.22,
+   0.7
+  ],
+  [
+   "four",
+   0,
+   0.6,
+   -0.78,
+   1.0
+  ],
+  [
+   "five",
+   0,
+   0.2,
+   -0.58,
+   1.0
+  ],
+  [
+   "six",
+   0,
+   1.7,
+   -1.51,
+   1.0
+  ],
+  [
+   "seven",
+   0,
+   0.3,
+   -0.73,
+   1.0
+  ],
+  [
+   "eight",
+   0,
+   0.4,
+   -0.55,
+   1.0
+  ],
+  [
+   "nine",
+   17,
+   21.4,
+   -0.87,
+   0.875
+  ],
+  [
+   "ten",
+   513,
+   482.4,
+   1.17,
+   0.075
+  ],
+  [
+   "zero",
+   0,
+   0.4,
+   -0.69,
+   1.0
+  ]
+ ],
+ "rarity_en": [
+  [
+   "Flinty’s",
+   22,
+   0.0
+  ],
+  [
+   "chalco",
+   21,
+   1.46
+  ],
+  [
+   "siren’s",
+   19,
+   1.92
+  ],
+  [
+   "verdigris",
+   4,
+   1.97
+  ],
+  [
+   "birches",
+   44,
+   2.29
+  ],
+  [
+   "wets",
+   12,
+   2.31
+  ],
+  [
+   "hums",
+   23,
+   2.48
+  ],
+  [
+   "mountain’s",
+   6,
+   2.49
+  ],
+  [
+   "miner’s",
+   20,
+   2.52
+  ],
+  [
+   "dulled",
+   34,
+   2.52
+  ],
+  [
+   "ignites",
+   15,
+   2.71
+  ],
+  [
+   "pales",
+   40,
+   2.73
+  ],
+  [
+   "cedars",
+   29,
+   2.83
+  ],
+  [
+   "ember",
+   15,
+   2.97
+  ],
+  [
+   "gleam",
+   19,
+   2.97
+  ],
+  [
+   "sliver",
+   50,
+   2.99
+  ],
+  [
+   "brine",
+   11,
+   3.07
+  ],
+  [
+   "Bathurst",
+   38,
+   3.11
+  ],
+  [
+   "overgrown",
+   50,
+   3.12
+  ],
+  [
+   "gripped",
+   21,
+   3.14
+  ],
+  [
+   "mislead",
+   7,
+   3.22
+  ],
+  [
+   "stitched",
+   13,
+   3.22
+  ],
+  [
+   "hoard",
+   42,
+   3.23
+  ],
+  [
+   "sunken",
+   26,
+   3.26
+  ],
+  [
+   "zinc-toned",
+   37,
+   3.26
+  ],
+  [
+   "brittle",
+   10,
+   3.28
+  ],
+  [
+   "gilded",
+   7,
+   3.3
+  ],
+  [
+   "glaciers",
+   5,
+   3.31
+  ],
+  [
+   "seams",
+   14,
+   3.32
+  ],
+  [
+   "fleeting",
+   14,
+   3.32
+  ],
+  [
+   "bends",
+   25,
+   3.34
+  ],
+  [
+   "haste",
+   45,
+   3.37
+  ],
+  [
+   "sighs",
+   6,
+   3.38
+  ],
+  [
+   "forgets",
+   11,
+   3.41
+  ],
+  [
+   "folds",
+   40,
+   3.43
+  ],
+  [
+   "hush",
+   52,
+   3.47
+  ],
+  [
+   "hue",
+   7,
+   3.49
+  ],
+  [
+   "birch",
+   8,
+   3.5
+  ],
+  [
+   "lore",
+   4,
+   3.55
+  ],
+  [
+   "sparked",
+   14,
+   3.55
+  ]
+ ],
+ "rarity_fr": [
+  [
+   "Flinty",
+   22,
+   0.0
+  ],
+  [
+   "chalco",
+   21,
+   1.43
+  ],
+  [
+   "avouées",
+   27,
+   1.83
+  ],
+  [
+   "couronnait",
+   42,
+   1.87
+  ],
+  [
+   "pâlit",
+   40,
+   2.14
+  ],
+  [
+   "chuchotent",
+   2,
+   2.22
+  ],
+  [
+   "fredonne",
+   23,
+   2.31
+  ],
+  [
+   "chuchotements",
+   26,
+   2.44
+  ],
+  [
+   "s’estompent",
+   39,
+   2.56
+  ],
+  [
+   "hâtivement",
+   45,
+   2.58
+  ],
+  [
+   "numérotée",
+   43,
+   2.62
+  ],
+  [
+   "bouleaux",
+   8,
+   2.68
+  ],
+  [
+   "saumure",
+   11,
+   2.75
+  ],
+  [
+   "cèdres",
+   29,
+   2.79
+  ],
+  [
+   "terni",
+   34,
+   2.84
+  ],
+  [
+   "guident",
+   10,
+   2.85
+  ],
+  [
+   "broussailles",
+   51,
+   2.85
+  ],
+  [
+   "Bathurst",
+   38,
+   2.91
+  ],
+  [
+   "Indiquera",
+   44,
+   2.92
+  ],
+  [
+   "braise",
+   15,
+   2.93
+  ],
+  [
+   "emparée",
+   21,
+   2.94
+  ],
+  [
+   "jaillir",
+   14,
+   2.95
+  ],
+  [
+   "forgée",
+   31,
+   2.95
+  ],
+  [
+   "teintées",
+   37,
+   2.96
+  ],
+  [
+   "s’alignent",
+   45,
+   2.97
+  ],
+  [
+   "cousu",
+   13,
+   3.01
+  ],
+  [
+   "coutures",
+   14,
+   3.04
+  ],
+  [
+   "tombaient",
+   37,
+   3.04
+  ],
+  [
+   "marchez",
+   45,
+   3.06
+  ],
+  [
+   "regardera",
+   16,
+   3.09
+  ],
+  [
+   "règnent",
+   5,
+   3.16
+  ],
+  [
+   "sonnait",
+   38,
+   3.16
+  ],
+  [
+   "envolé",
+   16,
+   3.18
+  ],
+  [
+   "phénix",
+   16,
+   3.22
+  ],
+  [
+   "endormis",
+   25,
+   3.22
+  ],
+  [
+   "bruyante",
+   31,
+   3.23
+  ],
+  [
+   "noyés",
+   26,
+   3.25
+  ],
+  [
+   "n’enflamme",
+   15,
+   3.26
+  ],
+  [
+   "fixent",
+   44,
+   3.28
+  ],
+  [
+   "mouille",
+   12,
+   3.29
+  ]
+ ],
+ "rarity_stanza_en": [
+  5.35,
+  4.9,
+  5.16,
+  5.32,
+  5.37,
+  5.21,
+  5.17,
+  5.75,
+  5.43,
+  5.09,
+  5.21,
+  5.5,
+  5.58
+ ],
+ "rare_count_stanza_en": [
+  1,
+  6,
+  4,
+  5,
+  3,
+  4,
+  2,
+  1,
+  1,
+  4,
+  3,
+  2,
+  3
+ ],
+ "metre": [
+  {
+   "g": 1,
+   "line": "In a land crowned cold and vast",
+   "syl": 7,
+   "pattern": "0011101",
+   "deviations": []
+  },
+  {
+   "g": 2,
+   "line": "Old riches whisper through the past",
+   "syl": 8,
+   "pattern": "11010101",
+   "deviations": []
+  },
+  {
+   "g": 3,
+   "line": "A mirror hides what veins once bore",
+   "syl": 8,
+   "pattern": "01011111",
+   "deviations": []
+  },
+  {
+   "g": 4,
+   "line": "The verdigris behind the lore",
+   "syl": 8,
+   "pattern": "01020101",
+   "deviations": []
+  },
+  {
+   "g": 5,
+   "line": "Beyond the clouds where glaciers reign",
+   "syl": 8,
+   "pattern": "01011101",
+   "deviations": []
+  },
+  {
+   "g": 6,
+   "line": "Gold sighs beneath the mountain’s strain",
+   "syl": 8,
+   "pattern": "11010101",
+   "deviations": []
+  },
+  {
+   "g": 7,
+   "line": "Yet peaks mislead with gilded hue",
+   "syl": 8,
+   "pattern": "11011101",
+   "deviations": []
+  },
+  {
+   "g": 8,
+   "line": "The path lies where the birch trees grew",
+   "syl": 8,
+   "pattern": "01110111",
+   "deviations": []
+  },
+  {
+   "g": 9,
+   "line": "Salt air once bore a copper song",
+   "syl": 8,
+   "pattern": "11110101",
+   "deviations": []
+  },
+  {
+   "g": 10,
+   "line": "But brittle roots don’t guide for long",
+   "syl": 8,
+   "pattern": "11011111",
+   "deviations": []
+  },
+  {
+   "g": 11,
+   "line": "The brine remembers, but forgets",
+   "syl": 8,
+   "pattern": "01010101",
+   "deviations": []
+  },
+  {
+   "g": 12,
+   "line": "The current pulls where moss still wets",
+   "syl": 8,
+   "pattern": "01011111",
+   "deviations": []
+  },
+  {
+   "g": 13,
+   "line": "Where fire stitched a northern name",
+   "syl": 8,
+   "pattern": "11010101",
+   "deviations": []
+  },
+  {
+   "g": 14,
+   "line": "And red seams sparked a fleeting flame",
+   "syl": 8,
+   "pattern": "01110101",
+   "deviations": []
+  },
+  {
+   "g": 15,
+   "line": "No ember now ignites the track",
+   "syl": 8,
+   "pattern": "11012101",
+   "deviations": []
+  },
+  {
+   "g": 16,
+   "line": "The phoenix flew and won’t look back",
+   "syl": 8,
+   "pattern": "01010111",
+   "deviations": []
+  },
+  {
+   "g": 17,
+   "line": "A giant coin reflects the sun",
+   "syl": 8,
+   "pattern": "01010101",
+   "deviations": []
+  },
+  {
+   "g": 18,
+   "line": "But circles lead where none begun",
+   "syl": 8,
+   "pattern": "11011101",
+   "deviations": []
+  },
+  {
+   "g": 19,
+   "line": "Its gleam is but a siren’s light",
+   "syl": 8,
+   "pattern": "11110101",
+   "deviations": []
+  },
+  {
+   "g": 20,
+   "line": "No miner’s truth is held in sight",
+   "syl": 8,
+   "pattern": "11011101",
+   "deviations": []
+  },
+  {
+   "g": 21,
+   "line": "Where chalco fever gripped the east",
+   "syl": 8,
+   "pattern": "11010101",
+   "deviations": []
+  },
+  {
+   "g": 22,
+   "line": "Where Flinty’s claim once never ceased",
+   "syl": 8,
+   "pattern": "11011101",
+   "deviations": []
+  },
+  {
+   "g": 23,
+   "line": "The water hums an ancient code",
+   "syl": 8,
+   "pattern": "01011101",
+   "deviations": []
+  },
+  {
+   "g": 24,
+   "line": "But silence marks the current road",
+   "syl": 8,
+   "pattern": "11010101",
+   "deviations": []
+  },
+  {
+   "g": 25,
+   "line": "The Shield bends low through sleeping trees",
+   "syl": 8,
+   "pattern": "01111101",
+   "deviations": []
+  },
+  {
+   "g": 26,
+   "line": "Where sunken whispers told of ease",
+   "syl": 8,
+   "pattern": "11010111",
+   "deviations": []
+  },
+  {
+   "g": 27,
+   "line": "But breaks don’t speak nor faults confess",
+   "syl": 8,
+   "pattern": "11111101",
+   "deviations": []
+  },
+  {
+   "g": 28,
+   "line": "What roots may hold in quiet press",
+   "syl": 8,
+   "pattern": "11110101",
+   "deviations": []
+  },
+  {
+   "g": 29,
+   "line": "Where iron sings and cedars lean",
+   "syl": 8,
+   "pattern": "11010101",
+   "deviations": []
+  },
+  {
+   "g": 30,
+   "line": "The northern call remains unseen",
+   "syl": 8,
+   "pattern": "01010101",
+   "deviations": []
+  },
+  {
+   "g": 31,
+   "line": "A truth not loud, but forged to be",
+   "syl": 8,
+   "pattern": "01111111",
+   "deviations": []
+  },
+  {
+   "g": 32,
+   "line": "The strong, the silent, and the free",
+   "syl": 8,
+   "pattern": "01010001",
+   "deviations": []
+  },
+  {
+   "g": 33,
+   "line": "One marker stands, by shore and pine",
+   "syl": 8,
+   "pattern": "11011101",
+   "deviations": []
+  },
+  {
+   "g": 34,
+   "line": "Its message dulled by passing time",
+   "syl": 8,
+   "pattern": "11011101",
+   "deviations": []
+  },
+  {
+   "g": 35,
+   "line": "What once declared, now disappears",
+   "syl": 8,
+   "pattern": "11011201",
+   "deviations": []
+  },
+  {
+   "g": 36,
+   "line": "Beneath the weight of growing years",
+   "syl": 8,
+   "pattern": "01011101",
+   "deviations": []
+  },
+  {
+   "g": 37,
+   "line": "Where warm the zinc-toned waters fell",
+   "syl": 8,
+   "pattern": "11011101",
+   "deviations": [
+    "zinc-toned (primary stress on weak syllable 5)"
+   ]
+  },
+  {
+   "g": 38,
+   "line": "And Bathurst rang its deepest bell",
+   "syl": 8,
+   "pattern": "01011101",
+   "deviations": []
+  },
+  {
+   "g": 39,
+   "line": "The sounds now fade but echo trails",
+   "syl": 8,
+   "pattern": "01111101",
+   "deviations": []
+  },
+  {
+   "g": 40,
+   "line": "In folds where even memory pales",
+   "syl": 9,
+   "pattern": "011101001",
+   "deviations": [
+    "memory (unstressed syllable on beat 8)"
+   ]
+  },
+  {
+   "g": 41,
+   "line": "Where suits and stones have struck accord",
+   "syl": 8,
+   "pattern": "11011101",
+   "deviations": []
+  },
+  {
+   "g": 42,
+   "line": "And Bay Street crowned the mining hoard",
+   "syl": 8,
+   "pattern": "01110101",
+   "deviations": []
+  },
+  {
+   "g": 43,
+   "line": "No gilded desk nor numbered share",
+   "syl": 8,
+   "pattern": "11011101",
+   "deviations": []
+  },
+  {
+   "g": 44,
+   "line": "Will point to where the birches stare",
+   "syl": 7,
+   "pattern": "1111011",
+   "deviations": []
+  },
+  {
+   "g": 45,
+   "line": "Step not in haste where paths align",
+   "syl": 8,
+   "pattern": "11011101",
+   "deviations": []
+  },
+  {
+   "g": 46,
+   "line": "But where the trail forgets design",
+   "syl": 8,
+   "pattern": "11010101",
+   "deviations": []
+  },
+  {
+   "g": 47,
+   "line": "Beyond the mark the tall grass grows",
+   "syl": 8,
+   "pattern": "01010111",
+   "deviations": []
+  },
+  {
+   "g": 48,
+   "line": "And buried speaks what no one knows",
+   "syl": 8,
+   "pattern": "01011111",
+   "deviations": []
+  },
+  {
+   "g": 49,
+   "line": "Not marked by gold but core alone",
+   "syl": 8,
+   "pattern": "11111101",
+   "deviations": []
+  },
+  {
+   "g": 50,
+   "line": "A sliver rests in overgrown",
+   "syl": 8,
+   "pattern": "01010201",
+   "deviations": []
+  },
+  {
+   "g": 51,
+   "line": "Look past the script, behind the brush",
+   "syl": 8,
+   "pattern": "11010101",
+   "deviations": []
+  },
+  {
+   "g": 52,
+   "line": "The compass turns, and all is hush",
+   "syl": 8,
+   "pattern": "01010111",
+   "deviations": []
+  }
+ ],
+ "rhyme": [
+  [
+   1,
+   "vast",
+   "past",
+   "AE1 S T",
+   "AE1 S T",
+   "perfect"
+  ],
+  [
+   3,
+   "bore",
+   "lore",
+   "AO1 R",
+   "AO1 R",
+   "perfect"
+  ],
+  [
+   5,
+   "reign",
+   "strain",
+   "EY1 N",
+   "EY1 N",
+   "perfect"
+  ],
+  [
+   7,
+   "hue",
+   "grew",
+   "UW1",
+   "UW1",
+   "perfect"
+  ],
+  [
+   9,
+   "song",
+   "long",
+   "AO1 NG",
+   "AO1 NG",
+   "perfect"
+  ],
+  [
+   11,
+   "forgets",
+   "wets",
+   "EH1 T S",
+   null,
+   "slant"
+  ],
+  [
+   13,
+   "name",
+   "flame",
+   "EY1 M",
+   "EY1 M",
+   "perfect"
+  ],
+  [
+   15,
+   "track",
+   "back",
+   "AE1 K",
+   "AE1 K",
+   "perfect"
+  ],
+  [
+   17,
+   "sun",
+   "begun",
+   "AH1 N",
+   "AH1 N",
+   "perfect"
+  ],
+  [
+   19,
+   "light",
+   "sight",
+   "AY1 T",
+   "AY1 T",
+   "perfect"
+  ],
+  [
+   21,
+   "east",
+   "ceased",
+   "IY1 S T",
+   "IY1 S T",
+   "perfect"
+  ],
+  [
+   23,
+   "code",
+   "road",
+   "OW1 D",
+   "OW1 D",
+   "perfect"
+  ],
+  [
+   25,
+   "trees",
+   "ease",
+   "IY1 Z",
+   "IY1 Z",
+   "perfect"
+  ],
+  [
+   27,
+   "confess",
+   "press",
+   "EH1 S",
+   "EH1 S",
+   "perfect"
+  ],
+  [
+   29,
+   "lean",
+   "unseen",
+   "IY1 N",
+   "IY1 N",
+   "perfect"
+  ],
+  [
+   31,
+   "be",
+   "free",
+   "IY1",
+   "IY1",
+   "perfect"
+  ],
+  [
+   33,
+   "pine",
+   "time",
+   "AY1 N",
+   "AY1 M",
+   "slant (same vowel, consonant differs)"
+  ],
+  [
+   35,
+   "disappears",
+   "years",
+   "IH1 R Z",
+   "IH1 R Z",
+   "perfect"
+  ],
+  [
+   37,
+   "fell",
+   "bell",
+   "EH1 L",
+   "EH1 L",
+   "perfect"
+  ],
+  [
+   39,
+   "trails",
+   "pales",
+   "EY1 L Z",
+   "EY1 L Z",
+   "perfect"
+  ],
+  [
+   41,
+   "accord",
+   "hoard",
+   "AO1 R D",
+   "AO1 R D",
+   "perfect"
+  ],
+  [
+   43,
+   "share",
+   "stare",
+   "EH1 R",
+   "EH1 R",
+   "perfect"
+  ],
+  [
+   45,
+   "align",
+   "design",
+   "AY1 N",
+   "AY1 N",
+   "perfect"
+  ],
+  [
+   47,
+   "grows",
+   "knows",
+   "OW1 Z",
+   "OW1 Z",
+   "perfect"
+  ],
+  [
+   49,
+   "alone",
+   "overgrown",
+   "OW1 N",
+   "OW1 N",
+   "perfect"
+  ],
+  [
+   51,
+   "brush",
+   "hush",
+   "AH1 SH",
+   "AH1 SH",
+   "perfect"
+  ]
+ ],
+ "junctions": [
+  [
+   1,
+   "vast",
+   "Old",
+   "TO"
+  ],
+  [
+   2,
+   "past",
+   "A",
+   "TA"
+  ],
+  [
+   3,
+   "bore",
+   "The",
+   "ET"
+  ],
+  [
+   4,
+   "lore",
+   "Beyond",
+   "EB"
+  ],
+  [
+   5,
+   "reign",
+   "Gold",
+   "NG"
+  ],
+  [
+   6,
+   "strain",
+   "Yet",
+   "NY"
+  ],
+  [
+   7,
+   "hue",
+   "The",
+   "ET"
+  ],
+  [
+   8,
+   "grew",
+   "Salt",
+   "WS"
+  ],
+  [
+   9,
+   "song",
+   "But",
+   "GB"
+  ],
+  [
+   10,
+   "long",
+   "The",
+   "GT"
+  ],
+  [
+   11,
+   "forgets",
+   "The",
+   "ST"
+  ],
+  [
+   12,
+   "wets",
+   "Where",
+   "SW"
+  ],
+  [
+   13,
+   "name",
+   "And",
+   "EA"
+  ],
+  [
+   14,
+   "flame",
+   "No",
+   "EN"
+  ],
+  [
+   15,
+   "track",
+   "The",
+   "KT"
+  ],
+  [
+   16,
+   "back",
+   "A",
+   "KA"
+  ],
+  [
+   17,
+   "sun",
+   "But",
+   "NB"
+  ],
+  [
+   18,
+   "begun",
+   "Its",
+   "NI"
+  ],
+  [
+   19,
+   "light",
+   "No",
+   "TN"
+  ],
+  [
+   20,
+   "sight",
+   "Where",
+   "TW"
+  ],
+  [
+   21,
+   "east",
+   "Where",
+   "TW"
+  ],
+  [
+   22,
+   "ceased",
+   "The",
+   "DT"
+  ],
+  [
+   23,
+   "code",
+   "But",
+   "EB"
+  ],
+  [
+   24,
+   "road",
+   "The",
+   "DT"
+  ],
+  [
+   25,
+   "trees",
+   "Where",
+   "SW"
+  ],
+  [
+   26,
+   "ease",
+   "But",
+   "EB"
+  ],
+  [
+   27,
+   "confess",
+   "What",
+   "SW"
+  ],
+  [
+   28,
+   "press",
+   "Where",
+   "SW"
+  ],
+  [
+   29,
+   "lean",
+   "The",
+   "NT"
+  ],
+  [
+   30,
+   "unseen",
+   "A",
+   "NA"
+  ],
+  [
+   31,
+   "be",
+   "The",
+   "ET"
+  ],
+  [
+   32,
+   "free",
+   "One",
+   "EO"
+  ],
+  [
+   33,
+   "pine",
+   "Its",
+   "EI"
+  ],
+  [
+   34,
+   "time",
+   "What",
+   "EW"
+  ],
+  [
+   35,
+   "disappears",
+   "Beneath",
+   "SB"
+  ],
+  [
+   36,
+   "years",
+   "Where",
+   "SW"
+  ],
+  [
+   37,
+   "fell",
+   "And",
+   "LA"
+  ],
+  [
+   38,
+   "bell",
+   "The",
+   "LT"
+  ],
+  [
+   39,
+   "trails",
+   "In",
+   "SI"
+  ],
+  [
+   40,
+   "pales",
+   "Where",
+   "SW"
+  ],
+  [
+   41,
+   "accord",
+   "And",
+   "DA"
+  ],
+  [
+   42,
+   "hoard",
+   "No",
+   "DN"
+  ],
+  [
+   43,
+   "share",
+   "Will",
+   "EW"
+  ],
+  [
+   44,
+   "stare",
+   "Step",
+   "ES"
+  ],
+  [
+   45,
+   "align",
+   "But",
+   "NB"
+  ],
+  [
+   46,
+   "design",
+   "Beyond",
+   "NB"
+  ],
+  [
+   47,
+   "grows",
+   "And",
+   "SA"
+  ],
+  [
+   48,
+   "knows",
+   "Not",
+   "SN"
+  ],
+  [
+   49,
+   "alone",
+   "A",
+   "EA"
+  ],
+  [
+   50,
+   "overgrown",
+   "Look",
+   "NL"
+  ],
+  [
+   51,
+   "brush",
+   "The",
+   "HT"
+  ]
+ ],
+ "junction_letters": "TOTAETEBNGNYETWSGBGTSTSWEAENKTKANBNITNTWTWDTEBDTSWEBSWSWNTNAETEOEIEWSBSWLALTSISWDADNEWESNBNBSASNEANLHT",
+ "murray_shared": [
+  [
+   "current",
+   2,
+   68
+  ],
+  [
+   "east",
+   1,
+   45
+  ],
+  [
+   "bay",
+   1,
+   36
+  ],
+  [
+   "red",
+   1,
+   34
+  ],
+  [
+   "shore",
+   1,
+   25
+  ],
+  [
+   "iron",
+   1,
+   19
+  ],
+  [
+   "strong",
+   1,
+   17
+  ],
+  [
+   "veins",
+   1,
+   15
+  ],
+  [
+   "copper",
+   1,
+   14
+  ],
+  [
+   "pine",
+   1,
+   13
+  ],
+  [
+   "northern",
+   2,
+   11
+  ],
+  [
+   "low",
+   1,
+   11
+  ],
+  [
+   "beyond",
+   2,
+   10
+  ],
+  [
+   "land",
+   1,
+   9
+  ],
+  [
+   "waters",
+   1,
+   9
+  ],
+  [
+   "turns",
+   1,
+   9
+  ],
+  [
+   "mark",
+   1,
+   6
+  ],
+  [
+   "passing",
+   1,
+   5
+  ],
+  [
+   "mountains",
+   1,
+   4
+  ],
+  [
+   "bends",
+   1,
+   3
+  ],
+  [
+   "compass",
+   1,
+   3
+  ],
+  [
+   "lies",
+   1,
+   2
+  ],
+  [
+   "birch",
+   1,
+   2
+  ],
+  [
+   "trees",
+   2,
+   2
+  ],
+  [
+   "hold",
+   1,
+   2
+  ],
+  [
+   "struck",
+   1,
+   2
+  ],
+  [
+   "mining",
+   1,
+   2
+  ],
+  [
+   "marked",
+   1,
+   2
+  ],
+  [
+   "vast",
+   1,
+   1
+  ],
+  [
+   "past",
+   2,
+   1
+  ],
+  [
+   "beneath",
+   2,
+   1
+  ],
+  [
+   "remains",
+   1,
+   1
+  ],
+  [
+   "stones",
+   1,
+   1
+  ],
+  [
+   "grass",
+   1,
+   1
+  ],
+  [
+   "grows",
+   1,
+   1
+  ]
+ ],
+ "murray_poem_only": [
+  "accord",
+  "air",
+  "align",
+  "alone",
+  "ancient",
+  "bathurst",
+  "begun",
+  "behind",
+  "bell",
+  "birches",
+  "bore",
+  "breaks",
+  "brine",
+  "brittle",
+  "brush",
+  "buried",
+  "ceased",
+  "cedars",
+  "chalco",
+  "circles",
+  "claim",
+  "clouds",
+  "code",
+  "coin",
+  "cold",
+  "confess",
+  "core",
+  "crowned",
+  "declared",
+  "deepest",
+  "design",
+  "desk",
+  "disappears",
+  "dont",
+  "dulled",
+  "ease",
+  "echo",
+  "ember",
+  "fade",
+  "faults",
+  "fell",
+  "fever",
+  "fire",
+  "flame",
+  "fleeting",
+  "flew",
+  "flintys",
+  "folds",
+  "forged",
+  "forgets",
+  "giant",
+  "gilded",
+  "glaciers",
+  "gleam",
+  "gold",
+  "grew",
+  "gripped",
+  "growing",
+  "guide",
+  "haste",
+  "held",
+  "hides",
+  "hoard",
+  "hue",
+  "hums",
+  "hush",
+  "ignites",
+  "knows",
+  "lead",
+  "lean",
+  "light",
+  "lore",
+  "loud",
+  "marker",
+  "marks",
+  "memory",
+  "message",
+  "miners",
+  "mirror",
+  "mislead",
+  "moss",
+  "none",
+  "nor",
+  "numbered",
+  "overgrown",
+  "pales",
+  "path",
+  "paths",
+  "peaks",
+  "phoenix",
+  "press",
+  "pulls",
+  "quiet",
+  "rang",
+  "reflects",
+  "reign",
+  "remembers",
+  "rests",
+  "riches",
+  "road",
+  "roots",
+  "salt",
+  "script",
+  "seams",
+  "share",
+  "shield",
+  "sighs",
+  "sight",
+  "silence",
+  "silent",
+  "sings",
+  "sirens",
+  "sleeping",
+  "sliver",
+  "song",
+  "sounds",
+  "sparked",
+  "speak",
+  "speaks",
+  "stands",
+  "stare",
+  "step",
+  "stitched",
+  "strain",
+  "street",
+  "suits",
+  "sun",
+  "sunken",
+  "tall",
+  "track",
+  "trail",
+  "trails",
+  "truth",
+  "unseen",
+  "verdigris",
+  "warm",
+  "weight",
+  "wets",
+  "whisper",
+  "whispers",
+  "wont",
+  "zinctoned"
+ ],
+ "murray_shared_rare": [
+  [
+   "bends",
+   1,
+   3,
+   3.34
+  ],
+  [
+   "birch",
+   1,
+   2,
+   3.5
+  ],
+  [
+   "compass",
+   1,
+   3,
+   3.74
+  ],
+  [
+   "veins",
+   1,
+   15,
+   3.76
+  ],
+  [
+   "pine",
+   1,
+   13,
+   4.1
+  ],
+  [
+   "grows",
+   1,
+   1,
+   4.18
+  ]
+ ],
+ "murray_ctx": {
+  "compass": [
+   3,
+   "ld require some farther investigation. From the point where the Wahnapitae separates into two channels, a true meridian line, or a bearing about N. 4° E. by compass, will in twenty-two miles and a-half strike Mr. Salter’s base line, where it crosses the river ; and thence a course N. 4° W., for six and a-quarter miles farther, will reach the route wher",
+   "mination was that the local attraction, which I found exactly as described by Mr. Salter, was owing to the presence of an immense mass of magnetic trap. The compass was found while traversing these trap ridges, to be deflected from its true bearing upwards of ten degrees at several different parts, and in one place it shewed a variation of fifteen degr"
+  ],
+  "attraction": [
+   4,
+   "ts of the streams that unite them, are narrow, sometimes not exceeding a few chains in width ; they are bounded by bold, rugged, barren shores, destitute of attraction as regards the picturesque until reaching the lowest lakes of the series ; these wash the base of the range of hills which stretch along the coast of Lake Huron from La- cloche, and thou",
+   "and west, and small brooks or marshes occupy the intermediate valleys. Previous to my visit to White-fish Lake, I had been informed by Mr. Salter that local attraction of the magnet had been observed by himself, while he was engaged in running the meridian line, and he expressed it to be his opinion that the presence of a large body of iron ore was the "
+  ],
+  "deviation": [
+   2,
+   "ld rudely represent the common boundary of the two formations ; were the junction however followed out in detail between the two points, there would be many deviations from the line, presenting sweeps aud curves in it, sometimes on one side and sometimes on the other, resulting from the effects of undulations. The difference in lithological character b",
+   "s from S. 27° W. to S. 49° W. On the Sturgeon and Maskanongi Rivers, and on Lake Wahnapitae- ping, the course of the grooves is S. 27° W., with scarcely any deviation, but farther west they seem to alter their course to a more westerly direction, and on Round Lake they bear S. 41° W. ; while at the long lake near the outlet of the White-fish River thei"
+  ],
+  "magnetic": [
+   12,
+   "zite crosses the line a little within the third mile mark, and a little beyond the fourth mile mark the rock is red syenite. At the fifth mile a dingy green magnetic trap, with a large amount of iron pyrites, forms a ridge, and that rock, with syenite, continues in a succession of parallel ridges to the seventh mile, beyond which the country becomes low",
+   "the result of my examination was that the local attraction, which I found exactly as described by Mr. Salter, was owing to the presence of an immense mass of magnetic trap. The compass was found while traversing these trap ridges, to be deflected from its true bearing upwards of ten degrees at several different parts, and in one place it shewed a variat"
+  ],
+  "fault": [
+   0
+  ],
+  "trap": [
+   9,
+   " finer grain. The rocks which form the different members of the group, as seen in the area examined, taken independantly of igneous intrusions or interposed trap beds, may, there is reason to suppose, be found to succeed one another in something like the following ascending order; the district however is so much disturbed that the sequence is not given",
+   "e conglomerate, the matrix always greenish in colour; sometimes it has a regular slaty structure, at other times it resembles a massive finegrained greenstone trap ; it holds pebbles of white and red syenite in great profusion, with occasional masses of green, brown and red jasper, rounded in form ; associated with the conglomerate, and probably not far f"
+  ],
+  "copper": [
+   14,
+   " ; also fine grained slates, sometimes of a green tinge, and often bluish or black, weathering very black ; occasionally some layers assume a reddish color ; copper pyrites and iron pyrites are frequently present in this division. 2. Slate conglomerate, the matrix always greenish in colour; sometimes it has a regular slaty structure, at other times it r",
+   "re found on the shores of the largest of the three lower lakes ; the slates were generally of a very fine grain and compact texture, and frequently contained copper and iron pyrites. At the head of the same lake the slate, which there is green, weathering brownish-grey, rises in a set of parallel ridges, running N. 50° E. and S. 50° W., the strata appar"
+  ],
+  "nickel": [
+   3,
+   "rally disseminated through the rock, the former in very small grains ; titaniferous iron was found associated with the magnetic ore, and a small quantity of nickel and copper with the pyrites. It was remarked that notwithstanding the powerful influence of this magnetic mass === PDF PAGE 201 === 181 \\ in causing a general local attraction, the contact ",
+   "erial, of which eleven were magnetic, and consisted of magnetic iron ore, with a little titaniferous iron ore, and magnetic iron pyrites containing traces of nickel. The nine grains of non-magnetic mineral consisted of iron pyrites, containing from two to three per cent of copper and about one per cent of nickel. Many large quartz veins occur on the lo"
+  ],
+  "salter": [
+   21,
+   " accident which had happened to the only steamer on the route, have been subject to much delay and inconvenience, but for the timely assistance of Mr. A. P. Salter, P.L.S., whom I am desirous of taking this opportunity to thank for the conveyance of myself and assistant Mr. Brown, together with my supplies for the season, to Shibah- ahnahning, where a p",
+   "nce of myself and assistant Mr. Brown, together with my supplies for the season, to Shibah- ahnahning, where a party of Indians were waiting my arrival. Mr. Salter, at the time I met him, was on his way to Lake Nipissing, from the vicinity of which lake he had instructions from the Crown Land Department to run a true west line, as a basis for future se"
+  ],
+  "birch": [
+   2,
+   "rlaid with sand, most of the way, as far up as the Temagamang. The soil on these flats is chiefly a sandy loam, bearing in many instances large-sized yellow birch, elm, maple and white pine. Above the Temagamang, the country becomes more broken than it is below, and the flats are less extensive, and before reaching the Maskanongi it becomes for the gre",
+   "ocky character of the ground. The banks of the stream falling from Round Lake are generally flat and dry about the upper end, bearing balsam, _ small white birch, cedar and tamarack ; but they become gradually lower and more swampy towards Lake Lavase, and the stream after passing through a low and wet tract, producing black ash, and black oak of stun"
+  ],
+  "cedar": [
+   1,
+   "aracter of the ground. The banks of the stream falling from Round Lake are generally flat and dry about the upper end, bearing balsam, _ small white birch, cedar and tamarack ; but they become gradually lower and more swampy towards Lake Lavase, and the stream after passing through a low and wet tract, producing black ash, and black oak of stunted siz"
+  ],
+  "pine": [
+   13,
+   "low the lowest fall, the soil appears to be of good quality, giving a mixture of hard-wood and evergreens, among the latter of which there is some good white pine. Small portions of this land have already been partially cultivated by the Indians and servants of the Hudson’s Bay Company, and the crops resulting from such cultivation, particularly in pot",
+   " way, as far up as the Temagamang. The soil on these flats is chiefly a sandy loam, bearing in many instances large-sized yellow birch, elm, maple and white pine. Above the Temagamang, the country becomes more broken than it is below, and the flats are less extensive, and before reaching the Maskanongi it becomes for the greater part poor and rocky. W"
+  ],
+  "iron": [
+   19,
+   "d slates, sometimes of a green tinge, and often bluish or black, weathering very black ; occasionally some layers assume a reddish color ; copper pyrites and iron pyrites are frequently present in this division. 2. Slate conglomerate, the matrix always greenish in colour; sometimes it has a regular slaty structure, at other times it resembles a massive ",
+   " the shores of the largest of the three lower lakes ; the slates were generally of a very fine grain and compact texture, and frequently contained copper and iron pyrites. At the head of the same lake the slate, which there is green, weathering brownish-grey, rises in a set of parallel ridges, running N. 50° E. and S. 50° W., the strata apparently vert"
+  ],
+  "zinc": [
+   0
+  ],
+  "gold": [
+   0
+  ],
+  "shield": [
+   0
+  ]
+ }
+}

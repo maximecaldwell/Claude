@@ -1,0 +1,440 @@
+{
+ "rows": [
+  [
+   1,
+   "In a land crowned cold and vast",
+   "Dans une terre couronnée froide et vaste",
+   "Dans une terre couronnée froide et vaste",
+   100.0,
+   true
+  ],
+  [
+   2,
+   "Old riches whisper through the past",
+   "De vieilles richesses chuchotent à travers le passé",
+   "Les vieilles richesses murmurent dans le passé",
+   53.5,
+   false
+  ],
+  [
+   3,
+   "A mirror hides what veins once bore",
+   "Un miroir cache ce que les veines ont porté autrefois",
+   "Un miroir cache ce qu'une fois les veines perçaient",
+   59.5,
+   false
+  ],
+  [
+   4,
+   "The verdigris behind the lore",
+   "Le vert-de-gris derrière la légende",
+   "Les verdigris derrière le lore",
+   45.3,
+   false
+  ],
+  [
+   5,
+   "Beyond the clouds where glaciers reign",
+   "Au-delà des nuages, là où règnent les glaciers",
+   "Au-delà des nuages où règnent les glaciers",
+   86.1,
+   false
+  ],
+  [
+   6,
+   "Gold sighs beneath the mountain’s strain",
+   "L’or soupire sous la tension de la montagne",
+   "Soupirs d'or sous la souche de la montagne",
+   57.7,
+   false
+  ],
+  [
+   7,
+   "Yet peaks mislead with gilded hue",
+   "Mais les sommets trompent avec leur teinte dorée",
+   "Pourtant, les pics trompent avec une teinte dorée",
+   55.8,
+   false
+  ],
+  [
+   8,
+   "The path lies where the birch trees grew",
+   "Le chemin se trouve là où les bouleaux ont poussé",
+   "Le sentier se trouve là où les bouleaux ont grandi.",
+   65.2,
+   false
+  ],
+  [
+   9,
+   "Salt air once bore a copper song",
+   "L’air salé portait autrefois une chanson de cuivre",
+   "L'air salé a une fois porté une chanson de cuivre",
+   66.2,
+   false
+  ],
+  [
+   10,
+   "But brittle roots don’t guide for long",
+   "Mais les racines fragiles ne guident pas longtemps",
+   "Mais les racines cassantes ne guident pas longtemps",
+   78.8,
+   false
+  ],
+  [
+   11,
+   "The brine remembers, but forgets",
+   "La saumure se souvient, mais oublie",
+   "La saumure se souvient, mais oublie",
+   100.0,
+   true
+  ],
+  [
+   12,
+   "The current pulls where moss still wets",
+   "Le courant tire là où la mousse mouille encore",
+   "Le courant tire où la mousse s'humidifie encore",
+   63.4,
+   false
+  ],
+  [
+   13,
+   "Where fire stitched a northern name",
+   "Là où le feu a cousu un nom nordique",
+   "Où le feu a cousu un nom du nord",
+   69.6,
+   false
+  ],
+  [
+   14,
+   "And red seams sparked a fleeting flame",
+   "Et les coutures rouges ont fait jaillir une flamme éphémère",
+   "Et les coutures rouges ont déclenché une flamme fugace",
+   58.2,
+   false
+  ],
+  [
+   15,
+   "No ember now ignites the track",
+   "Aucune braise n’enflamme plus la piste",
+   "Pas de brai n'enflamme maintenant la piste",
+   48.8,
+   false
+  ],
+  [
+   16,
+   "The phoenix flew and won’t look back",
+   "Le phénix s’est envolé et ne regardera pas en arrière",
+   "Le phénix vole et ne regarde pas en arrière",
+   61.6,
+   false
+  ],
+  [
+   17,
+   "A giant coin reflects the sun",
+   "Une pièce de monnaie géante reflète le soleil",
+   "Une pièce géante reflète le soleil",
+   73.4,
+   false
+  ],
+  [
+   18,
+   "But circles lead where none begun",
+   "Mais les cercles mènent là où rien n’a commencé",
+   "Mais les cercles mènent là où aucun n'a commencé",
+   84.2,
+   false
+  ],
+  [
+   19,
+   "Its gleam is but a siren’s light",
+   "Son éclat n’est que la lumière d’une sirène",
+   "Sa lueur n'est qu'une lumière de sirène",
+   51.6,
+   false
+  ],
+  [
+   20,
+   "No miner’s truth is held in sight",
+   "Aucune vérité du mineur n’est en vue",
+   "Il n'y a pas de vérité de mineur en vue.",
+   44.2,
+   false
+  ],
+  [
+   21,
+   "Where chalco fever gripped the east",
+   "Là où la fièvre du chalco s’est emparée de l’Est",
+   "Où la fièvre de chalco s'est emparée de l'est",
+   85.6,
+   false
+  ],
+  [
+   22,
+   "Where Flinty’s claim once never ceased",
+   "Là où la revendication de Flinty n’a jamais cessé",
+   "Dans le cas où Flinty, la revendication de Flinty, n'a jamais cessé",
+   78.4,
+   false
+  ],
+  [
+   23,
+   "The water hums an ancient code",
+   "L’eau fredonne un code ancien",
+   "L'eau agite un ancien code",
+   40.7,
+   false
+  ],
+  [
+   24,
+   "But silence marks the current road",
+   "Mais le silence marque la route actuelle",
+   "Mais le silence marque la route actuelle",
+   100.0,
+   true
+  ],
+  [
+   25,
+   "The Shield bends low through sleeping trees",
+   "Le Bouclier s’incline vers le bas à travers les arbres endormis",
+   "Le Bouclier s'incline bas à travers les arbres endormis",
+   86.8,
+   false
+  ],
+  [
+   26,
+   "Where sunken whispers told of ease",
+   "Là où des chuchotements noyés parlaient de facilité",
+   "Où les chuchotements engloutis ont dit de la facilité",
+   51.7,
+   false
+  ],
+  [
+   27,
+   "But breaks don’t speak nor faults confess",
+   "Mais les ruptures ne parlent pas et les fautes ne sont pas avouées",
+   "Mais les pauses ne parlent pas ni les fautes confessent",
+   50.6,
+   false
+  ],
+  [
+   28,
+   "What roots may hold in quiet press",
+   "Ce que les racines peuvent retenir dans la presse silencieuse",
+   "Ce que les racines peuvent contenir dans la presse silencieuse",
+   90.4,
+   false
+  ],
+  [
+   29,
+   "Where iron sings and cedars lean",
+   "Là où le fer chante et les cèdres s’appuient",
+   "Où le fer chante et les cèdres se penchent",
+   71.2,
+   false
+  ],
+  [
+   30,
+   "The northern call remains unseen",
+   "L’appel du Nord demeure invisible",
+   "L'appel du nord reste invisible",
+   70.2,
+   false
+  ],
+  [
+   31,
+   "A truth not loud, but forged to be",
+   "Une vérité non bruyante, mais forgée pour être",
+   "Une vérité pas fort, mais forgée pour être",
+   65.9,
+   false
+  ],
+  [
+   32,
+   "The strong, the silent, and the free",
+   "Les forts, les silencieux et les libres",
+   "Les forts, les silencieux et les libres",
+   100.0,
+   true
+  ],
+  [
+   33,
+   "One marker stands, by shore and pine",
+   "Une borne se dresse, près du rivage et des pins",
+   "Un pied marqueur, par rivage et pin",
+   25.9,
+   false
+  ],
+  [
+   34,
+   "Its message dulled by passing time",
+   "Son message est terni par le temps qui passe",
+   "Son message est terni par le temps qui passe",
+   100.0,
+   true
+  ],
+  [
+   35,
+   "What once declared, now disappears",
+   "Ce qui a été déclaré autrefois disparaît aujourd’hui",
+   "Ce qui a été déclaré, disparaît maintenant.",
+   50.8,
+   false
+  ],
+  [
+   36,
+   "Beneath the weight of growing years",
+   "Sous le poids des années qui passent",
+   "Sous le poids des années de croissance",
+   66.4,
+   false
+  ],
+  [
+   37,
+   "Where warm the zinc-toned waters fell",
+   "Là où les eaux chaudes, teintées de zinc, tombaient",
+   "Là où les eaux tièdes de zinc sont tombées",
+   45.7,
+   false
+  ],
+  [
+   38,
+   "And Bathurst rang its deepest bell",
+   "Et Bathurst sonnait sa cloche la plus profonde",
+   "Et Bathurst sonna sa cloche la plus profonde",
+   88.4,
+   false
+  ],
+  [
+   39,
+   "The sounds now fade but echo trails",
+   "Les sons s’estompent aujourd’hui, mais l’écho traîne",
+   "Les sons s'estompent, mais les échos s'évanouissent.",
+   51.4,
+   false
+  ],
+  [
+   40,
+   "In folds where even memory pales",
+   "Dans les plis où même la mémoire pâlit",
+   "Dans les plis où même la mémoire est pâle",
+   85.0,
+   false
+  ],
+  [
+   41,
+   "Where suits and stones have struck accord",
+   "Là où les costumes et les pierres se sont accordés",
+   "Lorsque les costumes et les pierres ont atteint l'accord",
+   68.5,
+   false
+  ],
+  [
+   42,
+   "And Bay Street crowned the mining hoard",
+   "Et Bay Street couronnait le trésor minier",
+   "Et Bay Street a couronné l'exploitation minière",
+   48.0,
+   false
+  ],
+  [
+   43,
+   "No gilded desk nor numbered share",
+   "Aucun bureau doré ni aucune action numérotée",
+   "Pas de bureau doré ni de partage numéroté",
+   45.5,
+   false
+  ],
+  [
+   44,
+   "Will point to where the birches stare",
+   "Indiquera là où les bouleaux se fixent",
+   "Indique où les bouleaux regardent",
+   56.2,
+   false
+  ],
+  [
+   45,
+   "Step not in haste where paths align",
+   "Ne marchez pas hâtivement là où les chemins s’alignent",
+   "Étape pas dans la précipitation où les chemins s'alignent",
+   50.3,
+   false
+  ],
+  [
+   46,
+   "But where the trail forgets design",
+   "Mais là où le sentier oublie le dessin",
+   "Mais où le sentier oublie le design",
+   76.6,
+   false
+  ],
+  [
+   47,
+   "Beyond the mark the tall grass grows",
+   "Au-delà de la marque, les hautes herbes poussent",
+   "Au-delà de la marque, la grande herbe pousse",
+   60.4,
+   false
+  ],
+  [
+   48,
+   "And buried speaks what no one knows",
+   "Et enterré, il dit ce que personne ne sait",
+   "Et enterré dit ce que personne ne sait",
+   83.8,
+   false
+  ],
+  [
+   49,
+   "Not marked by gold but core alone",
+   "Pas marqué par l’or, mais par le noyau seul",
+   "Non marqué par l'or mais le noyau seul",
+   64.6,
+   false
+  ],
+  [
+   50,
+   "A sliver rests in overgrown",
+   "Un éclat repose dans la végétation",
+   "Une lisière se trouve dans une végétation envahie.",
+   40.7,
+   false
+  ],
+  [
+   51,
+   "Look past the script, behind the brush",
+   "Regardez au-delà de l’écriture, derrière les broussailles",
+   "Regardez au-delà du script, derrière le pinceau",
+   51.9,
+   false
+  ],
+  [
+   52,
+   "The compass turns, and all is hush",
+   "La boussole tourne, et tout est silencieux",
+   "La boussole tourne, et tout est bouché",
+   72.7,
+   false
+  ]
+ ],
+ "corpus_chrf": 66.1,
+ "corpus_bleu": 45.4,
+ "stanza_chrf": 62.4,
+ "exact": 5,
+ "word_overlap_mean": 0.701,
+ "mt_stanzas": [
+  "Dans un pays couronné de froid et de vastes richesses anciennes murmurent à travers le passé Un miroir cache ce que les veines portaient autrefois Les verdigris derrière le lore",
+  "Au-delà des nuages où règnent les glaciers L'or soupire sous la souche de la montagne Pourtant les pics s'égarent avec une teinte dorée Le sentier se trouve là où les bouleaux poussaient",
+  "L'air de sel a une fois porté une chanson de cuivre Mais les racines cassantes ne guident pas longtemps La saumure se souvient, mais oublie Le courant tire où la mousse mouille encore",
+  "Où le feu a cousu un nom du nord Et les coutures rouges ont déclenché une flamme fugace No ember enflamme maintenant la piste Le phénix a volé et n'a pas regardé en arrière",
+  "Une pièce géante reflète le soleil Mais les cercles mènent là où aucun n'a commencé Sa lueur n'est qu'une lumière de sirène Aucun mineur de vérité n'est tenu en vue",
+  "Là où la fièvre de chalco s'empare de l'est Où Flinty, dit-on, n'a jamais cessé L'eau agite un ancien code Mais le silence marque la route actuelle",
+  "Le Bouclier se penche bas à travers les arbres endormis Où les murmures coulés disent de la facilité Mais les pauses ne parlent pas ni les défauts confessent Ce que les racines peuvent tenir dans la presse tranquille",
+  "Où le fer chante et les cèdres se penchent L'appel du nord reste invisible Une vérité non pas forte, mais forgée pour être Le fort, le silencieux, et le libre",
+  "Un marqueur se dresse, par la rive et le pin Son message terni par le temps passé Ce qui a été déclaré, disparaît maintenant Sous le poids des années de croissance",
+  "Où les eaux tièdes sont tombées et Bathurst a sonné sa cloche la plus profonde Les sons s'estompent maintenant mais les échos s'estompent Dans des plis où même la mémoire est pâle",
+  "Où costumes et pierres ont frappé l'accord et Bay Street couronné le hangar minier Pas de bureau doré ni numéroté partage Will point où les bouleaux regardent",
+  "Étape pas dans la précipitation où les chemins s'alignent Mais où le sentier oublie le design Au-delà de la marque la grande herbe pousse Et enterré parle ce que personne ne sait",
+  "Non marqué par l'or mais le noyau seul Un éclat se repose dans l'écriture envahie Regardez derrière le pinceau La boussole tourne, et tout est hush"
+ ]
+}
