@@ -58,3 +58,13 @@
 - **Revised verdict:** D66's selection step still works (the concept picks one named site), but the site it picks is **heavily searched with no find**. Signal for "the recap's restoration line points here": medium → **low**. Interpretation "the box is on this trail": **low**. Two readings are left, and this file cannot choose between them: (a) the box is here and well hidden, which is the Bathurst lesson ("nearly walked away… disguised box"); (b) the concept is right but selects a vantage the sources don't showcase.
 - **No second concept is tried** (PREREG §3: one concept, one selection). Restoration stays on record as a **filter**: any Sudbury candidate should have regreened land and historic mining/smelting ground in one view. Kelly Lake meets that filter (Max's photo: regreened hills + Superstack). That is still circular, as stated.
 - **Board effect:** none. FC-019 #1 (Kelly Lake linear leg, walk pending) is unchanged.
+
+## AMENDMENT 2 · 07 Nov 2026 (append-only; traffic claim verified, Reddit via the Arctic Shift archive, r/GreatCanadianTreasure)
+Max asked whether "heavily searched" had been checked. It had not; Amendment 1 rested on Max's report. Now checked:
+- **After the Sudbury release (25 Aug), at least three hunters say they searched the trail:**
+  - u/Gold-Speed8361, 15 Sep: "searched extensively… several times. Many hours each time. But it is a very messy area to search as the trails go all over so it could have been missed."
+  - u/Extension_Tea_2598: three visits by 23–28 Sep.
+  - u/Effective_Pie1789, 11 Oct: "goodall trail too… im one of hundreds by now who have also searched."
+- **Before the Sudbury release** (u/Deadlyhalovirus, 2 May and 6 Jun 2026: "checked almost every tree base and rock outcrop"): these predate the Sudbury box and do **not** count against it.
+- **Verdict:** the traffic screen fails on evidence, not hearsay. Amendment 1 stands. One searcher's own caveat ("messy… could have been missed") keeps reading (a) alive at low.
+- **Same concept, not in the program sources:** u/Extension_Tea_2598 (1 Oct, post "Windmill Point") found that the regreening was photographed from **Windmill Point**, the site of a 1980 Ontario Hydro test windmill on a ridge west of Coniston Hydro Road, ~250 m north of Hwy 17 (≈46.481 N, 80.852 W, ~1.8 km from the trail kiosk). It is recorded only. No second selection is made (PREREG §3), and that hunter has presumably been there. A 5 Oct reply says some approaches are gated for public safety.
