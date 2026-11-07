@@ -1,0 +1,255 @@
+[
+ {
+  "name": "Val-d'Or EN 810-419-227",
+  "kind": "groups",
+  "n_cands": 12,
+  "hits": 0,
+  "null_mean": 0.4,
+  "p_ge": 1.0,
+  "examples": []
+ },
+ {
+  "name": "Val-d'Or FR 1045-420-275",
+  "kind": "groups",
+  "n_cands": 12,
+  "hits": 0,
+  "null_mean": 0.39,
+  "p_ge": 1.0,
+  "examples": []
+ },
+ {
+  "name": "One-year Quebec 20 · 60 · 5",
+  "kind": "groups",
+  "n_cands": 2,
+  "hits": 0,
+  "null_mean": 0.16,
+  "p_ge": 1.0,
+  "examples": []
+ },
+ {
+  "name": "Boyd video 217 · 14",
+  "kind": "groups",
+  "n_cands": 3,
+  "hits": 0,
+  "null_mean": 0.15,
+  "p_ge": 1.0,
+  "examples": []
+ },
+ {
+  "name": "Video key years (chapter order)",
+  "kind": "groups",
+  "n_cands": 132,
+  "hits": 0,
+  "null_mean": 5.3,
+  "p_ge": 1.0,
+  "examples": []
+ },
+ {
+  "name": "Video non-year numbers (EN)",
+  "kind": "groups",
+  "n_cands": 165,
+  "hits": 1,
+  "null_mean": 8.2,
+  "p_ge": 0.93,
+  "examples": [
+   [
+    46.0,
+    80.0,
+    "46.0 / 80.",
+    "Spring Creek, ON (6.1 km)"
+   ]
+  ]
+ },
+ {
+  "name": "Year last-two-digits",
+  "kind": "groups",
+  "n_cands": 56,
+  "hits": 1,
+  "null_mean": 3.46,
+  "p_ge": 0.817,
+  "examples": [
+   [
+    61.0,
+    96.0,
+    "61. / 96.",
+    "Arviat, NU (105.2 km)"
+   ]
+  ]
+ },
+ {
+  "name": "Val-d'Or EN digits",
+  "kind": "split",
+  "n_cands": 14,
+  "hits": 0,
+  "null_mean": 0.59,
+  "p_ge": 1.0,
+  "examples": []
+ },
+ {
+  "name": "Val-d'Or FR digits",
+  "kind": "split",
+  "n_cands": 15,
+  "hits": 0,
+  "null_mean": 0.51,
+  "p_ge": 1.0,
+  "examples": []
+ },
+ {
+  "name": "Val-d'Or EN+FR",
+  "kind": "split",
+  "n_cands": 47,
+  "hits": 0,
+  "null_mean": 1.1,
+  "p_ge": 1.0,
+  "examples": []
+ },
+ {
+  "name": "Nelligan EN pair digits",
+  "kind": "split",
+  "n_cands": 74,
+  "hits": 0,
+  "null_mean": 2.18,
+  "p_ge": 1.0,
+  "examples": []
+ },
+ {
+  "name": "Nelligan FR pair digits",
+  "kind": "split",
+  "n_cands": 55,
+  "hits": 1,
+  "null_mean": 2.39,
+  "p_ge": 0.297,
+  "examples": [
+   [
+    41.91221,
+    82.1,
+    "41.91221281361371471651702811 / 82.1",
+    "Port Crewe, ON (32.7 km)"
+   ]
+  ]
+ },
+ {
+  "name": "Toronto pair digits (first 40)",
+  "kind": "split",
+  "n_cands": 127,
+  "hits": 0,
+  "null_mean": 2.39,
+  "p_ge": 1.0,
+  "examples": []
+ },
+ {
+  "name": "Quebec 20605",
+  "kind": "split",
+  "n_cands": 3,
+  "hits": 0,
+  "null_mean": 0.16,
+  "p_ge": 1.0,
+  "examples": []
+ },
+ {
+  "name": "Codes in chapter order (Toronto first-pair, Val-d'Or, Nelligan first-pair, Quebec)",
+  "kind": "split",
+  "n_cands": 37,
+  "hits": 0,
+  "null_mean": 1.45,
+  "p_ge": 1.0,
+  "examples": []
+ },
+ {
+  "name": "Key years concatenated (chapter order)",
+  "kind": "split",
+  "n_cands": 57,
+  "hits": 0,
+  "null_mean": 2.08,
+  "p_ge": 1.0,
+  "examples": []
+ },
+ {
+  "name": "Year last-two-digits concatenated",
+  "kind": "split",
+  "n_cands": 36,
+  "hits": 0,
+  "null_mean": 0.96,
+  "p_ge": 1.0,
+  "examples": []
+ },
+ {
+  "name": "Non-year numbers concatenated (EN order)",
+  "kind": "split",
+  "n_cands": 86,
+  "hits": 4,
+  "null_mean": 1.52,
+  "p_ge": 0.17,
+  "examples": [
+   [
+    46.0302,
+    80.20211,
+    "46.0302040100343 / 080.20211401631",
+    "The Depot, ON (9.5 km)"
+   ],
+   [
+    46.05056,
+    80.33917,
+    "DMS 460302040100343 / 08020211401631",
+    "Chartrand Corner, ON (10.0 km)"
+   ],
+   [
+    46.0302,
+    80.20211,
+    "46.03020401003430 / 80.20211401631",
+    "The Depot, ON (9.5 km)"
+   ],
+   [
+    46.05056,
+    80.33917,
+    "DMS 4603020401003430 / 8020211401631",
+    "Chartrand Corner, ON (10.0 km)"
+   ]
+  ]
+ },
+ {
+  "name": "Non-year numbers (FR order)",
+  "kind": "split",
+  "n_cands": 96,
+  "hits": 0,
+  "null_mean": 2.26,
+  "p_ge": 1.0,
+  "examples": []
+ },
+ {
+  "name": "Everything in chapter order: video numbers + codes + Quebec",
+  "kind": "split",
+  "n_cands": 173,
+  "hits": 0,
+  "null_mean": 6.2,
+  "p_ge": 1.0,
+  "examples": []
+ },
+ {
+  "name": "Sudbury video numbers",
+  "kind": "split",
+  "n_cands": 27,
+  "hits": 0,
+  "null_mean": 0.88,
+  "p_ge": 1.0,
+  "examples": []
+ },
+ {
+  "name": "Cobalt video numbers EN",
+  "kind": "split",
+  "n_cands": 26,
+  "hits": 0,
+  "null_mean": 0.71,
+  "p_ge": 1.0,
+  "examples": []
+ },
+ {
+  "name": "Cobalt video numbers FR",
+  "kind": "split",
+  "n_cands": 20,
+  "hits": 0,
+  "null_mean": 0.77,
+  "p_ge": 1.0,
+  "examples": []
+ }
+]

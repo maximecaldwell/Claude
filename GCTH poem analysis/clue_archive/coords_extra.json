@@ -1,0 +1,15 @@
+{"groups": {
+ "Video key years (chapter order)": ["1896","1903","1941","1931","1943","1861","1883","1903"],
+ "Video non-year numbers (EN)": ["460","30","20","40","100","34","30","80","20","21","140","16","3"],
+ "Year last-two-digits": ["96","03","41","31","43","61","83","03"]
+},
+"split": {
+ "Key years concatenated (chapter order)": "18961903194119311943186118831903",
+ "Year last-two-digits concatenated": "9603413143618303",
+ "Non-year numbers concatenated (EN order)": "46030204010034308020211401631",
+ "Non-year numbers (FR order)": "2046030702040100343080202114016",
+ "Everything in chapter order: video numbers + codes + Quebec": "189619034603070204028358104192271931100341943130186130188319108020211401903195016311320605",
+ "Sudbury video numbers": "18831910802021140",
+ "Cobalt video numbers EN": "1903190046030",
+ "Cobalt video numbers FR": "19032046030"
+}}

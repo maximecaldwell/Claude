@@ -840,6 +840,25 @@ RENDER.archive = () => {
   <div class="panel scroll"><h3>Article by article</h3><table><thead><tr><th>Article</th><th class="num">EN words</th><th class="num">FR words</th><th class="num">FR÷EN</th><th>Devices / anomalies</th><th>Echoes of the poem</th></tr></thead><tbody>
    ${PERART.map(p=>{const r=ARTROWS.find(x=>x[1].toLowerCase().startsWith(p[0].toLowerCase().slice(0,5)))||[];return `<tr><td><b>${esc(p[0])}</b><br><span class="note mono" style="font-size:11px">${r[2]||''}</span></td><td class="num">${r[3]??'—'}</td><td class="num">${r[4]??'—'}</td><td class="num">${r[3]&&r[4]?(r[4]/r[3]).toFixed(2):'—'}</td><td style="font-size:13.5px">${p[1]}</td><td style="font-size:13.5px">${p[2]}</td></tr>`}).join('')}
   </tbody></table><p class="note" style="margin-top:8px">No English PDF was ever uploaded for Klondike, Nova Scotia or Dawson City. The French Klondike article carries its own device, so French-only readers had a clue English readers didn’t.</p></div>
+  <div class="panel scroll"><h3>Video transcripts and the coordinate test (7 Nov)</h3>
+   <p class="note" style="margin-bottom:8px">Captions for 28 of the 29 clue videos linked from the posts (one Golden Triangle video has none), fetched through your Mac. All are YouTube auto-captions. No video has uploaded subtitles or a written transcript. Numbers spoken in each chapter’s English video:</p>
+   <table><thead><tr><th>Chapter</th><th>Numbers spoken</th><th>What they are</th></tr></thead><tbody>
+   <tr><td>Dawson</td><td class="mono">1896</td><td>discovery year</td></tr>
+   <tr><td>Cobalt</td><td class="mono">1903 · 1900s · 460 · 30</td><td>discovery; 460 million oz silver; $30 billion (FR: 20e siècle)</td></tr>
+   <tr><td>Golden Triangle</td><td class="mono">—</td><td>one video has no speech, the other has no captions</td></tr>
+   <tr><td>Argentia</td><td class="mono">1941</td><td>base year</td></tr>
+   <tr><td>Southern BC</td><td class="mono">20th · seven billion</td><td>century; population (FR adds 70)</td></tr>
+   <tr><td>Toronto</td><td class="mono">40</td><td>40% of the world’s mining companies</td></tr>
+   <tr><td>Bathurst</td><td class="mono">—</td><td>no numbers spoken</td></tr>
+   <tr><td>Val-d’Or</td><td class="mono">1931 · 100 · 3.4</td><td>Sullivan’s strike; 100 M oz; 3.4 M oz last year</td></tr>
+   <tr><td>Saskatchewan</td><td class="mono">1943 · 1/3</td><td>discovery; share of world supply</td></tr>
+   <tr><td>Nova Scotia</td><td class="mono">1861 · 30</td><td>Moose Land rush; 30 years before the Klondike</td></tr>
+   <tr><td>Manitoba</td><td class="mono">—</td><td>no numbers spoken</td></tr>
+   <tr><td>Sudbury</td><td class="mono">1883 · 1910 · 80 · 20th · 21st · 140</td><td>Flanagan; 80% of world nickel; 140 years</td></tr>
+   <tr><td>Chibougamau</td><td class="mono">1903 · 1950s · 1.6 · 3</td><td>McKenzie; 1.6 B lb copper; 3 M oz gold (“a literal mountain of chalcopyrite”)</td></tr>
+   </tbody></table>
+   <p style="margin-top:12px;max-width:80ch"><b>Coordinate test.</b> Every digit set (article codes, the one-year 20·60·5, the Boyd numbers, the video years, the video statistics, each alone and in chapter order) was read every reasonable way as latitude/longitude: decimal and DMS, whole numbers and every split point. A hit had to be on Canadian land, 41.7–66.5° N (south of the Arctic Circle per the subscriber verse). Each set was compared with 300 random-digit sets of the same shape. <b>No set beat chance.</b> The closest: video statistics in chapter order read as 46.0302° N, 80.2021° W, near the French River south of Sudbury (p = 0.17). It is built from “460 million ounces”, “80% of the world’s nickel” and similar facts, so it is a coincidence.</p>
+   <p class="note" style="margin-top:6px">So the “digits coast to coast” are not the narration, not the article codes as they stand, and (per your 28 Oct scan) not flashed frames. Still untested: subscriber-only emails and portal content, each chapter’s embedded video on the article page (vs the YouTube upload), photos, maps and captions inside the articles, the claim codes winners submitted, and the poem’s own line numbers (“line by line”).</p></div>
   <div class="grid2">
    <div class="panel"><h3>File forensics</h3><ul class="callouts">
     <li>48 PDFs checked: text layer, hidden/white/tiny/off-page text, invisible render mode, annotations, links, embedded files, metadata, saved revisions.</li>
