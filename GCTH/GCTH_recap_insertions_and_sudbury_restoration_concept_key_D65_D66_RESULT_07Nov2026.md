@@ -51,3 +51,10 @@
 - **D65:** descriptive. 3 of 4 live sections carry one concrete insertion; Sudbury's is environmental restoration.
 - **D66:** the concept key re-opens for Sudbury on a new carrier and **selects the Jane Goodall Reclamation Trail, Coniston** (medium signal, low-to-medium interpretation). Kelly Lake is recorded as circular.
 - **Promotes nothing without Max.** Proposed field step: walk the 1 km loop section by section, starting with the two lookouts and the gazebo, then the marker-3 stump and marker-5 outcrop. Photograph every sign face (both languages). November: short daylight, so go mid-day.
+
+## AMENDMENT 1 · 07 Nov 2026 (append-only; Max's correction, same evening)
+- **Correction:** Max did **not** search the Jane Goodall Reclamation Trail on 10 Sep (photographed signs only). The "covered" line in the 12 Sep Reddit census is one of several: per Max, a post shows **many other hunters have searched this trail**.
+- **Screen result changes:** the trail now **fails the traffic screen** (PREREG §3 step 4), on the same footing as Bell Park, the Big Nickel and the Murray pullout.
+- **Revised verdict:** D66's selection step still works (the concept picks one named site), but the site it picks is **heavily searched with no find**. Signal for "the recap's restoration line points here": medium → **low**. Interpretation "the box is on this trail": **low**. Two readings are left, and this file cannot choose between them: (a) the box is here and well hidden, which is the Bathurst lesson ("nearly walked away… disguised box"); (b) the concept is right but selects a vantage the sources don't showcase.
+- **No second concept is tried** (PREREG §3: one concept, one selection). Restoration stays on record as a **filter**: any Sudbury candidate should have regreened land and historic mining/smelting ground in one view. Kelly Lake meets that filter (Max's photo: regreened hills + Superstack). That is still circular, as stated.
+- **Board effect:** none. FC-019 #1 (Kelly Lake linear leg, walk pending) is unchanged.
