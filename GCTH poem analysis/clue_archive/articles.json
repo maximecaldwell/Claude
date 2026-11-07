@@ -1,0 +1,9052 @@
+{
+ "cobalt": {
+  "key": "cobalt",
+  "region": "Cobalt, ON",
+  "month": "2025-10",
+  "en_id": "1003883782",
+  "fr_id": "1003883783",
+  "en": {
+   "words": 1929,
+   "sentences": 90,
+   "paragraphs": 58,
+   "chars": 11910,
+   "letters": 9418,
+   "styled": [
+    {
+     "t": "more",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 1
+    },
+    {
+     "t": "Pink stains on rocks",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 2
+    },
+    {
+     "t": "From stir to rush",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 2
+    },
+    {
+     "t": "Seekers and winners",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 2
+    },
+    {
+     "t": "Daily Nugget",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 3
+    },
+    {
+     "t": "Rushing in, building up",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 3
+    },
+    {
+     "t": "The Northern Miner",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 3
+    },
+    {
+     "t": "Not all roses",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 3
+    },
+    {
+     "t": "The boom fades",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 4
+    },
+    {
+     "t": "Cobalt’s innovation spur",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 4
+    },
+    {
+     "t": "Education, training, Agnico",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 5
+    },
+    {
+     "t": "Cobalt’s green future?",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 5
+    }
+   ],
+   "numbers": {
+    "1000": 1,
+    "1545": 1,
+    "4000": 2,
+    "30": 2,
+    "1859": 1,
+    "200": 1,
+    "25000": 1,
+    "1903": 2,
+    "500": 1,
+    "210000": 1,
+    "1906": 3,
+    "1907": 1,
+    "15": 1,
+    "225": 1,
+    "1913": 1,
+    "1927": 1,
+    "13": 1,
+    "12": 1,
+    "1908": 1,
+    "591400": 1,
+    "1914": 1,
+    "25": 1,
+    "90": 1,
+    "24": 1,
+    "1909": 4,
+    "38": 1,
+    "10000": 1,
+    "12000": 1,
+    "1910": 2,
+    "1915": 1,
+    "1912": 2,
+    "100": 2,
+    "1911": 1,
+    "34": 1,
+    "1929": 1,
+    "460": 1,
+    "2000": 1,
+    "1905": 1,
+    "1957": 1,
+    "5": 1,
+    "122": 1
+   }
+  },
+  "poem_word_hits": {
+   "vast": 1,
+   "old": 1,
+   "veins": 3,
+   "gold": 4,
+   "grew": 5,
+   "air": 8,
+   "long": 2,
+   "northern": 8,
+   "name": 3,
+   "look": 1,
+   "back": 2,
+   "lead": 1,
+   "light": 1,
+   "miner": 2,
+   "claim": 1,
+   "ceased": 1,
+   "water": 4,
+   "road": 1,
+   "remains": 1,
+   "time": 2,
+   "growing": 2,
+   "years": 4,
+   "fell": 2,
+   "even": 3,
+   "bay": 1,
+   "street": 3,
+   "mining": 14
+  },
+  "key_hits": {
+   "veins": 3
+  },
+  "poem_bigrams": [
+   "the mining",
+   "the northern",
+   "the water"
+  ],
+  "key_sentences": [
+   "Thinking that “Long Lake” was too generic a name for the camp, he also knew that the metal cobalt – used at the time as blue pigment in paint – co-occurred in the local silver veins.",
+   "The next spring they returned to the area and headed back into the bush with the mining gear of the day: wheelbarrow, picks, shovels, and an axe, and began trenching for silver veins.",
+   "The silver veins petered out about 100 metres below the surface."
+  ],
+  "prize_sentences": [
+   "Rushing in, building up Cobalt grew, with the population reaching 10,000 in 1909 – and even 12,000 by some accounts – swelled by silver hunters from an impressively far reach including Russia, China, Greece and Finland."
+  ],
+  "caps": [
+   [
+    "Cobalt",
+    17
+   ],
+   [
+    "The",
+    15
+   ],
+   [
+    "Cobalt’s",
+    7
+   ],
+   [
+    "Ontario",
+    4
+   ],
+   [
+    "That",
+    4
+   ],
+   [
+    "Potosi",
+    3
+   ],
+   [
+    "Toronto",
+    3
+   ],
+   [
+    "Ragged Chutes",
+    3
+   ],
+   [
+    "Americas",
+    2
+   ],
+   [
+    "But",
+    2
+   ],
+   [
+    "Fast",
+    2
+   ],
+   [
+    "Nevada",
+    2
+   ],
+   [
+    "Silver Kings",
+    2
+   ],
+   [
+    "TNO",
+    2
+   ],
+   [
+    "Canada’s",
+    2
+   ],
+   [
+    "Montreal",
+    2
+   ],
+   [
+    "McKinley",
+    2
+   ],
+   [
+    "Darragh",
+    2
+   ],
+   [
+    "Mines",
+    2
+   ],
+   [
+    "Northern Ontario",
+    2
+   ],
+   [
+    "When",
+    2
+   ],
+   [
+    "Some",
+    2
+   ],
+   [
+    "Lang Street",
+    2
+   ],
+   [
+    "Montreal River",
+    2
+   ],
+   [
+    "While",
+    2
+   ],
+   [
+    "HSM",
+    2
+   ],
+   [
+    "The Northern Miner Treasure Hunt",
+    1
+   ],
+   [
+    "Standing",
+    1
+   ],
+   [
+    "Nipissing Hill Lookout",
+    1
+   ],
+   [
+    "Ont",
+    1
+   ],
+   [
+    "There’s",
+    1
+   ],
+   [
+    "Cobalt Lake",
+    1
+   ],
+   [
+    "Look",
+    1
+   ],
+   [
+    "Spanish",
+    1
+   ],
+   [
+    "Bolivia",
+    1
+   ],
+   [
+    "Andes",
+    1
+   ],
+   [
+    "Within",
+    1
+   ],
+   [
+    "Spanish Empire",
+    1
+   ],
+   [
+    "Indigenous",
+    1
+   ],
+   [
+    "African",
+    1
+   ],
+   [
+    "Mount Davidson",
+    1
+   ],
+   [
+    "Though",
+    1
+   ],
+   [
+    "Comstock Rush",
+    1
+   ],
+   [
+    "Over",
+    1
+   ],
+   [
+    "Virginia City",
+    1
+   ],
+   [
+    "Almost",
+    1
+   ],
+   [
+    "Temiskaming",
+    1
+   ],
+   [
+    "Northern Ontario Railway",
+    1
+   ],
+   [
+    "North Bay",
+    1
+   ],
+   [
+    "Haileybury",
+    1
+   ],
+   [
+    "New Liskeard",
+    1
+   ],
+   [
+    "Canada",
+    1
+   ],
+   [
+    "Pink",
+    1
+   ],
+   [
+    "One August",
+    1
+   ],
+   [
+    "Long Lake James McKinley",
+    1
+   ],
+   [
+    "Ernest Darragh",
+    1
+   ],
+   [
+    "They",
+    1
+   ],
+   [
+    "California",
+    1
+   ],
+   [
+    "Later",
+    1
+   ],
+   [
+    "McGill University",
+    1
+   ],
+   [
+    "Willett Green Miller",
+    1
+   ],
+   [
+    "Ontario’s",
+    1
+   ],
+   [
+    "Thinking",
+    1
+   ],
+   [
+    "Long Lake",
+    1
+   ],
+   [
+    "Bureau",
+    1
+   ],
+   [
+    "From",
+    1
+   ],
+   [
+    "McKinley- Darragh",
+    1
+   ],
+   [
+    "American",
+    1
+   ],
+   [
+    "The Cobalt",
+    1
+   ],
+   [
+    "Until",
+    1
+   ],
+   [
+    "As Cobalt’s",
+    1
+   ],
+   [
+    "There",
+    1
+   ],
+   [
+    "LaRose",
+    1
+   ],
+   [
+    "Trethewey",
+    1
+   ],
+   [
+    "Buffalo",
+    1
+   ],
+   [
+    "Coniagas",
+    1
+   ],
+   [
+    "Drummond",
+    1
+   ],
+   [
+    "Nipissing",
+    1
+   ],
+   [
+    "Seekers",
+    1
+   ],
+   [
+    "Also",
+    1
+   ]
+  ],
+  "fr": {
+   "words": 2250,
+   "sentences": 91,
+   "paragraphs": 59,
+   "chars": 14487,
+   "letters": 11511,
+   "styled": [
+    {
+     "t": "Taches roses sur les rochers",
+     "b": true,
+     "i": false,
+     "size": 11.0,
+     "page": 1
+    },
+    {
+     "t": "De l'agitation à la ruée",
+     "b": true,
+     "i": false,
+     "size": 11.0,
+     "page": 2
+    },
+    {
+     "t": "Chercheurs et gagnants",
+     "b": true,
+     "i": false,
+     "size": 11.0,
+     "page": 2
+    },
+    {
+     "t": "Une croissance fulgurante",
+     "b": true,
+     "i": false,
+     "size": 11.0,
+     "page": 3
+    },
+    {
+     "t": "The Northern Miner",
+     "b": false,
+     "i": true,
+     "size": 11.0,
+     "page": 3
+    },
+    {
+     "t": "Tout n'était pas rose",
+     "b": true,
+     "i": false,
+     "size": 11.0,
+     "page": 3
+    },
+    {
+     "t": "Le boom s'estompe",
+     "b": true,
+     "i": false,
+     "size": 11.0,
+     "page": 3
+    },
+    {
+     "t": "L'élan innovateur du cobalt",
+     "b": true,
+     "i": false,
+     "size": 11.0,
+     "page": 4
+    },
+    {
+     "t": "Éducation, formation, Agnico",
+     "b": true,
+     "i": false,
+     "size": 11.0,
+     "page": 5
+    },
+    {
+     "t": "L'avenir vert du cobalt ?",
+     "b": true,
+     "i": false,
+     "size": 11.0,
+     "page": 5
+    }
+   ],
+   "numbers": {
+    "1000": 1,
+    "1545": 1,
+    "4000": 2,
+    "30": 2,
+    "1859": 1,
+    "200": 1,
+    "25000": 1,
+    "1903": 2,
+    "500": 1,
+    "210000": 1,
+    "1906": 3,
+    "1907": 1,
+    "15": 1,
+    "225": 1,
+    "1913": 1,
+    "1927": 1,
+    "13": 1,
+    "12": 1,
+    "1908": 1,
+    "1914": 1,
+    "591400": 1,
+    "25": 1,
+    "90": 1,
+    "24": 1,
+    "1909": 4,
+    "38": 1,
+    "10000": 1,
+    "12000": 1,
+    "1910": 2,
+    "1915": 1,
+    "1912": 2,
+    "100": 2,
+    "1911": 1,
+    "34": 1,
+    "1920": 1,
+    "1929": 1,
+    "460": 1,
+    "1930": 1,
+    "1940": 1,
+    "2000": 1,
+    "1905": 1,
+    "1950": 1,
+    "1957": 1,
+    "5": 1,
+    "122": 1
+   }
+  },
+  "prize_sentences_fr": [],
+  "numbers_only_en": [],
+  "numbers_only_fr": [
+   "1920",
+   "1930",
+   "1940",
+   "1950"
+  ],
+  "number_count_mismatch": []
+ },
+ "golden": {
+  "key": "golden",
+  "region": "Golden Triangle, BC",
+  "month": "2025-11",
+  "en_id": "1003884744",
+  "fr_id": "1003884870",
+  "en": {
+   "words": 1639,
+   "sentences": 138,
+   "paragraphs": 7,
+   "chars": 10325,
+   "letters": 8137,
+   "styled": [
+    {
+     "t": "Golden Triangle Dreams: From Buck to Billions",
+     "b": true,
+     "i": false,
+     "size": 15.1,
+     "page": 1
+    },
+    {
+     "t": "A boy against the grain",
+     "b": true,
+     "i": false,
+     "size": 13.9,
+     "page": 1
+    },
+    {
+     "t": "Into the Wild West",
+     "b": true,
+     "i": false,
+     "size": 13.9,
+     "page": 1
+    },
+    {
+     "t": "Golden era",
+     "b": true,
+     "i": false,
+     "size": 13.9,
+     "page": 2
+    },
+    {
+     "t": "The Triangle takes shape",
+     "b": true,
+     "i": false,
+     "size": 13.9,
+     "page": 3
+    },
+    {
+     "t": "Awakening the giant",
+     "b": true,
+     "i": false,
+     "size": 13.9,
+     "page": 4
+    },
+    {
+     "t": "Silver shine",
+     "b": true,
+     "i": false,
+     "size": 13.9,
+     "page": 5
+    }
+   ],
+   "numbers": {
+    "1849": 1,
+    "1857": 1,
+    "1859": 1,
+    "1300": 1,
+    "1861": 1,
+    "1862": 1,
+    "1918": 1,
+    "200": 1,
+    "1964": 1,
+    "49": 1,
+    "2406": 1,
+    "300": 1,
+    "150": 1,
+    "2020": 2,
+    "2024": 4,
+    "63": 1,
+    "2017": 1,
+    "00006": 1,
+    "713": 1,
+    "2027": 1,
+    "100000": 1,
+    "38000": 1,
+    "2023": 2,
+    "2021": 1
+   }
+  },
+  "poem_word_hits": {
+   "land": 2,
+   "cold": 1,
+   "vast": 1,
+   "riches": 1,
+   "veins": 1,
+   "lore": 1,
+   "gold": 23,
+   "mountain": 3,
+   "path": 1,
+   "lies": 2,
+   "trees": 1,
+   "copper": 3,
+   "long": 1,
+   "northern": 1,
+   "name": 3,
+   "sparked": 1,
+   "back": 2,
+   "giant": 1,
+   "begun": 1,
+   "gleam": 1,
+   "fever": 1,
+   "claim": 1,
+   "never": 3,
+   "water": 1,
+   "road": 1,
+   "low": 1,
+   "remains": 1,
+   "time": 4,
+   "mining": 7,
+   "share": 1,
+   "point": 1,
+   "align": 2,
+   "buried": 1
+  },
+  "key_hits": {
+   "path": 1,
+   "glacier": 1,
+   "buried": 1,
+   "align": 2,
+   "veins": 1,
+   "lore": 1,
+   "riches": 1
+  },
+  "poem_bigrams": [
+   "the lore",
+   "the water"
+  ],
+  "key_sentences": [
+   "Golden Triangle Dreams: From Buck to Billions In the far northwest of British Columbia lies a place few Canadians can name, but where billions of dollars' worth of gold, silver and copper still lie buried beneath glacier-topped mountains and untamed forest.",
+   "Choquette— who stumbled into its riches and reshaped its destiny.",
+   "In the seigneurial village life of early 19th-century Quebec, his path was set from birth: Jesuit schooling, life close to the church, and a marriage chosen by his elders.",
+   "He followed the veins of gold through northern California and southern Oregon— Shasta, Yreka, the Trinity River, Josephine Creek—living like a hawk, surviving off the land, chasing stories.",
+   "At one point, Buck stood before a glacier, awestruck.",
+   "Buck stayed, guided newcomers, raised a family with Georgiana and cemented his place in the lore of the North.",
+   "Premier David Eby said his government aims to align industry, First Nations and conservation interests.",
+   "B.C.’s Critical Minerals Minister, Jagrup Brar, noted the plan aims to align provincial and federal reviews."
+  ],
+  "prize_sentences": [],
+  "caps": [
+   [
+    "Buck",
+    14
+   ],
+   [
+    "The",
+    13
+   ],
+   [
+    "But",
+    7
+   ],
+   [
+    "Golden Triangle",
+    5
+   ],
+   [
+    "California",
+    4
+   ],
+   [
+    "When",
+    3
+   ],
+   [
+    "What",
+    3
+   ],
+   [
+    "They",
+    3
+   ],
+   [
+    "For",
+    3
+   ],
+   [
+    "Stikine",
+    3
+   ],
+   [
+    "And",
+    3
+   ],
+   [
+    "Triangle",
+    3
+   ],
+   [
+    "This",
+    2
+   ],
+   [
+    "Alexander",
+    2
+   ],
+   [
+    "Gold",
+    2
+   ],
+   [
+    "Tlingit",
+    2
+   ],
+   [
+    "Georgiana",
+    2
+   ],
+   [
+    "Ice Mountain",
+    2
+   ],
+   [
+    "Telegraph Creek",
+    2
+   ],
+   [
+    "Buck’s",
+    2
+   ],
+   [
+    "Eskay Creek",
+    2
+   ],
+   [
+    "Modern",
+    2
+   ],
+   [
+    "Today",
+    2
+   ],
+   [
+    "Silver",
+    2
+   ],
+   [
+    "Buck Choquette",
+    2
+   ],
+   [
+    "Golden Triangle Dreams",
+    1
+   ],
+   [
+    "From Buck",
+    1
+   ],
+   [
+    "Billions In",
+    1
+   ],
+   [
+    "British Columbia",
+    1
+   ],
+   [
+    "Canadians",
+    1
+   ],
+   [
+    "Once",
+    1
+   ],
+   [
+    "Quebecois",
+    1
+   ],
+   [
+    "Choquette",
+    1
+   ],
+   [
+    "Long",
+    1
+   ],
+   [
+    "Alexander Choquette",
+    1
+   ],
+   [
+    "Quebec",
+    1
+   ],
+   [
+    "Jesuit",
+    1
+   ],
+   [
+    "Certainty",
+    1
+   ],
+   [
+    "But Alexandre",
+    1
+   ],
+   [
+    "One",
+    1
+   ],
+   [
+    "His",
+    1
+   ],
+   [
+    "In Montreal",
+    1
+   ],
+   [
+    "Restless",
+    1
+   ],
+   [
+    "In Winnipeg",
+    1
+   ],
+   [
+    "Fort Garry",
+    1
+   ],
+   [
+    "News",
+    1
+   ],
+   [
+    "Into",
+    1
+   ],
+   [
+    "Wild West\nBy",
+    1
+   ],
+   [
+    "Missouri",
+    1
+   ],
+   [
+    "Always",
+    1
+   ],
+   [
+    "Anglo Saxons",
+    1
+   ],
+   [
+    "Still",
+    1
+   ],
+   [
+    "Oregon",
+    1
+   ],
+   [
+    "Shasta",
+    1
+   ],
+   [
+    "Yreka",
+    1
+   ],
+   [
+    "Trinity River",
+    1
+   ],
+   [
+    "Josephine Creek",
+    1
+   ],
+   [
+    "British",
+    1
+   ],
+   [
+    "Fraser River",
+    1
+   ],
+   [
+    "Just",
+    1
+   ],
+   [
+    "The Stikine",
+    1
+   ],
+   [
+    "Golden",
+    1
+   ],
+   [
+    "Victoria",
+    1
+   ],
+   [
+    "Tahltan Nation",
+    1
+   ],
+   [
+    "Inside Passage",
+    1
+   ],
+   [
+    "Narrow",
+    1
+   ],
+   [
+    "Chief Shakes",
+    1
+   ],
+   [
+    "Stikine Tlingit",
+    1
+   ],
+   [
+    "Shakes",
+    1
+   ],
+   [
+    "She",
+    1
+   ],
+   [
+    "French-Canadian",
+    1
+   ],
+   [
+    "With Georgiana",
+    1
+   ],
+   [
+    "The Triangle",
+    1
+   ],
+   [
+    "Fall",
+    1
+   ],
+   [
+    "Real",
+    1
+   ],
+   [
+    "Heavy",
+    1
+   ],
+   [
+    "Plentiful",
+    1
+   ],
+   [
+    "Soon",
+    1
+   ],
+   [
+    "By Spring",
+    1
+   ],
+   [
+    "Buck’s Bar",
+    1
+   ]
+  ],
+  "fr": {
+   "words": 1966,
+   "sentences": 135,
+   "paragraphs": 70,
+   "chars": 12566,
+   "letters": 9902,
+   "styled": [
+    {
+     "t": "Rêves du Triangle d'Or : De Buck aux Milliards",
+     "b": true,
+     "i": false,
+     "size": 14.0,
+     "page": 1
+    },
+    {
+     "t": "Un garçon à contre-courant",
+     "b": true,
+     "i": false,
+     "size": 14.0,
+     "page": 1
+    },
+    {
+     "t": "Dans l'Ouest sauvage",
+     "b": true,
+     "i": false,
+     "size": 14.0,
+     "page": 1
+    },
+    {
+     "t": "buckskin",
+     "b": false,
+     "i": true,
+     "size": 14.0,
+     "page": 1
+    },
+    {
+     "t": "L'âge d'or",
+     "b": true,
+     "i": false,
+     "size": 14.0,
+     "page": 2
+    },
+    {
+     "t": "Ice Mountain",
+     "b": false,
+     "i": true,
+     "size": 14.0,
+     "page": 3
+    },
+    {
+     "t": "Le Triangle prend forme",
+     "b": true,
+     "i": false,
+     "size": 14.0,
+     "page": 3
+    },
+    {
+     "t": "Buck's Bar",
+     "b": false,
+     "i": true,
+     "size": 14.0,
+     "page": 3
+    },
+    {
+     "t": "Alaskan Panhandle",
+     "b": false,
+     "i": true,
+     "size": 14.0,
+     "page": 3
+    },
+    {
+     "t": "Le réveil du géant",
+     "b": true,
+     "i": false,
+     "size": 14.0,
+     "page": 4
+    },
+    {
+     "t": "Valley of the Kings",
+     "b": false,
+     "i": true,
+     "size": 14.0,
+     "page": 4
+    },
+    {
+     "t": "L'éclat de l'argent",
+     "b": true,
+     "i": false,
+     "size": 14.0,
+     "page": 5
+    },
+    {
+     "t": "Bibliographie et notes sur les sources",
+     "b": true,
+     "i": false,
+     "size": 14.0,
+     "page": 6
+    },
+    {
+     "t": "What’s Up Yukon",
+     "b": false,
+     "i": true,
+     "size": 14.0,
+     "page": 6
+    },
+    {
+     "t": "Visual Capitalist",
+     "b": false,
+     "i": true,
+     "size": 14.0,
+     "page": 6
+    },
+    {
+     "t": "Mining Journal",
+     "b": false,
+     "i": true,
+     "size": 14.0,
+     "page": 6
+    }
+   ],
+   "numbers": {
+    "1849": 1,
+    "1857": 1,
+    "1859": 1,
+    "1300": 1,
+    "1861": 1,
+    "1862": 1,
+    "1918": 1,
+    "200": 1,
+    "1964": 1,
+    "49": 1,
+    "2406": 1,
+    "1990": 1,
+    "300": 1,
+    "150": 1,
+    "2020": 2,
+    "2024": 4,
+    "63": 1,
+    "2017": 1,
+    "00006": 1,
+    "713": 1,
+    "2027": 1,
+    "100000": 1,
+    "38000": 1,
+    "2023": 2,
+    "2021": 1
+   }
+  },
+  "prize_sentences_fr": [],
+  "numbers_only_en": [],
+  "numbers_only_fr": [
+   "1990"
+  ],
+  "number_count_mismatch": []
+ },
+ "argentia": {
+  "key": "argentia",
+  "region": "Argentia, NL",
+  "month": "2025-12",
+  "en_id": "1003885767",
+  "fr_id": "1003885833",
+  "en": {
+   "words": 738,
+   "sentences": 31,
+   "paragraphs": 66,
+   "chars": 4466,
+   "letters": 3534,
+   "styled": [
+    {
+     "t": "Argentia: The Land of Silver — and Second Chances",
+     "b": true,
+     "i": false,
+     "size": 14.0,
+     "page": 1
+    },
+    {
+     "t": "A Priest, a Prospect, and a Name Reborn",
+     "b": true,
+     "i": false,
+     "size": 14.0,
+     "page": 1
+    },
+    {
+     "t": "Storm Clouds Over the Argent Cliff",
+     "b": true,
+     "i": false,
+     "size": 14.0,
+     "page": 2
+    },
+    {
+     "t": "World War II: From Quiet Harbour to Global Stage",
+     "b": true,
+     "i": false,
+     "size": 14.0,
+     "page": 2
+    },
+    {
+     "t": "From Silver Undercurrents to Maritime Dreams",
+     "b": true,
+     "i": false,
+     "size": 14.0,
+     "page": 3
+    }
+   ],
+   "numbers": {
+    "1895": 1,
+    "1911": 1,
+    "1900": 1,
+    "1940": 1,
+    "1942": 1,
+    "1943": 1,
+    "12000": 1,
+    "1941": 1,
+    "1994": 1
+   }
+  },
+  "poem_word_hits": {
+   "land": 1,
+   "veins": 3,
+   "clouds": 1,
+   "lies": 1,
+   "salt": 1,
+   "air": 1,
+   "long": 2,
+   "name": 1,
+   "lead": 1,
+   "never": 2,
+   "water": 2,
+   "quiet": 2,
+   "unseen": 1,
+   "forged": 1,
+   "shore": 1,
+   "trails": 1,
+   "bay": 3,
+   "mining": 1,
+   "point": 1
+  },
+  "key_hits": {
+   "shore": 1,
+   "veins": 3
+  },
+  "poem_bigrams": [],
+  "key_sentences": [
+   "In the shadows of towering cliffs near Broad Cove Point, local prospectors had stumbled on glittering veins of galena — rich lead ore that carried silver deep in the rock.",
+   "Men like John Burke, the prospector credited with locating the first silver exposed in veins in the early 1880s, sold claims to English investors who dreamed of striking it rich.",
+   "But the silver remained stubborn, locked in narrow quartz veins that teased more than they delivered.",
+   "Over decades, the silver found at the Cliff Mine opened and closed, worked in “fits and starts” as financiers came and went, metal prices swung, and winter storms battered the shore."
+  ],
+  "prize_sentences": [],
+  "caps": [
+   [
+    "Argentia",
+    5
+   ],
+   [
+    "The",
+    4
+   ],
+   [
+    "Argentia’s",
+    3
+   ],
+   [
+    "Placentia Bay",
+    2
+   ],
+   [
+    "French",
+    2
+   ],
+   [
+    "North Atlantic",
+    2
+   ],
+   [
+    "But",
+    2
+   ],
+   [
+    "Then",
+    2
+   ],
+   [
+    "Atlantic",
+    2
+   ],
+   [
+    "The Land",
+    1
+   ],
+   [
+    "Silver",
+    1
+   ],
+   [
+    "Second Chances\nOn",
+    1
+   ],
+   [
+    "Newfoundland",
+    1
+   ],
+   [
+    "Long",
+    1
+   ],
+   [
+    "Petit\nPlaisance",
+    1
+   ],
+   [
+    "Pleasant Little Place",
+    1
+   ],
+   [
+    "The Rock",
+    1
+   ],
+   [
+    "Priest",
+    1
+   ],
+   [
+    "Prospect",
+    1
+   ],
+   [
+    "Name Reborn\nIt",
+    1
+   ],
+   [
+    "Father John St",
+    1
+   ],
+   [
+    "John",
+    1
+   ],
+   [
+    "Holy Rosary Parish",
+    1
+   ],
+   [
+    "Broad Cove Point",
+    1
+   ],
+   [
+    "Around",
+    1
+   ],
+   [
+    "Father St",
+    1
+   ],
+   [
+    "John’s",
+    1
+   ],
+   [
+    "Little Placentia",
+    1
+   ],
+   [
+    "Silver Valley’",
+    1
+   ],
+   [
+    "Men",
+    1
+   ],
+   [
+    "John Burke",
+    1
+   ],
+   [
+    "English",
+    1
+   ],
+   [
+    "Over",
+    1
+   ],
+   [
+    "Cliff Mine",
+    1
+   ],
+   [
+    "Miners",
+    1
+   ],
+   [
+    "Storm Clouds Over",
+    1
+   ],
+   [
+    "Argent Cliff\nBy",
+    1
+   ],
+   [
+    "Townsfolk",
+    1
+   ],
+   [
+    "Europe’s",
+    1
+   ],
+   [
+    "World War II",
+    1
+   ],
+   [
+    "From Quiet Harbour",
+    1
+   ],
+   [
+    "Global Stage\nIn",
+    1
+   ],
+   [
+    "Europe",
+    1
+   ],
+   [
+    "Battle",
+    1
+   ],
+   [
+    "Britain",
+    1
+   ],
+   [
+    "United States",
+    1
+   ],
+   [
+    "Under",
+    1
+   ],
+   [
+    "Destroyers",
+    1
+   ],
+   [
+    "Bases",
+    1
+   ],
+   [
+    "Families",
+    1
+   ],
+   [
+    "Freshwater",
+    1
+   ],
+   [
+    "Placentia",
+    1
+   ],
+   [
+    "Newfoundlanders",
+    1
+   ],
+   [
+    "American",
+    1
+   ],
+   [
+    "August",
+    1
+   ],
+   [
+    "President Franklin",
+    1
+   ],
+   [
+    "Roosevelt",
+    1
+   ],
+   [
+    "British Prime Minister Winston Churchill",
+    1
+   ],
+   [
+    "There",
+    1
+   ],
+   [
+    "London",
+    1
+   ],
+   [
+    "Washington",
+    1
+   ],
+   [
+    "Atlantic Charter",
+    1
+   ],
+   [
+    "From Silver Undercurrents",
+    1
+   ],
+   [
+    "Maritime Dreams\nLong",
+    1
+   ],
+   [
+    "What",
+    1
+   ],
+   [
+    "Today",
+    1
+   ]
+  ],
+  "fr": {
+   "words": 841,
+   "sentences": 30,
+   "paragraphs": 19,
+   "chars": 5449,
+   "letters": 4358,
+   "styled": [
+    {
+     "t": "Argentia : Terre d’argent — et de secondes chances",
+     "b": true,
+     "i": false,
+     "size": 14.0,
+     "page": 1
+    },
+    {
+     "t": "Petite",
+     "b": true,
+     "i": false,
+     "size": 14.0,
+     "page": 1
+    },
+    {
+     "t": "Plaisance",
+     "b": true,
+     "i": false,
+     "size": 14.0,
+     "page": 1
+    },
+    {
+     "t": "Un prêtre, une perspective et un nom renaissant",
+     "b": true,
+     "i": false,
+     "size": 14.0,
+     "page": 1
+    },
+    {
+     "t": "Argentia",
+     "b": true,
+     "i": false,
+     "size": 14.0,
+     "page": 1
+    },
+    {
+     "t": "Nuages d'orage sur la falaise d'Argent",
+     "b": true,
+     "i": false,
+     "size": 14.0,
+     "page": 2
+    },
+    {
+     "t": "La Seconde Guerre mondiale : Du havre tranquille à la scène mondiale",
+     "b": true,
+     "i": false,
+     "size": 14.0,
+     "page": 2
+    },
+    {
+     "t": "Destroyers for Bases agreement",
+     "b": false,
+     "i": true,
+     "size": 14.0,
+     "page": 2
+    },
+    {
+     "t": "Charte de l'Atlantique",
+     "b": true,
+     "i": false,
+     "size": 14.0,
+     "page": 2
+    },
+    {
+     "t": "Des courants d'argent aux rêves maritimes",
+     "b": true,
+     "i": false,
+     "size": 14.0,
+     "page": 3
+    }
+   ],
+   "numbers": {
+    "1895": 1,
+    "1911": 1,
+    "1900": 1,
+    "1880": 1,
+    "1920": 1,
+    "1940": 1,
+    "1942": 1,
+    "1943": 1,
+    "12000": 1,
+    "1941": 1,
+    "1994": 1
+   }
+  },
+  "prize_sentences_fr": [],
+  "numbers_only_en": [],
+  "numbers_only_fr": [
+   "1880",
+   "1920"
+  ],
+  "number_count_mismatch": []
+ },
+ "southbc": {
+  "key": "southbc",
+  "region": "Southern BC",
+  "month": "2026-01",
+  "en_id": "1003886917",
+  "fr_id": "1003886916",
+  "en": {
+   "words": 1490,
+   "sentences": 88,
+   "paragraphs": 42,
+   "chars": 9744,
+   "letters": 7769,
+   "styled": [],
+   "numbers": {
+    "50": 4,
+    "272025": 1,
+    "1": 1,
+    "15": 1,
+    "3": 3,
+    "20": 2,
+    "1974": 2,
+    "80000": 1,
+    "191975": 1,
+    "1898": 1,
+    "1904": 1,
+    "160": 1,
+    "108": 1,
+    "750": 1,
+    "35": 1,
+    "2010": 1,
+    "1915": 1,
+    "1921": 1,
+    "1952": 1,
+    "99": 1,
+    "1886": 1
+   }
+  },
+  "poem_word_hits": {
+   "gold": 2,
+   "mountain": 1,
+   "air": 2,
+   "copper": 5,
+   "don’t": 1,
+   "long": 2,
+   "fire": 1,
+   "track": 1,
+   "look": 1,
+   "back": 1,
+   "never": 1,
+   "water": 3,
+   "marks": 1,
+   "road": 1,
+   "bends": 1,
+   "remains": 1,
+   "time": 1,
+   "years": 1,
+   "waters": 1,
+   "fade": 1,
+   "even": 2,
+   "mining": 5,
+   "point": 1,
+   "step": 1,
+   "grows": 1,
+   "alone": 1,
+   "turns": 1
+  },
+  "key_hits": {},
+  "poem_bigrams": [
+   "a copper"
+  ],
+  "key_sentences": [],
+  "prize_sentences": [],
+  "caps": [
+   [
+    "Jang",
+    16
+   ],
+   [
+    "The",
+    11
+   ],
+   [
+    "Britannia’s",
+    8
+   ],
+   [
+    "Britannia",
+    5
+   ],
+   [
+    "Mill No",
+    3
+   ],
+   [
+    "BOOM",
+    3
+   ],
+   [
+    "Howe Sound",
+    3
+   ],
+   [
+    "For",
+    3
+   ],
+   [
+    "From",
+    2
+   ],
+   [
+    "Sea",
+    2
+   ],
+   [
+    "Sky",
+    2
+   ],
+   [
+    "It’s",
+    2
+   ],
+   [
+    "Canadian",
+    2
+   ],
+   [
+    "People",
+    2
+   ],
+   [
+    "Jang’s",
+    2
+   ],
+   [
+    "Museum",
+    2
+   ],
+   [
+    "And",
+    2
+   ],
+   [
+    "One",
+    2
+   ],
+   [
+    "Today",
+    2
+   ],
+   [
+    "Mount Sheer",
+    2
+   ],
+   [
+    "Boom",
+    1
+   ],
+   [
+    "Britannia Mine Museum",
+    1
+   ],
+   [
+    "August",
+    1
+   ],
+   [
+    "By Henry Lazenby\nAt",
+    1
+   ],
+   [
+    "Five",
+    1
+   ],
+   [
+    "As Britannia Mine Museum",
+    1
+   ],
+   [
+    "Derek Jang",
+    1
+   ],
+   [
+    "Set",
+    1
+   ],
+   [
+    "Born",
+    1
+   ],
+   [
+    "The Britannia",
+    1
+   ],
+   [
+    "Yang",
+    1
+   ],
+   [
+    "When",
+    1
+   ],
+   [
+    "Second",
+    1
+   ],
+   [
+    "Civic",
+    1
+   ],
+   [
+    "May",
+    1
+   ],
+   [
+    "Mining",
+    1
+   ],
+   [
+    "Where",
+    1
+   ],
+   [
+    "Today’s",
+    1
+   ],
+   [
+    "Long",
+    1
+   ],
+   [
+    "Texada Island",
+    1
+   ],
+   [
+    "Squamish",
+    1
+   ],
+   [
+    "Alexander Forbes",
+    1
+   ],
+   [
+    "Britannia Mining",
+    1
+   ],
+   [
+    "Smelting Company",
+    1
+   ],
+   [
+    "Scale",
+    1
+   ],
+   [
+    "Over",
+    1
+   ],
+   [
+    "British Empire’s",
+    1
+   ],
+   [
+    "November",
+    1
+   ],
+   [
+    "There’s",
+    1
+   ],
+   [
+    "Inside",
+    1
+   ],
+   [
+    "Community",
+    1
+   ],
+   [
+    "Isolation",
+    1
+   ],
+   [
+    "Company-built",
+    1
+   ],
+   [
+    "Copper Queen",
+    1
+   ],
+   [
+    "These",
+    1
+   ],
+   [
+    "Jane Camp",
+    1
+   ],
+   [
+    "Those",
+    1
+   ],
+   [
+    "Britannia Beach",
+    1
+   ],
+   [
+    "Beach",
+    1
+   ],
+   [
+    "Townsite",
+    1
+   ],
+   [
+    "Highway",
+    1
+   ],
+   [
+    "Step",
+    1
+   ],
+   [
+    "Science-backed\nBritannia’s",
+    1
+   ],
+   [
+    "Jack Ross",
+    1
+   ],
+   [
+    "Carrie Everson",
+    1
+   ],
+   [
+    "Chicago",
+    1
+   ],
+   [
+    "Returning",
+    1
+   ],
+   [
+    "But",
+    1
+   ],
+   [
+    "Staff",
+    1
+   ],
+   [
+    "Executives",
+    1
+   ],
+   [
+    "That",
+    1
+   ],
+   [
+    "Future",
+    1
+   ],
+   [
+    "Much",
+    1
+   ],
+   [
+    "Britannia Village",
+    1
+   ],
+   [
+    "This",
+    1
+   ],
+   [
+    "Remediation",
+    1
+   ],
+   [
+    "Full",
+    1
+   ],
+   [
+    "Not",
+    1
+   ],
+   [
+    "Yet",
+    1
+   ],
+   [
+    "Origin",
+    1
+   ]
+  ],
+  "fr": {
+   "words": 1926,
+   "sentences": 104,
+   "paragraphs": 45,
+   "chars": 12460,
+   "letters": 9908,
+   "styled": [
+    {
+     "t": "BOOM! sans le krach : Le Musée de la mine Britannia fête ses 50 ans",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 1
+    },
+    {
+     "t": "D'une ville de compagnie à un lieu de rassemblement, le site patrimonial explore le",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 1
+    },
+    {
+     "t": "rôle du cuivre",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 1
+    },
+    {
+     "t": "27 août 2025 (mis à jour)",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 1
+    },
+    {
+     "t": "Par Henry Lazenby",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 1
+    },
+    {
+     "t": "BOOM!",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 1
+    },
+    {
+     "t": "Sea-to-Sky",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 1
+    },
+    {
+     "t": "BOOM!",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 1
+    },
+    {
+     "t": "Deuxième acte",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 2
+    },
+    {
+     "t": "B.C. Museum of Mining",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 2
+    },
+    {
+     "t": "Britannia Mining & Smelting Company",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 2
+    },
+    {
+     "t": "BOOM!",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 2
+    },
+    {
+     "t": "Communauté, risque et résilience",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 3
+    },
+    {
+     "t": "Copper",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 3
+    },
+    {
+     "t": "Queen",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 3
+    },
+    {
+     "t": "Jane Camp",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 3
+    },
+    {
+     "t": "the Beach",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 3
+    },
+    {
+     "t": "Townsite",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 3
+    },
+    {
+     "t": "Soutenu par la science",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 3
+    },
+    {
+     "t": "Une année record",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 4
+    },
+    {
+     "t": "Vers l'avenir",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 4
+    },
+    {
+     "t": "Sea-to-Sky",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 5
+    }
+   ],
+   "numbers": {
+    "50": 4,
+    "27": 1,
+    "2025": 1,
+    "13": 1,
+    "15": 1,
+    "3": 3,
+    "20": 2,
+    "1974": 2,
+    "80000": 1,
+    "1960": 2,
+    "19": 1,
+    "1975": 1,
+    "1880": 1,
+    "1898": 1,
+    "1904": 1,
+    "160": 1,
+    "108": 1,
+    "750": 1,
+    "35": 1,
+    "1920": 1,
+    "2010": 1,
+    "1915": 1,
+    "1921": 1,
+    "1952": 1,
+    "99": 1,
+    "1886": 1
+   }
+  },
+  "prize_sentences_fr": [],
+  "numbers_only_en": [
+   "1",
+   "191975",
+   "272025"
+  ],
+  "numbers_only_fr": [
+   "13",
+   "1880",
+   "19",
+   "1920",
+   "1960",
+   "1975",
+   "2025",
+   "27"
+  ],
+  "number_count_mismatch": []
+ },
+ "toronto": {
+  "key": "toronto",
+  "region": "Toronto, ON",
+  "month": "2026-02",
+  "en_id": "1003888069",
+  "fr_id": "1003888212",
+  "en": {
+   "words": 1917,
+   "sentences": 84,
+   "paragraphs": 44,
+   "chars": 12631,
+   "letters": 9825,
+   "styled": [
+    {
+     "t": "Toronto: The heartbeat of mining industry ﬁnance",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 1
+    },
+    {
+     "t": "The Northern",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 1
+    },
+    {
+     "t": "Miner",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 1
+    },
+    {
+     "t": "Toronto’s rise to prominence",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 2
+    },
+    {
+     "t": "The Northern Miner",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 2
+    },
+    {
+     "t": "Global hub",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 3
+    },
+    {
+     "t": "Not for granted",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 4
+    },
+    {
+     "t": "Sources:",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 5
+    }
+   ],
+   "numbers": {
+    "1929": 1,
+    "1915": 1,
+    "122": 1,
+    "300": 2,
+    "2000": 1,
+    "40": 1,
+    "2021": 1,
+    "10": 1,
+    "77": 1,
+    "2024": 2,
+    "1861": 1,
+    "45000": 1,
+    "1903": 1,
+    "1914": 1,
+    "6000": 1,
+    "1906": 1,
+    "1896": 1,
+    "1934": 1,
+    "30000": 1,
+    "130": 2,
+    "2025": 1,
+    "27353": 1,
+    "126": 1,
+    "500": 1,
+    "2023": 1,
+    "16": 1,
+    "1": 3,
+    "180": 1,
+    "28": 1,
+    "3525": 1,
+    "929": 1,
+    "234": 2,
+    "125": 2,
+    "435": 2,
+    "237": 1,
+    "1229": 2,
+    "3524": 1,
+    "425": 1,
+    "2931": 1,
+    "329": 1,
+    "1026": 1,
+    "727": 1,
+    "337": 1,
+    "1325": 2,
+    "530": 1,
+    "734": 1,
+    "832": 1,
+    "3137": 1,
+    "531": 1,
+    "224": 1,
+    "429": 1,
+    "831": 1,
+    "2725": 1,
+    "133": 1,
+    "1435": 1,
+    "3827": 1,
+    "934": 1,
+    "2930": 1,
+    "2026": 1,
+    "1224": 1,
+    "233": 1,
+    "827": 1,
+    "232": 1,
+    "2137": 1,
+    "229": 1,
+    "2425": 1,
+    "127": 1,
+    "426": 1,
+    "5031": 1,
+    "1433": 2,
+    "2925": 1,
+    "535": 1,
+    "1030": 1,
+    "137": 1,
+    "128": 1,
+    "525": 1,
+    "336": 1,
+    "324": 1,
+    "527": 1,
+    "837": 1,
+    "1228": 1,
+    "2": 1,
+    "3": 1,
+    "4": 1,
+    "5": 1
+   }
+  },
+  "poem_word_hits": {
+   "reign": 1,
+   "gold": 7,
+   "copper": 2,
+   "long": 1,
+   "northern": 5,
+   "red": 1,
+   "back": 2,
+   "lead": 1,
+   "begun": 1,
+   "miner": 2,
+   "truth": 1,
+   "held": 1,
+   "claim": 1,
+   "remains": 2,
+   "strong": 2,
+   "message": 1,
+   "time": 2,
+   "years": 3,
+   "even": 1,
+   "struck": 2,
+   "bay": 3,
+   "street": 4,
+   "mining": 41,
+   "share": 1,
+   "point": 2,
+   "buried": 1
+  },
+  "key_hits": {
+   "buried": 1
+  },
+  "poem_bigrams": [
+   "bay street",
+   "point to",
+   "the mining",
+   "the northern"
+  ],
+  "key_sentences": [
+   "The Guardian — Toronto's buried history: the dark story of how mining built a city 4."
+  ],
+  "prize_sentences": [],
+  "caps": [
+   [
+    "Toronto",
+    17
+   ],
+   [
+    "Toronto’s",
+    13
+   ],
+   [
+    "The",
+    11
+   ],
+   [
+    "TSX",
+    7
+   ],
+   [
+    "Canada’s",
+    6
+   ],
+   [
+    "PDAC",
+    4
+   ],
+   [
+    "Cobalt",
+    3
+   ],
+   [
+    "Bay Street",
+    3
+   ],
+   [
+    "Ontario",
+    3
+   ],
+   [
+    "TSXV",
+    3
+   ],
+   [
+    "This",
+    3
+   ],
+   [
+    "Mining",
+    3
+   ],
+   [
+    "But",
+    3
+   ],
+   [
+    "Indigenous",
+    3
+   ],
+   [
+    "Canada",
+    3
+   ],
+   [
+    "TMX Group",
+    3
+   ],
+   [
+    "Ont",
+    2
+   ],
+   [
+    "The Northern Miner",
+    2
+   ],
+   [
+    "From",
+    2
+   ],
+   [
+    "That",
+    2
+   ],
+   [
+    "Toronto Stock Exchange",
+    2
+   ],
+   [
+    "Canadian",
+    2
+   ],
+   [
+    "ESG",
+    2
+   ],
+   [
+    "Sydney",
+    2
+   ],
+   [
+    "London",
+    2
+   ],
+   [
+    "The Guardian",
+    2
+   ],
+   [
+    "Richmond St",
+    1
+   ],
+   [
+    "Nearly",
+    1
+   ],
+   [
+    "Ghana",
+    1
+   ],
+   [
+    "Chile",
+    1
+   ],
+   [
+    "Because",
+    1
+   ],
+   [
+    "New York’s",
+    1
+   ],
+   [
+    "Every",
+    1
+   ],
+   [
+    "The TSX Venture Exchange",
+    1
+   ],
+   [
+    "Today",
+    1
+   ],
+   [
+    "While",
+    1
+   ],
+   [
+    "Just",
+    1
+   ],
+   [
+    "Rome",
+    1
+   ],
+   [
+    "Depression-era",
+    1
+   ],
+   [
+    "When",
+    1
+   ],
+   [
+    "TSE",
+    1
+   ],
+   [
+    "Rumoured",
+    1
+   ],
+   [
+    "Promoters",
+    1
+   ],
+   [
+    "Canadians",
+    1
+   ],
+   [
+    "Britons",
+    1
+   ],
+   [
+    "Americans",
+    1
+   ],
+   [
+    "Agnico Eagle Mines",
+    1
+   ],
+   [
+    "Another",
+    1
+   ],
+   [
+    "Croesus",
+    1
+   ],
+   [
+    "Matheson",
+    1
+   ],
+   [
+    "Northern Ontario",
+    1
+   ],
+   [
+    "The Ontario Mines Act",
+    1
+   ],
+   [
+    "The Standard Stock",
+    1
+   ],
+   [
+    "Mining Exchange",
+    1
+   ],
+   [
+    "President Franklin Roosevelt",
+    1
+   ],
+   [
+    "Gold Reserve Act",
+    1
+   ],
+   [
+    "Northern Ontario’s Porcupine",
+    1
+   ],
+   [
+    "Kirkland Lake",
+    1
+   ],
+   [
+    "Montreal",
+    1
+   ],
+   [
+    "Through",
+    1
+   ],
+   [
+    "Successive",
+    1
+   ],
+   [
+    "Global",
+    1
+   ],
+   [
+    "Fast-forward",
+    1
+   ],
+   [
+    "Specialized",
+    1
+   ],
+   [
+    "Each",
+    1
+   ],
+   [
+    "Prospectors",
+    1
+   ],
+   [
+    "Developers Association",
+    1
+   ],
+   [
+    "CEOs",
+    1
+   ],
+   [
+    "Front Street",
+    1
+   ],
+   [
+    "Metro Toronto Convention Centre",
+    1
+   ],
+   [
+    "Significant",
+    1
+   ],
+   [
+    "One",
+    1
+   ],
+   [
+    "Not",
+    1
+   ],
+   [
+    "Asia",
+    1
+   ],
+   [
+    "According",
+    1
+   ],
+   [
+    "TMX",
+    1
+   ],
+   [
+    "TSX-V",
+    1
+   ],
+   [
+    "Many",
+    1
+   ],
+   [
+    "Australian Securities Exchange",
+    1
+   ],
+   [
+    "ASX",
+    1
+   ]
+  ],
+  "fr": {
+   "words": 2370,
+   "sentences": 77,
+   "paragraphs": 45,
+   "chars": 15538,
+   "letters": 12196,
+   "styled": [
+    {
+     "t": "Toronto : Le cœur ﬁnancier de l'industrie minière",
+     "b": true,
+     "i": false,
+     "size": 11.0,
+     "page": 1
+    },
+    {
+     "t": "The Northern Miner",
+     "b": false,
+     "i": true,
+     "size": 11.0,
+     "page": 1
+    },
+    {
+     "t": "greenﬁeld",
+     "b": false,
+     "i": true,
+     "size": 11.0,
+     "page": 1
+    },
+    {
+     "t": "près de 40 % des sociétés minières cotées en bourse dans",
+     "b": true,
+     "i": false,
+     "size": 11.0,
+     "page": 1
+    },
+    {
+     "t": "le monde",
+     "b": true,
+     "i": false,
+     "size": 11.0,
+     "page": 1
+    },
+    {
+     "t": "L'ascension de Toronto vers les sommets",
+     "b": true,
+     "i": false,
+     "size": 11.0,
+     "page": 2
+    },
+    {
+     "t": "The Northern Miner",
+     "b": false,
+     "i": true,
+     "size": 11.0,
+     "page": 2
+    },
+    {
+     "t": "Standard Stock and Mining Exchange",
+     "b": false,
+     "i": true,
+     "size": 11.0,
+     "page": 2
+    },
+    {
+     "t": "Gold Reserve Act",
+     "b": false,
+     "i": true,
+     "size": 11.0,
+     "page": 3
+    },
+    {
+     "t": "ﬂow-through shares",
+     "b": false,
+     "i": true,
+     "size": 11.0,
+     "page": 3
+    },
+    {
+     "t": "Un carrefour mondial",
+     "b": true,
+     "i": false,
+     "size": 11.0,
+     "page": 3
+    },
+    {
+     "t": "Rien n'est acquis",
+     "b": true,
+     "i": false,
+     "size": 11.0,
+     "page": 4
+    },
+    {
+     "t": "bought",
+     "b": false,
+     "i": true,
+     "size": 11.0,
+     "page": 4
+    },
+    {
+     "t": "deal",
+     "b": false,
+     "i": true,
+     "size": 11.0,
+     "page": 4
+    },
+    {
+     "t": "Sources :",
+     "b": true,
+     "i": false,
+     "size": 11.0,
+     "page": 5
+    }
+   ],
+   "numbers": {
+    "1929": 1,
+    "1915": 1,
+    "122": 1,
+    "300": 2,
+    "2000": 1,
+    "40": 1,
+    "2021": 1,
+    "10": 1,
+    "77": 1,
+    "2024": 2,
+    "1861": 1,
+    "45000": 1,
+    "1903": 1,
+    "1914": 1,
+    "6000": 1,
+    "1906": 1,
+    "1896": 1,
+    "1934": 1,
+    "1980": 1,
+    "30000": 1,
+    "130": 2,
+    "2025": 1,
+    "27353": 1,
+    "126": 1,
+    "500": 1,
+    "2023": 1,
+    "16": 1,
+    "180": 1,
+    "28": 1,
+    "3525": 1,
+    "929": 1,
+    "234": 2,
+    "125": 2,
+    "435": 2,
+    "237": 1,
+    "1229": 2,
+    "3524": 1,
+    "425": 1,
+    "2931": 1,
+    "329": 1,
+    "1026": 1,
+    "727": 1,
+    "337": 1,
+    "1325": 2,
+    "530": 1,
+    "734": 1,
+    "832": 1,
+    "3137": 1,
+    "531": 1,
+    "224": 1,
+    "429": 1,
+    "831": 1,
+    "2725": 1,
+    "133": 1,
+    "1435": 1,
+    "3827": 1,
+    "934": 1,
+    "2930": 1,
+    "2026": 1,
+    "1224": 1,
+    "233": 1,
+    "827": 1,
+    "232": 1,
+    "2137": 1,
+    "229": 1,
+    "2425": 1,
+    "127": 1,
+    "426": 1,
+    "5031": 1,
+    "1433": 2,
+    "2925": 1,
+    "535": 1,
+    "1030": 1,
+    "137": 1,
+    "128": 1,
+    "525": 1,
+    "336": 1,
+    "324": 1,
+    "527": 1,
+    "837": 1,
+    "1228": 1,
+    "1": 1
+   }
+  },
+  "prize_sentences_fr": [],
+  "numbers_only_en": [
+   "2",
+   "3",
+   "4",
+   "5"
+  ],
+  "numbers_only_fr": [
+   "1980"
+  ],
+  "number_count_mismatch": [
+   "1"
+  ]
+ },
+ "bathurst": {
+  "key": "bathurst",
+  "region": "Bathurst, NB",
+  "month": "2026-03",
+  "en_id": "1003889269",
+  "fr_id": "1003889385",
+  "en": {
+   "words": 1187,
+   "sentences": 67,
+   "paragraphs": 44,
+   "chars": 7655,
+   "letters": 6211,
+   "styled": [
+    {
+     "t": "After the launch of The Great Canadian Treasure Hunt, explorers from coast to coast have",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 1
+    },
+    {
+     "t": "been digging into Canada’s mining past – chasing clues, revisiting forgotten camps, and",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 1
+    },
+    {
+     "t": "rediscovering the places that helped build the nation’s resource wealth.",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 1
+    },
+    {
+     "t": "This month, the Hunt leads east to the forests and rivers of northern New Brunswick, to one",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 1
+    },
+    {
+     "t": "of Canada’s greatest – and least widely known – mining districts: the Bathurst Mining",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 1
+    },
+    {
+     "t": "Camp.",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 1
+    },
+    {
+     "t": "Hidden beneath the spruce and rolling Appalachian hills lies a story of stubborn",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 1
+    },
+    {
+     "t": "prospectors, visionary geologists and the metals that quietly power modern life.",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 1
+    },
+    {
+     "t": "For the latest clue, read the article below; voici la version française.",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 1
+    },
+    {
+     "t": "And watch the video: English | French",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 1
+    },
+    {
+     "t": "Keep your eyes (and ears) open. The clue is tucked into the content – no tricks, just careful",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 1
+    },
+    {
+     "t": "attention…",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 1
+    },
+    {
+     "t": "Treasure Hunt: Bathurst - The camp that powered the modern world",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 1
+    },
+    {
+     "t": "Searches in the bush",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 1
+    },
+    {
+     "t": "First sulphide discovery",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 2
+    },
+    {
+     "t": "The rush to Bathurst",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 2
+    },
+    {
+     "t": "Supporting growth",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 2
+    },
+    {
+     "t": "Bathurst’s rise and fall",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 3
+    },
+    {
+     "t": "This campaign is proudly presented with the support of industry sponsors including Agnico",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 4
+    },
+    {
+     "t": "Eagle Mines, Sprott Money, EarthLabs, Iamgold, Kinross Gold, The World Gold Council,",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 4
+    },
+    {
+     "t": "Alamos Gold, Ernst & Young, MINING.COM, CEO.CA and The Canadian Mining Journal.",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 4
+    },
+    {
+     "t": "For more information, including full contest rules, FAQs and updates, visit",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 4
+    },
+    {
+     "t": "treasure.northernminer.com.",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 4
+    },
+    {
+     "t": "Follow @northernminer (X/FB/YouTube) | @thenorthernminer (IG) | @mining (X) |",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 4
+    },
+    {
+     "t": "@miningdotcom (IG/FB/YouTube) | @ceodotca (X/IG/FB/TikTok) | @ceocaﬁlm (YouTube) for",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 4
+    },
+    {
+     "t": "ongoing clues and community updates.",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 4
+    }
+   ],
+   "numbers": {
+    "1952": 1,
+    "6": 1,
+    "12": 5,
+    "1964": 1,
+    "2013": 1
+   }
+  },
+  "poem_word_hits": {
+   "vast": 1,
+   "old": 1,
+   "gold": 4,
+   "lies": 2,
+   "birch": 1,
+   "grew": 1,
+   "copper": 3,
+   "long": 3,
+   "northern": 7,
+   "giant": 1,
+   "lead": 3,
+   "held": 3,
+   "east": 1,
+   "ancient": 4,
+   "hold": 2,
+   "quiet": 3,
+   "time": 1,
+   "growing": 1,
+   "years": 2,
+   "zinc": 4,
+   "bathurst": 11,
+   "mining": 13,
+   "point": 1,
+   "buried": 1,
+   "core": 1
+  },
+  "key_hits": {
+   "birch": 1,
+   "core": 1,
+   "zinc": 4,
+   "buried": 1
+  },
+  "poem_bigrams": [
+   "an ancient",
+   "the northern"
+  ],
+  "key_sentences": [
+   "Narrow roads wound through forests of spruce and birch, and the quiet rivers that flowed toward the Gulf of St.",
+   "In other parts of the world, such environments had produced massive deposits of zinc, lead, copper and silver.",
+   "Prospectors working with the company followed creeks and ridges, searching for rusty stains on rock faces – the telltale sign of buried sulphide minerals.",
+   "The core samples that came up from the depths were heavy with zinc and lead, shot through with copper and silver.",
+   "The deposit would become known as Brunswick No. 12 and it would eventually grow into the largest underground zinc mine in the world.",
+   "Zinc protects steel from corrosion, helping preserve bridges, buildings and infrastructure."
+  ],
+  "prize_sentences": [
+   "After the launch of The Great Canadian Treasure Hunt, explorers from coast to coast have been digging into Canada’s mining past – chasing clues, revisiting forgotten camps, and rediscovering the places that helped build the nation’s resource wealth.",
+   "Hidden beneath the spruce and rolling Appalachian hills lies a story of stubborn prospectors, visionary geologists and the metals that quietly power modern life.",
+   "For the latest clue, read the article below; voici la version française.",
+   "And watch the video: English | French Keep your eyes (and ears) open.",
+   "The clue is tucked into the content – no tricks, just careful attention… Treasure Hunt: Bathurst - The camp that powered the modern world In the early 1950s, northern New Brunswick was not the place where most prospectors expected to strike it rich.",
+   "The question was whether northern New Brunswick held the same hidden wealth.",
+   "Modern exploration tools – from airborne geophysics to deep drilling – are giving geologists new ways to search for hidden deposits.",
+   "Somewhere within that story – hidden in rock, waiting for the right set of eyes – the next discovery may still be waiting.",
+   "Follow @northernminer (X/FB/YouTube) | @thenorthernminer (IG) | @mining (X) | @miningdotcom (IG/FB/YouTube) | @ceodotca (X/IG/FB/TikTok) | @ceocafilm (YouTube) for ongoing clues and community updates."
+  ],
+  "caps": [
+   [
+    "The",
+    14
+   ],
+   [
+    "Bathurst",
+    7
+   ],
+   [
+    "Brunswick No",
+    6
+   ],
+   [
+    "New Brunswick",
+    5
+   ],
+   [
+    "For",
+    5
+   ],
+   [
+    "Canada’s",
+    3
+   ],
+   [
+    "YouTube",
+    3
+   ],
+   [
+    "This",
+    2
+   ],
+   [
+    "But",
+    2
+   ],
+   [
+    "Those",
+    2
+   ],
+   [
+    "One",
+    2
+   ],
+   [
+    "Prospectors",
+    2
+   ],
+   [
+    "Belledune",
+    2
+   ],
+   [
+    "Sudbury",
+    2
+   ],
+   [
+    "After",
+    1
+   ],
+   [
+    "The Great Canadian Treasure Hunt",
+    1
+   ],
+   [
+    "Hunt",
+    1
+   ],
+   [
+    "Bathurst Mining Camp",
+    1
+   ],
+   [
+    "Hidden",
+    1
+   ],
+   [
+    "Appalachian",
+    1
+   ],
+   [
+    "And",
+    1
+   ],
+   [
+    "English",
+    1
+   ],
+   [
+    "French\nKeep",
+    1
+   ],
+   [
+    "Treasure Hunt",
+    1
+   ],
+   [
+    "Narrow",
+    1
+   ],
+   [
+    "Gulf",
+    1
+   ],
+   [
+    "Lawrence",
+    1
+   ],
+   [
+    "Appalachians",
+    1
+   ],
+   [
+    "Searches",
+    1
+   ],
+   [
+    "Ken Ritchie",
+    1
+   ],
+   [
+    "Brunswick Mining",
+    1
+   ],
+   [
+    "Smelting",
+    1
+   ],
+   [
+    "Noranda’s",
+    1
+   ],
+   [
+    "Ritchie",
+    1
+   ],
+   [
+    "Murray Brook",
+    1
+   ],
+   [
+    "Like",
+    1
+   ],
+   [
+    "First",
+    1
+   ],
+   [
+    "Drilling",
+    1
+   ],
+   [
+    "Bathurst\nAlmost",
+    1
+   ],
+   [
+    "Geologists",
+    1
+   ],
+   [
+    "Canada",
+    1
+   ],
+   [
+    "Drill",
+    1
+   ],
+   [
+    "The Bathurst Mining Camp",
+    1
+   ],
+   [
+    "There",
+    1
+   ],
+   [
+    "Yukon",
+    1
+   ],
+   [
+    "Mine",
+    1
+   ],
+   [
+    "Atlantic Canada",
+    1
+   ],
+   [
+    "Among",
+    1
+   ],
+   [
+    "Joe Mann",
+    1
+   ],
+   [
+    "Noranda",
+    1
+   ],
+   [
+    "Their",
+    1
+   ],
+   [
+    "Throughout",
+    1
+   ],
+   [
+    "Mines",
+    1
+   ],
+   [
+    "Caribou",
+    1
+   ],
+   [
+    "Halfmile Lake",
+    1
+   ],
+   [
+    "Restigouche",
+    1
+   ],
+   [
+    "Heath Steele",
+    1
+   ],
+   [
+    "Each",
+    1
+   ],
+   [
+    "Supporting",
+    1
+   ],
+   [
+    "Miners",
+    1
+   ],
+   [
+    "Newcastle",
+    1
+   ],
+   [
+    "Fathers",
+    1
+   ],
+   [
+    "Zinc",
+    1
+   ],
+   [
+    "Copper",
+    1
+   ],
+   [
+    "Lead",
+    1
+   ],
+   [
+    "Silver",
+    1
+   ],
+   [
+    "Bathurst’s",
+    1
+   ],
+   [
+    "When",
+    1
+   ],
+   [
+    "Ore",
+    1
+   ],
+   [
+    "Yet",
+    1
+   ],
+   [
+    "Modern",
+    1
+   ],
+   [
+    "Companies",
+    1
+   ],
+   [
+    "Mining",
+    1
+   ],
+   [
+    "Timmins",
+    1
+   ],
+   [
+    "Flin Flon",
+    1
+   ],
+   [
+    "Many",
+    1
+   ],
+   [
+    "Somewhere",
+    1
+   ],
+   [
+    "Agnico Eagle Mines",
+    1
+   ],
+   [
+    "Sprott Money",
+    1
+   ],
+   [
+    "EarthLabs",
+    1
+   ]
+  ],
+  "fr": {
+   "words": 1391,
+   "sentences": 66,
+   "paragraphs": 44,
+   "chars": 9222,
+   "letters": 7503,
+   "styled": [
+    {
+     "t": "Chasse au trésor : Bathurst – Le camp qui a alimenté le monde moderne",
+     "b": true,
+     "i": false,
+     "size": 11.0,
+     "page": 1
+    },
+    {
+     "t": "Recherches dans la brousse",
+     "b": true,
+     "i": false,
+     "size": 11.0,
+     "page": 1
+    },
+    {
+     "t": "Première découverte de sulfures",
+     "b": true,
+     "i": false,
+     "size": 11.0,
+     "page": 2
+    },
+    {
+     "t": "La ruée vers Bathurst",
+     "b": true,
+     "i": false,
+     "size": 11.0,
+     "page": 2
+    },
+    {
+     "t": "Soutenir la croissance",
+     "b": true,
+     "i": false,
+     "size": 11.0,
+     "page": 2
+    },
+    {
+     "t": "L'essor et le déclin de Bathurst",
+     "b": true,
+     "i": false,
+     "size": 11.0,
+     "page": 3
+    },
+    {
+     "t": "Cette campagne est fièrement présentée avec le soutien de commanditaires de l'industrie,",
+     "b": false,
+     "i": true,
+     "size": 11.0,
+     "page": 4
+    },
+    {
+     "t": "notamment Agnico Eagle Mines, Sprott Money, EarthLabs, Iamgold, Kinross Gold, le World Gold",
+     "b": false,
+     "i": true,
+     "size": 11.0,
+     "page": 4
+    },
+    {
+     "t": "Council, Alamos Gold, Ernst & Young, MINING.COM, CEO.CA et le Canadian Mining Journal.",
+     "b": false,
+     "i": true,
+     "size": 11.0,
+     "page": 4
+    },
+    {
+     "t": "Pour plus d'informations, y compris les règlements complets du concours, la foire aux questions et",
+     "b": false,
+     "i": true,
+     "size": 11.0,
+     "page": 4
+    },
+    {
+     "t": "les mises à jour, visitez treasure.northernminer.com.",
+     "b": false,
+     "i": true,
+     "size": 11.0,
+     "page": 4
+    },
+    {
+     "t": "Suivez @northernminer (X/FB/YouTube) | @thenorthernminer (IG) | @mining (X) | @miningdotcom",
+     "b": false,
+     "i": true,
+     "size": 11.0,
+     "page": 4
+    },
+    {
+     "t": "(IG/FB/YouTube) | @ceodotca (X/IG/FB/TikTok) | @ceocafilm (YouTube) pour des indices et des",
+     "b": false,
+     "i": true,
+     "size": 11.0,
+     "page": 4
+    },
+    {
+     "t": "nouvelles de la communauté.",
+     "b": false,
+     "i": true,
+     "size": 11.0,
+     "page": 4
+    }
+   ],
+   "numbers": {
+    "1950": 1,
+    "1952": 1,
+    "6": 1,
+    "12": 5,
+    "1960": 1,
+    "1970": 1,
+    "1964": 1,
+    "2013": 1
+   }
+  },
+  "prize_sentences_fr": [
+   "Après le lancement de La Grande Chasse au Trésor Canadienne, des explorateurs d'un océan à l'autre se sont plongés dans le passé minier du Canada – suivant des indices, revisitant des camps oubliés et redécouvrant les lieux qui ont contribué à bâtir la richesse en ressources du pays.",
+   "Cachée sous les épinettes et les collines ondulantes des Appalaches se trouve une histoire de prospecteurs tenaces, de géologues visionnaires et de métaux qui alimentent discrètement la vie moderne.",
+   "Pour le dernier indice, lisez l'article ci-dessous ; here is the English version.",
+   "L'indice est dissimulé dans le contenu – pas de pièges, juste une attention soutenue… Chasse au trésor : Bathurst – Le camp qui a alimenté le monde moderne Au début des années 1950, le nord du Nouveau-Brunswick n'était pas l'endroit où la plupart des prospecteurs s'attendaient à faire fortune.",
+   "La question était de savoir si le nord du Nouveau-Brunswick recelait la même richesse cachée.",
+   "Les outils d'exploration modernes – de la géophysique aéroportée au forage profond – offrent aux géologues de nouvelles façons de rechercher des gisements cachés.",
+   "Quelque part dans cette histoire – cachée dans la roche, en attente du bon regard – la prochaine découverte attend peut-être encore.",
+   "Suivez @northernminer (X/FB/YouTube) | @thenorthernminer (IG) | @mining (X) | @miningdotcom (IG/FB/YouTube) | @ceodotca (X/IG/FB/TikTok) | @ceocafilm (YouTube) pour des indices et des nouvelles de la communauté."
+  ],
+  "numbers_only_en": [],
+  "numbers_only_fr": [
+   "1950",
+   "1960",
+   "1970"
+  ],
+  "number_count_mismatch": []
+ },
+ "valdor": {
+  "key": "valdor",
+  "region": "Val-d'Or, QC",
+  "month": "2026-04",
+  "en_id": "1003890424",
+  "fr_id": "1003890541",
+  "en": {
+   "words": 955,
+   "sentences": 51,
+   "paragraphs": 27,
+   "chars": 5839,
+   "letters": 4675,
+   "styled": [
+    {
+     "t": "Val-d’Or: Gold, Grit and the Road to the North",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 1
+    },
+    {
+     "t": "A town forms",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 1
+    },
+    {
+     "t": "Building a camp",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 2
+    },
+    {
+     "t": "A lasting camp",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 2
+    }
+   ],
+   "numbers": {
+    "1931": 1,
+    "810": 1,
+    "419": 1,
+    "227": 1
+   }
+  },
+  "poem_word_hits": {
+   "land": 1,
+   "veins": 1,
+   "gold": 11,
+   "name": 1,
+   "fleeting": 1,
+   "reflects": 1,
+   "lead": 1,
+   "miner": 1,
+   "held": 1,
+   "road": 3,
+   "remains": 1,
+   "stands": 1,
+   "time": 1,
+   "growing": 1,
+   "years": 2,
+   "even": 1,
+   "mining": 3,
+   "core": 1
+  },
+  "key_hits": {
+   "core": 1,
+   "veins": 1
+  },
+  "poem_bigrams": [
+   "a fleeting",
+   "gold but",
+   "reflects the"
+  ],
+  "key_sentences": [
+   "At Sigma, engineers pushed deeper in pursuit of the gold-bearing veins, extending shafts and refining underground methods that would define the camp.",
+   "Headframes rise above the skyline, core shacks hum with activity, and trucks roll in and out carrying the next chapter of a story that began in the hardest of times."
+  ],
+  "prize_sentences": [],
+  "caps": [
+   [
+    "Val-d’Or",
+    11
+   ],
+   [
+    "The",
+    7
+   ],
+   [
+    "Gold",
+    3
+   ],
+   [
+    "Sullivan",
+    3
+   ],
+   [
+    "Lamaque",
+    3
+   ],
+   [
+    "Quebec",
+    2
+   ],
+   [
+    "But",
+    2
+   ],
+   [
+    "Abitibi",
+    2
+   ],
+   [
+    "Canada’s",
+    2
+   ],
+   [
+    "Canada",
+    2
+   ],
+   [
+    "Sigma",
+    2
+   ],
+   [
+    "Like Dawson",
+    2
+   ],
+   [
+    "Agnico Eagle",
+    2
+   ],
+   [
+    "Grit",
+    1
+   ],
+   [
+    "Road",
+    1
+   ],
+   [
+    "North\nThere’s",
+    1
+   ],
+   [
+    "Great Depression",
+    1
+   ],
+   [
+    "They",
+    1
+   ],
+   [
+    "Jobs",
+    1
+   ],
+   [
+    "In Quebec’s Abitibi",
+    1
+   ],
+   [
+    "Prospectors",
+    1
+   ],
+   [
+    "Jean-Jacques",
+    1
+   ],
+   [
+    "Jack",
+    1
+   ],
+   [
+    "Irish-born",
+    1
+   ],
+   [
+    "Sullivan Consolidated Mine",
+    1
+   ],
+   [
+    "This",
+    1
+   ],
+   [
+    "Wooden",
+    1
+   ],
+   [
+    "Senneterre",
+    1
+   ],
+   [
+    "Valley",
+    1
+   ],
+   [
+    "People",
+    1
+   ],
+   [
+    "Toronto",
+    1
+   ],
+   [
+    "Building",
+    1
+   ],
+   [
+    "At Sigma",
+    1
+   ],
+   [
+    "Together",
+    1
+   ],
+   [
+    "Electric",
+    1
+   ],
+   [
+    "Schools",
+    1
+   ],
+   [
+    "Rail",
+    1
+   ],
+   [
+    "What",
+    1
+   ],
+   [
+    "Through",
+    1
+   ],
+   [
+    "Depression",
+    1
+   ],
+   [
+    "Workers",
+    1
+   ],
+   [
+    "Methods",
+    1
+   ],
+   [
+    "Hand-steel",
+    1
+   ],
+   [
+    "Abitibi Greenstone Belt",
+    1
+   ],
+   [
+    "Earth",
+    1
+   ],
+   [
+    "Over",
+    1
+   ],
+   [
+    "Companies",
+    1
+   ],
+   [
+    "Agnico Eagle Mines",
+    1
+   ],
+   [
+    "TSX",
+    1
+   ],
+   [
+    "NYSE",
+    1
+   ],
+   [
+    "AEM",
+    1
+   ],
+   [
+    "While",
+    1
+   ],
+   [
+    "Its Goldex",
+    1
+   ],
+   [
+    "Val-d’Or’s",
+    1
+   ],
+   [
+    "LaRonde",
+    1
+   ],
+   [
+    "Canadian Malartic",
+    1
+   ],
+   [
+    "Where",
+    1
+   ],
+   [
+    "Today",
+    1
+   ],
+   [
+    "Canadian",
+    1
+   ],
+   [
+    "Golden Triangle",
+    1
+   ],
+   [
+    "Like Argentia",
+    1
+   ],
+   [
+    "Newfoundland",
+    1
+   ],
+   [
+    "Headframes",
+    1
+   ],
+   [
+    "Nearly",
+    1
+   ]
+  ],
+  "fr": {
+   "words": 1116,
+   "sentences": 51,
+   "paragraphs": 27,
+   "chars": 6941,
+   "letters": 5548,
+   "styled": [
+    {
+     "t": "Val-d'Or : l'or, le cran et la route vers le Nord",
+     "b": true,
+     "i": false,
+     "size": 11.0,
+     "page": 1
+    },
+    {
+     "t": "Une ville prend forme",
+     "b": true,
+     "i": false,
+     "size": 11.0,
+     "page": 1
+    },
+    {
+     "t": "Bâtir un camp",
+     "b": true,
+     "i": false,
+     "size": 11.0,
+     "page": 1
+    },
+    {
+     "t": "Un camp qui dure",
+     "b": true,
+     "i": false,
+     "size": 11.0,
+     "page": 2
+    }
+   ],
+   "numbers": {
+    "1930": 2,
+    "1931": 1,
+    "1045": 1,
+    "420": 1,
+    "275": 1
+   }
+  },
+  "prize_sentences_fr": [],
+  "numbers_only_en": [
+   "227",
+   "419",
+   "810"
+  ],
+  "numbers_only_fr": [
+   "1045",
+   "1930",
+   "275",
+   "420"
+  ],
+  "number_count_mismatch": []
+ },
+ "klondike": {
+  "key": "klondike",
+  "region": "Klondike, YT",
+  "month": "2026-05",
+  "en_id": null,
+  "fr_id": "1003891142",
+  "fr": {
+   "words": 1845,
+   "sentences": 74,
+   "paragraphs": 36,
+   "chars": 11494,
+   "letters": 9198,
+   "styled": [
+    {
+     "t": "Dawson City : poussière d'or, ruine et renaissance à la frontière du Yukon",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 1
+    },
+    {
+     "t": "La ruée commence",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 1
+    },
+    {
+     "t": "Site urbain",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 2
+    },
+    {
+     "t": "Les personnages de la ville en plein essor",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 3
+    },
+    {
+     "t": "De la splendeur à la morosité",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 3
+    },
+    {
+     "t": "La grande restauration",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 4
+    },
+    {
+     "t": "Une ville aux deux héritages",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 4
+    }
+   ],
+   "numbers": {
+    "1898": 3,
+    "100": 2,
+    "1200": 1,
+    "1896": 2,
+    "1897": 1,
+    "22000": 1,
+    "17000": 1,
+    "800": 1,
+    "16000": 1,
+    "1899": 1,
+    "1953": 1,
+    "1960": 1,
+    "1959": 1,
+    "1962": 1,
+    "1890": 1,
+    "30000": 1
+   }
+  },
+  "prize_sentences_fr": []
+ },
+ "sask": {
+  "key": "sask",
+  "region": "Saskatchewan",
+  "month": "2026-05",
+  "en_id": "1003891454",
+  "fr_id": "1003891545",
+  "en": {
+   "words": 1262,
+   "sentences": 83,
+   "paragraphs": 59,
+   "chars": 8565,
+   "letters": 7069,
+   "styled": [],
+   "numbers": {
+    "1": 1,
+    "350": 1,
+    "1943": 1,
+    "1000": 1,
+    "1987": 1,
+    "1975": 1,
+    "2010": 1,
+    "10": 1
+   }
+  },
+  "poem_word_hits": {
+   "land": 1,
+   "vast": 2,
+   "veins": 1,
+   "bore": 1,
+   "gold": 3,
+   "mountain": 1,
+   "lies": 1,
+   "grew": 1,
+   "salt": 3,
+   "roots": 1,
+   "long": 1,
+   "brine": 1,
+   "giant": 3,
+   "sun": 1,
+   "light": 1,
+   "water": 1,
+   "ancient": 1,
+   "quiet": 1,
+   "remains": 3,
+   "growing": 1,
+   "years": 5,
+   "waters": 1,
+   "even": 1,
+   "struck": 1,
+   "bay": 1,
+   "mining": 7,
+   "buried": 3,
+   "marked": 1
+  },
+  "key_hits": {
+   "brine": 1,
+   "buried": 3,
+   "veins": 1,
+   "roots": 1
+  },
+  "poem_bigrams": [
+   "marked by",
+   "not marked",
+   "the mining"
+  ],
+  "key_sentences": [
+   "Saskatchewan Potash: The buried treasure that fed the world Long before Saskatchewan became synonymous with endless wheat fields, another treasure lay hidden deep beneath the prairie soil.",
+   "Instead, it arrived almost by accident, buried nearly 1 km underground beneath flat farmland.",
+   "Over millions of years, those deposits were buried beneath sedimentary rock, entombing one of the world’s richest evaporite basins beneath the future Canadian Prairies.",
+   "It strengthens roots, improves drought resistance and boosts crop yields.",
+   "Crews drilled rings of pipes into the earth and circulated super-chilled brine to freeze water-bearing rock solid before sinking shafts through it.",
+   "Instead of jagged rock veins, potash miners carved vast rooms through pink and white salt beds that glowed under artificial light."
+  ],
+  "prize_sentences": [
+   "Saskatchewan Potash: The buried treasure that fed the world Long before Saskatchewan became synonymous with endless wheat fields, another treasure lay hidden deep beneath the prairie soil.",
+   "And yet the story of Saskatchewan potash remains one of Canada’s great hidden treasure tales: a saga of accidental discovery, engineering triumphs, prairie boomtowns and a mineral so valuable it became known as “pink gold.”",
+   "Giant white tailings piles rise beside prairie highways like artificial mountains, unmistakable landmarks of the hidden treasure below."
+  ],
+  "caps": [
+   [
+    "The",
+    17
+   ],
+   [
+    "Saskatchewan",
+    17
+   ],
+   [
+    "Canadian",
+    5
+   ],
+   [
+    "But",
+    4
+   ],
+   [
+    "Saskatchewan’s",
+    4
+   ],
+   [
+    "Instead",
+    3
+   ],
+   [
+    "Earth",
+    3
+   ],
+   [
+    "Potash",
+    3
+   ],
+   [
+    "Canada",
+    3
+   ],
+   [
+    "NYSE",
+    3
+   ],
+   [
+    "Today",
+    2
+   ],
+   [
+    "And",
+    2
+   ],
+   [
+    "Canada’s",
+    2
+   ],
+   [
+    "For",
+    2
+   ],
+   [
+    "Esterhazy",
+    2
+   ],
+   [
+    "Lanigan",
+    2
+   ],
+   [
+    "Rocanville",
+    2
+   ],
+   [
+    "BHP",
+    2
+   ],
+   [
+    "Some",
+    2
+   ],
+   [
+    "Saskatchewan Potash",
+    1
+   ],
+   [
+    "Long",
+    1
+   ],
+   [
+    "Eureka",
+    1
+   ],
+   [
+    "What",
+    1
+   ],
+   [
+    "Devonian",
+    1
+   ],
+   [
+    "Over",
+    1
+   ],
+   [
+    "Canadian Prairies",
+    1
+   ],
+   [
+    "Settlers",
+    1
+   ],
+   [
+    "Wheat",
+    1
+   ],
+   [
+    "Without",
+    1
+   ],
+   [
+    "Ironically",
+    1
+   ],
+   [
+    "Radville",
+    1
+   ],
+   [
+    "Similar",
+    1
+   ],
+   [
+    "Among",
+    1
+   ],
+   [
+    "Edmunds",
+    1
+   ],
+   [
+    "International",
+    1
+   ],
+   [
+    "Many",
+    1
+   ],
+   [
+    "Sinking",
+    1
+   ],
+   [
+    "American",
+    1
+   ],
+   [
+    "European",
+    1
+   ],
+   [
+    "Towns",
+    1
+   ],
+   [
+    "Early",
+    1
+   ],
+   [
+    "Water",
+    1
+   ],
+   [
+    "Millions",
+    1
+   ],
+   [
+    "Saskatoon",
+    1
+   ],
+   [
+    "Patience Lake",
+    1
+   ],
+   [
+    "Engineers",
+    1
+   ],
+   [
+    "Yet Saskatchewan",
+    1
+   ],
+   [
+    "Crews",
+    1
+   ],
+   [
+    "Boomtowns",
+    1
+   ],
+   [
+    "Life",
+    1
+   ],
+   [
+    "Europe",
+    1
+   ],
+   [
+    "New",
+    1
+   ],
+   [
+    "Rail",
+    1
+   ],
+   [
+    "West Coast",
+    1
+   ],
+   [
+    "Thunder Bay",
+    1
+   ],
+   [
+    "Inside",
+    1
+   ],
+   [
+    "Guests",
+    1
+   ],
+   [
+    "All",
+    1
+   ],
+   [
+    "National",
+    1
+   ],
+   [
+    "Pink",
+    1
+   ],
+   [
+    "Brazil",
+    1
+   ],
+   [
+    "India",
+    1
+   ],
+   [
+    "China",
+    1
+   ],
+   [
+    "Premier Allan Blakeney’s",
+    1
+   ],
+   [
+    "Potash Corporation",
+    1
+   ],
+   [
+    "Crown",
+    1
+   ],
+   [
+    "Few",
+    1
+   ],
+   [
+    "Mines",
+    1
+   ],
+   [
+    "Ottawa",
+    1
+   ],
+   [
+    "PotashCorp",
+    1
+   ],
+   [
+    "ASX",
+    1
+   ],
+   [
+    "Feeding",
+    1
+   ],
+   [
+    "Modern",
+    1
+   ],
+   [
+    "Nutrien",
+    1
+   ],
+   [
+    "TSX",
+    1
+   ],
+   [
+    "NTR",
+    1
+   ],
+   [
+    "Mosaic",
+    1
+   ],
+   [
+    "MOS",
+    1
+   ],
+   [
+    "At Esterhazy",
+    1
+   ],
+   [
+    "Farmers",
+    1
+   ]
+  ],
+  "fr": {
+   "words": 1594,
+   "sentences": 83,
+   "paragraphs": 60,
+   "chars": 10720,
+   "letters": 8835,
+   "styled": [
+    {
+     "t": "Le potasse de la Saskatchewan : le trésor enfoui qui a nourri le monde",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 1
+    },
+    {
+     "t": "Une mer sous les prairies",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 1
+    },
+    {
+     "t": "La découverte fortuite",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 2
+    },
+    {
+     "t": "Le fonçage des puits",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 2
+    },
+    {
+     "t": "Des villes champignons dans les prairies",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 3
+    },
+    {
+     "t": "L'or rose et la puissance mondiale",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 4
+    },
+    {
+     "t": "Nourrir l'avenir",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 4
+    },
+    {
+     "t": "Le trésor des prairies perdure",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 5
+    }
+   ],
+   "numbers": {
+    "350": 1,
+    "1943": 1,
+    "1000": 1,
+    "1950": 1,
+    "1960": 1,
+    "1987": 1,
+    "1970": 1,
+    "1975": 1,
+    "2010": 1,
+    "10": 1
+   }
+  },
+  "prize_sentences_fr": [
+   "Le potasse de la Saskatchewan : le trésor enfoui qui a nourri le monde Bien avant que la Saskatchewan ne devienne synonyme de vastes champs de blé, un autre trésor reposait caché dans les profondeurs du sol des prairies.",
+   "Et pourtant, l'histoire du potasse de la Saskatchewan demeure l'un des grands récits de trésors cachés du Canada : une saga de découverte accidentelle, de prouesses d'ingénierie, de villes champignons des prairies et d'un minéral si précieux qu'il est devenu connu sous le nom d'« or rose ».",
+   "De gigantesques haldes blanches s'élèvent à côté des routes des prairies comme des montagnes artificielles, repères inconfondables du trésor caché en dessous.",
+   "Au lieu de cela, le plus grand trésor de la Saskatchewan fut découvert sous des champs de blé par des foreurs cherchant tout autre chose."
+  ],
+  "numbers_only_en": [
+   "1"
+  ],
+  "numbers_only_fr": [
+   "1950",
+   "1960",
+   "1970"
+  ],
+  "number_count_mismatch": []
+ },
+ "novascotia": {
+  "key": "novascotia",
+  "region": "Nova Scotia",
+  "month": "2026-06",
+  "en_id": null,
+  "fr_id": "1003892426",
+  "fr": {
+   "words": 1431,
+   "sentences": 67,
+   "paragraphs": 45,
+   "chars": 9567,
+   "letters": 7778,
+   "styled": [
+    {
+     "t": "Nouvelle-Écosse : La première frontière minière du Canada",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 1
+    },
+    {
+     "t": "1861 à Mooseland",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 1
+    },
+    {
+     "t": "Un charbon bâtisseur de nation",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 1
+    },
+    {
+     "t": "General Mining Association",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 2
+    },
+    {
+     "t": "Le roi charbon",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 2
+    },
+    {
+     "t": "Glace Bay",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 2
+    },
+    {
+     "t": "New Waterford",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 2
+    },
+    {
+     "t": "Sydney Mines",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 2
+    },
+    {
+     "t": "Springhill",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 2
+    },
+    {
+     "t": "Stellarton",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 2
+    },
+    {
+     "t": "De dures leçons sous terre",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 2
+    },
+    {
+     "t": "Springhill Bump",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 2
+    },
+    {
+     "t": "Or et cuivre",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 3
+    },
+    {
+     "t": "Un trésor sous les vagues",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 4
+    },
+    {
+     "t": "Sydney Tar Ponds",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 4
+    }
+   ],
+   "numbers": {
+    "1861": 1,
+    "30": 1,
+    "1942": 1,
+    "1672": 1,
+    "1700": 2,
+    "1798": 1,
+    "1820": 1,
+    "1958": 1,
+    "2009": 1,
+    "1981": 1,
+    "1860": 1,
+    "2025": 1,
+    "44": 1,
+    "80": 1,
+    "2030": 1
+   }
+  },
+  "prize_sentences_fr": [
+   "Ses trésors n'étaient pas cachés dans des montagnes reculées ou dans la nature sauvage du nord.",
+   "Le charbon est rapidement devenu le premier grand trésor de la Nouvelle-Écosse."
+  ]
+ },
+ "manitoba": {
+  "key": "manitoba",
+  "region": "Manitoba",
+  "month": "2026-07",
+  "en_id": "1003893528",
+  "fr_id": "1003893609",
+  "en": {
+   "words": 1182,
+   "sentences": 62,
+   "paragraphs": 43,
+   "chars": 8038,
+   "letters": 6614,
+   "styled": [
+    {
+     "t": "Manitoba: Where a storybook hero led Canada to one of its greatest mining camps",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 1
+    },
+    {
+     "t": "Manitoba's first gold rush",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 1
+    },
+    {
+     "t": "A novel discovery",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 2
+    },
+    {
+     "t": "The Sunless City",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 2
+    },
+    {
+     "t": "Building a mining city",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 2
+    },
+    {
+     "t": ".",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 2
+    },
+    {
+     "t": "Snow Lake expands the district",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 2
+    },
+    {
+     "t": "Built by people",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 3
+    },
+    {
+     "t": "The mining story continues",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 3
+    },
+    {
+     "t": "What lies beneath?",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 4
+    },
+    {
+     "t": "The Great Canadian Treasure Hunt",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 4
+    }
+   ],
+   "numbers": {
+    "1910": 1,
+    "1911": 1,
+    "1913": 1,
+    "1914": 1,
+    "1905": 1,
+    "1927": 1,
+    "1930": 1,
+    "200": 1,
+    "1949": 1
+   }
+  },
+  "poem_word_hits": {
+   "veins": 1,
+   "gold": 16,
+   "lies": 1,
+   "grew": 1,
+   "copper": 5,
+   "long": 1,
+   "northern": 6,
+   "name": 1,
+   "look": 1,
+   "giant": 1,
+   "held": 1,
+   "east": 3,
+   "claim": 1,
+   "ancient": 1,
+   "shield": 1,
+   "remains": 3,
+   "stands": 1,
+   "shore": 1,
+   "time": 1,
+   "zinc": 5,
+   "even": 2,
+   "bay": 2,
+   "mining": 26,
+   "share": 1
+  },
+  "key_hits": {
+   "shore": 1,
+   "shield": 1,
+   "zinc": 5,
+   "veins": 1
+  },
+  "poem_bigrams": [
+   "the mining",
+   "the northern"
+  ],
+  "key_sentences": [
+   "Before there was Flin Flon, before there was Snow Lake, before giant ore bodies produced billions of dollars in copper, zinc, gold and silver, there were simply curious prospectors following rivers, paddling lakes and chasing stories across one of Canada's last great wildernesses.",
+   "Manitoba's first gold rush Long before northern Manitoba became synonymous with base metals, prospectors searching the forests east of Winnipeg began uncovering quartz veins bearing visible gold.",
+   "Though modest by later standards, the operation proved that Manitoba's ancient Precambrian Shield held economic gold.",
+   "In 1914, prospector Tom Creighton noticed copper-bearing rock along the shore of a remote northern lake.",
+   "The discovery would eventually become one of the world's great volcanogenic massive sulphide (VMS) deposits – a rich concentration of copper, zinc, gold and silver.",
+   "By 1930, its concentrator, copper smelter and zinc plant were operating, helping establish Flin Flon as one of the country's premier mining centres.",
+   "Over the decades, the Flin Flon camp produced enormous quantities of copper, zinc, gold and silver while supporting thousands of families across Manitoba and neighbouring Saskatchewan.",
+   "Today, Lalor stands among Canada's leading polymetallic mines, producing gold, copper, zinc and silver while carrying forward a mining tradition that spans more than a century."
+  ],
+  "prize_sentences": [
+   "Today, those searching Manitoba for the next clue in The Great Canadian Treasure Hunt are following in the footsteps of those first prospectors.",
+   "Because every great discovery, whether it be a world-class orebody or a hidden treasure, still begins with the same simple question: What can we find if we keep looking?"
+  ],
+  "caps": [
+   [
+    "Manitoba",
+    9
+   ],
+   [
+    "Manitoba's",
+    9
+   ],
+   [
+    "Flin Flon",
+    6
+   ],
+   [
+    "Canada's",
+    6
+   ],
+   [
+    "Winnipeg",
+    6
+   ],
+   [
+    "The",
+    6
+   ],
+   [
+    "Snow Lake",
+    5
+   ],
+   [
+    "Every",
+    3
+   ],
+   [
+    "Today",
+    3
+   ],
+   [
+    "Sometimes",
+    2
+   ],
+   [
+    "Mining",
+    2
+   ],
+   [
+    "They",
+    2
+   ],
+   [
+    "Tom Creighton",
+    2
+   ],
+   [
+    "VMS",
+    2
+   ],
+   [
+    "Building",
+    2
+   ],
+   [
+    "Hudson Bay Mining",
+    2
+   ],
+   [
+    "Harry Payne Whitney",
+    2
+   ],
+   [
+    "William Boyce Thompson",
+    2
+   ],
+   [
+    "Lalor",
+    2
+   ],
+   [
+    "What",
+    2
+   ],
+   [
+    "Where",
+    1
+   ],
+   [
+    "Canada",
+    1
+   ],
+   [
+    "But",
+    1
+   ],
+   [
+    "Before",
+    1
+   ],
+   [
+    "Surprisingly",
+    1
+   ],
+   [
+    "Long",
+    1
+   ],
+   [
+    "Star Lake Gold Mine",
+    1
+   ],
+   [
+    "Whiteshell Provincial Park",
+    1
+   ],
+   [
+    "Star Lake",
+    1
+   ],
+   [
+    "Though",
+    1
+   ],
+   [
+    "Precambrian Shield",
+    1
+   ],
+   [
+    "Bissett",
+    1
+   ],
+   [
+    "The San Antonio",
+    1
+   ],
+   [
+    "Nearby",
+    1
+   ],
+   [
+    "Penniac Reef",
+    1
+   ],
+   [
+    "Those",
+    1
+   ],
+   [
+    "Manitoba’s",
+    1
+   ],
+   [
+    "Banks",
+    1
+   ],
+   [
+    "While",
+    1
+   ],
+   [
+    "That",
+    1
+   ],
+   [
+    "Although",
+    1
+   ],
+   [
+    "Then",
+    1
+   ],
+   [
+    "Canadian",
+    1
+   ],
+   [
+    "When",
+    1
+   ],
+   [
+    "Creighton",
+    1
+   ],
+   [
+    "The Sunless City",
+    1
+   ],
+   [
+    "Its",
+    1
+   ],
+   [
+    "Josiah Flintabbatey Flonatin",
+    1
+   ],
+   [
+    "Fortunately",
+    1
+   ],
+   [
+    "Discovering",
+    1
+   ],
+   [
+    "Railways",
+    1
+   ],
+   [
+    "Smelting Co",
+    1
+   ],
+   [
+    "Newmont Mining",
+    1
+   ],
+   [
+    "Mining Corporation",
+    1
+   ],
+   [
+    "Canadatransformed",
+    1
+   ],
+   [
+    "Over",
+    1
+   ],
+   [
+    "Saskatchewan",
+    1
+   ],
+   [
+    "Generations",
+    1
+   ],
+   [
+    "Many",
+    1
+   ],
+   [
+    "But Flin Flon",
+    1
+   ],
+   [
+    "About",
+    1
+   ],
+   [
+    "Herb",
+    1
+   ],
+   [
+    "Wekusko",
+    1
+   ],
+   [
+    "Lake",
+    1
+   ],
+   [
+    "Second World War",
+    1
+   ],
+   [
+    "Howe Sound Exploration",
+    1
+   ],
+   [
+    "Nor-Acme Mine",
+    1
+   ],
+   [
+    "Major",
+    1
+   ],
+   [
+    "Chisel Lake",
+    1
+   ],
+   [
+    "New Britannia",
+    1
+   ],
+   [
+    "Built",
+    1
+   ],
+   [
+    "Prospectors",
+    1
+   ],
+   [
+    "Entrepreneurs",
+    1
+   ],
+   [
+    "Companies",
+    1
+   ],
+   [
+    "Smelting",
+    1
+   ],
+   [
+    "Sherritt Gordon",
+    1
+   ],
+   [
+    "Howe Sound",
+    1
+   ],
+   [
+    "Hudbay Minerals",
+    1
+   ],
+   [
+    "And",
+    1
+   ],
+   [
+    "Their",
+    1
+   ]
+  ],
+  "fr": {
+   "words": 1461,
+   "sentences": 61,
+   "paragraphs": 42,
+   "chars": 9482,
+   "letters": 7695,
+   "styled": [
+    {
+     "t": "The Sunless City",
+     "b": false,
+     "i": true,
+     "size": 11.0,
+     "page": 2
+    },
+    {
+     "t": "Que se cache-t-il sous nos pieds?",
+     "b": true,
+     "i": false,
+     "size": 11.0,
+     "page": 4
+    }
+   ],
+   "numbers": {
+    "1910": 1,
+    "1960": 1,
+    "1911": 1,
+    "1913": 1,
+    "1914": 1,
+    "1905": 1,
+    "1927": 1,
+    "1930": 1,
+    "200": 1,
+    "1949": 1
+   }
+  },
+  "prize_sentences_fr": [
+   "Aujourd'hui, ceux qui parcourent le Manitoba à la recherche du prochain indice de La Grande Chasse au trésor canadienne marchent dans les pas de ces premiers prospecteurs.",
+   "En scrutant les affleurements rocheux et en fouillant à l'ombre des chevalements, les chasseurs de trésors modernes font encore des découvertes aujourd'hui."
+  ],
+  "numbers_only_en": [],
+  "numbers_only_fr": [
+   "1960"
+  ],
+  "number_count_mismatch": []
+ },
+ "sudbury": {
+  "key": "sudbury",
+  "region": "Sudbury, ON",
+  "month": "2026-08",
+  "en_id": "1003894294",
+  "fr_id": "1003894368",
+  "en": {
+   "words": 2051,
+   "sentences": 126,
+   "paragraphs": 86,
+   "chars": 14422,
+   "letters": 11881,
+   "styled": [
+    {
+     "t": "Sudbury: The Basin That Built a Mining Nation",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 1
+    },
+    {
+     "t": "By Northern Miner Staff",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 1
+    },
+    {
+     "t": "Born in cosmic violence, discovered along a railway and built by generations of miners,",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 1
+    },
+    {
+     "t": "metallurgists, entrepreneurs and immigrants, the Sudbury Basin helped turn Canada into",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 1
+    },
+    {
+     "t": "a mining power. Nearly a century and a half later, its metals are taking on new importance",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 1
+    },
+    {
+     "t": "in a world increasingly concerned with energy security, strategic supply chains and",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 1
+    },
+    {
+     "t": "economic sovereignty.",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 1
+    },
+    {
+     "t": "Few mining camps on Earth compare with Sudbury’s origin story.",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 1
+    },
+    {
+     "t": "The railway that found a mining camp",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 1
+    },
+    {
+     "t": "From unwanted metal to strategic metal",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 2
+    },
+    {
+     "t": "Inco: a Canadian mining colossus",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 2
+    },
+    {
+     "t": "a",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 3
+    },
+    {
+     "t": "the",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 3
+    },
+    {
+     "t": "Falconbridge: the great rival",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 3
+    },
+    {
+     "t": "Noranda and the end of an era",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 3
+    },
+    {
+     "t": "The metals that built the modern world",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 4
+    },
+    {
+     "t": "One of Earth’s great mining camps",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 4
+    },
+    {
+     "t": "Sudbury’s other great resource",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 5
+    },
+    {
+     "t": "The next strategic age",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 5
+    },
+    {
+     "t": "Critical minerals and Canadian sovereignty",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 6
+    },
+    {
+     "t": "The next generation",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 6
+    }
+   ],
+   "numbers": {
+    "185": 1,
+    "198": 1,
+    "1856": 1,
+    "1883": 2,
+    "1886": 1,
+    "1910": 1,
+    "80": 1,
+    "1902": 1,
+    "1901": 1,
+    "1928": 1,
+    "1922": 1,
+    "2005": 1,
+    "2006": 1,
+    "438000": 1,
+    "2024": 2,
+    "153": 1,
+    "21": 1,
+    "140": 2,
+    "34": 1,
+    "40": 1
+   }
+  },
+  "poem_word_hits": {
+   "land": 1,
+   "gold": 1,
+   "grew": 3,
+   "copper": 14,
+   "roots": 1,
+   "northern": 3,
+   "name": 1,
+   "back": 4,
+   "giant": 1,
+   "miner": 1,
+   "hold": 1,
+   "remains": 1,
+   "strong": 1,
+   "time": 2,
+   "years": 4,
+   "zinc": 1,
+   "even": 2,
+   "struck": 1,
+   "mining": 32,
+   "knows": 1,
+   "marked": 1,
+   "alone": 1,
+   "compass": 1
+  },
+  "key_hits": {
+   "compass": 1,
+   "zinc": 1,
+   "roots": 1
+  },
+  "poem_bigrams": [
+   "the mining"
+  ],
+  "key_sentences": [
+   "In 1856, provincial land surveyor Albert Salter encountered strange deflections in his compass while surveying west of Lake Nipissing.",
+   "Its roots even included one of history’s most famous inventors.",
+   "Founded in 1922 following Edmund Horne’s discoveries in Quebec’s Abitibi region, Noranda grew into one of Canada’s great diversified resource companies, spanning copper, zinc, nickel, aluminum and other commodities."
+  ],
+  "prize_sentences": [],
+  "caps": [
+   [
+    "Sudbury",
+    28
+   ],
+   [
+    "The",
+    20
+   ],
+   [
+    "Canadian",
+    19
+   ],
+   [
+    "Canada",
+    9
+   ],
+   [
+    "Inco",
+    9
+   ],
+   [
+    "Falconbridge",
+    8
+   ],
+   [
+    "Sudbury’s",
+    7
+   ],
+   [
+    "Noranda",
+    6
+   ],
+   [
+    "Canada’s",
+    5
+   ],
+   [
+    "Creighton",
+    4
+   ],
+   [
+    "That",
+    4
+   ],
+   [
+    "Sudbury Basin",
+    3
+   ],
+   [
+    "Geological Survey",
+    3
+   ],
+   [
+    "Copper Cliff",
+    3
+   ],
+   [
+    "Stobie",
+    3
+   ],
+   [
+    "Its",
+    3
+   ],
+   [
+    "Basin",
+    3
+   ],
+   [
+    "Earth’s",
+    2
+   ],
+   [
+    "Thomas Flanagan",
+    2
+   ],
+   [
+    "Then",
+    2
+   ],
+   [
+    "Generations",
+    2
+   ],
+   [
+    "For",
+    2
+   ],
+   [
+    "Inco’s",
+    2
+   ],
+   [
+    "Thayer Lindsley",
+    2
+   ],
+   [
+    "Over",
+    2
+   ],
+   [
+    "Xstrata",
+    2
+   ],
+   [
+    "Vale",
+    2
+   ],
+   [
+    "Glencore",
+    2
+   ],
+   [
+    "They",
+    2
+   ],
+   [
+    "More",
+    2
+   ],
+   [
+    "The Basin That Built",
+    1
+   ],
+   [
+    "Mining Nation\nBy Northern Miner Staff\nBorn",
+    1
+   ],
+   [
+    "Nearly",
+    1
+   ],
+   [
+    "Few",
+    1
+   ],
+   [
+    "Earth",
+    1
+   ],
+   [
+    "Northern Ontario",
+    1
+   ],
+   [
+    "Out",
+    1
+   ],
+   [
+    "Sudbury Igneous Complex",
+    1
+   ],
+   [
+    "Russia’s Norilsk-Talnakh",
+    1
+   ],
+   [
+    "Albert Salter",
+    1
+   ],
+   [
+    "Lake Nipissing",
+    1
+   ],
+   [
+    "Alexander Murray",
+    1
+   ],
+   [
+    "Then Canada",
+    1
+   ],
+   [
+    "The Canadian Pacific Railway",
+    1
+   ],
+   [
+    "In Northern Ontario",
+    1
+   ],
+   [
+    "CPR",
+    1
+   ],
+   [
+    "Alfred Selwyn",
+    1
+   ],
+   [
+    "William",
+    1
+   ],
+   [
+    "Thomas Murray",
+    1
+   ],
+   [
+    "Henry Abbott",
+    1
+   ],
+   [
+    "John Laughrin",
+    1
+   ],
+   [
+    "Murray Mine",
+    1
+   ],
+   [
+    "Prospectors",
+    1
+   ],
+   [
+    "Names",
+    1
+   ],
+   [
+    "Thomas Frood",
+    1
+   ],
+   [
+    "James Stobie",
+    1
+   ],
+   [
+    "From",
+    1
+   ],
+   [
+    "The Canadian Copper Company",
+    1
+   ],
+   [
+    "CCC",
+    1
+   ],
+   [
+    "American",
+    1
+   ],
+   [
+    "Samuel",
+    1
+   ],
+   [
+    "Ritchie",
+    1
+   ],
+   [
+    "Advances",
+    1
+   ],
+   [
+    "Nickel-steel",
+    1
+   ],
+   [
+    "Naval",
+    1
+   ],
+   [
+    "Construction",
+    1
+   ],
+   [
+    "If Sudbury",
+    1
+   ],
+   [
+    "The International Nickel Company",
+    1
+   ],
+   [
+    "CCC’s",
+    1
+   ],
+   [
+    "Orford",
+    1
+   ],
+   [
+    "United States",
+    1
+   ],
+   [
+    "Operations",
+    1
+   ],
+   [
+    "Frood",
+    1
+   ],
+   [
+    "But Inco",
+    1
+   ],
+   [
+    "Across",
+    1
+   ],
+   [
+    "Falconbridge Nickel Mines",
+    1
+   ],
+   [
+    "Thomas Edison",
+    1
+   ],
+   [
+    "Falconbridge Township",
+    1
+   ],
+   [
+    "Edison's",
+    1
+   ],
+   [
+    "Falconbridge Nickel Mines Limited",
+    1
+   ]
+  ],
+  "fr": {
+   "words": 2455,
+   "sentences": 127,
+   "paragraphs": 86,
+   "chars": 16896,
+   "letters": 13798,
+   "styled": [
+    {
+     "t": "Sudbury : le bassin qui a bâti une nation minière",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 1
+    },
+    {
+     "t": "Par le personnel du Northern Miner",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 1
+    },
+    {
+     "t": "Le chemin de fer qui a découvert un camp minier",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 1
+    },
+    {
+     "t": "D'un métal indésirable à un métal stratégique",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 2
+    },
+    {
+     "t": "Inco : un colosse minier canadien",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 2
+    },
+    {
+     "t": "une",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 3
+    },
+    {
+     "t": "la",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 3
+    },
+    {
+     "t": "Falconbridge : le grand rival",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 3
+    },
+    {
+     "t": "Noranda et la fin d'une époque",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 4
+    },
+    {
+     "t": "Les métaux qui ont bâti le monde moderne",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 4
+    },
+    {
+     "t": "L'un des grands camps miniers de la planète",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 5
+    },
+    {
+     "t": "L'autre grande ressource de Sudbury",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 5
+    },
+    {
+     "t": "La prochaine ère stratégique",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 6
+    },
+    {
+     "t": "Minéraux critiques et souveraineté canadienne",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 6
+    },
+    {
+     "t": "La prochaine génération",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 7
+    }
+   ],
+   "numbers": {
+    "185": 1,
+    "198": 1,
+    "1880": 1,
+    "1856": 1,
+    "1883": 2,
+    "1886": 1,
+    "1910": 1,
+    "80": 1,
+    "1902": 1,
+    "1901": 1,
+    "1928": 1,
+    "1922": 1,
+    "2005": 1,
+    "2006": 1,
+    "438000": 1,
+    "2024": 2,
+    "153": 1,
+    "21": 1,
+    "140": 2,
+    "1940": 1,
+    "34": 1,
+    "40": 1
+   }
+  },
+  "prize_sentences_fr": [],
+  "numbers_only_en": [],
+  "numbers_only_fr": [
+   "1880",
+   "1940"
+  ],
+  "number_count_mismatch": []
+ },
+ "nelligan": {
+  "key": "nelligan",
+  "region": "Chibougamau / Nelligan, QC",
+  "month": "2026-09",
+  "en_id": "1003895272",
+  "fr_id": "1003895351",
+  "en": {
+   "words": 1901,
+   "sentences": 127,
+   "paragraphs": 97,
+   "chars": 12792,
+   "letters": 10335,
+   "styled": [
+    {
+     "t": "Iamgold",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 1
+    },
+    {
+     "t": "Fur trader",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 1
+    },
+    {
+     "t": "Camp comes alive",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 2
+    },
+    {
+     "t": "Searching familiar ground",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 3
+    },
+    {
+     "t": "Building something bigger",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 3
+    },
+    {
+     "t": "More than gold",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 4
+    },
+    {
+     "t": "Nelligan’s importance",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 5
+    },
+    {
+     "t": "Chibougamau's second act",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 5
+    },
+    {
+     "t": "This article was prepared by The Northern Miner and does not constitute disclosure by Iamgold",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 6
+    },
+    {
+     "t": "Corp. (\"Iamgold\"), which has not endorsed or approved its contents. It contains forward-looking",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 6
+    },
+    {
+     "t": "statements regarding the potential development, scale and economic impact of the Nelligan",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 6
+    },
+    {
+     "t": "Mining Complex, which are subject to risks and uncertainties — including exploration results,",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 6
+    },
+    {
+     "t": "study outcomes, permitting and gold prices — and may prove incorrect. There is no certainty the",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 6
+    },
+    {
+     "t": "complex will be developed.",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 6
+    },
+    {
+     "t": "The complex is at the resource development stage.",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 7
+    },
+    {
+     "t": "Mineral resources are not mineral reserves",
+     "b": true,
+     "i": true,
+     "size": 12.0,
+     "page": 7
+    },
+    {
+     "t": "and do not have demonstrated economic viability.",
+     "b": true,
+     "i": true,
+     "size": 12.0,
+     "page": 7
+    },
+    {
+     "t": "No mineral reserves have been declared and",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 7
+    },
+    {
+     "t": "no economic study has been completed. Inferred mineral resources are subject to a high degree",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 7
+    },
+    {
+     "t": "of uncertainty and may not be upgraded to a higher category.",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 7
+    },
+    {
+     "t": "Readers should refer to Iamgold's disclosure filed on SEDAR+ at",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 7
+    },
+    {
+     "t": "www.sedarplus.ca",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 7
+    },
+    {
+     "t": ".",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 7
+    }
+   ],
+   "numbers": {
+    "500": 1,
+    "45": 1,
+    "1340": 1,
+    "1870": 1,
+    "1903": 1,
+    "240": 1,
+    "10": 1,
+    "1929": 1,
+    "162": 2,
+    "322": 1,
+    "11": 1,
+    "800000": 1,
+    "2012": 1,
+    "2014": 1,
+    "2023": 1,
+    "2025": 3,
+    "17": 1,
+    "1365": 1,
+    "099": 1,
+    "434": 1,
+    "2162": 1,
+    "108": 1,
+    "751": 1,
+    "24": 1,
+    "336": 1,
+    "2027": 1,
+    "23": 1,
+    "53": 1,
+    "113": 1,
+    "104": 1,
+    "251": 1,
+    "363": 1,
+    "451": 1,
+    "5513": 1,
+    "631": 1,
+    "6621": 1,
+    "7732": 1
+   }
+  },
+  "poem_word_hits": {
+   "old": 1,
+   "riches": 1,
+   "gold": 15,
+   "lies": 1,
+   "grew": 2,
+   "copper": 9,
+   "long": 1,
+   "northern": 5,
+   "name": 1,
+   "look": 1,
+   "back": 1,
+   "lead": 1,
+   "miner": 2,
+   "never": 1,
+   "ancient": 1,
+   "road": 1,
+   "shield": 1,
+   "quiet": 1,
+   "iron": 1,
+   "remains": 2,
+   "pine": 1,
+   "time": 2,
+   "declared": 1,
+   "years": 1,
+   "zinc": 3,
+   "even": 1,
+   "mining": 28,
+   "alone": 1
+  },
+  "key_hits": {
+   "pine": 1,
+   "shield": 1,
+   "iron": 1,
+   "zinc": 3,
+   "riches": 1
+  },
+  "poem_bigrams": [
+   "the mining",
+   "the northern"
+  ],
+  "key_sentences": [
+   "Drive north into this corner of Quebec and the landscape seems endless: spruce and jack pine, exposed rock, lakes and rivers stretching towards the horizon.",
+   "But hidden beneath all that Canadian Shield is something that has drawn prospectors, geologists and mining companies here for more than a century.",
+   "Copper, gold, silver and zinc built the region.",
+   "Prospectors searched for copper and gold as well as silver, iron, lead and zinc.",
+   "The Chibougamau mining camp has produced an estimated 1.62 billion lb. of copper and 3.22 million oz. of gold, along with substantial quantities of silver and zinc.Nearby Chapais added roughly another 1.1 billion lb. of copper and 800,000 oz.of gold.",
+   "Generations after Peter McKenzie went searching for mineral riches among these lakes and forests, prospectors are searching here again."
+  ],
+  "prize_sentences": [
+   "But hidden beneath all that Canadian Shield is something that has drawn prospectors, geologists and mining companies here for more than a century."
+  ],
+  "caps": [
+   [
+    "Iamgold",
+    11
+   ],
+   [
+    "Chibougamau",
+    9
+   ],
+   [
+    "Nelligan",
+    8
+   ],
+   [
+    "But",
+    8
+   ],
+   [
+    "There",
+    7
+   ],
+   [
+    "Quebec",
+    6
+   ],
+   [
+    "Canada",
+    5
+   ],
+   [
+    "Canada's",
+    5
+   ],
+   [
+    "Then",
+    5
+   ],
+   [
+    "And",
+    5
+   ],
+   [
+    "Peter McKenzie",
+    4
+   ],
+   [
+    "The",
+    4
+   ],
+   [
+    "Monster Lake",
+    4
+   ],
+   [
+    "Philibert",
+    4
+   ],
+   [
+    "Chevrier",
+    4
+   ],
+   [
+    "That",
+    4
+   ],
+   [
+    "Canadian",
+    3
+   ],
+   [
+    "Chibougamau's",
+    3
+   ],
+   [
+    "More",
+    3
+   ],
+   [
+    "Copper",
+    2
+   ],
+   [
+    "Generations",
+    2
+   ],
+   [
+    "Today",
+    2
+   ],
+   [
+    "Chibougamau-Chapais",
+    2
+   ],
+   [
+    "Nelligan Mining Complex",
+    2
+   ],
+   [
+    "Lake Chibougamau",
+    2
+   ],
+   [
+    "Gold",
+    2
+   ],
+   [
+    "They",
+    2
+   ],
+   [
+    "Lac Surprise",
+    2
+   ],
+   [
+    "Muus",
+    2
+   ],
+   [
+    "Anik",
+    2
+   ],
+   [
+    "Different",
+    2
+   ],
+   [
+    "Mines",
+    2
+   ],
+   [
+    "Iamgold's",
+    2
+   ],
+   [
+    "Indigenous",
+    2
+   ],
+   [
+    "This",
+    2
+   ],
+   [
+    "Treasure Hunt",
+    1
+   ],
+   [
+    "By Northern Miner",
+    1
+   ],
+   [
+    "Drive",
+    1
+   ],
+   [
+    "Canadian Shield",
+    1
+   ],
+   [
+    "From",
+    1
+   ],
+   [
+    "Montreal",
+    1
+   ],
+   [
+    "Iamgold\nAbout",
+    1
+   ],
+   [
+    "TSX",
+    1
+   ],
+   [
+    "IMG",
+    1
+   ],
+   [
+    "NYSE",
+    1
+   ],
+   [
+    "IAG",
+    1
+   ],
+   [
+    "Rather",
+    1
+   ],
+   [
+    "After",
+    1
+   ],
+   [
+    "Canadians",
+    1
+   ],
+   [
+    "Fur",
+    1
+   ],
+   [
+    "The Cree",
+    1
+   ],
+   [
+    "Geological Survey",
+    1
+   ],
+   [
+    "James Richardson",
+    1
+   ],
+   [
+    "McKenzie",
+    1
+   ],
+   [
+    "Ashuapmushuan River",
+    1
+   ],
+   [
+    "Portage Island",
+    1
+   ],
+   [
+    "Joseph Obalski",
+    1
+   ],
+   [
+    "Their",
+    1
+   ],
+   [
+    "Soon",
+    1
+   ],
+   [
+    "McKenzie's",
+    1
+   ],
+   [
+    "Yet",
+    1
+   ],
+   [
+    "Langlade",
+    1
+   ],
+   [
+    "Prospectors",
+    1
+   ],
+   [
+    "Yukon",
+    1
+   ],
+   [
+    "Credit",
+    1
+   ],
+   [
+    "Camp",
+    1
+   ],
+   [
+    "Despite",
+    1
+   ],
+   [
+    "Second World War Chibougamau's",
+    1
+   ],
+   [
+    "Workers",
+    1
+   ],
+   [
+    "Names",
+    1
+   ],
+   [
+    "Campbell Chibougamau",
+    1
+   ],
+   [
+    "Opemiska",
+    1
+   ],
+   [
+    "Copper Rand",
+    1
+   ],
+   [
+    "The Chibougamau",
+    1
+   ],
+   [
+    "Nearby Chapais",
+    1
+   ],
+   [
+    "Those",
+    1
+   ],
+   [
+    "Deposits",
+    1
+   ],
+   [
+    "Most",
+    1
+   ],
+   [
+    "Searching",
+    1
+   ],
+   [
+    "One",
+    1
+   ]
+  ],
+  "fr": {
+   "words": 2372,
+   "sentences": 128,
+   "paragraphs": 98,
+   "chars": 15542,
+   "letters": 12451,
+   "styled": [
+    {
+     "t": "Chasse au trésor : Nelligan insuffle une nouvelle vie à un ancien camp québécois",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 1
+    },
+    {
+     "t": "Iamgold",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 1
+    },
+    {
+     "t": "Le marchand de fourrures",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 1
+    },
+    {
+     "t": "Le camp prend vie",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 3
+    },
+    {
+     "t": "Explorer un terrain connu",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 3
+    },
+    {
+     "t": "Bâtir quelque chose de plus grand",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 4
+    },
+    {
+     "t": "Plus que de l'or",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 5
+    },
+    {
+     "t": "L'importance de Nelligan",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 5
+    },
+    {
+     "t": "Le deuxième acte de Chibougamau",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 6
+    },
+    {
+     "t": "Cet article a été rédigé par The Northern Miner et ne constitue pas une divulgation de la",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 7
+    },
+    {
+     "t": "part de Iamgold Corp. (« Iamgold »), qui n'en a ni approuvé ni cautionné le contenu. Il",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 7
+    },
+    {
+     "t": "contient des énoncés prospectifs concernant le développement potentiel, l'ampleur et",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 7
+    },
+    {
+     "t": "l'impact économique du complexe minier Nelligan, lesquels sont assujettis à des risques",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 7
+    },
+    {
+     "t": "et à des incertitudes — y compris les résultats d'exploration, les conclusions des études,",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 7
+    },
+    {
+     "t": "l'obtention des permis et les prix de l'or — et pourraient s'avérer inexacts. Il n'y a aucune",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 7
+    },
+    {
+     "t": "certitude que le complexe sera développé.",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 7
+    },
+    {
+     "t": "Le complexe est au stade du développement des ressources. Les ressources minérales ne",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 7
+    },
+    {
+     "t": "sont pas des réserves minérales et leur viabilité économique n'a pas été démontrée.",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 7
+    },
+    {
+     "t": "Aucune réserve minérale n'a été déclarée et aucune étude économique n'a été réalisée.",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 7
+    },
+    {
+     "t": "Les ressources minérales présumées sont soumises à un degré élevé d'incertitude et",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 7
+    },
+    {
+     "t": "pourraient ne pas être reclassées dans une catégorie supérieure.",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 7
+    },
+    {
+     "t": "Les lecteurs doivent se référer à la divulgation d'Iamgold déposée sur SEDAR+ à l'adresse",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 8
+    },
+    {
+     "t": "www.sedarplus.ca.",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 8
+    }
+   ],
+   "numbers": {
+    "1950": 3,
+    "500": 1,
+    "45": 1,
+    "1340": 1,
+    "1870": 1,
+    "1903": 1,
+    "240": 1,
+    "10": 1,
+    "1920": 1,
+    "1929": 1,
+    "162": 2,
+    "322": 1,
+    "11": 1,
+    "800000": 1,
+    "2012": 1,
+    "2014": 1,
+    "2023": 1,
+    "2025": 3,
+    "17": 1,
+    "1365": 1,
+    "099": 1,
+    "434": 1,
+    "2162": 1,
+    "108": 1,
+    "751": 1,
+    "24": 1,
+    "336": 1,
+    "2027": 1,
+    "23": 1,
+    "53": 1,
+    "41": 1,
+    "91": 1,
+    "221": 1,
+    "281": 1,
+    "361": 1,
+    "371": 1,
+    "471": 1,
+    "651": 1,
+    "702": 1,
+    "811": 1,
+    "821": 1
+   }
+  },
+  "prize_sentences_fr": [
+   "Mais caché sous tout ce Bouclier canadien se trouve ce qui attire ici prospecteurs, géologues et sociétés minières depuis plus d'un siècle.",
+   "Et au lieu de courir après un indice minéralisé au bord d'un lac, ils commencent à voir tout un district : Nelligan, Monster Lake, Philibert, Chevrier et les cibles environnantes."
+  ],
+  "numbers_only_en": [
+   "104",
+   "113",
+   "251",
+   "363",
+   "451",
+   "5513",
+   "631",
+   "6621",
+   "7732"
+  ],
+  "numbers_only_fr": [
+   "1920",
+   "1950",
+   "221",
+   "281",
+   "361",
+   "371",
+   "41",
+   "471",
+   "651",
+   "702",
+   "811",
+   "821",
+   "91"
+  ],
+  "number_count_mismatch": []
+ },
+ "oneyear": {
+  "key": "oneyear",
+  "region": "One-year update",
+  "month": "2026-11",
+  "en_id": "1003897109",
+  "fr_id": "1003897110",
+  "en": {
+   "words": 2214,
+   "sentences": 120,
+   "paragraphs": 114,
+   "chars": 14488,
+   "letters": 11789,
+   "styled": [
+    {
+     "t": "More than 80,000 Canadians have joined the adventure, discovering the remarkable stories",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 1
+    },
+    {
+     "t": "of the mining industry that helped build our nation. Now, with 241 oz. of gold still hidden",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 1
+    },
+    {
+     "t": "across the country, the hunt is far from over.",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 1
+    },
+    {
+     "t": "241 oz. of gold still waiting to be found",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 1
+    },
+    {
+     "t": "Treasure hunt nation",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 1
+    },
+    {
+     "t": "The Northern Miner",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 1
+    },
+    {
+     "t": "80,500 Canadians have become active treasure hunters",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 1
+    },
+    {
+     "t": "Mining’s next generation",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 2
+    },
+    {
+     "t": "MINING.com",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 3
+    },
+    {
+     "t": "Five treasures remain",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 3
+    },
+    {
+     "t": "Quebec: Gold, grit, the road north",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 3
+    },
+    {
+     "t": "valley of",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 3
+    },
+    {
+     "t": "gold",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 3
+    },
+    {
+     "t": "Ready to hunt for Quebec's hidden gold?",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 4
+    },
+    {
+     "t": "Saskatchewan: The buried treasure that feeds the world",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 4
+    },
+    {
+     "t": "Could Saskatchewan's potash history lead you to six ounces of gold?",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 5
+    },
+    {
+     "t": "Manitoba: The mining town named after a fictional hero",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 5
+    },
+    {
+     "t": "The Sunless City",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 5
+    },
+    {
+     "t": "Think you can solve Manitoba's mining mystery?",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 5
+    },
+    {
+     "t": "Sudbury: The cosmic collision that helped build a nation",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 5
+    },
+    {
+     "t": "Can Sudbury's extraordinary geological history point you toward hidden gold?",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 6
+    },
+    {
+     "t": "Somewhere in Canada, 217 1-oz. gold coins are waiting to be discovered.",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 6
+    },
+    {
+     "t": "The next chapter begins",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 7
+    },
+    {
+     "t": "The history is real. The gold is real. And the adventure is far from over.",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 7
+    },
+    {
+     "t": "This campaign is proudly presented with the support of industry sponsors including Agnico",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 8
+    },
+    {
+     "t": "Eagle Mines, Sprott Money, EarthLabs, Iamgold, Kinross Gold, The World Gold Council,",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 8
+    },
+    {
+     "t": "Alamos Gold, Ernst & Young, MINING.COM, CEO.CA and The Canadian Mining Journal.",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 8
+    },
+    {
+     "t": "For more information, including full contest rules, FAQs and updates, visit",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 8
+    },
+    {
+     "t": "treasure.northernminer.com.Follow @northernminer (X/FB/YouTube) | @thenorthernminer",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 8
+    },
+    {
+     "t": "(IG) | @mining (X) | @miningdotcom (IG/FB/YouTube) | @ceodotca (X/IG/FB/TikTok) |",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 8
+    },
+    {
+     "t": "@ceocafilm (YouTube) for ongoing clues and community updates.",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 8
+    }
+   ],
+   "numbers": {
+    "80000": 1,
+    "241": 2,
+    "2171": 2,
+    "6": 2,
+    "80500": 1,
+    "4000": 1,
+    "24": 1,
+    "283": 1,
+    "23": 1,
+    "17": 1,
+    "60": 1,
+    "5": 1,
+    "350": 1,
+    "1914": 1,
+    "1905": 1,
+    "1910": 1,
+    "185": 1,
+    "2027": 1
+   }
+  },
+  "poem_word_hits": {
+   "old": 1,
+   "gold": 35,
+   "lies": 1,
+   "grew": 1,
+   "copper": 4,
+   "long": 1,
+   "northern": 4,
+   "name": 3,
+   "look": 3,
+   "back": 2,
+   "lead": 5,
+   "miner": 1,
+   "claim": 1,
+   "never": 2,
+   "ancient": 1,
+   "road": 2,
+   "told": 1,
+   "call": 1,
+   "remains": 4,
+   "shore": 1,
+   "time": 2,
+   "declared": 1,
+   "growing": 2,
+   "years": 3,
+   "zinc": 1,
+   "bathurst": 1,
+   "even": 2,
+   "struck": 1,
+   "mining": 37,
+   "point": 1,
+   "trail": 1,
+   "buried": 4
+  },
+  "key_hits": {
+   "shore": 1,
+   "trail": 1,
+   "zinc": 1,
+   "buried": 4
+  },
+  "poem_bigrams": [
+   "an ancient",
+   "of growing",
+   "the mining",
+   "the northern"
+  ],
+  "key_sentences": [
+   "Read the Quebec treasure story: Gold, Grit and the Road to the North Saskatchewan: The buried treasure that feeds the world Not every great Canadian treasure glitters.",
+   "Communities such as Esterhazy, Rocanville and Lanigan grew alongside the industry as exploration pushed west on the old yellow-head trail, while Saskatchewan became a global potash powerhouse, today accounting for roughly one-third of the world's supply.",
+   "A mineral buried beneath the Canadian Prairies helps grow food on farms from Brazil to India and China.",
+   "And now there's another kind of buried treasure in Saskatchewan: six ounces of gold waiting for someone who can solve the mystery.",
+   "Read the Saskatchewan treasure story: The Buried Treasure That Fed the World Manitoba: The mining town named after a fictional hero Few countries have as many unusual place names as Canada.",
+   "Roaming a remote northern Manitoba lake in 1914, prospector Tom Creighton discovered copper-bearing rock along the shore.",
+   "Generations of workers and their families were supported by the discovery, which led to a mining district that produced copper, zinc, gold and silver."
+  ],
+  "prize_sentences": [
+   "Now, with 241 oz. of gold still hidden across the country, the hunt is far from over.",
+   "Four more treasures, each containing 6 oz. of pure gold, are hidden in Quebec, Saskatchewan, Manitoba and the Sudbury region of Ontario.",
+   "More than 80,500 Canadians have become active treasure hunters, following clues, studying maps, watching videos and learning about communities and discoveries they may never have heard of before.",
+   "There were brothers Jason and Matthew Schwarz, separated by 4,000 km, who spent months working together to solve clues before discovering 6 oz. of gold in British Columbia's legendary Golden Triangle.",
+   "Today's curious young treasure hunter could become tomorrow's geologist, engineer or mining entrepreneur.",
+   "The grand prize remains unclaimed, along with four regional treasures, each containing six one-ounce gold coins.",
+   "Hidden within each original article and its accompanying video are clues that could help you find real gold.",
+   "And somewhere in Quebec, six one-ounce gold coins await a treasure hunter who can unlock the clues hidden in this history.",
+   "Ready to hunt for Quebec's hidden gold?",
+   "Explore the original story and watch the embedded video for clues that could lead you to the treasure.",
+   "As the sea evaporated, it left behind enormous deposits of potassium-rich minerals, hidden underground for millions of years.",
+   "Read the original story and watch the embedded video to begin solving the clues.",
+   "And with a hidden treasure of six ounces of gold still waiting in Manitoba, the mystery continues.",
+   "Read between the lines, and perhaps the next chapter will feature you.",
+   "Follow the original story and watch its accompanying video for clues that could lead you to the gold.",
+   "Somewhere in the Sudbury region, six ounces of gold remain hidden.",
+   "Can Sudbury's extraordinary geological history point you toward hidden gold?",
+   "Read the original story and watch the embedded video for clues that could lead you to the treasure.",
+   "The grand prize is the centrepiece of the Great Canadian Treasure Hunt, an adventure that has already sent tens of thousands of Canadians poring over maps, researching mining history and debating the meaning of cryptic clues.",
+   "Every clue offers another opportunity to discover something fascinating about this country: a forgotten gold rush, a legendary prospector, a community built around a discovery or a mineral that changed Canadian history.",
+   "Hunters and observers alike can look forward to the extension of the hunt into 2027 as so many incredible stories still wait to be told.",
+   "Visit treasure.northernminer.com to join the Hunt, explore the stories and start solving the clues.",
+   "For more information, including full contest rules, FAQs and updates, visit treasure.northernminer.com.Follow @northernminer (X/FB/YouTube) | @thenorthernminer (IG) | @mining (X) | @miningdotcom (IG/FB/YouTube) | @ceodotca (X/IG/FB/TikTok) | @ceocafilm (YouTube) for ongoing clues and community updates."
+  ],
+  "caps": [
+   [
+    "The",
+    14
+   ],
+   [
+    "Canadians",
+    11
+   ],
+   [
+    "And",
+    10
+   ],
+   [
+    "Quebec",
+    7
+   ],
+   [
+    "Read",
+    7
+   ],
+   [
+    "Canada",
+    6
+   ],
+   [
+    "Canada's",
+    6
+   ],
+   [
+    "Saskatchewan",
+    5
+   ],
+   [
+    "Canadian",
+    5
+   ],
+   [
+    "Great Canadian Treasure Hunt",
+    5
+   ],
+   [
+    "Manitoba",
+    4
+   ],
+   [
+    "Sudbury",
+    4
+   ],
+   [
+    "Somewhere",
+    3
+   ],
+   [
+    "Ontario",
+    3
+   ],
+   [
+    "But",
+    3
+   ],
+   [
+    "There",
+    3
+   ],
+   [
+    "Hunt",
+    3
+   ],
+   [
+    "Manitoba's",
+    3
+   ],
+   [
+    "YouTube",
+    3
+   ],
+   [
+    "More",
+    2
+   ],
+   [
+    "Four",
+    2
+   ],
+   [
+    "What",
+    2
+   ],
+   [
+    "For",
+    2
+   ],
+   [
+    "They",
+    2
+   ],
+   [
+    "It's",
+    2
+   ],
+   [
+    "MINING",
+    2
+   ],
+   [
+    "Gold",
+    2
+   ],
+   [
+    "Abitibi",
+    2
+   ],
+   [
+    "Sullivan",
+    2
+   ],
+   [
+    "Today",
+    2
+   ],
+   [
+    "Few",
+    2
+   ],
+   [
+    "Flin Flon",
+    2
+   ],
+   [
+    "Follow",
+    2
+   ],
+   [
+    "Earth",
+    2
+   ],
+   [
+    "You",
+    2
+   ],
+   [
+    "Biggest",
+    1
+   ],
+   [
+    "Great Canadian Treasure Hunt's",
+    1
+   ],
+   [
+    "Now",
+    1
+   ],
+   [
+    "That's",
+    1
+   ],
+   [
+    "The Northern Miner's Great Canadian Treasure Hunt",
+    1
+   ],
+   [
+    "Across",
+    1
+   ],
+   [
+    "Treasure",
+    1
+   ],
+   [
+    "When The Northern Miner",
+    1
+   ],
+   [
+    "August",
+    1
+   ],
+   [
+    "Participants",
+    1
+   ],
+   [
+    "The Hunt",
+    1
+   ],
+   [
+    "Perhaps",
+    1
+   ],
+   [
+    "Jason",
+    1
+   ],
+   [
+    "Matthew Schwarz",
+    1
+   ],
+   [
+    "British Columbia's",
+    1
+   ],
+   [
+    "Golden Triangle",
+    1
+   ],
+   [
+    "Then",
+    1
+   ],
+   [
+    "Oliver Baker",
+    1
+   ],
+   [
+    "Bella Ruppert",
+    1
+   ],
+   [
+    "Bathurst",
+    1
+   ],
+   [
+    "Fortunately",
+    1
+   ],
+   [
+    "These",
+    1
+   ],
+   [
+    "Mining’s",
+    1
+   ],
+   [
+    "From",
+    1
+   ],
+   [
+    "West",
+    1
+   ],
+   [
+    "Speaking",
+    1
+   ],
+   [
+    "Canada House",
+    1
+   ],
+   [
+    "London",
+    1
+   ],
+   [
+    "October",
+    1
+   ],
+   [
+    "Minister Tim Hodgson",
+    1
+   ],
+   [
+    "They're",
+    1
+   ],
+   [
+    "Copper",
+    1
+   ],
+   [
+    "Seventeen",
+    1
+   ],
+   [
+    "Hunt's",
+    1
+   ],
+   [
+    "Over",
+    1
+   ],
+   [
+    "Jobs",
+    1
+   ],
+   [
+    "Although",
+    1
+   ],
+   [
+    "Junior Explorers Challenge",
+    1
+   ],
+   [
+    "Mining Matters",
+    1
+   ],
+   [
+    "Today's",
+    1
+   ],
+   [
+    "That",
+    1
+   ],
+   [
+    "Five",
+    1
+   ],
+   [
+    "Remember",
+    1
+   ],
+   [
+    "Hidden",
+    1
+   ],
+   [
+    "Here's",
+    1
+   ]
+  ],
+  "fr": {
+   "words": 2659,
+   "sentences": 128,
+   "paragraphs": 112,
+   "chars": 17030,
+   "letters": 13721,
+   "styled": [
+    {
+     "t": "Les plus gros prix sont toujours en jeu après la première année de la Grande Chasse",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 1
+    },
+    {
+     "t": "au Trésor Canadienne",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 1
+    },
+    {
+     "t": "Plus de 80 000 Canadiens ont rejoint l'aventure, découvrant les histoires remarquables de",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 1
+    },
+    {
+     "t": "l'industrie minière qui ont aidé à bâtir notre pays. Aujourd'hui, avec 241 onces d'or encore",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 1
+    },
+    {
+     "t": "cachées à travers le pays, la chasse est loin d'être terminée.",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 1
+    },
+    {
+     "t": "241 onces d'or qui attendent toujours d'être trouvées",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 1
+    },
+    {
+     "t": "Une nation de chasseurs de trésors",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 1
+    },
+    {
+     "t": "80 500 Canadiens sont devenus des chasseurs de trésors actifs",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 1
+    },
+    {
+     "t": "La prochaine génération de l'industrie minière",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 2
+    },
+    {
+     "t": "Cinq trésors restent à trouver",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 3
+    },
+    {
+     "t": "Québec : L'or, le courage, la route du nord",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 3
+    },
+    {
+     "t": "Saskatchewan: Le trésor enfoui qui nourrit le monde",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 4
+    },
+    {
+     "t": "L'histoire de la potasse de la Saskatchewan pourrait-elle vous mener à six onces d'or?",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 5
+    },
+    {
+     "t": "Manitoba: La ville minière nommée d'après un héros de fiction",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 5
+    },
+    {
+     "t": "Pensez-vous pouvoir résoudre le mystère minier du Manitoba?",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 6
+    },
+    {
+     "t": "Sudbury: La collision cosmique qui a aidé à bâtir une nation",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 6
+    },
+    {
+     "t": "L'extraordinaire histoire géologique de Sudbury peut-elle vous orienter vers l'or",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 7
+    },
+    {
+     "t": "caché?",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 7
+    },
+    {
+     "t": "Quelque part au Canada, 217 pièces d'or d'une once attendent d'être découvertes.",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 7
+    },
+    {
+     "t": "Le prochain chapitre commence",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 7
+    },
+    {
+     "t": "L'histoire est vraie. L'or est vrai. Et l'aventure est loin d'être terminée.",
+     "b": true,
+     "i": false,
+     "size": 12.0,
+     "page": 8
+    },
+    {
+     "t": "Cette campagne est fièrement présentée avec le soutien de commanditaires de l'industrie,",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 8
+    },
+    {
+     "t": "dont Agnico Eagle Mines, Sprott Money, EarthLabs, Iamgold, Kinross Gold, The World Gold",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 8
+    },
+    {
+     "t": "Council, Alamos Gold, Ernst & Young, MINING.COM, CEO.CA et The Canadian Mining",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 8
+    },
+    {
+     "t": "Journal.",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 8
+    },
+    {
+     "t": "Pour plus d'informations, y compris les règles complètes du concours, la FAQ et les mises",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 8
+    },
+    {
+     "t": "à jour, visitez",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 8
+    },
+    {
+     "t": "treasure.northernminer.com",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 8
+    },
+    {
+     "t": ". Suivez @northernminer (X/FB/YouTube) |",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 8
+    },
+    {
+     "t": "@thenorthernminer (IG) | @mining (X) | @miningdotcom (IG/FB/YouTube) | @ceodotca",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 8
+    },
+    {
+     "t": "(X/IG/FB/TikTok) | @ceocafilm (YouTube) pour les indices continus et les mises à jour de la",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 8
+    },
+    {
+     "t": "communauté.",
+     "b": false,
+     "i": true,
+     "size": 12.0,
+     "page": 8
+    }
+   ],
+   "numbers": {
+    "80000": 1,
+    "241": 2,
+    "217": 2,
+    "6": 2,
+    "80500": 1,
+    "4000": 1,
+    "24": 1,
+    "283": 1,
+    "23": 1,
+    "17": 1,
+    "60": 1,
+    "5": 1,
+    "350": 1,
+    "1914": 1,
+    "1905": 1,
+    "1910": 1,
+    "185": 1,
+    "1880": 1,
+    "2027": 1
+   }
+  },
+  "prize_sentences_fr": [
+   "Aujourd'hui, avec 241 onces d'or encore cachées à travers le pays, la chasse est loin d'être terminée.",
+   "Quatre autres trésors, contenant chacun 6 onces d'or pur, sont cachés au Québec, en Saskatchewan, au Manitoba et dans la région de Sudbury en Ontario.",
+   "Une nation de chasseurs de trésors Lorsque The Northern Miner a lancé la Grande Chasse au Trésor Canadienne en août l'année dernière, l'idée était simple: et si nous pouvions passionner les Canadiens pour l'exploitation minière en transformant la remarquable histoire minière de notre pays en une véritable chasse au trésor?",
+   "Plus de 80 500 Canadiens sont devenus des chasseurs de trésors actifs, suivant des indices, étudiant des cartes, regardant des vidéos et découvrant des communautés et des découvertes dont ils n'avaient peut-être jamais entendu parler auparavant.",
+   "Il y a eu les frères Jason et Matthew Schwarz, séparés par 4 000 km, qui ont passé des mois à travailler ensemble pour résoudre des indices avant de découvrir 6 onces d'or dans le légendaire Triangle d'Or de la Colombie-Britannique.",
+   "Le jeune chasseur de trésors curieux d'aujourd'hui pourrait devenir le géologue, l'ingénieur ou l'entrepreneur minier de demain.",
+   "Le grand prix n'a toujours pas été réclamé, ainsi que quatre trésors régionaux contenant chacun six pièces d'or d'une once.",
+   "Cachés dans chaque article original et sa vidéo d'accompagnement se trouvent des indices qui pourraient vous aider à trouver de l'or véritable.",
+   "Et quelque part au Québec, six pièces d'or d'une once attendent un chasseur de trésors capable de percer les indices cachés dans cette histoire.",
+   "Prêt à chasser l'or caché du Québec?",
+   "Explorez l'histoire originale et regardez la vidéo intégrée pour trouver des indices qui pourraient vous mener au trésor.",
+   "En s'évaporant, la mer a laissé derrière elle d'énormes dépôts de minéraux riches en potassium, cachés sous terre pendant des millions d'années.",
+   "Lisez l'histoire originale et regardez la vidéo intégrée pour commencer à résoudre les indices.",
+   "Et avec un trésor caché de six onces d'or qui attend toujours au Manitoba, le mystère continue.",
+   "Lisez entre les lignes, et peut-être que le prochain chapitre vous mettra en vedette.",
+   "Suivez l'histoire originale et regardez la vidéo qui l'accompagne pour trouver des indices qui pourraient vous mener à l'or.",
+   "Quelque part dans la région de Sudbury, six onces d'or restent cachées.",
+   "L'extraordinaire histoire géologique de Sudbury peut-elle vous orienter vers l'or caché?",
+   "Lisez l'histoire originale et regardez la vidéo intégrée pour trouver des indices qui pourraient vous mener au trésor.",
+   "Et puis il y a le grand prix.",
+   "Mais le plus grand prix de tous est toujours là.",
+   "Le grand prix est la pièce maîtresse de la Grande Chasse au Trésor Canadienne, une aventure qui a déjà poussé des dizaines de milliers de Canadiens à se pencher sur des cartes, à rechercher l'histoire minière et à débattre du sens d'indices énigmatiques.",
+   "Chaque indice offre une autre occasion de découvrir quelque chose de fascinant sur ce pays : une ruée vers l'or oubliée, un prospecteur légendaire, une communauté bâtie autour d'une découverte ou un minéral qui a changé l'histoire du Canada.",
+   "Les chasseurs comme les observateurs peuvent se réjouir du prolongement de la chasse jusqu'en 2027, car tant d'histoires incroyables attendent encore d'être racontées.",
+   "Visitez treasure.northernminer.com pour rejoindre la Chasse, explorer les histoires et commencer à résoudre les indices.",
+   "Suivez @northernminer (X/FB/YouTube) | @thenorthernminer (IG) | @mining (X) | @miningdotcom (IG/FB/YouTube) | @ceodotca (X/IG/FB/TikTok) | @ceocafilm (YouTube) pour les indices continus et les mises à jour de la communauté."
+  ],
+  "numbers_only_en": [
+   "2171"
+  ],
+  "numbers_only_fr": [
+   "1880",
+   "217"
+  ],
+  "number_count_mismatch": []
+ },
+ "blast1923": {
+  "key": "blast1923",
+  "region": "Blast from the Past (Oct 2025 reprint)",
+  "month": "2025-10",
+  "en_id": "1003883495",
+  "fr_id": null,
+  "en": {
+   "words": 988,
+   "sentences": 41,
+   "paragraphs": 35,
+   "chars": 5880,
+   "letters": 4663,
+   "styled": [
+    {
+     "t": "42",
+     "b": true,
+     "i": false,
+     "size": 10.0,
+     "page": 1
+    },
+    {
+     "t": "OCTOBER 2025",
+     "b": true,
+     "i": false,
+     "size": 8.0,
+     "page": 1
+    },
+    {
+     "t": "Lucky Noranda Rouyn Find",
+     "b": true,
+     "i": false,
+     "size": 26.0,
+     "page": 1
+    },
+    {
+     "t": "Makes Quebec Field Look Big",
+     "b": true,
+     "i": false,
+     "size": 26.0,
+     "page": 1
+    },
+    {
+     "t": "RICHARD PEARCE, Editor",
+     "b": true,
+     "i": false,
+     "size": 8.0,
+     "page": 1
+    },
+    {
+     "t": "Saturday, October 27th, 1923",
+     "b": true,
+     "i": false,
+     "size": 8.0,
+     "page": 1
+    },
+    {
+     "t": "Ninth Year, No. 22",
+     "b": true,
+     "i": false,
+     "size": 8.0,
+     "page": 1
+    },
+    {
+     "t": "Northern Miner Press Limited, Publishers",
+     "b": true,
+     "i": false,
+     "size": 8.0,
+     "page": 1
+    },
+    {
+     "t": "FIVE CENTS",
+     "b": true,
+     "i": false,
+     "size": 8.0,
+     "page": 1
+    },
+    {
+     "t": "CAMP TAKES ON GREAT",
+     "b": true,
+     "i": false,
+     "size": 10.0,
+     "page": 1
+    },
+    {
+     "t": "IMPORTANCE—NEW BURST",
+     "b": true,
+     "i": false,
+     "size": 10.0,
+     "page": 1
+    },
+    {
+     "t": "OF ACTIVITY—ROUYN GOLD",
+     "b": true,
+     "i": false,
+     "size": 10.0,
+     "page": 1
+    },
+    {
+     "t": "MINES FINDS FOURTEEN VEINS—",
+     "b": true,
+     "i": false,
+     "size": 10.0,
+     "page": 1
+    },
+    {
+     "t": "NIPISSING INVESTIGATING—",
+     "b": true,
+     "i": false,
+     "size": 10.0,
+     "page": 1
+    },
+    {
+     "t": "HORNE GETS COPPER ASSAYS.",
+     "b": true,
+     "i": false,
+     "size": 10.0,
+     "page": 1
+    },
+    {
+     "t": "(Continued on page eight)",
+     "b": false,
+     "i": true,
+     "size": 7.0,
+     "page": 1
+    },
+    {
+     "t": "BLAST",
+     "b": true,
+     "i": false,
+     "size": 16.0,
+     "page": 1
+    },
+    {
+     "t": "PAST",
+     "b": true,
+     "i": false,
+     "size": 16.0,
+     "page": 1
+    },
+    {
+     "t": "INVESTIGATING POWELL AND",
+     "b": true,
+     "i": false,
+     "size": 9.0,
+     "page": 1
+    },
+    {
+     "t": "OTHER CLAIMS EXPLORED",
+     "b": true,
+     "i": false,
+     "size": 9.0,
+     "page": 1
+    },
+    {
+     "t": "BY NORANDA COMPANY",
+     "b": true,
+     "i": false,
+     "size": 9.0,
+     "page": 1
+    },
+    {
+     "t": "Specialists in",
+     "b": true,
+     "i": true,
+     "size": 9.0,
+     "page": 1
+    },
+    {
+     "t": "Conservative Mining Investments",
+     "b": true,
+     "i": true,
+     "size": 9.0,
+     "page": 1
+    },
+    {
+     "t": "Mining in la belle province",
+     "b": true,
+     "i": false,
+     "size": 22.0,
+     "page": 1
+    }
+   ],
+   "numbers": {
+    "42": 1,
+    "2025": 1,
+    "1923": 1,
+    "22": 2,
+    "7": 1,
+    "6": 1,
+    "107": 1,
+    "100": 3,
+    "15": 1,
+    "125": 1,
+    "40": 2,
+    "50": 1,
+    "300": 1,
+    "700": 1,
+    "5": 1,
+    "19": 1,
+    "26": 1,
+    "150000": 1,
+    "90": 1,
+    "1927": 1
+   }
+  },
+  "poem_word_hits": {
+   "veins": 2,
+   "gold": 7,
+   "copper": 2,
+   "roots": 1,
+   "northern": 3,
+   "look": 1,
+   "back": 1,
+   "miner": 4,
+   "claim": 4,
+   "ceased": 1,
+   "hold": 1,
+   "press": 1,
+   "iron": 2,
+   "shore": 1,
+   "time": 2,
+   "years": 1,
+   "mining": 7,
+   "marked": 1
+  },
+  "key_hits": {
+   "shore": 1,
+   "iron": 2,
+   "veins": 2,
+   "roots": 1
+  },
+  "poem_bigrams": [
+   "the mining",
+   "the northern"
+  ],
+  "key_sentences": [
+   "42 OCTOBER 2025 | THE NORTHERN MINER www.northernminer.com Lucky Noranda Rouyn Find Makes Quebec Field Look Big RICHARD PEARCE, Editor Saturday, October 27th, 1923 Ninth Year, No. 22 Northern Miner Press Limited, Publishers FIVE CENTS CAMP TAKES ON GREAT IMPORTANCE—NEW BURST OF ACTIVITY—ROUYN GOLD MINES FINDS FOURTEEN VEINS— NIPISSING INVESTIGATING— HORNE GETS COPPER ASSAYS.",
+   "No less than fourteen veins have been uncov- ered by Rouyn Gold Mines, with as yet only about five per cent of its large acreage getting any exploration.",
+   "Specialists in Conservative Mining Investments Mining in la belle province Quebec’s mining roots stretch back to the 19th century with asbestos, iron and copper discoveries, but it was the Abitibi belt finds that turned the province into a global player.",
+   "The province later hosted world-class operations such as the Campbell and Dome mines near the Ontario border, the Raglan nickel mine in Nunavik, and the iron ranges of the North Shore."
+  ],
+  "prize_sentences": [],
+  "caps": [
+   [
+    "Rouyn",
+    10
+   ],
+   [
+    "The",
+    9
+   ],
+   [
+    "Powell",
+    5
+   ],
+   [
+    "Quebec’s",
+    4
+   ],
+   [
+    "October",
+    2
+   ],
+   [
+    "North",
+    2
+   ],
+   [
+    "These",
+    2
+   ],
+   [
+    "This",
+    2
+   ],
+   [
+    "Ontario",
+    2
+   ],
+   [
+    "Chadbourne",
+    2
+   ],
+   [
+    "Nipissing",
+    2
+   ],
+   [
+    "Noranda’s",
+    2
+   ],
+   [
+    "OCTOBER",
+    1
+   ],
+   [
+    "THE NORTHERN MINER",
+    1
+   ],
+   [
+    "Lucky Noranda Rouyn Find Makes Quebec Field Look Big\nRICHARD PEARCE",
+    1
+   ],
+   [
+    "Editor Saturday",
+    1
+   ],
+   [
+    "Ninth Year",
+    1
+   ],
+   [
+    "Northern Miner Press Limited",
+    1
+   ],
+   [
+    "Publishers FIVE CENTS\nCAMP TAKES ON GREAT IMPORTANCE",
+    1
+   ],
+   [
+    "NEW BURST OF ACTIVITY",
+    1
+   ],
+   [
+    "ROUYN GOLD MINES FINDS FOURTEEN VEINS",
+    1
+   ],
+   [
+    "NIPISSING INVESTIGATING",
+    1
+   ],
+   [
+    "HORNE GETS COPPER ASSAYS",
+    1
+   ],
+   [
+    "The Noranda",
+    1
+   ],
+   [
+    "Quebec",
+    1
+   ],
+   [
+    "With",
+    1
+   ],
+   [
+    "Claims",
+    1
+   ],
+   [
+    "Rouyn Gold Mines",
+    1
+   ],
+   [
+    "Horne",
+    1
+   ],
+   [
+    "Later",
+    1
+   ],
+   [
+    "Nipssing Mining Co",
+    1
+   ],
+   [
+    "Pelletier Lake",
+    1
+   ],
+   [
+    "The Northern Miner",
+    1
+   ],
+   [
+    "Noranda",
+    1
+   ],
+   [
+    "There",
+    1
+   ],
+   [
+    "And",
+    1
+   ],
+   [
+    "June",
+    1
+   ],
+   [
+    "July",
+    1
+   ],
+   [
+    "They",
+    1
+   ],
+   [
+    "Continued",
+    1
+   ],
+   [
+    "BLAST FROM THE PAST\nIT IS BIG\nNoranda Mines Limited’s",
+    1
+   ],
+   [
+    "Osisko Lake",
+    1
+   ],
+   [
+    "The Miner",
+    1
+   ],
+   [
+    "Visible",
+    1
+   ],
+   [
+    "May",
+    1
+   ],
+   [
+    "First",
+    1
+   ],
+   [
+    "August",
+    1
+   ],
+   [
+    "Finding",
+    1
+   ],
+   [
+    "NIPISSING IN ROUYN\nINVESTIGATING POWELL AND\nOTHER CLAIMS EXPLORED\nBY NORANDA COMPANY\nCyril Knight",
+    1
+   ],
+   [
+    "Nipissing Min-",
+    1
+   ],
+   [
+    "Waite",
+    1
+   ],
+   [
+    "Noranda Mines Lim-",
+    1
+   ],
+   [
+    "Although Noranda Mines",
+    1
+   ],
+   [
+    "Powll",
+    1
+   ],
+   [
+    "Two",
+    1
+   ],
+   [
+    "Specialists",
+    1
+   ],
+   [
+    "Conservative Mining Investments\nMining",
+    1
+   ],
+   [
+    "Abitibi",
+    1
+   ],
+   [
+    "The Rouyn-Noranda",
+    1
+   ],
+   [
+    "Val-d’Or",
+    1
+   ],
+   [
+    "Great Depression",
+    1
+   ],
+   [
+    "Through",
+    1
+   ],
+   [
+    "Abitibi’s",
+    1
+   ],
+   [
+    "Canadian",
+    1
+   ],
+   [
+    "Campbell",
+    1
+   ],
+   [
+    "Dome",
+    1
+   ],
+   [
+    "Raglan",
+    1
+   ],
+   [
+    "Nunavik",
+    1
+   ],
+   [
+    "North Shore",
+    1
+   ],
+   [
+    "Canada’s",
+    1
+   ],
+   [
+    "COLIN MCCLELLAND",
+    1
+   ]
+  ]
+ },
+ "blast1942": {
+  "key": "blast1942",
+  "region": "Blast from the Past (Dec 2025 reprint)",
+  "month": "2025-12",
+  "en_id": "1003886083",
+  "fr_id": null,
+  "en": {
+   "words": 2047,
+   "sentences": 60,
+   "paragraphs": 38,
+   "chars": 13015,
+   "letters": 10471,
+   "styled": [
+    {
+     "t": "42",
+     "b": true,
+     "i": false,
+     "size": 10.0,
+     "page": 1
+    },
+    {
+     "t": "NOVEMBER 2025",
+     "b": true,
+     "i": false,
+     "size": 8.0,
+     "page": 1
+    },
+    {
+     "t": "United States Proposes Huge",
+     "b": true,
+     "i": false,
+     "size": 26.0,
+     "page": 1
+    },
+    {
+     "t": "Program of New Projects",
+     "b": true,
+     "i": false,
+     "size": 26.0,
+     "page": 1
+    },
+    {
+     "t": "Bureau of Mines Has Plans For Development of Deposits of",
+     "b": true,
+     "i": false,
+     "size": 13.0,
+     "page": 1
+    },
+    {
+     "t": "Strategic Metals and Minerals All Over the Country – Contrast",
+     "b": true,
+     "i": false,
+     "size": 13.0,
+     "page": 1
+    },
+    {
+     "t": "With Canadian Policy",
+     "b": true,
+     "i": false,
+     "size": 13.0,
+     "page": 1
+    },
+    {
+     "t": "RICHARD PEARCE, Editor",
+     "b": true,
+     "i": false,
+     "size": 8.0,
+     "page": 1
+    },
+    {
+     "t": "Thursday, March 5th, 1942",
+     "b": true,
+     "i": false,
+     "size": 8.0,
+     "page": 1
+    },
+    {
+     "t": "Ninth Year, No. 22",
+     "b": true,
+     "i": false,
+     "size": 8.0,
+     "page": 1
+    },
+    {
+     "t": "Northern Miner Press Limited, Publishers",
+     "b": true,
+     "i": false,
+     "size": 8.0,
+     "page": 1
+    },
+    {
+     "t": "FIVE CENTS",
+     "b": true,
+     "i": false,
+     "size": 8.0,
+     "page": 1
+    },
+    {
+     "t": "Mineral Development Program",
+     "b": true,
+     "i": false,
+     "size": 9.0,
+     "page": 1
+    },
+    {
+     "t": "1.",
+     "b": true,
+     "i": false,
+     "size": 9.0,
+     "page": 1
+    },
+    {
+     "t": "BLAST",
+     "b": true,
+     "i": false,
+     "size": 16.0,
+     "page": 1
+    },
+    {
+     "t": "PAST",
+     "b": true,
+     "i": false,
+     "size": 16.0,
+     "page": 1
+    },
+    {
+     "t": "Another war footing",
+     "b": true,
+     "i": false,
+     "size": 22.0,
+     "page": 1
+    },
+    {
+     "t": "The Northern Miner",
+     "b": false,
+     "i": true,
+     "size": 9.6,
+     "page": 1
+    },
+    {
+     "t": "Patents and Processes, Too",
+     "b": true,
+     "i": false,
+     "size": 9.0,
+     "page": 1
+    },
+    {
+     "t": "To Break Bottlenecks",
+     "b": true,
+     "i": false,
+     "size": 9.0,
+     "page": 1
+    },
+    {
+     "t": "2.",
+     "b": true,
+     "i": false,
+     "size": 9.0,
+     "page": 1
+    },
+    {
+     "t": "Financing by R.F.C.",
+     "b": true,
+     "i": false,
+     "size": 9.0,
+     "page": 1
+    },
+    {
+     "t": "3.",
+     "b": true,
+     "i": false,
+     "size": 9.0,
+     "page": 1
+    },
+    {
+     "t": "Manganese and Aluminium",
+     "b": true,
+     "i": false,
+     "size": 9.0,
+     "page": 1
+    },
+    {
+     "t": "4.",
+     "b": true,
+     "i": false,
+     "size": 9.0,
+     "page": 1
+    },
+    {
+     "t": "5.",
+     "b": true,
+     "i": false,
+     "size": 9.0,
+     "page": 1
+    },
+    {
+     "t": "6.",
+     "b": true,
+     "i": false,
+     "size": 9.0,
+     "page": 1
+    },
+    {
+     "t": "7.",
+     "b": true,
+     "i": false,
+     "size": 9.0,
+     "page": 1
+    },
+    {
+     "t": "Vanadium and Phosphates",
+     "b": true,
+     "i": false,
+     "size": 9.0,
+     "page": 1
+    },
+    {
+     "t": "8.",
+     "b": true,
+     "i": false,
+     "size": 9.0,
+     "page": 1
+    },
+    {
+     "t": "9.",
+     "b": true,
+     "i": false,
+     "size": 9.0,
+     "page": 1
+    },
+    {
+     "t": "10.",
+     "b": true,
+     "i": false,
+     "size": 9.0,
+     "page": 1
+    }
+   ],
+   "numbers": {
+    "42": 1,
+    "2025": 2,
+    "1942": 3,
+    "22": 2,
+    "1": 1,
+    "2": 1,
+    "250": 1,
+    "3": 1,
+    "4": 1,
+    "2683000": 1,
+    "429000000": 1,
+    "1112680": 1,
+    "13": 1,
+    "5": 1,
+    "6": 1,
+    "7": 1,
+    "1000000": 1,
+    "250000": 1,
+    "1941": 1,
+    "8": 1,
+    "9": 1,
+    "10": 1,
+    "17": 1,
+    "1480000": 1,
+    "10190800000": 1
+   }
+  },
+  "poem_word_hits": {
+   "cold": 1,
+   "vast": 1,
+   "copper": 5,
+   "long": 2,
+   "current": 1,
+   "northern": 3,
+   "look": 1,
+   "lead": 3,
+   "miner": 3,
+   "low": 10,
+   "press": 1,
+   "iron": 4,
+   "call": 1,
+   "stands": 1,
+   "message": 1,
+   "time": 1,
+   "years": 1,
+   "zinc": 5,
+   "mining": 1,
+   "point": 2,
+   "marked": 1,
+   "alone": 1
+  },
+  "key_hits": {
+   "iron": 4,
+   "zinc": 5
+  },
+  "poem_bigrams": [
+   "the current",
+   "the northern"
+  ],
+  "key_sentences": [
+   "The program called for a massive expansion of domestic mining – from copper and zinc to manganese, tungsten, and magnesium – materials suddenly deemed “strategic metals.”",
+   "Seen from 2025, the 1942 call to action reads like an early version of the same challenge now facing Western governments: how to rebuild secure domestic supply chains for essential metals in a world again divided by conflict and resource rivalry. —COLIN MCCLELLAND general use of new processes,” the Department asks Congress to instruct the Bureau of Mines to “push its work to a triple speed basis” on the development of: “means for the processing of low grade manganese ores, or alunites and magnesites;” plants to use new iron ore reduc­ tion processes producing sponge iron for later smelting, economical extraction of such metals as “copper, lead and zinc from our abundant resources of low grade ores,” and increased production of the alkali and alkaline earth met­ als—lithium, sodium, strontium, barium and beryllium.”",
+   "To break the “second major bottleneck” in “the production both of ores which had been considered strategic, such as tin, antimony, mercury and nickel, and ores that had not previ­ ously been considered strategic, such as copper, zinc, lead and iron,”",
+   "Secretary Ickes proposed that “Congress make funds available for explor­ atory work by the Bureau of Mines and the Geological Survey for copper, iron, chromite, zinc and lead,” involving the assignment of 250 additional engineers and geologists to intensive exploratory work in “low grade areas” in a ten­ tative list of 22 states and Alaska.",
+   "The reports quoted continued urging by Sec­ retary Ickes that defense agencies give consid­ eration to locating aluminium, magnesium and other power consuming loads such as zinc, on the public projects in the West, so that the plants will be useful at the end of the war, instead of tieing them up to the closing-down policies of companies with Eastern interests."
+  ],
+  "prize_sentences": [],
+  "caps": [
+   [
+    "Mines",
+    14
+   ],
+   [
+    "Bureau",
+    12
+   ],
+   [
+    "The",
+    9
+   ],
+   [
+    "Secretary Ickes",
+    7
+   ],
+   [
+    "West",
+    6
+   ],
+   [
+    "Interior",
+    4
+   ],
+   [
+    "Department",
+    4
+   ],
+   [
+    "United States",
+    3
+   ],
+   [
+    "Recommendations",
+    3
+   ],
+   [
+    "Deposits",
+    2
+   ],
+   [
+    "Secretary",
+    2
+   ],
+   [
+    "While",
+    2
+   ],
+   [
+    "Ickes",
+    2
+   ],
+   [
+    "O’Mahoney",
+    2
+   ],
+   [
+    "Navy",
+    2
+   ],
+   [
+    "America",
+    2
+   ],
+   [
+    "For",
+    2
+   ],
+   [
+    "Congress",
+    2
+   ],
+   [
+    "Geological Survey",
+    2
+   ],
+   [
+    "War",
+    2
+   ],
+   [
+    "NOVEMBER",
+    1
+   ],
+   [
+    "THE NORTHERN MINER",
+    1
+   ],
+   [
+    "United States Proposes Huge Program",
+    1
+   ],
+   [
+    "New Projects\nBureau",
+    1
+   ],
+   [
+    "Mines Has Plans For Development",
+    1
+   ],
+   [
+    "Strategic Metals",
+    1
+   ],
+   [
+    "Minerals All Over",
+    1
+   ],
+   [
+    "Country",
+    1
+   ],
+   [
+    "Contrast With Canadian Policy\nRICHARD PEARCE",
+    1
+   ],
+   [
+    "Editor Thursday",
+    1
+   ],
+   [
+    "March",
+    1
+   ],
+   [
+    "Ninth Year",
+    1
+   ],
+   [
+    "Northern Miner Press Limited",
+    1
+   ],
+   [
+    "Publishers FIVE CENTS\nIn",
+    1
+   ],
+   [
+    "Allied",
+    1
+   ],
+   [
+    "Interior Ickes",
+    1
+   ],
+   [
+    "United States Bureau",
+    1
+   ],
+   [
+    "Mills",
+    1
+   ],
+   [
+    "Another",
+    1
+   ],
+   [
+    "Moreover",
+    1
+   ],
+   [
+    "The United States",
+    1
+   ],
+   [
+    "Canada",
+    1
+   ],
+   [
+    "However",
+    1
+   ],
+   [
+    "Dominion",
+    1
+   ],
+   [
+    "Just",
+    1
+   ],
+   [
+    "President’s",
+    1
+   ],
+   [
+    "Senate",
+    1
+   ],
+   [
+    "February",
+    1
+   ],
+   [
+    "Harold",
+    1
+   ],
+   [
+    "Senator Joseph",
+    1
+   ],
+   [
+    "Wyoming",
+    1
+   ],
+   [
+    "Secretary Ickes’",
+    1
+   ],
+   [
+    "Senator O’Mahoney",
+    1
+   ],
+   [
+    "Basic",
+    1
+   ],
+   [
+    "Sen",
+    1
+   ],
+   [
+    "Major",
+    1
+   ],
+   [
+    "Mineral Development Program",
+    1
+   ],
+   [
+    "BLAST FROM THE PAST\nAnother",
+    1
+   ],
+   [
+    "Allies",
+    1
+   ],
+   [
+    "This",
+    1
+   ],
+   [
+    "The Northern Miner",
+    1
+   ],
+   [
+    "Washington’s",
+    1
+   ],
+   [
+    "Canada’s",
+    1
+   ],
+   [
+    "North America",
+    1
+   ],
+   [
+    "Axis",
+    1
+   ],
+   [
+    "Asia",
+    1
+   ],
+   [
+    "Europe",
+    1
+   ],
+   [
+    "Cold War",
+    1
+   ],
+   [
+    "Seen",
+    1
+   ],
+   [
+    "Western",
+    1
+   ],
+   [
+    "COLIN MCCLELLAND",
+    1
+   ],
+   [
+    "Bonneville",
+    1
+   ],
+   [
+    "Grand Coulee",
+    1
+   ],
+   [
+    "Pacific Northwest",
+    1
+   ],
+   [
+    "Patents",
+    1
+   ],
+   [
+    "Processes",
+    1
+   ],
+   [
+    "Too As",
+    1
+   ],
+   [
+    "American",
+    1
+   ],
+   [
+    "The Bureau",
+    1
+   ],
+   [
+    "To Break Bottlenecks",
+    1
+   ]
+  ]
+ }
+}

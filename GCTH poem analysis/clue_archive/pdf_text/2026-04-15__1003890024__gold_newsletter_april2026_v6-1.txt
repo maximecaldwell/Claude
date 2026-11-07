@@ -1,0 +1,160 @@
+GOLD & MACRO ANALYSIS | APRIL 2026
+The Gold Paradox:
+War, Inflation, and Why Gold Isn't Doing What You 
+Think It Should
+The United States and Israel launched airstrikes against Iran on February 28, 2026, killing 
+Supreme Leader Ali Khamenei. Iran retaliated by effectively closing the Strait of Hormuz the 
+chokepoint through which roughly 25% of the world's seaborne oil and 20% of its liquefied 
+natural gas had previously flowed freely. On April 12, peace talks in Islamabad collapsed. 
+Trump ordered a naval blockade of Iranian ports the following morning. Oil surged back above 
+$100 a barrel. Bloomberg ran the headline: "Gold Eases as US Plans to Blockade Hormuz, 
+Raising Inflation Risks."
+And that headline is what sent people reaching for their phones to type a very logical question: if 
+inflation is accelerating and a war is raging, why isn't gold surging? This edition answers that 
+question in full.
+"Gold isn't ignoring the war. It's reacting to the war's economic 
+consequences and right now, those consequences favor the 
+dollar and higher interest rates, not gold."
+The War's Impact on Inflation: What the Numbers Actually Show
+The March 2026 CPI report the first since the conflict began was historic. The Bureau of Labor 
+Statistics confirmed the consumer price index rose 0.9% in a single month, putting the annual 
+rate at 3.3%, up sharply from 2.4% in February. The monthly gain was the largest since 2022.
+The energy breakdown inside that number tells the real story:
+Gasoline (month-over-month)
++21.2% largest monthly increase since 1967
+Energy index (month-over-month)
++10.9% largest since September 2005
+Fuel oil (month-over-month)
++30.7% largest since February 2000
+Annual headline CPI (March)
+3.3% highest since May 2024
+National gas average (April 2026)
+$4.15/gallon up from $2.94 pre-war
+Brent crude (peak, March 2026)
+~$118/barrel up from $73 pre-war
+Those numbers are extraordinary. But here is the critical nuance: strip out food and energy, and 
+core CPI rose just 0.2% for the month and 2.6% year-over-year below forecast. Underlying 
+
+
+inflation, the kind the Fed actually responds to with rate decisions, remains relatively contained. 
+This is an energy-driven spike, not broad-based inflationary pressure embedded in the 
+economy.
+Economists are clear that April will be worse. Higher fuel costs take months to ripple through 
+supply chains into food, airfare, shipping, and manufactured goods. The inflationary impact of 
+this war has not yet fully arrived.
+The Fed's Catch-22: Trapped Between Inflation and Debt
+At its March 17–18 meeting, the Fed held rates steady at 3.5% to 3.75% for the second 
+consecutive meeting. The vote was 11 to 1. The dissent was in favor of a cut. In its statement, 
+the Fed acknowledged that "the implications of developments in the Middle East for the US 
+economy are uncertain." What the minutes revealed was more alarming: a growing number of 
+officials raised the possibility that the Fed may need to consider raising rates.
+"Before the war, I believed rates could come down multiple 
+times in 2026. The energy shock complicates that picture if 
+we’re truly not going to see any improvement in inflation, that 
+starts pushing these decisions off to 2027 at the earliest." 
+Chicago Fed President Austan Goolsbee, March 2026
+The IMF made the structural constraint explicit in its April 1, 2026 Article IV Consultation on the 
+United States: "With the policy rate close to neutral, there is little room to cut interest rates in 
+2026, particularly given the rise in energy prices, the likely passthrough to core inflation, and the 
+upside risks to global commodity prices."
+The debt dimension of this trap is not rhetorical. In 2025, the United States paid $970 billion in 
+interest on its national debt the third-largest spending category in the federal budget, trailing 
+only Social Security and Medicare. As a share of federal revenues, that figure reached 18.5%, 
+exceeding the previous historical peak set in 1991. The national debt itself reached $38 trillion in 
+October 2025 and continues to grow. With the federal funds rate sitting near 3.5%, the 
+arithmetic of higher rates translates directly into hundreds of billions more in annual debt service 
+costs the government cannot easily absorb. The Fed knows this. The market knows this. And 
+this dynamic more than almost anything else is why rate hikes remain a last resort even as 
+inflation accelerates.
+Why Gold Is Falling
+Gold entered this war at all-time highs above $5,000 per ounce and has since declined more 
+than 10%. Understanding why requires separating the main factor working against gold.
+▪
+The Rate Expectation Channel Gold does not pay interest. Its entire relative value 
+depends on what you give up by not holding a yield-bearing asset instead a concept 
+economists call the opportunity cost, measured by real interest rates (nominal rates minus 
+inflation). When the Iran war sent oil prices surging, markets did not interpret that as good 
+news for gold. They interpreted it as a signal that the Fed would stay higher for longer or 
+potentially hike. That shift has direct consequences for gold. If interest rates remain 
+
+
+elevated or move higher investors can earn a meaningful return in safe, liquid assets such 
+as U.S. Treasuries. The opportunity cost of holding gold rises accordingly. Capital that 
+might otherwise flow into gold instead flows into yield-bearing instruments.
+The World Gold Council’s March 2026 ETF flow data makes the rotation visible. Global gold 
+ETF holdings fell 84.8 tonnes in the month, shedding $11.8 billion in aggregate. North America 
+alone accounted for $13.5 billion of outflows. Asia was the sole exception, adding 9.9 tonnes as 
+structural demand from buyers less exposed to US rate dynamics held firm.
+Source: World Gold Council, Gold ETF Holdings and Flows by Region, March 2026
+Region
+AUM (US$bn)
+Fund Flows 
+(US$mn)
+Holdings (t)
+Demand (% 
+holdings)
+North America
+308.1
+-13,520.5
+2,079.4
+-4.0%
+Europe
+209.2
+-154.3
+1,411.8
+-0.5%
+Asia
+78.1
++1,867.6
+521.6
++1.9%
+Other
+11.1
+-27.6
+74.9
+-0.5%
+Total
+606.5
+-11,834.8
+4,087.8
+-2.0%
+"Gold is falling not because the geopolitical risk has 
+diminished, but because oil-driven inflation fears are 
+suppressing rate cut expectations, the dollar is stronger, and 
+leveraged positions are being unwound.  Morningstar, April 
+2026"
+What This Means For You
+▪
+Do not confuse the macro thesis with the near-term trade.  The long-term structural 
+case for gold sovereign debt burdens, central bank accumulation, de-dollarization, fiscal 
+deficits has not changed. What has changed is the near-term rate and dollar environment. 
+These are different timeframes and different arguments. Conflating them leads to bad 
+decisions in both directions.
+▪
+Track real rates, not headline inflation.  The variable that most directly predicts gold's 
+direction is real interest rates: nominal rates minus inflation expectations. Historical data 
+shows a correlation of approximately -0.82 between gold prices and real interest rates. 
+When the 10-year TIPS yield rises, gold faces headwinds. When it falls which would 
+happen with either a ceasefire lowering oil prices or a recession forcing rate cuts gold 
+recovers. Watch the 10-year TIPS yield, not the CPI headline.
+▪
+The ceasefire scenario is the most important near-term variable.  A negotiated 
+resolution to the Iran conflict would simultaneously lower oil prices, reduce inflation 
+expectations, restore rate-cut probability, and weaken the dollar. All four of those 
+
+
+outcomes are bullish for gold. The ceasefire scenario does not require the long-term 
+structural thesis to play out it just requires peace talks to succeed.
+▪
+The debt burden makes this cycle structurally different.  In prior inflation cycles, the 
+Fed had room to raise rates aggressively and the market knew it. Today, $970 billion in 
+annual interest payments and a national debt of $40 trillion create a ceiling on how far 
+rates can go. The market understands this. When that ceiling becomes binding when the 
+Fed can no longer raise rates despite persistent inflation the conditions that historically 
+produce gold's most powerful rallies will be in place. That moment has not arrived yet. But 
+the current policy trap described in this edition is part of the path toward it.
+This newsletter focuses on junior mining, metals, and commodities and is intended for informational purposes 
+only. Nothing contained here constitutes investment advice. Junior mining is a high-risk, high-volatility asset 
+class. Past performance of any investment mentioned does not guarantee future results. Always conduct your own 
+due diligence and consult a qualified financial advisor before making investment decisions. Contributors to this 
+newsletter may hold positions in securities mentioned
