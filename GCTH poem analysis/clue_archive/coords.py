@@ -99,15 +99,15 @@ nell_en = [(1, 13), (10, 4), (25, 1), (36, 3), (45, 1), (55, 13), (63, 1), (66, 
 nell_fr = [(4, 1), (9, 1), (22, 1), (28, 1), (36, 1), (37, 1), (47, 1), (65, 1), (70, 2), (81, 1), (82, 1)]
 tor_txt = open(os.path.join(D, "..", "arts", "out", "text", "toronto_en.txt")).read().split("\n")[36]
 tor = [(int(a), int(b)) for a, b in re.findall(r"(\d+)-\s*(\d+)", tor_txt)]
-FR = {
+FR0 = {
     "Val-d'Or EN 810-419-227": ["810", "419", "227"],
     "Val-d'Or FR 1045-420-275": ["1045", "420", "275"],
     "One-year Quebec 20 · 60 · 5": ["20", "60", "5"],
     "Boyd video 217 · 14": ["217", "14"],
 }
 extra = json.load(open(sys.argv[1])) if len(sys.argv) > 1 and os.path.exists(sys.argv[1]) else {}
-FR.update(extra.get("groups", {}))
-SPLIT = {
+FR = extra.get("groups", {}) if extra.get("only") else {**FR0, **extra.get("groups", {})}
+SPLIT0 = {
     "Val-d'Or EN digits": "810419227",
     "Val-d'Or FR digits": "1045420275",
     "Val-d'Or EN+FR": "8104192271045420275",
@@ -117,9 +117,9 @@ SPLIT = {
     "Quebec 20605": "20605",
     "Codes in chapter order (Toronto first-pair, Val-d'Or, Nelligan first-pair, Quebec)": "2835" + "810419227" + "113" + "20605",
 }
-SPLIT.update(extra.get("split", {}))
+SPLIT = extra.get("split", {}) if extra.get("only") else {**SPLIT0, **extra.get("split", {})}
 R = [test(k, "groups", v) for k, v in FR.items()] + [test(k, "split", v) for k, v in SPLIT.items()]
-json.dump(R, open(os.path.join(D, "coords.json"), "w"), indent=1, ensure_ascii=False)
+json.dump(R, open(os.path.join(D, extra.get("out","coords.json")), "w"), indent=1, ensure_ascii=False)
 for r in R:
     print(f"{r['name'][:60]:60} cands={r['n_cands']:4} hits={r['hits']:3} null={r['null_mean']:6} p={r['p_ge']}")
     for e in r["examples"][:6]:

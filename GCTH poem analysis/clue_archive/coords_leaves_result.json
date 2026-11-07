@@ -1,0 +1,201 @@
+[
+ {
+  "name": "Leaf groups, release order (EN Sudbury)",
+  "kind": "groups",
+  "n_cands": 10,
+  "hits": 0,
+  "null_mean": 0.45,
+  "p_ge": 1.0,
+  "examples": []
+ },
+ {
+  "name": "Leaf groups, release order (FR Sudbury)",
+  "kind": "groups",
+  "n_cands": 12,
+  "hits": 0,
+  "null_mean": 0.42,
+  "p_ge": 1.0,
+  "examples": []
+ },
+ {
+  "name": "Sudbury EN leaf pieces",
+  "kind": "groups",
+  "n_cands": 20,
+  "hits": 0,
+  "null_mean": 1.1,
+  "p_ge": 1.0,
+  "examples": []
+ },
+ {
+  "name": "Sudbury FR leaf pieces",
+  "kind": "groups",
+  "n_cands": 20,
+  "hits": 0,
+  "null_mean": 1.1,
+  "p_ge": 1.0,
+  "examples": []
+ },
+ {
+  "name": "Clock hours (flash order)",
+  "kind": "groups",
+  "n_cands": 6,
+  "hits": 0,
+  "null_mean": 0.35,
+  "p_ge": 1.0,
+  "examples": []
+ },
+ {
+  "name": "Leaves, release order, EN",
+  "kind": "split",
+  "n_cands": 39,
+  "hits": 0,
+  "null_mean": 1.6,
+  "p_ge": 1.0,
+  "examples": []
+ },
+ {
+  "name": "Leaves, release order, FR",
+  "kind": "split",
+  "n_cands": 39,
+  "hits": 0,
+  "null_mean": 1.6,
+  "p_ge": 1.0,
+  "examples": []
+ },
+ {
+  "name": "Leaves + Val-d'Or code, release order, EN",
+  "kind": "split",
+  "n_cands": 73,
+  "hits": 0,
+  "null_mean": 2.19,
+  "p_ge": 1.0,
+  "examples": []
+ },
+ {
+  "name": "Leaves + Val-d'Or code, release order, FR",
+  "kind": "split",
+  "n_cands": 83,
+  "hits": 0,
+  "null_mean": 1.79,
+  "p_ge": 1.0,
+  "examples": []
+ },
+ {
+  "name": "Leaves in clock order, EN",
+  "kind": "split",
+  "n_cands": 37,
+  "hits": 0,
+  "null_mean": 1.74,
+  "p_ge": 1.0,
+  "examples": []
+ },
+ {
+  "name": "Leaves in clock order, FR",
+  "kind": "split",
+  "n_cands": 37,
+  "hits": 1,
+  "null_mean": 1.36,
+  "p_ge": 0.207,
+  "examples": [
+   [
+    42.91325,
+    81.67142,
+    "42.91325 / 81.6714242532638",
+    "Cairngorm, ON (1.1 km)"
+   ]
+  ]
+ },
+ {
+  "name": "Leaves + Val-d'Or in clock order, EN",
+  "kind": "split",
+  "n_cands": 55,
+  "hits": 1,
+  "null_mean": 2.67,
+  "p_ge": 0.263,
+  "examples": [
+   [
+    42.91,
+    81.04192,
+    "42.91 / 81.0419227627637325694202638",
+    "Gladstone, ON (0.9 km)"
+   ]
+  ]
+ },
+ {
+  "name": "Leaves + Val-d'Or in clock order, FR",
+  "kind": "split",
+  "n_cands": 55,
+  "hits": 2,
+  "null_mean": 2.16,
+  "p_ge": 0.227,
+  "examples": [
+   [
+    42.91,
+    81.04192,
+    "42.91 / 81.0419227325816714242532638",
+    "Gladstone, ON (0.9 km)"
+   ],
+   [
+    42.9181,
+    81.67142,
+    "42.91810419227325 / 81.6714242532638",
+    "Cairngorm, ON (1.6 km)"
+   ]
+  ]
+ },
+ {
+  "name": "Sudbury EN 14 digits",
+  "kind": "split",
+  "n_cands": 21,
+  "hits": 3,
+  "null_mean": 0.93,
+  "p_ge": 0.173,
+  "examples": [
+   [
+    62.0,
+    76.37326,
+    "62. / 76.3732569420",
+    "Salluit, QC (44.3 km)"
+   ],
+   [
+    62.76373,
+    69.42,
+    "62.7637325 / 69.420",
+    "Kimmirut, NU (24.7 km)"
+   ],
+   [
+    62.76373,
+    94.2,
+    "62.76373256 / 94.20",
+    "Tavani, NU (95.4 km)"
+   ]
+  ]
+ },
+ {
+  "name": "Sudbury FR 14 digits",
+  "kind": "split",
+  "n_cands": 33,
+  "hits": 0,
+  "null_mean": 0.98,
+  "p_ge": 1.0,
+  "examples": []
+ },
+ {
+  "name": "Clock hours concatenated",
+  "kind": "split",
+  "n_cands": 33,
+  "hits": 0,
+  "null_mean": 0.88,
+  "p_ge": 1.0,
+  "examples": []
+ },
+ {
+  "name": "Leaves without Sudbury (1,2638,9,42,2)",
+  "kind": "split",
+  "n_cands": 9,
+  "hits": 0,
+  "null_mean": 0.38,
+  "p_ge": 1.0,
+  "examples": []
+ }
+]
