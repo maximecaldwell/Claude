@@ -1,0 +1,100 @@
+[
+ {
+  "name": "T9 per chapter (13 groups)",
+  "kind": "groups",
+  "n_cands": 194,
+  "hits": 4,
+  "null_mean": 7.39,
+  "p_ge": 0.71,
+  "examples": [
+   [
+    55.32692,
+    92.5688,
+    "55.32692 / 92.5688",
+    "Shamattawa, MB (65.9 km)"
+   ],
+   [
+    55.32692,
+    76.6,
+    "55.32692 / 76.6",
+    "Whapmagoostui, QC (73.1 km)"
+   ],
+   [
+    55.32692,
+    62.76373,
+    "55.32692 / 62.763732569420",
+    "Natuashish, NL (122.4 km)"
+   ],
+   [
+    62.76373,
+    92.5688,
+    "62.763732569420 / 92.5688",
+    "Rankin Inlet, NU (25.1 km)"
+   ]
+  ]
+ },
+ {
+  "name": "A1Z26 sums per word leaf",
+  "kind": "groups",
+  "n_cands": 30,
+  "hits": 3,
+  "null_mean": 1.89,
+  "p_ge": 0.317,
+  "examples": [
+   [
+    45.0,
+    79.0,
+    "45. / 79.",
+    "Clear Lake, ON (1.5 km)"
+   ],
+   [
+    45.0,
+    79.0,
+    "45. / 79.",
+    "Clear Lake, ON (1.5 km)"
+   ],
+   [
+    46.0,
+    79.0,
+    "46. / 79.",
+    "Fossmill, ON (12.9 km)"
+   ]
+  ]
+ },
+ {
+  "name": "T9 all leaves, release order",
+  "kind": "split",
+  "n_cands": 141,
+  "hits": 0,
+  "null_mean": 4.11,
+  "p_ge": 1.0,
+  "examples": []
+ },
+ {
+  "name": "T9 without Sudbury",
+  "kind": "split",
+  "n_cands": 105,
+  "hits": 0,
+  "null_mean": 3.98,
+  "p_ge": 1.0,
+  "examples": []
+ },
+ {
+  "name": "A1Z26 all leaves, release order",
+  "kind": "split",
+  "n_cands": 165,
+  "hits": 0,
+  "null_mean": 6.06,
+  "p_ge": 1.0,
+  "examples": []
+ },
+ {
+  "name": "T9 word leaves only (ch1-6)",
+  "kind": "split",
+  "n_cands": 61,
+  "hits": 0,
+  "null_mean": 1.92,
+  "p_ge": 1.0,
+  "examples": []
+ }
+]
