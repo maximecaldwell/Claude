@@ -1,0 +1,39 @@
+Two liabilities, one stone A double solution to acid mine drainage and wet tailings dam failure
+
+Two of the mining industry’s biggest challenges today are acid rock drainage (ARD) and wet tailings storage liability. Ward Wilson, professor of geotechnical and geo-environmental engineering at the University of Alberta and the NSERC/COSIA Industrial Research Chair in Oil Sands Tailings Geotechnique, says mixing dewatered tailings and waste rock together can provide a “double solution” to deal with both.
+
+CIM: What path did you take to your current career?
+
+Wilson: I studied civil engineering at the University of Manitoba, which was my start. When I was at the University of Saskatchewan, originally to study slope stability in geotechnical engineering, I started looking at cover system and closure design to stop ARD from tailings and waste rock. Placer Dome (which became part of Barrick) funded a massive research program, which allowed me to go to NSERC and get funding to look at various ways to stop ARD. After that, my work blending tailings and rock started while I was at the University of British Columbia (UBC) a serving as an Endowed Research Chair in Mining and the Environment from 2000 to 2010.
+
+CIM: What is driving the current flurry of attention on tailings storage and closure issues?
+
+Wilson: Mount Polley was a major issue, but the Fundão tailings dam failure really caught the world’s attention due to the magnitude of the event. And now it has the attention of the Wall Street Journal – so even the financial community is very concerned about this problem and we’re still building bigger dams all the time. Meanwhile, ARD is a global problem that could cost $100 billion to fix.
+
+CIM: How do paste tailings figure into your idea?
+
+Wilson: The approach is to mix tailings and waste rock together. Waste rock is responsible for up to 85 per cent of all ARD – and thus it mostly comes from the waste rock and not the tailings. So then-Placer Dome vice-president Keith Ferguson and I came up with this idea: Why don’t we seal up the rock with tailings? Imagine making concrete – you use gravel, take some sand and then you mix in a ratio of cement and water to get a mixture. Concrete is what’s called a “mix design.” Paste rock, while it does not use cement, should also be considered a “mix design.” You’ve got to control the blending ratio and the water content to come up with an optimum mixture. And when you hit all that, you have a tight, dense, strong saturated matrix that has low compressibility, high strength and high resistance to oxygen diffusion.
+
+CIM: You have described this approach as a “double solution” to deal with both permanent wet tailings storage and ARD. Can you explain?
+
+Wilson: We can use dewatered paste-consistency tailings and blend it with the waste rock to fill the matrix of the rock with paste tailings. That’s important, because you fill all the voids with paste tailings and retain enough water to keep oxygen out while lowering permeability. So we end up with a material that is sealed, thus it won’t have this ARD problem, and we also get the structural strength of the rock. It’s not compressible and has high strength. Initially the approach was intended to cure ARD at the time of deposition. Now we’re getting dam failures and tailings are proving to be a problem because they are low strength and have a high water content – and are liquefiable. The double solution is we get both physical stability – it is not going to have liquefaction flow slides – and chemical stability so that it maintains a resistance to oxygen diffusion, metal leaching and ARD.
+
+CIM: Does the water have to be taken out of the tailings first before it is combined with waste rock? How would this work in practice on a mine site?
+
+Wilson: Yes, you’ve got to dewater the tailings; you can’t use slurry tailings. So you dewater and get it to a paste or filtered product that’s not fluid. Then you have to have a method of combining the two, which can be very simple. It can be done on conveyor belts.
+
+CIM: Where is this approach being employed?
+
+Wilson: At UBC I was involved with two projects – we partnered with Placer Dome and Inco (which became Vale) at the Porgera mine in Papua New Guinea and Copper Cliff mine in Sudbury, respectively. They haven’t actually implemented it but they have done experiments at field scale, demonstrating that it works. The results of that work went into peer-reviewed journal papers, including the papers published by Dr. Ben Wickland who constructed the experiments at Porgera. We’re at the point where companies are ready to pilot this. Canadian Malartic is currently building field-scale trials. CodelcoTech is also evaluating the approach, and Golder Associates is working internally on perfecting the use of a material they call PasteRock. Goldcorp is looking at blending filtered tailings with rock, something they are calling EcoTails. They want to move to filtered tailings, getting away from ponds and dams, and are aggressively pursuing this. Finally, Newcrest Mining is also investigating paste rock for potential greenfield sites, which is the perfect time to start.
+
+CIM: Further to the greenfield, I presume this mixed paste approach provides a way to avoid future costs and liabilities from perpetual water treatment and dam failures?
+
+Wilson: Using paste rock is a way to design for closure, for sure. With ARD, you have to prevent it right from the get-go. The day you deposit, you need a mine waste material that does not react and oxidize and is chemically stable. With waste rock dumps, you might operate for a decade, or two or three, and all the while it’s open to oxygen and precipitation and is reacting before you even get to closure. And that’s a problem. It’s so hard to correct once the acid, the water and the drainage is all there. That has been one of the main issues with ARD; mitigation is difficult, so prevention is the key.
+
+CIM: What are the potential limitations with this approach?
+
+Wilson: The one fear I have is that people will try it, but not mix it properly; it’s got to be well mixed. The design has to hold true. It’s like building concrete buildings – you just don’t shovel in the sand and gravel, etc. You have to create the proper mixture and get the geochemistry right. So you need to have people who know how to do it. It needs quality control and quality assurance. And it’s going to cost more. I think that’s been a source of resistance. Mines have to make money. You always have to start with investment and start-up costs; they don’t get revenue early on, so high capital cost up front is a barrier. But what I’ll say to that is just look at the companies treating ARD now, they may never walk away. They will be in the business of ARD treatment for centuries.
+
+CIM: By 2040 will the industry still be leaving wet tailings dams to perpetual care and chance?
+
+Wilson: We will see a transition in response to the threat of liquefaction of tailings. We’re already on the edge of seeing a whole new generation of tailings impoundment design. What we need to do now is train young and intermediate engineers – the next generation – to have a high level of practice in dam stability and integrity.

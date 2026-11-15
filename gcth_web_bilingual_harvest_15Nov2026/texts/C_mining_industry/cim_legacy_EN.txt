@@ -1,0 +1,75 @@
+A legacy project in progress The completion of a $1-billion retrofit at the Sudbury smelter begins a new era and spells the end of a local landmark
+
+Soon the changes at the smelter complex will become visible to the people of Sudbury, Ont. as the iconic 380-metre Superstack is brought back down to earth. But no matter how the changes made as part of Vale’s Clean Atmospheric Emissions Reduction project may impact the Sudbury skyline, its effects on the air are more profound. With upgrades throughout the smelting process, Vale has been able to bring down sulfur dioxide (SO2) emissions by 85 per cent, metal particulate emissions down by 40 per cent over the last decade, and once the superstack is decommissioned, carbon dioxide emissions will drop 40 per cent at the smelting complex.
+
+Over the 10-year span of the project, the company has built two new converters, overhauled the converter flues, built a wet gas cleaning plant, and constructed a new secondary baghouse and fan building. And through all of the upgrades, the Copper Cliff smelter stayed operational.
+
+Dave Stefanuto is Vale’s vice-president of Canadian projects including the Clean AER project – pronounced “air” – and he said one of the greatest challenges in doing all of this was keeping the Copper Cliff smelter complex, which produces 24,000 tonnes of copper and 80,000 tonnes of Bessemer matte each year, running through the project.
+
+“During this whole period, we continued to smelt and produce nickel, while we made changes to the smelter,” Stefanuto said. “It’s akin to doing open heart surgery on a long distance runner while he’s running his race.”
+
+It was not always easy, he said. SNC-Lavalin took on the engineering, procurement and construction management challenge for the project.
+
+“If you can imagine, the crews installing the new converter are working next to an operating converter,” Stefanuto said. “We have 180 crane movements of molten metal going up and down the aisle while the team is there trying to install, from the ground up, this new converter.”
+
+Despite these potential hazards, Stefanuto said that, on a million-person hour basis, the project finished its last year with a total recordable injury frequency of 2.36 for an overall TRIF of 8.88. This included a lost time injury frequency of zero.
+
+There were times when the upgrades could not be completed because the smelter was in operation, he said, so the Clean AER team had to schedule certain upgrades – like electrical tie ins and the installation of the new flue systems – during regularly planned maintenance cycles.
+
+“We’ve made a really important point of integrating a very strong operational readiness team as part of the project team. So we can do that integrated planning between the two,” Stefanuto said.
+
+This was one of the key lessons Stefanuto said the Vale team learned through the process. “Bringing in that operational team so that they’re part of the project implementation, they’re engaged, they take ownership of it as well. So when we hand it over, they understand what they’re getting, and they’re ready to operate the assets,” he said.
+
+The upgrades were done in several phases. The company replaced its five conventional converters with two Pierce-Smith converters. This was, for Stefanuto, the big moment. The converters are about 14 metres long, and weigh nearly 100 tonnes and required much of the highway to be shut down as they were brought from Anmar Mechanical’s fabrication facility in Lively to the Copper Cliff smelter in September 2012.
+
+“That was kind of the first indication to people that something was going on. And it was something that we could show that change is coming,” Stefanuto said.
+
+After the converters were in, new primary and secondary hoods had to be installed.
+
+The new primary hoods are designed to better capture SO2 with a closer fit to the opening of the converter than previously. That gas is then directed to the wet gas cleaning plant where the gasses are scrubbed before the SO2 is sent off to Vale’s acid plant for conversion into sulfuric acid.
+
+The gasses not captured by the primary hood will be captured by the secondary hood, which Stefanuto describes as something similar to an aircraft hangar door closing in front of the converter. But more than just to catch the remaining SO2, the secondary hood is there to capture fine particulate metals that are often released during the converting process.
+
+That gas and particulate mixture captured by the secondary hood is sent off to the secondary bag house, where what can be best described as a giant industrial vacuum filters out the nickel particulate from the off gasses. What is left is air with a low-percentage of SO2, which is then sent out to the soon-to-be-decommissioned Superstack.
+
+To the moon and back
+
+Where before the project, about 150,000 tonnes of SO2 were released out the stack per year, now only 20,000 to 25,000 tonnes will be released. This 85 per cent reduction makes the superstack that defines the Sudbury skyline obsolete. In 2020 it will be decommissioned, and a new pair of smaller, 140-metre stacks will go online.
+
+The difference will not only be felt in the city. One of the biggest changes to air quality is actually inside the smelter.
+
+“Whatever SO2 remaining that could escape into the workplace … we try and capture that as best we can. We noticed not only that we’re capturing the primary gas but there has been a significant improvement to the workplace environment within our smelter,” Stefanuto said. “In the past the air used to be a bit hazy and now it’s clear, and certainly much better for our workforce.”
+
+When the Superstack was first built in the early 1970s, the smelter was emitting more than two million tonnes of SO2 per year. This volume of SO2 emissions, along with a heavier discharge of metal particulate, pumped out of a shorter smoke stack, had serious effects on the environment in the Sudbury region.
+
+When David Pearson first arrived in Sudbury to work at Laurentian University in 1969, he remembers having to run from his car to the classroom on days when the SO2 was particularly thick. “The fumes were very, very dense, and you really felt them in the back of your throat, like you were breathing from a bottle,” said Pearson, who is a professor at Laurentian’s Vale school of the environment.
+
+It was not just bad for the lungs, though. It had broader effects throughout the region. Smelting began in Copper Cliff in the late 1880s, soon after copper and nickel deposits were found in the region. Initially, the smelting process was done out in the open, with ore placed on top of stacks of cut timber several metres high, and then set alight, left to roast for months. Over the next 80 years, the process was industrialized, smokestacks were added, but the problem of SO2 emissions remained.
+
+“The problem was that the acidity of the gas when it was met by rain and fell on the land, acidified the groundwater, which dissolved metal from the metal particles and turned out to be toxic for the trees and shrubs,” he said.
+
+This acid rain and other pollution also blackened the pink rocks in the region. With greenery dying off, the soil became more fragile and with no roots to hold it in place, soon washed away.
+
+“We lost millions of tonnes of soil, which was washed downhill into lakes and that [...] took the topsoil where the nutrients would normally be in soil profile,” Pearson said. “What was left was not good ground for plants to grow in. So that’s when Sudbury became known as a moonscape.”
+
+(While astronauts did train in Sudbury for the Apollo moon missions, it was not because of this moon-like appearance. The astronauts went there to study, first-hand, geologic formations particular to meteor craters, like the shatter cones and breccia found around the Sudbury basin, itself a long-ago impact site.)
+
+At the time, the best answer to deal with all of this SO2 was to disperse it over a larger area. How? Make a really big smokestack. And so in 1972 the Superstack, towering above the landscape, went online.
+
+Since it was erected, Vale has steadily decreased the amount of sulfur released by the smelter into the atmosphere. According to the company, only one per cent of the volume of SO2 released when the stack was first built is now emitted. The volume is so low they are forced to burn natural gas at the bottom to keep the gasses hot enough to make it to the top of the stack without condensing into sulfuric acid.
+
+The two shorter stacks have been designed to handle the far lower concentration, 25,000 or so tonnes per year, of SO2 gas, and will require signficantly less natural gas to operate. By turning off the Superstack natural gas burners, Vale will be able to cut its carbon dioxide emissions by some 40 per cent all at once.
+
+After that, the steel liner will be removed from the Superstack and the concrete shell will be prepared for dismantling in the coming years.
+
+Plans to decommission and dismantle the Superstack are “a symbol of how far we’ve come as a company and community as well, in terms of reducing our impact on the environment. So we’re looking at it as a positive thing,” Stefanuto said.
+
+The community has come a long way, there is no question, but there may still be further to go. Where once Pearson could pick up pellets of re-solidified metal particulates from the soil with a magnet, now the landscape has been regreened. That the city is no longer referred to as a “moonscape” and people are able to look outside and see the leaves change with the season is a testament to the improvements at Copper Cliff and in the industry as a whole.
+
+But things are still fragile. No one yet knows whether the regreening will last more than a few generations, because it has never been done before, Pearson said. “This is not a natural landscape or an old landscape, it’s a new landscape that may be vulnerable to stresses that an old landscape with more mature soil might be able to withstand.”
+
+With the Clean AER project, Vale has taken another positive step for helping the landscape thrive by lowering the risks of further damage.
+
+But it is too soon to say things have turned the corner permanently, he said.
+
+“We can talk about recovery in a hundred years, what we’re talking about now is the first step – maybe the beginning of the second step – but you and I will be long gone by the time somebody is going to be able to say the Sudbury landscape has recovered,” Pearson said.

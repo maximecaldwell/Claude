@@ -1,0 +1,58 @@
+[
+ {
+  "file": "../B/oht_laurentian_university_FR.txt",
+  "lang": "FR",
+  "words": 117,
+  "letters": 653,
+  "targets": 0,
+  "p_targets": 1.0,
+  "hidden": "ne+dures+un",
+  "p_hidden": 0.0038998050097495125,
+  "outputs": {
+   "as given | word n (whole)": "de laurentienne la Canada requête Unie d'éminents citoyens de",
+   "as given | word running (whole)": "de À de suspendus catholique qui _ _ _",
+   "as given | initials (whole)": "dllCrUdcd",
+   "as given | word n (split)": "de laurentienne qui Canada requête Unie d'éminents citoyens de",
+   "as given | word running (split)": "de À fois en l'Université à _ _ _",
+   "as given | initials (split)": "dlqCrUdcd",
+   "as given | letter n": "nUSeruden",
+   "as given | letter running": "nvruelmti",
+   "reversed | word n (whole)": "de citoyens d'éminents Unie requête Canada la laurentienne de",
+   "reversed | word running (whole)": "de universitaire de grades Ces Huntington _ _ _",
+   "reversed | initials (whole)": "dcdUrClld",
+   "reversed | word n (split)": "de citoyens d'éminents Unie requête Canada qui laurentienne de",
+   "reversed | word running (split)": "de universitaire par de Université catholique _ _ _",
+   "reversed | initials (split)": "dcdUrCqld",
+   "reversed | letter n": "nedureSUn",
+   "reversed | letter running": "ndseeutti"
+  }
+ },
+ {
+  "file": "../B/vm_1739_creating_a_separate_school_EN.txt",
+  "lang": "EN",
+  "words": 180,
+  "letters": 891,
+  "targets": 0,
+  "p_targets": 1.0,
+  "hidden": "hide+he+pro",
+  "p_hidden": 0.0023998800059997,
+  "outputs": {
+   "as given | word n (whole)": "1886 a school as Separate This residents School create",
+   "as given | word running (whole)": "1886 local the steps the September _ _ _",
+   "as given | initials (whole)": "1asaSTrSc",
+   "as given | word n (split)": "1886 a school as Separate This residents School create",
+   "as given | word running (split)": "1886 local the steps the September _ _ _",
+   "as given | initials (split)": "1asaSTrSc",
+   "as given | letter n": "irinenhah",
+   "as given | letter running": "igdhlnnto",
+   "reversed | word n (whole)": "create School residents This Separate as school a 1886",
+   "reversed | word running (whole)": "create School for began steps Mr _ _ _",
+   "reversed | initials (whole)": "cSrTSasa1",
+   "reversed | word n (split)": "create School residents This Separate as school a 1886",
+   "reversed | word running (split)": "create School for began steps Mr _ _ _",
+   "reversed | initials (split)": "cSrTSasa1",
+   "reversed | letter n": "hahneniri",
+   "reversed | letter running": "hIdehepro"
+  }
+ }
+]

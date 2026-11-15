@@ -1,0 +1,37 @@
+Meteors, Meteorites and Impact Craters
+
+The solar system contains many objects smaller than the planets (or their satellites) travelling in individual orbits about the sun; space between the planets also contains myriad dust grains in the micron size range. Near Earth, dust concentrations are only a few hundred particles per cubic kilometre, but 35,000 to 100,000 tonnes of extraterrestrial material enters the atmosphere annually, swept up by our planet from debris that is in its path or crosses its path.
+
+Definitions
+
+When a particle about a centimetre across or larger collides with Earth, interaction with the upper atmosphere produces a flash of light called a meteor, which typically endures for less than one second near heights of 90 km. Large objects known as meteoroids produce spectacular meteors (fireballs) and, in rare cases, part of the object survives to reach Earth's surface and is then called a meteorite. The largest intact meteorite (made of nickel-iron) weighs some 60 tonnes and remains where it fell and was discovered on Hoba farm in Namibia, southwestern Africa.
+
+Impact Craters
+
+Huge objects are not slowed much by the atmosphere, and their violent collisions with Earth have blasted out "impact" or "meteorite" craters throughout Earth's 4.6 billion-year history (see Geological History of Canada). These objects would have been totally vapourized in the process, leaving only the crater scars formed by shock waves to record the events. These scars are not as easily recognized on Earth as on other planets and moons where there is no atmosphere, hydrosphere or active geological processes to destroy and bury the craters. The largest craters in Canada are at Sudbury (140 km in diameter) and at Manicouagan (100 km in diameter). It is increasingly clear that many large objects have collided with Earth in the past, and may have had a profound effect on its climate and life processes. Ice and other components of comets that collided with Earth during its early history may have been the source of our water and air.
+
+The impact of Periodic Comet Shoemaker-Levy 9 on Jupiter in July 1994 was carefully observed from Earth and by the Hubble Space Telescope. Over 20 comet fragments up to 3–4 km across entered Jupiter's atmosphere at 60 km per second, producing violent explosions and leaving visible holes, some initially larger than the Earth's diameter.
+
+Meteor Showers
+
+The vast majority of meteors are fragments of comets. Comets orbit the Sun in elongate elliptical orbits that reach to the edge of our solar system. There may be trillions of comets in source regions up to 100,000 times the distance of the Earth from the Sun. When a comet mass made of various kinds of ice and rock is heated during passage near the Sun, particles separate from the nucleus, and the more stony material withstands the effect of solar heating and continues in its own orbit, which resembles the comet's orbit. Over thousands of years, the particles disperse around the entire orbit and into a stream of appreciable width.
+
+When Earth crosses such a stream, a meteor shower can be seen, and one observer can typically see 5–50 meteors per hour, all meeting Earth from the same direction and with constant velocity. These showers are named for their apparent radiant point in space amongst the constellations. A shower may last only hours or many days and is likely to occur every year. With time, streams disperse so that the meteors blend into a general background of sporadic meteors. Meteors enter the atmosphere at speeds of 11–72 km/s.
+
+Composition
+
+Except for lunar samples, meteorites provide our only chance to study material from space by laboratory techniques. Most meteorites are "stones" with a thin, black fusion crust, composed of silicate minerals and minor amounts of metal; about 5 per cent are "irons" composed of a nickel-iron alloy; a smaller number are "stony-irons." Analysis of meteorites yields vital clues about the early history of the solar system because some have had relatively simple chemical and thermal histories and have remained in the state in which they first formed in the early solar nebula. It is not clear whether any large chunks of cometary material are strong enough to survive impact with Earth's atmosphere, but some very chemically primitive meteorites are probably of comet origin.
+
+Sources
+
+Most meteorites appear to be derived from asteroids and the Asteroid Belt between Mars and Jupiter by mutual collisions. Their orbits appear to have been modified by Jupiter's gravitational field in tens of millions of years to permit collision with Earth. A few (by comparison with lunar samples) are recognizable as fragments from the Moon's surface, probably blasted off by meteorite impacts, and a few are suspected to have come from Mars in the same manner.
+
+Meteorites
+
+Several thousand different meteorites are known, of which nearly 50 have been found in Canada. Many meteorites have been found in glacial ice in Antarctica, where they have been concentrated by ice movements and wind ablation, and similar deposits are being sought in the Arctic. Observations from a network of cameras in Western Canada indicate that a meteorite weighing at least 100 g falls in Canada daily, but very few are ever recovered. A spectacular shower of stony meteorites, accompanied by a loud sonic boom, occurred on 14 June 1994 at St-Robert-de-Sorel, Quebec; about 25 kg of rock has been recovered.
+
+Canadian Research
+
+The moon and several other planets and satellites retain impact craters for very long periods, but on Earth erosion usually removes the surface evidence in a few million years. Subsurface rock, however, is permanently damaged by the shock wave and can be used to identify very ancient craters. A major program to study impact craters was begun during the 1950s by C.S. Beals, the Dominion Astronomer. Two dozen features in Canada, ranging from 3 to 95 km in diameter, have been confirmed as impact craters in this pioneer study, of which the Nouveau-Quebec Crater is the most recent, dated at a few million years old.
+
+Radar and spectroscopic meteor observations have been Canadian research specialties. A radar beam reflects from the column of electrified gas produced by a meteor's passage; the method is sensitive for very small particles. A meteor's spectrum can be recorded photographically or by television techniques, and spectrum analysis (e.g., spectroscopy) reveals which atoms are abundant in the particle and hence, indirectly, something of the chemical composition of comets.

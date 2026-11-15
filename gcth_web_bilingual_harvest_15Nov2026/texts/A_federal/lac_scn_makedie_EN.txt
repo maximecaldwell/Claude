@@ -1,0 +1,35 @@
+The Making of a Die
+
+A die is an engraved steel tool used in the coining press to impress a design onto a blank coin. At the Royal Canadian Mint, the production of a collector coin requires extra care in every step of the minting process, including the making of the die.
+
+Art Work
+
+The selection of an artist's sketch is the first step in making dies of a new coin. Some modifications may be made to improve the detail and overall appearance of the finished coin.
+
+Plaster Positive Model
+
+The engraver sculpts a model of the design into a large slab of plaster of Paris. This raised design often lacks intricate details.
+
+Plaster Negative Model
+
+An impression of the first plaster model is taken to produce a plaster negative model. Intricate details are added to this second model.
+
+Rubber Positive Model and Epoxy Negative Model
+
+A two-step process produces a model with a hard surface that can withstand the machine-engraving which follows. First, a rubber impression is taken of the plaster negative model. Second, a hard plastic impression (epoxy negative model) is made of the rubber positive model.
+
+Brass Intermediate Model
+
+The epoxy negative model is mounted at one end of a three-dimensional copying machine. As a tracer follows the contours of the epoxy model, a cutter duplicates the design on a smaller brass plate mounted at the opposite end of the machine.
+
+Reduction Matrix
+
+The design on the brass plate is reduced to coin size when it is engraved onto the end of a steel cylinder. The steel cylinder is then hardened by heat treatment to become the reduction matrix.
+
+Master Punch
+
+The reduction matrix is pressed onto a blank steel cylinder, producing a tool called the master punch. After hardening, the master punch is used to impress a series of specially prepared steel cylinders, which become the coin dies.
+
+Blank
+
+In the coining press, the dies come together and impress the designs onto the coin blank held between them. The blanks for the new Canadian $2 coin have an outer ring composed of nickel, and a core made of aluminum bronze.

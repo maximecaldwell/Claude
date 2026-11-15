@@ -1,0 +1,35 @@
+SNOLAB
+
+SNOLAB, an expanded version of the facility originally known as the Sudbury Neutrino Observatory, is a particle physics laboratory located in the Creighton Mine, about 12 kilometers west of Sudbury, Ontario. Situated approximately two kilometres below ground, the laboratory takes advantage of layers of Canadian Shield rock to protect sensitive experiments from high-energy particles which constantly bombard the Earth. SNOLAB currently hosts an array of particle physics experiments, along with experiments focused on the life sciences and quantum technology (see Physics).
+
+Work carried out at the lab in the 1990s and early 2000s, involving the subatomic particle known as the neutrino, led to a Nobel Prize in Physics, in 2015, for Canadian physicist Arthur B. McDonald. (See also Nobel Prizes and Canada.)
+
+History
+
+SNOLAB is located on the traditional territory of the Robinson-Huron Treaty of 1850, shared by the Indigenous people of the surrounding Atikameksheng Anishnawbek First Nation as part of the larger Anishinabek Nation (see Robinson Treaties of 1850). Nickel mining in the area began in the early 20th century. Operations at Creighton Mine were conducted first by the Canadian Copper Company, and later the International Nickel Company (INCO). Vale, a Brazilian company, acquired the mine in 2006.
+
+Plans for a particle physics laboratory were approved in 1990, with excavation and installation of equipment lasting eight years (see Physics). The Sudbury Neutrino Observatory (SNO), financed by Canada, the United States and Britain, began collecting data in 1999.
+
+Solar Neutrinos and the Nobel Prize
+
+Neutrinos are subatomic particles that hardly interact with ordinary matter at all. For decades physicists thought that neutrinos were massless, like photons of light. Most of the neutrinos that reach the earth are produced in the sun, but they also come from supernovae (the enormous explosions that massive stars undergo at the end of their lives), and some were produced in the Big Bang itself (the event believed to have brought the universe as we know it into existence, some 13.8 billion years ago). Because of their large numbers and low rate of interaction, billions of neutrinos pass through your body every second. SNO employed a 12-metre-wide spherical vat, filled with 1,000 tonnes of heavy water, which is like ordinary water except that instead of hydrogen it contains atoms of deuterium, which have an extra neutron. The neutrons acted as a target for incoming neutrinos: When a neutrino hits a neutron, it releases an electron, which in turn produces a flash of light. The vat was surrounded by some 9,500 sensitive photodetectors to record these faint flashes of light.
+
+After analyzing several years of data from the SNO experiment, researchers concluded that neutrinos must be switching from one type to another as they travelled from the sun to the Earth (changing “flavour,” or “oscillating,” as physicists call it). This ability to oscillate implied that neutrinos must have mass, albeit a very small one. This finding was corroborated by researchers at the Super-Kamiokande detector in Japan. In recognition of this discovery, the 2015 Nobel Prize in Physics was awarded to Arthur B. McDonald, who was SNO’s director at the time the research was carried out, along with Takaaki Kajita of Super-Kamiokande. (See also Nobel Prizes and Canada.)
+
+From SNO to SNOLAB
+
+While the original SNO project was still running, scientists began working on plans to enlarge the underground space to accommodate additional experiments. With funding secured from a number of partners, including the governments of Canada and Ontario, work began on expanding the facility. The space for underground labs was greatly increased, and a new office building on the surface opened in 2005. The SNO experiment was decommissioned in 2007. Phase one of the expansion was completed in 2008, and SNOLAB’s grand opening took place in 2012. As of 2022, the facility boasts 5,000 square metres of clean underground space, making it one of the deepest and cleanest laboratories in the world.
+
+Oversight and governance of the lab is conducted by SNOLAB’s Institute Board of Directors, whose member institutions are Carleton University, Laurentian University, Queen’s University, the Université de Montréal and the University of Alberta.
+
+Dark Matter
+
+Several of the active experiments at SNOLAB focus on the puzzle of dark matter, a mysterious substance believed to account for approximately 85 per cent of the matter in the universe. One such experiment is SuperCDMS (Super Cryogenic Dark Matter Search), which employs ultra-pure crystals of germanium and silicon, about the size of hockey pucks, cooled to extremely low temperatures. Its operating temperature will be 15 milliKelvins, in other words, 15 thousandths of a degree above absolute zero. If a dark matter particle strikes these crystals, it would produce a vibration creating a tiny electrical signal. As of mid-2026, SuperCDMS was undergoing testing and calibration. As Ivan Semeniuk wrote in The Globe and Mail in 2023, finding dark matter “would mean opening the door to a deeper understanding of the laws that underpin our existence and that shape the evolution of the cosmos,” adding that such a discovery “would almost certainly lead to a Nobel Prize.”
+
+Other Experiments
+
+Two life sciences experiments are being carried out at SNOLAB. One is REPAIR (Researching the Effects of the Presence and Absence of Ionizing Radiation), which is studying the effects of very low radiation levels on living organisms. Another is FLAME (FLies in A MinE), which studies the biological effects of spending time working deep underground (specifically at higher atmospheric pressure), using fruit flies. Scientists hope findings from the experiment can be used to improve health outcomes for people working underground.
+
+Another area of research involves quantum technologies. An experiment called CUTE (Cryogenic Underground TEst facility) is designed to investigate the impact of radiation and cosmic rays on quantum materials, particularly the fragile quantum bits, or qubits, which record information at the quantum level.
+
+Other experiments focus on environmental monitoring as well as the further study of neutrinos. In addition, SNOLAB is part of an early-warning network for supernovae. Because neutrinos can escape a dying star ahead of visible light, they can signal to astronomers that a supernova will soon be visible. SNOLAB will be participating in a global network known as the Supernova Early Warning System (SNEWS).

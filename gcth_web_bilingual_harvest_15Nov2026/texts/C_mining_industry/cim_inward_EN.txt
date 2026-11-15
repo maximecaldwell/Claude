@@ -1,0 +1,101 @@
+Inward and upward How the mining industry is developing existing workers to meet the human resources challenge of the digital revolution
+
+Automated equipment and cutting-edge data collection and analysis are fundamentally changing the way the mining industry chooses, trains and retains its employees. Experts foresee big shifts on the horizon in both the number and type of people employed in the sector, and mining training programs are being updated to reflect that future. For operators, the transition is already underway; managers at Goldcorp’s Musselwhite, Hecla Mining’s Casa Berardi and North American Palladium’s Lac des Iles say that automation and digitalization have already changed roles on site.
+
+Aaron Cosbey, a senior associate at the Intergovernmental Forum on Mining, Minerals, Metals and Sustainable Development (IGF) and author of a report on the future of automation in mining, foresees a spike in demand for highly skilled labour to meet the need to build and maintain increasingly sophisticated software and IT systems. At the same time, overall employment figures are set to drop dramatically, he said, as low-skilled workers’ tasks are made redundant. He estimated that a new mine built today with brand new technologies “in a country like Canada” could be operated “with 70 to 80 per cent fewer employees.”
+
+Andrew Swart, Deloitte mining and metals leader for Canada, said roles are likely to “combine and merge” over the coming years, requiring versatile employees with a broad set of skills. “Your grandfather’s miner is going to be very, very different to the miner that is going to be employed in the next five to 10 years,” he said. “[There will be a] greater focus on innovation, greater focus on analytics, greater focus on cross-functional skills. We are moving into a world where you don’t just have to have pure technical skills.”
+
+Swart also said the type of worker employed in mining will change, pointing to the growing trend in the U.S., where independent contractors are projected to make up more than 40 per cent of the workforce by 2020. (That number rested between five and 33 per cent in 2010, depending on your definition of contingent work.) Mining will head in that direction, in particular as the industry relies more and more on data analytics, which can be done remotely, he said. Mining companies will have to adapt their traditional bonus structures and incentive schemes – traditionally the domain of permanent employees – to remain competitive and attractive to new talent.
+
+The upside to a more diversified type of worker is that more opportunities for remote working tempers the mining industry’s age-old struggle to draw qualified individuals to far-flung mine sites. Mining, however, is now in competition for data scientists with well-paid industries like banking, technology, manufacturing and consultancy.
+
+Developing the existing workforce is one way the industry is hoping to sidestep that competition and shore up for the digital mines of the future. Educational institutions on a secondary and tertiary level are crafting programs that will upskill experienced miners, and in-house training is also evolving as mines revamp apprenticeship programs to include analytics and data modelling.
+
+Soft skills for hard rocks
+
+Both Swart and Cosbey iterated the need for industry, government and academia to be forward thinking in order to prepare and adapt for technological advances in mining. One company leading that push is NORCAT, a non-profit training centre in Greater Sudbury.
+
+“Gone are the days where mining companies can hire a new worker, provide some training, and assume that their training curriculum only needs to be updated every five years,” said Don Duval, NORCAT’s CEO.
+
+In his opinion, an unprecedented “technology renaissance” in mining means that industry players have to be nimbler and innovative in their approach to training and development. Training program curricula need to be refreshed on a frequent basis to reflect the changing workplace and be responsive to technology updates.
+
+An operating test mine at NORCAT doubles as a training ground for students and a space where big and small mining technology companies from around the globe test and showcase their latest products. As a result of a close relationship with these companies, NORCAT sees emerging technologies ahead of time and moulds its training programs appropriately, he said.
+
+Workers will need to be more versatile to keep up with new hardware and software, according to Duval. “Mining companies are looking for multifaceted skillsets within a worker and the ability to integrate multiple skillsets. Historically that worker might have had one specific job.” In his opinion, it is more critical now than ever before that hands-on technical training is integrated with soft skills like communication, leadership, problem solving, conflict resolution and project management, among others.
+
+“The notion of becoming very competent in a very specific technical activity needs to be tempered with the fact that technology will evolve. Workers need the skills, confidence and know-how [so that] if there’s a software upgrade, [they know] how to procedurally work through to understand what it means for the job,” he added.
+
+A 2017 study on the future of work from the McKinsey Global Institute also emphasized the need for workers of the future to acquire these (so far) un-automatable “soft” skills: “All workers will need to adapt, as their occupations evolve alongside increasingly capable machines. Some of that adaptation will require higher educational attainment, or spending more time on activities that require social and emotional skills, creativity, high-level cognitive capabilities and other skills relatively hard to automate.”
+
+Propelled by conversations with equipment manufacturers and mining companies, NORCAT is developing three new professional training programs – underground communication, tele-remote autonomous vehicle systems, and electrification – that will launch in 2019 and combine cutting-edge technological know-how with these soft skills. Aimed at green and mid-career miners, each course will run for three to five days at the NORCAT Underground Centre.
+
+While Duval acknowledged that automation and digitalization will result in some job losses for “traditional skilled labour jobs,” he said he believes that new jobs being created in the growing mining supply technology sector will “far outweigh the employment losses in the mining industry.” He noted that in-house R&D departments have been increasingly outsourced to a “vibrant” mining technology services and supply industry over the past 30 to 40 years. NORCAT’s regional innovation centre in Sudbury nourishes that industry by helping early-stage start-ups grow and scale.
+
+Rithmik Solutions is part of that growing mining technology ecosystem. The British Columbia-based firm works with open-pit mines in Canada and abroad and its flagship product, the Asset Health Analyzer, is a cloud-based software that uses artificial intelligence to monitor equipment in real time for wear and tear. Kris Isfeld, co-CEO, said products like theirs do not eliminate the need for any positions on site, but make the jobs of reliability engineers easier by saving them time while attempting to discover the root cause of a system failure.
+
+Meanwhile, on-site mechanics spend less time on irregular shutdowns, which will happen less frequently, and can dedicate themselves to regular plant maintenance. “So [mechanics’ jobs] will, I suppose, shift a little ­– sometimes there’s a little less manpower there – in exchange for more reliability engineers, more data analysts, and more computer-related jobs on the other end because you are dealing with all this data,” Isfeld explained.
+
+His colleague and co-CEO Kevin Urbanski said that the technological boom in mining is ultimately a good thing for the sector, given that “personnel from other industries will be attracted; industries that have been on the leading edge of technologies are making their way into the mines. This will be great for cross-pollination.”
+
+Meanwhile, at a post-secondary level, the University of British Columbia has been developing a range of new courses for both undergraduate- and graduate-level mining engineering students that will cover the basic applications of artificial intelligence, robotics, automation and machine learning for the industry.
+
+Professor Ilija Miskovic teaches geostatistics and applications of big data and artificial intelligence to students in the Norman B. Keevil Institute of Mining Engineering at UBC. He is hopeful the new courses will launch in late 2019, subject to the necessary approvals. “It’s up to us in academia to prepare new mining engineers to understand how to operate and to understand the digital mine concept,” he said. “When I talk to people from the industry,” he added, “they are looking for a new breed of mining engineer now. They are looking for someone who understands IBM Watson, who can work in Python, who knows how to code in Java. It was very different to what people learned three, four or 10 years ago.”
+
+He said that digitalization’s impact on the workforce is the “elephant in the room,” and that he believes there is a general – and not unfounded – nervousness about what it means for both white- and blue-collar jobs. He said mining companies share a responsibility with academia and government to “retrain and repurpose” workers. He added that he has seen positive steps in this direction in the mines he visits across Canada and the United States.
+
+His mining engineering department is also hoping to launch a one-year professional program aimed at professionals already in mining. It will consist mostly of online learning in order to fit around a working schedule.
+
+Musselwhite
+
+Voices from active mines in Canada say that the transition to increased automation and digitalization has been smooth from a human resources perspective. Moreover, they are confident that cutting-edge technologies on site will mitigate mining’s aging workforce problem and entice young people to the industry.
+
+Mining equipment operators working in Goldcorp’s Thunder Bay office in northwestern Ontario now use joysticks to remotely operate haul trucks, scoops and a crusher at the Musselwhite underground gold mine site 500 kilometres north of the city. Until 2018, those operators commuted to Musselwhite on a two-week fly-in-fly-out basis. They would spend more than two hours each day on a personnel carrier getting to and from their piece of subterranean equipment at the beginning and end of their shift.
+
+Despite this change, human resources manager Aileen Pajunen said that the breakdown of roles in Musselwhite’s workforce remains the same. The only difference is that two new roles were created, automation specialist and control room coordinator. While instrumentation specialists from elsewhere on the mine site were assigned to the project during installation, those employees have returned to their old jobs.
+
+The skillset required to remotely manage the equipment from Thunder Bay is the same as an operator underground, Pajunen explained. “It’s the same job,” she said, despite the fact that the new set-up is “like playing a video game.” Heavy equipment operation is one of four skilled trades in Musselwhite’s on-site training program. The qualifications to enter that 18-month pre-trade program remain the same: a grade 12 high school certification.
+
+Pajunen said that shifting older mines to a more automated environment has to be handled delicately from a human resources perspective, because “with change comes fear, and with automation comes fear. There is that [assumption] that ‘if you automate it, I’ll lose my job.’” However, the transition was smooth, she said.
+
+A number of maintenance planning roles were also moved to Thunder Bay. Many of the team members preferred not to make the move, largely because they were not based in Thunder Bay. Those people were offered alternate employment. Several opted for severance packages instead – although Pajunen said it was only a “couple” and that they were “very well taken care of.”
+
+Over 40 members of staff have now migrated to Thunder Bay, and overall Pajunen sees digitalization and automation as a balm for the industry’s workforce problem. “If youth could actually see that mining is sitting in an office in Thunder Bay playing a video game, I think it will open up our pool of candidates,” she said. “It just takes away some of the preconceived ideas of what mining is.”
+
+Casa Berardi
+
+Another mine that has embraced automated heavy equipment is Hecla’s Casa Berardi, an underground gold mine in northwestern Quebec. A team of five operates automated haul trucks, rock breakers and loading chutes from a control room on the site surface. One member of that team was previously an underground haul truck operator. The remainder were candidates unlikely to have taken the reins underground – two were working in Hecla’s administration department; one was a geological technician and one was an external hire who ran a garage at a local automotive service shop from a local town.
+
+Three of the five are women, and this is one of the new technology’s key attractions, said Chantal Toussaint, Hecla’s human resources manager. Making jobs safer and easier, “brings new opportunities to those who weren’t thinking about mining. Or those in mining who didn’t want to work underground.”
+
+Toussaint said there are now more instrumentation technicians and electromechanics on site to deal with the automated machinery and the data. Both roles require a college degree. There are also more project managers.
+
+Toussaint, who has worked in mining for several years, said she believes the most significant impact of technological innovation on site is the type of people working in the mine. “Back in the day, a lot of people didn’t have a bachelors’ degree, and some didn’t even have a secondary education. But now we have people who have a college or university degree who still go into mining operations.” She attributes this to the draw of exciting new technology – and training programs with cutting-edge tools that include virtual and augmented reality.
+
+It is therefore critical, Toussaint said, that mines attempt to keep up with advances in technology. “If we don’t keep the pace, all those nice curious people will go elsewhere,” she said.
+
+Lac des Iles
+
+Meanwhile David Galea, manager of operational excellence at North American Palladium’s Lac des Iles underground mine in northern Ontario, said the mine’s technological transition has changed the breakdown, but not the number, of staff on site. Lac des Iles has an automated load-haul-dump machine and a system where ventilation and dewatering systems can be controlled from the surface.
+
+A four-year mining engineer training program was launched at Lac des Iles in 2018. Alongside the more traditional rotations in engineering, underground operations and mill and maintenance, each trainee spends a year with Galea’s operational excellence and technology projects team. Tasks and skills developed include data modelling, process definition, emerging technology evaluation, business intelligence and analytics. “Feedback has been positive in terms of learning opportunities outside of traditional mine engineering and increased exposure across the business,” Galea said.
+
+“What we’ve learned about automation is that it requires a lot of technical support to keep it going,” said Galea. “You still need people underground to inspect, refuel, and lubricate automated equipment, as well as make sure the workplace is clean, neat and has good housekeeping.” There are also now more instrumentation technicians and electricians required to support the network and technology and maintain the underground infrastructure.
+
+The company has just hired a new electrical engineer-in-training who is freshly graduated from a local university and also attended a technical college. Galea said he imagines that mining companies will have to develop relationships with technology schools in the future to match increased demand.
+
+“Automation or not, the demand for skills in technology fields around control systems and battery electric equipment is just going to increase. And that’s with everything, not just mining. It’s no different than how a modern automotive technician has to have a stronger electronics skill set than a mechanic had 30 years ago,” he explained.
+
+Galea admitted that he foresees a challenge for remote mine sites like Lac des Iles to meet that demand. “Individuals with a technology background are often employable within many different industries – therefore they have their pick of sector and location of work. Given these options, mining operations, and more specifically remote mining operations, will need to find unique and creative ways to entice and retain that type of talent.”
+
+A new social contract
+
+IGF’s Cosbey said the impact of automation and digitalization on employment will be felt most harshly in Canada in remote northern mines that rely on local Indigenous communities for labour. “You will have much less local employment, because the jobs that will be eliminated are midlevel semi-skilled jobs that you can train up locals to handle,” he explained. “And you are replacing them with highly-skilled jobs that require specialized education. It’s much more challenging to train up locals for those jobs.”
+
+Cosbey predicts that, like miners operating in low-income jurisdictions with a dearth of skilled workers in foreign countries, miners operating in northern parts of Canada will face a “social-licence-to-operate problem.” Mining companies’ ability to operate legitimately in a particular place has long hinged on providing jobs for local suppliers and workers (and the ensuing income tax for governments), but with fewer jobs in the offering, companies are going to have to devise a “new deal” with local communities.
+
+“You are causing some environmental damage, you may be changing their way of life by rolling hundreds of trucks in and changing the migration patterns of the wildlife they rely on – and what are you giving back?” Cosbey said. Potential reinventions of the social contract include sharing infrastructure, like providing local villages and towns with clean water or fast internet.
+
+Deloitte’s Swart also acknowledged this problem and flagged other possible shared wealth scenarios to provide new value to communities beyond just jobs. These included partnering with a hospital or educational institution to provide world-leading “tele-remote” health care or teaching.
+
+“This is no longer the domain of human resources. You need to bring in the other functions of the organization,” he explained. “Just last week, we spoke to a mining company wrestling with this exact problem. What was really interesting was that while the topic was around the future of work, they brought in the chief technology officer, their chief human resources officer and the chief sustainability officer. All three domains were in the room together wrestling with this.”

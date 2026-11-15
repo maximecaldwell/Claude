@@ -1,0 +1,58 @@
+[
+ {
+  "file": "../X/hsmbcface_EN.txt",
+  "lang": "EN",
+  "words": 97,
+  "letters": 455,
+  "targets": 0,
+  "p_targets": 1.0,
+  "hidden": "no+dad",
+  "p_hidden": 0.44555444555444557,
+  "outputs": {
+   "as given | word n (whole)": "of is ore of a tied the leading economy",
+   "as given | word running (whole)": "of and Creighton _ _ _ _ _ _",
+   "as given | initials (whole)": "oiooattle",
+   "as given | word n (split)": "of is the of a tied the leading economy",
+   "as given | word running (split)": "of and The _ _ _ _ _ _",
+   "as given | initials (split)": "oitoattle",
+   "as given | letter n": "aaihnodad",
+   "as given | letter running": "asoyeiiic",
+   "reversed | word n (whole)": "economy leading the tied a of ore is of",
+   "reversed | word running (whole)": "economy closely nickel _ _ _ _ _ _",
+   "reversed | initials (whole)": "elttaooio",
+   "reversed | word n (split)": "economy leading the tied a of the is of",
+   "reversed | word running (split)": "economy closely largest _ _ _ _ _ _",
+   "reversed | initials (split)": "elttaotio",
+   "reversed | letter n": "dadonhiaa",
+   "reversed | letter running": "drnsyrlwc"
+  }
+ },
+ {
+  "file": "../X/hsmbcface_FR.txt",
+  "lang": "FR",
+  "words": 102,
+  "letters": 446,
+  "targets": 12,
+  "p_targets": 0.014985014985014986,
+  "hidden": "ce+le",
+  "p_hidden": 0.9050949050949051,
+  "outputs": {
+   "as given | word n (whole)": "est Canada cuivre ce producteurs minière Cette industrie est",
+   "as given | word running (whole)": "est des l'alliage le nickel importante _ _ _",
+   "as given | initials (whole)": "eCccpmCie",
+   "as given | word n (split)": "est Canada cuivre ce producteurs minière Cette industrie est",
+   "as given | word running (split)": "est des l'alliage le nickel importante _ _ _",
+   "as given | initials (split)": "eCccpmCie",
+   "as given | letter n": "CelednrsC",
+   "as given | letter running": "Cntédmiéu",
+   "reversed | word n (whole)": "est industrie Cette minière producteurs ce cuivre Canada est",
+   "reversed | word running (whole)": "est liée des et demande Creighton _ _ _",
+   "reversed | initials (whole)": "eiCmpccCe",
+   "reversed | word n (split)": "est industrie Cette minière producteurs ce cuivre Canada est",
+   "reversed | word running (split)": "est liée des et demande Creighton _ _ _",
+   "reversed | initials (split)": "eiCmpccCe",
+   "reversed | letter n": "CsrndeleC",
+   "reversed | letter running": "Coeneoléu"
+  }
+ }
+]

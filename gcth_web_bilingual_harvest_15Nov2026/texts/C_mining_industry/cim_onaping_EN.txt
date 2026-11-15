@@ -1,0 +1,49 @@
+The electric underground Glencore designs Onaping Depth around all-electric mining vehicle fleet
+
+Glencore’s Onaping Depth nickel/copper deposit in Sudbury, Ontario has been known to miners since the mid-1990s, sitting roughly 2,500 metres below the surface near two past producers, the Craig mine and the Onaping mine. But the question of how to access the deep orebody and mine it economically had never been answered.
+
+“This thing has been studied since the late 90s,” said Craig Harris, a senior electrical engineer with Glencore’s Sudbury Integrated Nickel Operations (Sudbury INO). “We’ve gone through a number of iterations to try and overcome the technical and financial hurdles.”
+
+The primary problem at Onaping Depth is ventilation. The deposit lies more than a kilometer away horizontally and over 1,000 metres deeper than the existing Craig mine works. Even using new ramps and winzes from the Craig mine to simplify access, the project would require four new openings to surface – two intake and two exhaust – to adequately ventilate the fumes from diesel equipment. At that depth, the cost of those shafts was prohibitive.
+
+Enter the potential solution: electric mining vehicles. The technology has been successfully implemented at Kirkland Lake Gold’s Macassa and South Mine Complex. Kirkland Lake began using a handful of electric LHDs and haul trucks in 2012 due to its own ventilation constraints during a mine-deepening plan.
+
+“It adds a lot of credibility when somebody is already mining with it,” said Harris. “We looked at KLG’s success and said, ‘Well, why can’t we do the whole mine around that?’”
+
+If you can’t stand the heat, get rid of your diesel equipment
+
+The advantages of electric vehicles that Harris lists include reduced greenhouse gas emissions, a better underground air environment, lower noise levels, less heat emitted and reduced operating costs (fueling with electricity being approximately one-third the price of diesel, in Sudbury INO’s estimation). But the key to making Onaping Depth economically viable is the ventilation savings.
+
+“If you look at any mine, one of the largest portions of the cost is for ventilation,” Harris said. “If you can cut that in half, which is roughly what we’ve done, it pays enormous dividends.”
+
+There are other follow-on benefits, too. With no diesel equipment, the company does not have to consider ever more stringent vent-per-horsepower particulates regulations. That opens up new design possibilities, said Harris, including recirculation of air underground and the use of a smaller, better-located cooling plant. “The less air you need to bring from surface to underground, the less cooling you need to do,” he pointed out.
+
+As young as electric vehicle technology is above ground, though, the technology is in its infancy in the mining world. Glencore wants to make every underground vehicle in its fleet of more than 80 at Onaping Depth electric. But many of those vehicles do not currently exist in electric form.
+
+“To build an entire mine with battery-electric vehicles today would be hard to do,” Harris said. “But we believe that in three, four, five years from now, it’s going to be there.” He said virtually all the equipment manufacturers are in some phase of research and development to electrify their products. “We have gone to the street for proposals and have seen at least one offering for all 80 pieces of gear.”
+
+Can’t we all just get along?
+
+A July workshop on the topic of electric mining vehicles in Sudbury drew more than 70 participants, including representatives from mining companies, vehicle manufacturers and electrical suppliers who make charging equipment. One of the pressing questions raised at the meeting was whether the industry can agree on a single charging standard for battery-electric vehicles. That would create options for miners wanting to order machines from multiple manufacturers while avoiding duplication of infrastructure. And getting many disparate companies and organizations to agree on a single standard will not be easy.
+
+One group helping to direct and inform the discussion is the Global Mining Standards and Guidelines Group (GMSG), which organized the workshop in Sudbury, as well as two others in Toronto and Brisbane, Australia. Heather Ednie, managing director of GMSG, said every company developing electric vehicles for use in mining right now is forging their own path as it relates to batteries, chargers and electrical current requirements. “If we continue on this path, we’re going to have severe safety concerns and a lot of extra expenses by mining companies trying to enable this mess of mismatching technology to work together,” said Ednie. “If we don’t work together, it will take longer to achieve the full potential of the electric mine.” GMSG recently created a working group to develop standards around underground mining with battery-electric vehicles in the hopes of providing a robust framework for technology developers to work within.
+
+Harris pointed out that because Onaping Depth is still in feasibility, it buys Glencore some time for these standards to be agreed upon and for the technology to mature or be developed.
+
+The company is estimating a cost premium of anywhere from 10 per cent to 100 per cent depending on vehicle type for its electrified vehicles, compared to diesel, however it expects this gap to narrow in the next few years. Harris admitted there is uncertainty around the premium, but said that it will not change the feasibility of the project. “With our timeline, we have a high degree of confidence that we can get there,” he said. “We wouldn’t be making this our base case and pushing this up the line if we didn’t think that.”
+
+He is eager for the technology to arrive, though. “The performance, on almost every metric, of an electric motor just blows diesel engines out of the water,” he said. “Any measurement you care to take – pollution, sound, acceleration, efficiency, comfort, maintenance even – they’re all better on an electric vehicle.”
+
+“The only challenge is, really, energy density.”
+
+Counting kilowatts
+
+That issue – manifesting in both the amount of work a vehicle is able to do on one charge and in the length of recharging times – does mean that mine planning has to tackle more granular issues, like vehicle parking schemes, than are typical. “Most engineering companies don’t put much thought into where you’re going to put your diesel equipment,” Harris explained. “With electric, it forces you to think about that, because you need to have the charging infrastructure in place.”
+
+Glencore hopes its vehicles will be usable for an entire eight-to-ten hour shift without interruption. Taking advantage of natural charging opportunities, like during breaks and shift changes, can help extend battery life, so the company plans to place chargers – over 100 in total, assuming infrastructure standardization – where the equipment will end up during those predictable downtimes. Regenerative braking can also drastically extend battery life. For a new project like Onaping Depth, that means designing the mine so that ore is carried on downhill grades to the dump, rather than uphill. Existing projects might not be so lucky.
+
+Other differences are relatively minor. “You need more electricians,” Harris noted. “Your expertise needs to change a little bit.” Maintenance costs may actually be lower, at least once initial teething problems are solved. “An electric drivetrain, with a proper control system, can really minimize the shocks on the mechanical portions of the vehicle,” he said. “It can slowly ramp up acceleration so you’re not as hard on your drivetrain.”
+
+As with any new technology, safety and training are concerns. Industry will have to find ways to vet new battery technologies and battery manufacturers. But neither Ednie nor Harris think these issues are insurmountable. “What our group will be looking at, rather than saying this is the battery chemistry you should be going for, will be the safety standards around [each chemistry],” said Ednie. “So if you want to bring this sort of battery into the mine site, what are the safety precautions that need to be considered? If a battery company can make sure that they’ve tested and met safety standards so the battery they’re selling you is safe, and the risks are well-known and documented, it’ll be up to the mining company to decide what technology they want to use.”
+
+And this is not just about technology for technology’s sake. As miners go deeper and hotter, Harris explained, electric mining vehicles become a vital enabler. “There’s really no other industry in the world that we know of that can benefit more from battery-electric vehicles.”

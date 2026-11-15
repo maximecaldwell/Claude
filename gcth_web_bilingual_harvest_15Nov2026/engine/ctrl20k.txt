@@ -1,0 +1,1 @@
+PLANT FR N=20000 hidden tresor+ici p 0.0015999200039998

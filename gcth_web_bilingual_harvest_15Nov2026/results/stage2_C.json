@@ -1,0 +1,30 @@
+[
+ {
+  "file": "../C/mhf_michael_j_knuckey_FR.txt",
+  "lang": "FR",
+  "words": 707,
+  "letters": 3610,
+  "targets": 1,
+  "p_targets": 0.45252737363131845,
+  "hidden": "ciel+le+sac",
+  "p_hidden": 0.0023498825058747065,
+  "outputs": {
+   "as given | word n (whole)": "Knuckey J du minier Michael du la découverte Knuckey",
+   "as given | word running (whole)": "Knuckey L'intronisation d’exploration nord accord opportunités mérites Cornwall Knuckey",
+   "as given | initials (whole)": "KJdmMdldK",
+   "as given | word n (split)": "Knuckey J champion secteur de renommée dans la Knuckey",
+   "as given | word running (split)": "Knuckey 2022 techniques le un des ses à Angleterre",
+   "as given | initials (split)": "KJcsdrdlK",
+   "as given | letter n": "ciéLlesac",
+   "as given | letter running": "caedrlien",
+   "reversed | word n (whole)": "Knuckey découverte la du Michael minier du J Knuckey",
+   "reversed | word running (whole)": "Knuckey mise minière désormais soutien peuples Né Cornwall Knuckey",
+   "reversed | initials (whole)": "KdldMmdJK",
+   "reversed | word n (split)": "Knuckey la dans renommée de secteur champion J Knuckey",
+   "reversed | word running (split)": "Knuckey la l’exploitation sont Son les secteur à Angleterre",
+   "reversed | initials (split)": "KldrdscJK",
+   "reversed | letter n": "caselLéic",
+   "reversed | letter running": "coreeeien"
+  }
+ }
+]

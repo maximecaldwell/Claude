@@ -1,0 +1,35 @@
+La fabrication d'une maquette
+
+Une maquette est un outil d'acier gravé, utilisé dans la presse de monnaie pour imprimer un dessin sur le blanc. À la Monnaie Royale Canadienne, la production d'une pièce de collection requiert plus d'attention à chaque étape du processus de monnayage (y compris la fabrication de la maquette).
+
+La maquette
+
+Le choix d'une maquette exécutée par un artiste constitue la première étape dans la fabrication de la monnaie.
+
+Modèle positif en plâtre
+
+Le graveur sculpte un modèle du dessin sur une grande pièce en plâtre de moulage. Souvent, ce modèle en relief ne contient pas tous les détails du dessin original.
+
+Modèle négatif en plâtre
+
+On prend ensuite l'empreinte du positif en plâtre et on en produit un négatif. Les petits détails du dessin sont ajoutés durant cette étape.
+
+Modèle positif en caoutchouc et modèle négatif en résine d'époxy
+
+Ce procédé en deux étapes produit un modèle ayant une surface dure qui peut résister à l'action de la machine à graver. D'abord, on fait une impression en caoutchouc du modèle négatif en plâtre. Ensuite, on fait un autre négatif (modèle négatif en époxy) du modèle positif en caoutchouc.
+
+Modèle intermédiaire en laiton
+
+Le modèle négatif en époxy est installé à une extrémité d'une machine qui reproduit un modèle en trois dimensions. Pendant qu'un traceur suit les contours du modèle en époxy, un couteau à l'extrémité opposée de la machine reproduit le dessin, en plus petite dimension, sur une plaque de laiton.
+
+Matrice de réduction
+
+Ensuite, le dessin imprimé sur la plaque de laiton est réduit aux dimensions d'une pièce de monnaie lorsqu'il est gravé à l'extrémité d'un cylindre d'acier. Ce cylindre est ensuite durci par traitement à la chaleur et devient ainsi la matrice de réduction.
+
+Le poinçon original
+
+La matrice de réduction est pressée contre un cylindre d'acier en blanc, produisant ainsi un poinçon original. Après son durcissement, le poinçon sert à frapper une série de cylindres d'acier spécialement préparés pour cela. Ces cylindres deviennent les poinçons qui serviront à frapper les pièces.
+
+Le blanc (le flan)
+
+Dans la presse monétaire, le poinçon supérieur et inférieur se rejoignent et serrent un blanc (appelé flan). Les blancs de la nouvelle pièce canadienne de 2 dollars ont une bande externe en nickel et une pièce centrale en alliage de bronze et d'aluminium.
