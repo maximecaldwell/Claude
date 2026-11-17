@@ -1,0 +1,16 @@
+rec_no,brief_no,chapter,region_lon,leaf,designed_digits_EN,designed_digits_FR,EN_eq_FR,designed_certainty,words_EN,words_FR,paras_EN,paras_FR,subheads_EN,subheads_FR,sentences_EN,sentences_FR,numbers_in_article_EN,numbers_in_article_FR,structural_certainty,notes
+1,8,Dawson (Klondike),-139.4,BRIDGE (word; community read),none,none,n/a,certain that no designed digit is on file (snow marks illegible at full res),1664,1889,30,26,6,6,86,81,55,44,certain under ledger convention,record numbers Dawson as release 1; brief lists it 8th
+2,1,Cobalt,-79.69,STEPS (word),none,none,n/a,certain (no digit carrier),1991,2328,47,47,9,9,99,100,85,83,certain under ledger convention,on-screen 'No. 8' etc. graded archival null
+3,2,Golden Triangle,-128.4,KLEANZA (word; community),none,none,n/a,certain (no digit carrier),1541,2038,48,49,6,7,142,142,61,61,certain under ledger convention,'SINCE 1911' mock-up = sample of one (untested)
+4,3,Newfoundland (Argentia/Dover),-53.97,WALNUT (word),none,none,n/a,certain (no digit carrier),759,877,14,14,4,4,32,32,23,22,certain under ledger convention,'N3WFOUNDLAND' AI-clip text: untested
+5,4,Southern BC (Britannia),-123.2,BOOM (word),none,none,n/a,certain (no digit carrier),1527,2031,33,35,5,5,93,91,43,48,certain under ledger convention,'+5.3' = W.J. Moore negative number (explained)
+6,5,Toronto,-79.38,ROM (word),60-pair block 28-35 ... 28-1 (solved: ROM plate),same,yes,certain (printed; solved 60/60),1958,2442,34,31,3,4,85,84,115,114,certain under ledger convention,pair block already used for the regional solve
+7,6,New Brunswick (Bathurst),-65.65,1 (Morse .----),1,1,yes,measured; classification post hoc,1103,1320,33,35,5,5,68,70,30,29,certain under ledger convention,
+8,7,Val-d'Or,-77.78,no leaf,810-419-227 (trailer),1045-420-275 (trailer),no,certain (printed); EN = word index -> Lamaque x3,957,1127,22,22,3,3,55,55,21,18,certain under ledger convention,FR has no headline
+9,9,Saskatchewan,-105.5,2638,2638,2638,yes,high (FR 20/20),1272,1608,49,51,7,7,90,90,33,38,certain under ledger convention,
+10,10,Nova Scotia,-64.8,9 (Morse ----.),9,9,yes,measured; classification post hoc,1125,1453,37,40,5,5,74,75,39,45,certain under ledger convention,
+11,11,Manitoba,-96.5,ALT42,42,42,yes,high (17/17),1195,1476,36,35,6,6,71,69,41,41,certain under ledger convention,ALT dropped for digits; ALT42 -> '*' -> Star Lake (D41)
+12,12,Sudbury,-81.0,9-group Morse,6|2|76|37|3|25|69|4|20 = 62763732569420,3|2|58|16|7|14|24|25|3 = 32581671424253,no,digits measured; nine-group parse open,2077,2499,71,72,11,11,136,137,55,60,certain under ledger convention,only leaf with EN != FR
+13,13,Chibougamau (EXCLUDED from the 12),-74.37,CUFES2,2 (in CUFES2); clocks 11 10 3 7 5 4 6 1 8 12 2 9; pairs EN 9,same leaf/clocks; pairs FR 11,leaf+clocks yes; pairs no,certain,1781,n/a,84,n/a,8,n/a,129,n/a,79,n/a,EN only,13th release; cited not used
+GP,GP,Quebec one-year recap,,,20 · 60 · 5,,,record,,,,,,,,,,,,closed R-1325 (article codes)
+GP,GP,Boyd clue #5 video,,,217 · 14,,,ASR,,,,,,,,,,,,closed R-1325
