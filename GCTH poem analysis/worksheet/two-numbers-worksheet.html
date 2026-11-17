@@ -1,0 +1,198 @@
+<title>Two Numbers Worksheet</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: a single column ledger sheet; ruled tables like an assay book, digits in a mono face, one gold accent for the digits that matter. */
+:root{
+  --paper:#f3f4f1; --sheet:#fbfbf9; --ink:#1d2321; --muted:#5d6763; --rule:#d5dad6; --gold:#9a6b12; --gold-soft:#f3e7cc; --closed:#8a3b2e; --closed-soft:#f4e1dc;
+  --f-head:"Space Grotesk",system-ui,sans-serif; --f-body:"Inter",system-ui,sans-serif; --f-num:"JetBrains Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--paper:#151917;--sheet:#1c211f;--ink:#e6ebe8;--muted:#9aa5a0;--rule:#333b38;--gold:#e0b45a;--gold-soft:#3a2f17;--closed:#e39b8c;--closed-soft:#3b221d;color-scheme:dark}}
+:root[data-theme="dark"]{--paper:#151917;--sheet:#1c211f;--ink:#e6ebe8;--muted:#9aa5a0;--rule:#333b38;--gold:#e0b45a;--gold-soft:#3a2f17;--closed:#e39b8c;--closed-soft:#3b221d;color-scheme:dark}
+body{background:var(--paper);color:var(--ink);font:15px/1.55 var(--f-body);padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:28px 60px}
+.wrap{max-width:980px;margin:0 auto;display:flex;flex-direction:column;gap:26px}
+h1,h2,h3{font-family:var(--f-head);text-wrap:balance;margin:0}
+h1{font-size:34px;line-height:1.1}
+h2{font-size:21px}
+h3{font-size:16px}
+.eyebrow{font:600 11px/1 var(--f-num);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.lede{max-width:66ch;color:var(--muted);margin:8px 0 0}
+section{background:var(--sheet);border:1px solid var(--rule);border-radius:6px;padding:20px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.note{color:var(--muted);font-size:13.5px;max-width:72ch;margin:0}
+blockquote{margin:0;padding:12px 16px;border-left:3px solid var(--gold);background:var(--gold-soft);font-family:var(--f-num);font-size:14px;letter-spacing:.02em}
+.scroll{overflow-x:auto;min-width:0}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th,td{border-bottom:1px solid var(--rule);padding:7px 8px;text-align:left;vertical-align:top}
+th{font:600 11px/1.3 var(--f-num);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+td.n,.num{font-family:var(--f-num);font-variant-numeric:tabular-nums}
+td.n{white-space:nowrap}
+.key{font-family:var(--f-num);font-weight:600;color:var(--gold);background:var(--gold-soft);padding:1px 6px;border-radius:3px;white-space:nowrap}
+.word{font-family:var(--f-num);font-weight:600;letter-spacing:.05em}
+.pill{display:inline-block;font:600 11px/1.6 var(--f-num);padding:0 7px;border-radius:9px;border:1px solid var(--rule);color:var(--muted);white-space:nowrap}
+.pill.ok{border-color:var(--gold);color:var(--gold)}
+.grid9{display:grid;grid-template-columns:auto repeat(9,minmax(34px,1fr));gap:4px;font-family:var(--f-num);min-width:420px}
+.grid9 div{border:1px solid var(--rule);padding:6px 4px;text-align:center;font-variant-numeric:tabular-nums}
+.grid9 .h{border:none;color:var(--muted);font-size:11px;padding:2px}
+.grid9 .lab{border:none;text-align:right;padding-right:8px;color:var(--muted);font-size:12px}
+.clocks{display:flex;flex-wrap:wrap;gap:6px}
+.clock{width:44px;height:44px;border:1.5px solid var(--ink);border-radius:50%;display:grid;place-items:center;font:600 15px var(--f-num);position:relative}
+.clock small{position:absolute;bottom:-17px;font:500 10px var(--f-num);color:var(--muted)}
+.pairs{display:grid;grid-template-columns:repeat(auto-fill,minmax(70px,1fr));gap:4px;font-family:var(--f-num);font-size:13px}
+.pairs span{border:1px solid var(--rule);padding:3px 4px;text-align:center}
+.pairs i{color:var(--muted);font-style:normal;font-size:10px;margin-right:3px}
+ul.tried{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:6px}
+ul.tried li{padding:8px 10px;border-radius:4px;background:var(--closed-soft);font-size:14px}
+ul.tried b{color:var(--closed)}
+.desk{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.desk label{display:flex;flex-direction:column;gap:6px;font:600 13px var(--f-head)}
+.desk textarea,.desk input{font:14px/1.5 var(--f-num);color:var(--ink);background:var(--paper);border:1px solid var(--rule);border-radius:4px;padding:8px;width:100%;box-sizing:border-box}
+.desk textarea{min-height:120px;resize:vertical}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+@media (max-width:560px){h1{font-size:27px}section{padding:14px}}
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="eyebrow">Great Canadian Treasure Hunt · grand prize · desk worksheet · 17 Nov 2026</div>
+    <h1>Two Numbers Worksheet</h1>
+    <p class="lede">Every number the clues carry, in one place, for Max, Mike and Dad. Chapters are in release order. Gold marks the digits each chapter carried that its own bonus box didn’t need. Those are the most likely pieces of the "two numbers".</p>
+  </header>
+
+  <section>
+    <h2>The instruction</h2>
+    <blockquote>SEEK THE DIGITS … FROM EVERY CHAPTER, EVERY POST … TWO NUMBERS MARK THE TREASURE’S BASE</blockquote>
+    <p class="note">Sean Boyd’s card, grand-prize clue 5 (video, 15 Oct 2026). From launch week, the site called the poem plus the monthly clues "the Hunt Marker – the keys to the gold". The only bonus clue excluded from the grand prize is the 4-line Golden Triangle riddle.</p>
+  </section>
+
+  <section>
+    <h2>1. What each chapter carries</h2>
+    <p class="note">"Leaf" is the hidden code in each chapter’s video. Chapters 1–6 carry words; from chapter 7 on, digits.</p>
+    <div class="scroll"><table>
+      <thead><tr><th>#</th><th>Chapter</th><th>Leaf / code (EN)</th><th>French, if different</th><th>Status</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td class="n">1</td><td>Dawson (Klondike)</td><td><span class="word">BRIDGE</span></td><td></td><td><span class="pill">found</span></td><td>Word leaf (community reading).</td></tr>
+        <tr><td class="n">2</td><td>Cobalt</td><td><span class="word">STEPS</span></td><td></td><td><span class="pill">found</span></td><td>Word leaf.</td></tr>
+        <tr><td class="n">3</td><td>Golden Triangle</td><td><span class="word">KLEANZA</span></td><td></td><td><span class="pill">found</span></td><td>Word leaf. Its separate 4-line riddle "does not apply" to the grand prize.</td></tr>
+        <tr><td class="n">4</td><td>Newfoundland (Argentia)</td><td><span class="word">WALNUT</span></td><td></td><td><span class="pill">found</span></td><td>Word leaf.</td></tr>
+        <tr><td class="n">5</td><td>Southern BC (Britannia)</td><td><span class="word">BOOM</span></td><td></td><td><span class="pill">found</span></td><td>Word leaf.</td></tr>
+        <tr><td class="n">6</td><td>Toronto</td><td><span class="word">ROM</span> + 60 number pairs (section 4)</td><td>same</td><td><span class="pill">found</span></td><td>The pairs already solved Toronto (the ROM plate).</td></tr>
+        <tr><td class="n">7</td><td>New Brunswick (Bathurst)</td><td><span class="key">1</span> <span class="note">Morse .----</span></td><td>same</td><td><span class="pill">found</span></td><td>Box found without this digit.</td></tr>
+        <tr><td class="n">8</td><td>Val-d’Or</td><td><span class="key">810-419-227</span></td><td><span class="key">1045-420-275</span></td><td><span class="pill ok">live</span></td><td>Printed at the end of the article. MINING.COM’s copy leaves it out. TNM’s copy also has a stray colon: "of <b>:mining</b> finance".</td></tr>
+        <tr><td class="n">9</td><td>Saskatchewan</td><td><span class="key">2638</span></td><td>same</td><td><span class="pill ok">live</span></td><td>High confidence.</td></tr>
+        <tr><td class="n">10</td><td>Nova Scotia</td><td><span class="key">9</span> <span class="note">Morse ----.</span></td><td>same</td><td><span class="pill">found</span></td><td>Box found without this digit.</td></tr>
+        <tr><td class="n">11</td><td>Manitoba</td><td><span class="key">ALT42</span> → <span class="key">42</span></td><td>same</td><td><span class="pill ok">live</span></td><td>Alt-code 42 is "*", which the record ties to Star Lake (regional).</td></tr>
+        <tr><td class="n">12</td><td>Sudbury</td><td><span class="key">6 2 76 37 3 25 69 4 20</span></td><td><span class="key">3 2 58 16 7 14 24 25 3</span></td><td><span class="pill ok">live</span></td><td>Nine Morse groups; the only leaf where English and French differ. See section 3.</td></tr>
+        <tr><td class="n">13</td><td>Chibougamau</td><td><span class="word">CUFES2</span> (chalcopyrite) + 12 clocks (section 2)</td><td>same</td><td><span class="pill">found</span></td><td>Word pairs gave BOARDWALK (EN, 9 pairs) / CAILLEBOTIS (FR, 11 pairs). Winners never mentioned the clocks.</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <section>
+    <h2>2. Chibougamau clocks</h2>
+    <p class="note">Twelve clock flashes in the Chibougamau video, in the order they appear.</p>
+    <div class="clocks" style="padding-bottom:18px">
+      <div class="clock">11<small>1</small></div><div class="clock">10<small>2</small></div><div class="clock">3<small>3</small></div><div class="clock">7<small>4</small></div><div class="clock">5<small>5</small></div><div class="clock">4<small>6</small></div><div class="clock">6<small>7</small></div><div class="clock">1<small>8</small></div><div class="clock">8<small>9</small></div><div class="clock">12<small>10</small></div><div class="clock">2<small>11</small></div><div class="clock">9<small>12</small></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>3. Sudbury leaf, English and French</h2>
+    <div class="scroll"><div class="grid9">
+      <div class="h"></div><div class="h">1</div><div class="h">2</div><div class="h">3</div><div class="h">4</div><div class="h">5</div><div class="h">6</div><div class="h">7</div><div class="h">8</div><div class="h">9</div>
+      <div class="lab">EN</div><div>6</div><div>2</div><div>76</div><div>37</div><div>3</div><div>25</div><div>69</div><div>4</div><div>20</div>
+      <div class="lab">FR</div><div>3</div><div>2</div><div>58</div><div>16</div><div>7</div><div>14</div><div>24</div><div>25</div><div>3</div>
+    </div></div>
+    <p class="note">As unbroken strings: EN <span class="num">62763732569420</span> · FR <span class="num">32581671424253</span>. Which groups go together is still open.</p>
+  </section>
+
+  <section>
+    <h2>4. Toronto’s 60 pairs</h2>
+    <p class="note">Printed in the Toronto article; already used to solve Toronto. Listed for completeness.</p>
+    <div class="pairs">
+      <span><i>1</i>28-35</span><span><i>2</i>25-9</span><span><i>3</i>29-2</span><span><i>4</i>34-1</span><span><i>5</i>25-1</span><span><i>6</i>30-4</span><span><i>7</i>35-2</span><span><i>8</i>37-12</span><span><i>9</i>29-35</span><span><i>10</i>24-4</span>
+      <span><i>11</i>25-4</span><span><i>12</i>35-29</span><span><i>13</i>31-3</span><span><i>14</i>29-10</span><span><i>15</i>26-7</span><span><i>16</i>27-3</span><span><i>17</i>37-12</span><span><i>18</i>29-13</span><span><i>19</i>25-5</span><span><i>20</i>30-7</span>
+      <span><i>21</i>34-8</span><span><i>22</i>32-31</span><span><i>23</i>37-5</span><span><i>24</i>31-2</span><span><i>25</i>24-4</span><span><i>26</i>29-8</span><span><i>27</i>31-27</span><span><i>28</i>25-1</span><span><i>29</i>33-14</span><span><i>30</i>35-38</span>
+      <span><i>31</i>27-9</span><span><i>32</i>34-29</span><span><i>33</i>30-20</span><span><i>34</i>26-12</span><span><i>35</i>24-2</span><span><i>36</i>33-8</span><span><i>37</i>27-2</span><span><i>38</i>32-21</span><span><i>39</i>37-2</span><span><i>40</i>29-24</span>
+      <span><i>41</i>25-1</span><span><i>42</i>27-4</span><span><i>43</i>26-50</span><span><i>44</i>31-14</span><span><i>45</i>33-2</span><span><i>46</i>34-29</span><span><i>47</i>25-5</span><span><i>48</i>35-10</span><span><i>49</i>30-1</span><span><i>50</i>37-13</span>
+      <span><i>51</i>25-1</span><span><i>52</i>28-5</span><span><i>53</i>25-14</span><span><i>54</i>33-3</span><span><i>55</i>36-3</span><span><i>56</i>24-5</span><span><i>57</i>27-1</span><span><i>58</i>25-8</span><span><i>59</i>37-12</span><span><i>60</i>28-1</span>
+    </div>
+  </section>
+
+  <section>
+    <h2>5. Grand-prize numbers</h2>
+    <div class="scroll"><table>
+      <thead><tr><th>Number</th><th>Where</th><th>What it is</th></tr></thead>
+      <tbody>
+        <tr><td class="n"><span class="key">217</span> · <span class="key">14</span></td><td>15 Oct 2026 video (GP clue 5)</td><td>Spoken in the video: "217 gold coins" and "14 treasures" (13 bonus caches plus the grand prize).</td></tr>
+        <tr><td class="n">217 · 241</td><td>One-year recap (3 Nov 2026)</td><td>"Grand Prize 217", and 241 (= 217 + 4 × 6, as your record notes it).</td></tr>
+        <tr><td class="n">20 · 60 · 5</td><td>One-year recap, Quebec section</td><td>Three paragraphs in a row open with these numbers; also "60 miles from the Ontario border". Unexplained.</td></tr>
+        <tr><td class="n">13 × 4 = 52</td><td>The poem</td><td>13 stanzas of 4 lines; no numerals anywhere in it.</td></tr>
+        <tr><td class="n">12</td><td>McEwen card (GP clue 4)</td><td>"TWELVE BROKEN STRIDES".</td></tr>
+        <tr><td class="n">$1.3M · 12 × $25,000</td><td>Launch posts</td><td>Prize values; TNM says "more than $1 million", MINING.COM "C$1.3 million".</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <section>
+    <h2>6. Counts for each chapter article</h2>
+    <p class="note">From your record’s Clue Number Ledger, checked against the publisher PDFs. EN / FR.</p>
+    <div class="scroll"><table>
+      <thead><tr><th>#</th><th>Chapter</th><th class="num">Words</th><th class="num">Paragraphs</th><th class="num">Subheads</th><th class="num">Sentences</th><th class="num">Numbers in text</th></tr></thead>
+      <tbody>
+        <tr><td class="n">1</td><td>Dawson</td><td class="n">1664 / 1889</td><td class="n">30 / 26</td><td class="n">6 / 6</td><td class="n">86 / 81</td><td class="n">55 / 44</td></tr>
+        <tr><td class="n">2</td><td>Cobalt</td><td class="n">1991 / 2328</td><td class="n">47 / 47</td><td class="n">9 / 9</td><td class="n">99 / 100</td><td class="n">85 / 83</td></tr>
+        <tr><td class="n">3</td><td>Golden Triangle</td><td class="n">1541 / 2038</td><td class="n">48 / 49</td><td class="n">6 / 7</td><td class="n">142 / 142</td><td class="n">61 / 61</td></tr>
+        <tr><td class="n">4</td><td>Newfoundland</td><td class="n">759 / 877</td><td class="n">14 / 14</td><td class="n">4 / 4</td><td class="n">32 / 32</td><td class="n">23 / 22</td></tr>
+        <tr><td class="n">5</td><td>Southern BC</td><td class="n">1527 / 2031</td><td class="n">33 / 35</td><td class="n">5 / 5</td><td class="n">93 / 91</td><td class="n">43 / 48</td></tr>
+        <tr><td class="n">6</td><td>Toronto</td><td class="n">1958 / 2442</td><td class="n">34 / 31</td><td class="n">3 / 4</td><td class="n">85 / 84</td><td class="n">115 / 114</td></tr>
+        <tr><td class="n">7</td><td>New Brunswick</td><td class="n">1103 / 1320</td><td class="n">33 / 35</td><td class="n">5 / 5</td><td class="n">68 / 70</td><td class="n">30 / 29</td></tr>
+        <tr><td class="n">8</td><td>Val-d’Or</td><td class="n">957 / 1127</td><td class="n">22 / 22</td><td class="n">3 / 3</td><td class="n">55 / 55</td><td class="n">21 / 18</td></tr>
+        <tr><td class="n">9</td><td>Saskatchewan</td><td class="n">1272 / 1608</td><td class="n">49 / 51</td><td class="n">7 / 7</td><td class="n">90 / 90</td><td class="n">33 / 38</td></tr>
+        <tr><td class="n">10</td><td>Nova Scotia</td><td class="n">1125 / 1453</td><td class="n">37 / 40</td><td class="n">5 / 5</td><td class="n">74 / 75</td><td class="n">39 / 45</td></tr>
+        <tr><td class="n">11</td><td>Manitoba</td><td class="n">1195 / 1476</td><td class="n">36 / 35</td><td class="n">6 / 6</td><td class="n">71 / 69</td><td class="n">41 / 41</td></tr>
+        <tr><td class="n">12</td><td>Sudbury</td><td class="n">2077 / 2499</td><td class="n">71 / 72</td><td class="n">11 / 11</td><td class="n">136 / 137</td><td class="n">55 / 60</td></tr>
+        <tr><td class="n">13</td><td>Chibougamau</td><td class="n">1781 / –</td><td class="n">84 / –</td><td class="n">8 / –</td><td class="n">129 / –</td><td class="n">79 / –</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <section>
+    <h2>7. Already tried</h2>
+    <p class="note">Each came out no better than random digits. Listed so nobody repeats them without a new reason.</p>
+    <ul class="tried">
+      <li><b>Map coordinates from the chapter codes</b> in release order and in clock order, split at every point (decimal and degrees-minutes-seconds).</li>
+      <li><b>Article features as digits:</b> subheads, title punctuation, last digit of word count, paragraph counts, English and French (11 versions).</li>
+      <li><b>6 + 6 splits</b> of the chapters: first half vs second, odd vs even, east vs west, by poem stanza, English vs French; first, last, total or whole digits; four map readings (760 tries, 17 Nov).</li>
+      <li><b>The clocks as an ordering</b> or compass bearings; the Alt-code weave; a survey-marker ID; poem letter and word counts as coordinates.</li>
+      <li><b>Sudbury leaf as letters</b> or as word positions in every clue text, English and French.</li>
+      <li><b>Not yet tried:</b> keeping only some digits from each chapter by a rule someone chooses (your record’s "Rule A"); lot and concession numbers on a township map; the 20 · 60 · 5 recap openers.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>8. Your ideas</h2>
+    <p class="note">Type here; it stays in this browser only and isn’t shared with anyone else who opens the page.</p>
+    <div class="desk">
+      <label for="idea-max">Max<textarea id="idea-max" placeholder="Which digits, in what order, read how?"></textarea></label>
+      <label for="idea-mike">Mike<textarea id="idea-mike" placeholder="Which digits, in what order, read how?"></textarea></label>
+      <label for="idea-dad">Dad<textarea id="idea-dad" placeholder="Which digits, in what order, read how?"></textarea></label>
+    </div>
+    <div class="two">
+      <label for="num1" class="desk" style="display:flex;flex-direction:column;gap:6px;font:600 13px var(--f-head)">Number 1<input id="num1" inputmode="numeric" autocomplete="off"></label>
+      <label for="num2" class="desk" style="display:flex;flex-direction:column;gap:6px;font:600 13px var(--f-head)">Number 2<input id="num2" inputmode="numeric" autocomplete="off"></label>
+    </div>
+  </section>
+</div>
+
+<script>
+(function(){
+  var ids=['idea-max','idea-mike','idea-dad','num1','num2'];
+  ids.forEach(function(id){
+    var el=document.getElementById(id); if(!el) return;
+    try{ var v=localStorage.getItem('tnw-'+id); if(v) el.value=v; }catch(e){}
+    el.addEventListener('input',function(){ try{ localStorage.setItem('tnw-'+id, el.value); }catch(e){} });
+  });
+})();
+</script>
