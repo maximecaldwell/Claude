@@ -221,7 +221,7 @@ const ECHO_OTHER = [
 
 /* ---------- tabs ---------- */
 const VIEWS = [
- ['overview','Summary'],['lines','Line by line'],['words','Every word'],['grammar','Grammar'],
+ ['overview','Summary'],['reading','Whole poem'],['lines','Line by line'],['words','Every word'],['grammar','Grammar'],
  ['letters','Letter patterns'],['numbers','Number sequences'],['translation','EN → FR drift'],['echoes','Anthem & echoes'],['rules','Rules & breaks'],['archive','Clue archive'],['sites','Site scorecard'],['deeper','Deeper tests'],['method','Method']
 ];
 const tabs = document.getElementById('tabs');
@@ -313,6 +313,75 @@ RENDER.overview = () => {
 };
 
 /* ---------- LINE BY LINE ---------- */
+RENDER.reading = () => {
+  const L = LE.map(x=>esc(x.text)), F = LF.map(x=>esc(x.text));
+  const S = [
+   {n:1, role:'Opening', conf:'s', names:'Canada as a whole ("a land crowned cold and vast"). No single place.',
+    read:'Sets the scene: old mining wealth, and "a mirror" (still water) that hides what the old veins carried. "Verdigris" is the green crust on old copper or bronze. The French "légende" can mean a legend, a caption or a map key.',
+    means:'<b>Points.</b> Still water near old mining ground; something old, metal and green-crusted. The mirror quatrain (grand-prize clue 2) repeats the water image.'},
+   {n:2, role:'Names a place, then cancels it', conf:'s', names:'High mountain gold country with glaciers: BC’s Golden Triangle (a bonus chapter, cache found).',
+    read:'"Yet peaks mislead with gilded hue": the gold mountains are a trap. Its last line is the only positive line in a cancel stanza: "The path lies where the birch trees grew".',
+    means:'<b>Cancels</b> mountain gold country. Keep: <b>birch</b> marks the path (it comes back in stanza 11).'},
+   {n:3, role:'Names a place, then cancels it', conf:'s', names:'Coastal copper by salt water: Britannia (Southern BC chapter) and/or Cape d’Or (Nova Scotia chapter). Both caches were found by the shore.',
+    read:'"The brine remembers, but forgets": the sea-coast copper story is not the answer.',
+    means:'<b>Cancels</b> salt-water coasts. That fits the calm, still "mirror" of stanza 1.'},
+   {n:4, role:'Names a place, then cancels it', conf:'m', names:'A northern mining town that burned and rose again ("phoenix"), with "red seams". Not settled. Candidates: Cobalt (pink-red cobalt ore, 1909 fire), Timmins–Porcupine (1911 fire), Phoenix BC (a copper ghost town).',
+    read:'"The phoenix flew and won’t look back": the town’s glory is over.',
+    means:'<b>Cancels</b> that town. Which town it is matters little for the grand prize.'},
+   {n:5, role:'Names a place, then cancels it', conf:'s', names:'Sudbury’s Big Nickel ("A giant coin reflects the sun"). Sudbury is a bonus chapter, cache still live.',
+    read:'"Its gleam is but a siren’s light / No miner’s truth is held in sight": the landmark is a lure.',
+    means:'<b>Cancels</b> the Big Nickel and Sudbury city. It does not obviously cancel the wider district.'},
+   {n:6, role:'Names places, then cancels them', conf:'s', names:'"Flinty’s claim" = Flin Flon, Manitoba. The city itself calls its statue of Flintabbatey Flonatin "Flinty for short", and the town grew from the claim staked there in 1915. "Chalco fever gripped the east" = an eastern copper rush (chalcopyrite), most likely Chibougamau, Quebec. Both are bonus chapters.',
+    read:'"But silence marks the current road". Flinton, Ontario is so small that almost nobody would recognise it, so it is a poor fit for a riddle written for the whole country.',
+    means:'<b>Cancels</b> Flin Flon and the eastern copper camp. <b>Eastern Ontario stays in.</b>'},
+   {n:7, role:'Open question: cancel or pointer?', conf:'c', names:'"The Shield". Either the Canadian Shield in general, or a Shield chapter not named elsewhere (Val-d’Or, Saskatchewan or Cobalt are the unclaimed ones).',
+    read:'It has the same shape as the cancel stanzas: a place, then "But breaks don’t speak nor faults confess". The French "noyés" means drowned and "fautes" means mistakes, not geological faults.',
+    means:'If it follows the pattern, it cancels <b>one Shield camp</b>, not the whole Shield. Either way it is not strong evidence <i>for</i> Shield country. That comes from stanzas 8–9 (cedar, pine, lake shore) instead.'},
+   {n:8, role:'No place named: the grand-prize landscape', conf:'s', names:'Nothing. No bonus cache matches it.',
+    read:'"Where iron sings and cedars lean": iron in the ground (a compass deflected?) or an old railway, and cedars leaning over the water. "The strong, the silent, and the free" echoes the English anthem ("True North strong and free"); the French line does not.',
+    means:'<b>Points.</b> Cedar country with iron, which means southern Ontario, southern Quebec or New Brunswick. This is the poem’s best regional filter.'},
+   {n:9, role:'No place named: the grand-prize spot', conf:'s', names:'Nothing. No bonus cache matches it.',
+    read:'"One marker stands, by shore and pine": an old marker that still stands upright (French "une borne se dresse") beside a lake with pines. Its message is faded; the French "terni" means tarnished, which suggests metal or paint. "What once declared": a boundary, a claim, or a sign that once announced something.',
+    means:'<b>Points.</b> An old standing marker on a lake shore among pines. The poem does not say it is a survey benchmark.'},
+   {n:10, role:'Names a place, then cancels it', conf:'s', names:'Bathurst, New Brunswick (zinc mines). Bonus chapter, cache found.',
+    read:'"The sounds now fade": its story is over.',
+    means:'<b>Cancels</b> the Bathurst camp.'},
+   {n:11, role:'Names a place, then cancels it', conf:'s', names:'Toronto’s Bay Street (mining finance). Bonus chapter, cache found.',
+    read:'"No gilded desk nor numbered share / Will point to where the birches stare": money and share numbers won’t lead you there. Birch again.',
+    means:'<b>Cancels</b> Toronto, and is a gentle warning against number-crunching. Keep: <b>birch</b>.'},
+   {n:12, role:'Directions on the ground', conf:'s', names:'Nothing.',
+    read:'"Step not in haste where paths align / But where the trail forgets design": leave the laid-out trail where it fades. "Beyond the mark the tall grass grows": past the marker there is an opening with tall grass. The French "il" (masculine) shows the buried thing is the treasure, not the marker (feminine "borne").',
+    means:'<b>Points.</b> A trail, a marker, then a grassy opening just past it.'},
+   {n:13, role:'Directions on the ground', conf:'s', names:'Nothing.',
+    read:'"Not marked by gold but core alone / A sliver rests in overgrown / Look past the script, behind the brush / The compass turns, and all is hush": look past an inscription, behind the brush. "The compass turns" is either a magnetic pull from iron or simply "turn here".',
+    means:'<b>Points.</b> An inscription, brush behind it, and possibly iron in the ground.'},
+  ];
+  const lines = n => { const a=(n-1)*4; return [0,1,2,3].map(i=>`<div class="pair"><q><span class="tag en">EN</span> ${L[a+i]}</q><q class="src"><span class="tag fr">FR</span> ${F[a+i]}</q></div>`).join(''); };
+  const conf = c => c==='s'?'<span class="sev s">clear</span>':c==='m'?'<span class="sev m">partly settled</span>':'<span class="sev c">open</span>';
+  let h = `<div><h2>The whole poem, stanza by stanza</h2><p class="note">How the 13 stanzas fit together. Desk reading only, using the clue texts and the record’s findings. Confidence labels describe how settled each reading is, not whether it is right.</p></div>
+  <div class="panel"><h3>How the poem is built</h3><ul class="callouts">
+   <li><b>Opening (stanza 1):</b> Canada, old mining wealth, and a "mirror" of still water.</li>
+   <li><b>Eight stanzas name a famous mining place, then turn it down</b> with "But", "Yet" or "No" (stanzas 2, 3, 4, 5, 6, 10, 11, and probably 7). Nearly every place they name has its own bonus chapter: Golden Triangle, Britannia / Cape d’Or, Sudbury, Flin Flon (Manitoba), Chibougamau, Bathurst and Toronto. The organisers reportedly said they built in where the treasure <i>isn’t</i> (second-hand, CP24).</li>
+   <li><b>Two stanzas name no place and have no cache:</b> stanza 8 (iron and cedar) and stanza 9 (a marker by shore and pine). They describe the grand-prize landscape.</li>
+   <li><b>The last two stanzas (12–13) are directions on the ground:</b> leave the trail where it fades, pass the marker, find the tall grass, look behind the brush.</li>
+  </ul></div>
+  <div class="panel"><h3>My view on "cancel every named place"</h3><ul class="callouts">
+   <li><b>I think it’s right, with one limit.</b> The named stanzas line up almost one-for-one with the bonus chapters, and each one turns the place down in the same way. That looks deliberate.</li>
+   <li><b>The limit:</b> each stanza cancels a <i>specific</i> landmark or camp (the Big Nickel, Bay Street, the Bathurst mines), not every place near it.</li>
+   <li><b>Stanza 6 is settled:</b> "Flinty" is Flin Flon, so eastern Ontario is not cancelled.</li>
+   <li><b>Stanza 7 follows the same pattern,</b> so it most likely cancels one Shield camp, not the Shield itself. It is not evidence for or against Shield country; the cedar, pine and lake-shore lines do that work.</li>
+  </ul></div>
+  <div class="panel"><h3>What the poem asks for, all together</h3><ul class="callouts">
+   <li>A <b>calm lake</b> (stanza 1 and the mirror quatrain) in <b>cedar, pine and birch</b> country (stanzas 2, 8, 9, 11), near <b>iron or old mining</b> (stanzas 1, 8, 13).</li>
+   <li>An <b>old marker that still stands</b> on the shore, its message faded (stanza 9), along a <b>trail</b> that fades out (stanza 12).</li>
+   <li><b>Tall grass</b> just past the marker, with brush behind an inscription (stanzas 12–13).</li>
+   <li><b>Not</b> on the sea coast or in mountains, and not at any of the named camps.</li>
+   <li>That fits <b>southern Ontario and southern Quebec</b> best, then New Brunswick. Pink Lake and Frontenac Provincial Park are the closest matches found so far.</li>
+  </ul></div>`;
+  S.forEach(s => { h += `<div class="panel"><h3>Stanza ${s.n} · ${s.role} ${conf(s.conf)}</h3>${lines(s.n)}<ul class="callouts" style="margin-top:10px"><li><b>What it names:</b> ${s.names}</li><li><b>Reading:</b> ${s.read}</li><li><b>For the search:</b> ${s.means}</li></ul></div>`; });
+  return h;
+};
+
 RENDER.lines = () => {
   let h = `<div><h2>All 52 lines, side by side</h2><p class="note">Counts per line. W = words, L = letters, C = characters, Syl = syllables (English from the CMU dictionary; French is an orthographic estimate), V = main verbs, A = adjectives, N = nouns, Σ = A1Z26 sum, 1st = first letter. Bars show letter counts on one scale (max ${Math.max(...LF.map(l=>l.letters))}).</p></div>
   <div class="panel scroll"><table class="linecmp"><thead><tr><th class="num">#</th><th>English</th><th class="num">W</th><th class="num">L</th><th class="num">C</th><th class="num">Syl</th><th class="num">V</th><th class="num">A</th><th class="num">N</th><th class="num">Σ</th><th>1st</th><th>French</th><th class="num">W</th><th class="num">L</th><th class="num">C</th><th class="num">Syl</th><th class="num">V</th><th class="num">A</th><th class="num">N</th><th class="num">Σ</th><th>1st</th></tr></thead><tbody>`;
